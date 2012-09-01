@@ -1,4 +1,4 @@
 Project-BlackHawk
 =================
 
-A CEN 3031 project
+Project BlackHawk is a revolutionary new program. Coming soon.
