@@ -1,4 +1,12 @@
-Project BlackHawk
-=================
+# Project Blackhawk
 
-Project BlackHawk is a revolutionary new program. Coming soon.
+Team Members:
+
+* Chris Christoff 
+* Stetson Gafford
+* James Stephens
+* Steve Curry
+
+## What Is Project BlackHawk?
+
+-Coming Soon-
