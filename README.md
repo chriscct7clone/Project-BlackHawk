@@ -9,4 +9,4 @@
 * Chris Christoff 
 * Stetson Gafford aka The Beard
 * James Stephens
-* Steve Curry
+* Stephen Curry
