@@ -7,6 +7,6 @@
 ## Team Members: ##
 
 * Chris Christoff 
-* Stetson Gafford
+* Stetson Gafford aka The Beard
 * James Stephens
 * Steve Curry
