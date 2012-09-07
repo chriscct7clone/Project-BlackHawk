@@ -1,0 +1,7 @@
+Project BlackHawk Credits:
+This project wouldn't be where it is without the help of several individuals and groups:
+
++ The authors of the Oxygen iconset
++ The codereview.stackexchange.com community
++ The devshed.com PHP community
++ The entire Stackoverflow.com community

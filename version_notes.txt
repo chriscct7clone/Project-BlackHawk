@@ -1,0 +1,30 @@
+Version Notes:
+
+How we are handling logins now:
+Me and Stetson have been talking, and we were thinking. Realistically, if we were to implement our parking system:
+ 1. We would have access to the UIN/PIN database for Gulfline.
+ 2. We can assume that our system would be tightly integrated into Gulfline, in a way that you would likely log into gulfline to view our service OR the login page would use Gulfline's database but take you straight to the parking system
+ 
+Therefore: 
+We are going to allow students the ability to self register given this scenario:
+Students are issued the sticker for the back of their car upon registration. Therefore, if they don't register, they can't park on campus. 
+Then, students go to our page, and regiser using their UIN and PIN.
+After registering, they are permitted to change their password to something besides their pin, within a set of predefined restritions (alphanumeric and between 6 and 25 characters).
+They are also permitted to delete their account. If they delete thier account ,they can't use parking on campus anymore (its the way we will design the garage system).
+
+At the end of each year, the admin can clear the entire user database with a single button click.
+
+
+Okay, so we have two parts to our system: The Garage system and the login.
+The login system is in /login/
+The garage system is in /garage/
+Please be aware, that at this time, the only working area is the login script, which is about 80% done give or take. 
+It has a working install script, if you want to test it.
+To test, create a database using PHPMyAdmin. 
+
+Then with your database name, database username, and database password head to localhost/blackhawk/login/
+(note the blackhawk part might be different...depends on what Github's download Zip feature calls it. If you download via Git, just dump it in a blackhawk folder in the www folder.
+run through the install script (note the database host is localhost). I have tested using the bycrypt() and 12 passes. You will notice some completed additional features I've added.
+
+Note: once I get further along, everything will be together instead of in seperate folders. Right now, as it stands, I have a lot of organizational things to do, so files will be renamed,
+moved, added and deleted. At this point, unless you notice an issue with a login script, I would not commit any changes.
