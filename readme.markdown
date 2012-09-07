@@ -1,6 +1,6 @@
 # Project BlackHawk #
 Version 0.1.0   
-Build Status: [![Build Status](https://secure.travis-ci.org/chriscct7/Project-BlackHawk.png)](http://travis-ci.org/chriscct7/Project-BlackHawk)
+[![Build Status](https://secure.travis-ci.org/chriscct7/Project-BlackHawk.png)](http://travis-ci.org/chriscct7/Project-BlackHawk)
 
 ## Program Description ##
 A revolutionary new parking system ;) 
@@ -56,6 +56,7 @@ Please open a ticket in Github.
 ## Automated Source Testing ##
 We test Project BlackHawk on every commit using a custom Travis-CI script (we are not currently using the default PHPUnit tests).
 If you add something that you think you needs to be tested on every commit, create a new issue.
+
 Build Status: [![Build Status](https://secure.travis-ci.org/chriscct7/Project-BlackHawk.png)](http://travis-ci.org/chriscct7/Project-BlackHawk)
 
 ## License conditions ##
