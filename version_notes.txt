@@ -28,3 +28,9 @@ run through the install script (note the database host is localhost). I have tes
 
 Note: once I get further along, everything will be together instead of in seperate folders. Right now, as it stands, I have a lot of organizational things to do, so files will be renamed,
 moved, added and deleted. At this point, unless you notice an issue with a login script, I would not commit any changes.
+
+If you guys have any questions based on the above, please feel free to email me at chriscct7@gmail.com (odds are I'll respond within a few minutes).
+We also have, what is now apparently a team meeting at 8:00 a.m. in 4th Floor, Holmes Engineering. 
+
+Finally,
+Be sure you are syncing often. We don't want people fixing issues that have already been fixed on the latest version of the code ;)
