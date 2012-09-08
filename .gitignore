@@ -45,3 +45,10 @@
 Icon?
 ehthumbs.db
 Thumbs.db
+
+# Chris's Developer Docs #
+# For now, I do not want to send these to Github #
+######################
+*.doc
+*.docx
+*.pdf
