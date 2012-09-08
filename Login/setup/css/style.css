@@ -1,16 +1,12 @@
 /*
 ********************
-WebSite: MemberL ogin
-Name: style.css
-Type: css
-Version: 3.0
-Author: FireDart
+Setup CSS
 ********************
 */
 /*Import Reset */
 @import url("reset.css"); 
 body {
-	background: #eeeeee url("../images/bg.png");
+	background: #eeeeee url("../../assets/images/bg.png");
 	color: #42423d;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	font-size: 13px;
@@ -45,7 +41,7 @@ body {
 	background: #61b832 -moz-repeating-linear-gradient(#61b832, #479619);
 }
 	.notice.success:before {
-		background: url("../images/good.png") no-repeat;
+		background: url("../../assets/images/good.png") no-repeat;
 		top: 4px;
 	}
 .notice.error {
@@ -54,7 +50,7 @@ body {
 	background: #CE3512 -moz-repeating-linear-gradient(#E6724E, #CE3512);
 }
 	.notice.error:before {
-		background: url("../images/error.png") no-repeat;
+		background: url("../../assets/images/error.png") no-repeat;
 	}
 .notice.info {
 	background: #74D1F0;
@@ -62,7 +58,7 @@ body {
 	background: #74D1F0 -moz-repeating-linear-gradient(#74D1F0, #50A3BF);
 }
 	.notice.info:before {
-		background: url("../images/info.png") no-repeat;
+		background: url("../../assets/images/info.png") no-repeat;
 	}
 
 /* ClearFix */
@@ -121,6 +117,8 @@ fieldset legend {
 #wrapper {
 	background: #ffffff;
 	width: 300px;
+	max-width:300px;
+	min-width: 200px;
 	padding: 20px;
 	margin: 0px auto;
 }

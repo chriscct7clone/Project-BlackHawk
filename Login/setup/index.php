@@ -1,6 +1,6 @@
 <?php
 /* Include Notice & Mailer Class */
-require_once("notice.class.php");
+require_once("../assets/notice.class.php");
 $notice = new notice;
 
 if(isset($_POST['setup'])) {
@@ -357,19 +357,19 @@ $("#myId").change(function() {
     }
 });
 		</script>
-			<label>Bcrypt rounds <i>(12 Rounds is recommended)</i></label> <!-- TODO: if SHA512 is selected, disable field -->
+			<label>Bcrypt rounds <i>(12 Rounds is recommended)</i></label> 
 			<input name="bcrypt_rounds" id="test" type="text" value="<?php echo $bcrypt_rounds; ?>"   />
 			
 			<label>Allow Remember me feature on login?</label>
 			<select name="remember_me">
-				<option value="false"<?php if($remember_me == 'false') { echo ' selected="selected"'; } ?>>False</option> <!-- TODO: if SHA512 is selected, disable field -->
+				<option value="false"<?php if($remember_me == 'false') { echo ' selected="selected"'; } ?>>False</option> <!-- First so that True is default -->
 				<option value="true"<?php if($remember_me == 'true') { echo ' selected="selected"'; } ?>>True</option>
 				
 			</select>
 			
 			<label>Require Captcha on registration</label>
 			<select name="captcha">
-				<option value="false"<?php if($captcha == 'false') { echo ' selected="selected"'; } ?>>False</option> <!-- TODO: if SHA512 is selected, disable field -->
+				<option value="false"<?php if($captcha == 'false') { echo ' selected="selected"'; } ?>>False</option> <!-- First so that True is default -->
 				<option value="true"<?php if($captcha == 'true') { echo ' selected="selected"'; } ?>>True</option>
 			</select>
 		</fieldset>
