@@ -600,13 +600,10 @@ class member {
 				/* Check the username length */
 				$length = strlen($check_username);
 				if($length == 9) {
-
 					/* Is the username numeric? */
 					if(preg_match('/[^0-9_]/', $check_username)) {
-
 						$notice->add('error', 'Please enter a valid alphanumeric username');
 						$username = null;
-
 					} else {
 						$database->query('SELECT id FROM users WHERE username = :username', array(':username' => $check_username));
 						/* Check if user exist in database */
@@ -635,8 +632,6 @@ class member {
 					$notice->add('error', 'Please enter a username between 5 to 25 characters');
 					$username = $check_username;
 				}
-
-
 			} else {
 				$notice->add('error', 'Please enter a username');
 				$username = null;
@@ -648,17 +643,10 @@ class member {
 					/* Is the password long enough? */
 					$length = strlen($_POST['password']);
 					if($length >= 6) {
-
-
-
 						$password = $_POST['password'];
 					} else {
 						$notice->add('error', 'Passwords must be atleast than 8 characters');
-
 					}
-
-
-
 				} else {
 					$notice->add('error', 'Passwords must match');
 				}
@@ -668,17 +656,12 @@ class member {
 			/* Check E-Mail */
 			if(!empty($_POST['email'])) {
 				$check_email = strtolower($_POST['email']);
-				
 				/* Do E-Mails match? */
 				if(isset($check_email)) {
 					$length = strlen($check_email);
 					/* Is the E-Mail really an E-Mail? */
 					if(filter_var($check_email, FILTER_VALIDATE_EMAIL) == true) {
 						$database->query('SELECT id FROM users WHERE email = :email', array(':email' => $check_email));
-
-
-
-
 						/* Check if user exist with email */
 						if($database->statement->rowCount() == 0) {
 							/* Require use to validate account */
@@ -688,7 +671,6 @@ class member {
 								/* If user incative is older than 24 hours */
 								if($database->statement->rowCount() == 0 or time() >= strtotime($user->date) + 86400) {
 									$email = $check_email;
-								
 								} else {
 									$notice->add('error', 'E-Mail already in use');
 									$email = null;
@@ -715,17 +697,21 @@ class member {
 			} else {
 				$notice->add('error', 'Please enter an E-Mail');
 				$email = null;
-				
 			}
-			
 			/* Captcha? */
 			if(Config::read('captcha') === true) {
 				/* Check E-Mail */
 				if(!empty($_POST['captcha'])) {
 					if($_POST['captcha'] != $_SESSION['captcha']) {
-						$notice->add('error', 'Invalid Captcha');
+					// Debugging Captcha being incorrect.
+					//$notice->add('error', $_POST['captcha']);
+					//$notice->add('error',$_SESSION['captcha']);
+					$notice->add('error', 'Invalid Captcha');
 					}
-					$notice->add('error', 'Please fill in the Captcha');
+					$notice->add('sucess', 'Valid Captcha');
+				}
+				else {
+				$notice->add('error', 'Please fill in the Captcha');
 				}
 			}
 			/* Is both Username and Password set? */
@@ -747,7 +733,6 @@ class member {
 						$content = 'Hi ' . $username . ',<br />Thanks for signing-up!<br /><br /><i>-Admin</i>';
 						/* Mail it! */
 						$mailer->mail($email, $subject, $content);
-						
 					}
 				}
 				/* Require use to validate account */

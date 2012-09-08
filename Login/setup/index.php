@@ -217,10 +217,9 @@ $mysql_users_recover = 'CREATE TABLE IF NOT EXISTS `users_recover` (
 		
 		if($notice->errorsExist() == false) {
 			$notice->add('success', 'BlackHawk has been installed!');
-			$finishing_up = '<hr />Please delete your /setup/ folder for security reasons.
+			$finishing_up = '<hr />For security reasons, we will now delete the /setup/ folder. <br /><hr />
 <form action="index.php" method="post">
-	<span style="text-align: left; margin: 10px 0px 10px 0px; float: left;"><input type="checkbox" name="delete_setup" value="true" /> Delete /setup/ folder</span>
-	<input name="continue" type="submit" value="Continue" />
+<input name="finish" type="submit" value="Delete Folder and Finish" />
 </form>
 			';
 			
@@ -278,7 +277,7 @@ $mysql_users_recover = 'CREATE TABLE IF NOT EXISTS `users_recover` (
 }
 
 
-if(isset($_POST['continue'])) {
+if(isset($_POST['finish'])) {
 		$showForm = false;
 		rrmdir('../setup');
 		$notice->add('success', 'Setup folder removed');
