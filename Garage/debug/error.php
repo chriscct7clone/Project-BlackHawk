@@ -25,7 +25,7 @@ if( isset($_GET['host']) )
 	$host = $_GET['host'];
 	$uri = ( isset($_GET['uri']) and strlen($_GET['uri']) > 0 ) ? $_GET['uri'] : '/';
    $content = '';
-   $fp = fsockopen("$host", 80, $errno, $errstr, 30);
+   $fp = fsockopen("$host", 80, $errno, $errstr, 30); // Alternatively use port 8080
    if(!$fp)
    {
       echo "$errstr ($errno)<br />\n";
@@ -83,7 +83,7 @@ What is the URI (the part of the URL after the domain name, or "/" if default pa
 </form>
 <?php endif; ?>
 <?php if ($global_debug == 0): ?>
-<h1> Access Denied </h1>
+<h1> Access Denied </h1> <!-- maybe a redirect to 404 here? -->
 <?php endif; ?>
 </body>
 </html>

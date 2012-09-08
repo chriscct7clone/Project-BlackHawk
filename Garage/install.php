@@ -125,6 +125,7 @@ if ($put) {
 }
 
 // Write .htaccess file
+// TODO: Add all errorcode values here!
 $fp = fopen(CL_ROOT . "/.htaccess", "a");
 fwrite($fp, "\n\n# ErrorDocuments \n");
 fwrite($fp, "ErrorDocument 400 ". $installURL."/errorcode.php?error=400 \n");
