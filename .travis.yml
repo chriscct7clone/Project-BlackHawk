@@ -8,4 +8,4 @@ before_script:
 script: "php travis.php" 
 notifications:
   email:
-    - chriscct7@gmail.com
+    - chriscct7@gmail.com 
