@@ -279,12 +279,10 @@ $mysql_users_recover = 'CREATE TABLE IF NOT EXISTS `users_recover` (
 
 
 if(isset($_POST['continue'])) {
-	$showForm = false;
-	if($_POST['delete_setup'] == true) {
+		$showForm = false;
 		rrmdir('../setup');
 		$notice->add('success', 'Setup folder removed');
 		header('Location: ../index.php');
-	}
 }
 // Disabled so that I don't lose my setup folder after setup.
 function rrmdir($dir) {
