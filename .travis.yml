@@ -3,16 +3,9 @@ php:
   - 5.2
   - 5.3
   - 5.4
-branches:
-  only:
-    - master
-    - Dev
-  exclude:
-    - alpha
 before_script:
   - mysql -e 'create database users;'
 script: "php travis.php" 
 notifications:
   email:
     - chriscct7@gmail.com
-    - chris@futuregencode.com
