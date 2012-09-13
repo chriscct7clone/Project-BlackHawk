@@ -154,38 +154,6 @@ class member {
         }
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	/*
 	 * verify
 	 *
@@ -266,7 +234,6 @@ class member {
 			$return_form = 1;
 			}
 			// Password Validation
-			//TO DO: Fail on non alphanumeric
 			// Check to make sure => 6 chars long
 			$length = strlen($password);
 			if($length < 6) {
@@ -280,27 +247,6 @@ class member {
 			} else {
 				$password = $_POST['password'];
 			}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 			/* Is both Username and Password set? */
 			if($username && $password) {
 				/* Get User data */
@@ -1175,5 +1121,51 @@ class member {
 		/* Return data */
 		return $notice->report() . $data;
 	}
+	
+	public function firstuserregister($email=null) {
+		if(file_exists('config.inc.php')) {
+			return false; //setup has been run already
+		} 
+		else {
+		global $database;
+		$username;
+		// Generate UID randomly, outside of 814 zone.
+		do {
+		$username = mt_rand(100000000, 999999999);
+		} while (strpos($username, '814') == 0);
+		// Generate Password randomly. TODO: How high should we allow for max?
+		$password=mt_rand(100000, 999999999);
+		$formailpass=$password;
+		$userrole=3;
+		$parkingrole=3;
+		/* Create new instance of notice class */
+		$notice = new notice;
+		/* Set Message Array */
+		$message = array();
+		if($email != null) {
+				$return_form = 0;
+				/* Final Format */
+				$password = $this->genHash($this->genSalt(), $password);
+				
+					/* Insert Data */
+					$date = date("Y-m-d", time());
+					$database->query('INSERT INTO users(username, password, email, date, parkingrole, userrole) VALUES (:username, :password, :email, :date,  :parkingrole, :userrole)', array(':username' => $username, 'password' => $password, 'email' => $email, 'date' => $date, 'parkingrole' => $parkingrole, 'userrole' => $userrole));
+					$mailer = new mailer(Config::read('email_master'));
+					$subject = 'Welcome ' . $username . '!';
+					$content = 'Thanks for installing BlackHawk <br />. Your admin username is' . $username . ' and password is ' . $formailpass. ',<br /> Please login and change these values! <br /><br /> Thanks for signing-up!<br /><br /><i>-The Project BlackHawk Team</i>';
+					/* Mail it! */
+				//	$mailer->mail($email, $subject, $content);
+				// for now disabled so we don't throw localhost php mail() function does not exist error
+				return true;
+				}
+				else {
+				//log this...should never have gotten here
+				return false;
+				}
+				return false; // errors occured (likely email)
+		}
+	}
+	
+	
 }
 ?>

@@ -19,11 +19,14 @@ if(isset($_POST['setup'])) {
 	$captcha             = $_POST['captcha'];
 	
 	$email_master        = $_POST['email_master'];
-	
 	$email_template      = $_POST['email_template'];
-	
 	$email_welcome       = $_POST['email_welcome'];
 	$email_verification  = $_POST['email_verification'];
+	
+	// User Area of Form
+	// Get User Email
+	$first_user_email		= $_POST['first_user_email'];
+
 	
 	/* e-mail templates */
 	$dh = opendir('../assets/email_templates');
@@ -70,13 +73,48 @@ if(isset($_POST['setup'])) {
 	
 	
 	if(empty($email_master)) {
-		$notice->add('error', 'Please enter a E-Mail that will be used to contcat users.');
+		$notice->add('error', 'Please enter a E-Mail that will be used to contact users.');
 		$email_master = null;
 	}
 	
+			/* Check Admin E-Mail */
+			if(!empty($first_user_email)) {
+				$check_email = strtolower($first_user_email);
+				// TODO php explode to make sure its valid	
+					/* Is the E-Mail really an E-Mail? */
+					if(filter_var($check_email, FILTER_VALIDATE_EMAIL) == true) {
+						// we are good
+					} else {
+						$notice->add('error', 'Invalid E-Mail');
+						$first_user_email = null;
+					}
+			} else {
+			$notice->add('error', 'Please enter an email to use as the email for the Admin account');
+			$first_user_email = null;
+			}
+	if($hostname=='localhost' && (($email_verification==true)|| ($email_welcome == true))){
+	$notice->add('notice', 'Install Error #9. See User Manual for details'); 
+	//$email_verification=false;
+	//$email_welcome=false;
+	
+	/*
+	I want to figure out a better way describing this error. I think the best way is actually to return a direct link to a 
+	anchor tab in our documentation about this. Seems easy enough to do. However it can't be done till we set that up.
+	The actual issue is that on localhost servers, PHP's mail() function is disabled, meaning we can't send the emails. When
+	the mail() function is called on localhost, PHP throws a fatal error, thus preventing BlackHawk from working.
+	I'll work on this TODO later
+	-Chris
+	*/
+	}
+	else {
+	// do nothing
+	}
+	
+	
+	
 	if($notice->errorsExist() == false) {
 		$showForm = false;
-		
+
 		
 		//Create Config File
 		if($config_handle = fopen('../assets/config.inc.php', 'w')) {
@@ -131,8 +169,8 @@ $mysql_users = 'CREATE TABLE IF NOT EXISTS `users` (
   `password` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `date` date NOT NULL,
-  `loginrole` int(11) NOT NULL,
-  `garagerole` int(11) NOT NULL,
+  `parkingrole` int(11) NOT NULL,
+  `userrole` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;';
 
@@ -169,7 +207,7 @@ $mysql_users_recover = 'CREATE TABLE IF NOT EXISTS `users_recover` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;';
 		
-		
+
 		/* mysql_users */
 		$statement = $pdo->prepare($mysql_users);
 		if($statement->execute()){
@@ -209,7 +247,14 @@ $mysql_users_recover = 'CREATE TABLE IF NOT EXISTS `users_recover` (
 		} else {
 			$notice->add('error', 'Could not populate users_recover!');
 		}
-		
+		require_once("../assets/member.inc.php");
+		// Fire User Registration 
+		if($member->firstuserregister($first_user_email) == true){
+		$notice->add('success', 'Admin User was created!');
+		}
+		else {
+		$notice->add('error', 'Admin User was not created!');
+		}
 		
 		//Notify that everything is done
 		
@@ -271,9 +316,12 @@ $mysql_users_recover = 'CREATE TABLE IF NOT EXISTS `users_recover` (
 	$captcha       = true;
 	
 	$email_master  = null;
+	$email_welcome = true;
 	$email_template = 'default';
-	
+	$email_verification = true;
 	$showForm = true;
+
+	$first_user_email= null;
 }
 
 
@@ -327,12 +375,7 @@ if($showForm == true) {
 			<label>Password</label>
 			<input name="password" type="password" value="<?php echo $password; ?>" />
 		</fieldset>
-	
-
-
-		
-		
-<fieldset>
+		<fieldset>
 			<legend>Security</legend>
 			<label>Hash Type</label>
 			<select name="hash" id="myId">
@@ -359,15 +402,14 @@ $("#myId").change(function() {
 			
 			<label>Allow Remember me feature on login?</label>
 			<select name="remember_me">
-				<option value="false"<?php if($remember_me == 'false') { echo ' selected="selected"'; } ?>>False</option> <!-- First so that True is default -->
 				<option value="true"<?php if($remember_me == 'true') { echo ' selected="selected"'; } ?>>True</option>
-				
+				<option value="false"<?php if($remember_me == 'false') { echo ' selected="selected"'; } ?>>False</option>
 			</select>
 			
 			<label>Require Captcha on registration</label>
 			<select name="captcha">
-				<option value="false"<?php if($captcha == 'false') { echo ' selected="selected"'; } ?>>False</option> <!-- First so that True is default -->
 				<option value="true"<?php if($captcha == 'true') { echo ' selected="selected"'; } ?>>True</option>
+				<option value="false"<?php if($captcha == 'false') { echo ' selected="selected"'; } ?>>False</option> 
 			</select>
 		</fieldset>
 
@@ -403,7 +445,12 @@ foreach($templates as $template) {
 				<option value="false"<?php if($email_verification == 'false') { echo ' selected="selected"'; }?>>False</option>
 			</select>
 		</fieldset>
-
+		<fieldset>
+			<legend>Admin User</legend>
+			
+			<label>Admin Email</label>
+			<input name="first_user_email" type="text" value="<?php echo $first_user_email; ?>"  />
+		</fieldset>
 		<input name="setup" type="submit" value="Setup" />
 	</form>
 <?php
