@@ -37,28 +37,28 @@ Intake Array format:
 
 $floors = array(
     1 => array( // floor 0 is ground floor...not garage
-	        'num_spots' => 100, 
-            'police' => array(15,16,17), //for ground level parking  
+			'num_spots' => 100, 
+			'police' => array(15,16,17), //for ground level parking  
 			'num_police' => 3,
 			'teacher' => array (47,62), //for ground level parking  
 			'num_teacher' => 2,
 			'visitors' => array (47,62), //for ground level parking  
 			'num_visitors' => 2,
-            'handicap' => array(15,16,17),
+			'handicap' => array(15,16,17),
 			'num_handicap' => 3,
 			'motorcycle' => array (47,62),
 			'num_motorcycle' => 2
         ),   
 
     2 => array(
-	        'num_spots' => 100,
-            'police' => array(15,16,17),  
+			'num_spots' => 100,
+			'police' => array(15,16,17),  
 			'num_police' => 3,
 			'teacher' => array (47,62),
 			'num_teacher' => 2,
 			'visitors' => array (47,62),
 			'num_visitors' => 2,
-            'handicap' => array(15,16,17),
+			'handicap' => array(15,16,17),
 			'num_handicap' => 3,
 			'motorcycle' => array (47,62),
 			'num_motorcycle' => 2
