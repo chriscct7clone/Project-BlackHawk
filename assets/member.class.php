@@ -436,6 +436,7 @@ class member {
 			/* Set Cookies */
 			setcookie("remember_me_id", $id, time() + 31536000);  /* expire in 1 year */
 			setcookie("remember_me_hash", $hash, time() + 31536000);  /* expire in 1 year */
+			//TODO: Save roles in cookie
 			/* Delete old record, if any */
 			$database->query('DELETE FROM users_logged WHERE id = :id', array(':id' => $id));
 			/* Insert new cookie */
@@ -519,7 +520,7 @@ class member {
 		}
 		if(!isset($user_id)) {
 			$notice = new notice;
-			$notice->add('error', 'Could not retrive user data becuase no user is logged in!');
+			$notice->add('error', 'Could not retrive user data because no user is logged in!');
 			return $notice->report();
 		} else {
 			$user = $database->query('SELECT id, username, email, date FROM users WHERE id = :id', array(':id' => $user_id), 'FETCH_OBJ');
@@ -598,6 +599,11 @@ class member {
 				}
 			} else {
 				$notice->add('error', 'Please enter a password');
+			}
+			// Dummy check against DB function
+			if (combovalidation($username, $password) == false)
+			{
+			$notice->add('error', 'Not a valid UID/PIN combo');
 			}
 			/* Check E-Mail */
 			if(!empty($_POST['email'])) {
@@ -710,6 +716,9 @@ class member {
 				} 
 				
 				} else {
+					$userrole=1; //student+faculty
+					$parkingrole=1; //student (commuter)
+					// TODO, make register form pick type of student and pull that value
 					/* Insert Data */
 					$date = date("Y-m-d", time());
 					$database->query('INSERT INTO users(username, password, email, date) VALUES (:username, :password, :email, :date)', array(':username' => $username, 'password' => $password, 'email' => $email, 'date' => $date));
@@ -751,10 +760,6 @@ class member {
 		} else {
 			$captcha_input = null;
 		}
-		
-
-
-
 
 		$form = '
 <form name="register" action="' . $this->currentPage() . '" method="post">
@@ -788,7 +793,25 @@ class member {
 		/* Return data */
 		return $notice->report() . $data;
 	}
-	
+	/*
+     * Combo Validation
+	 *
+	 * Type of function: Dummy
+	 *
+	 * Purpose: Checks PIN/UID combo against FGCU Database to see if valid combo
+	 *
+	 * Input: $UID, $PIN
+	 *
+	 * Output: true (bool) if valid, else false (bool)
+	 *
+	 * Created in Version: 0.2.0
+	 *
+	 * Last Modified: 9/15/2012, by Chris Christoff
+	 */
+	 combovalidation($username, $password){
+	 // TODO: Check against a dummy DB, that is made manually by SQL import?
+	 return true;
+	 }
 	/*
 	 * Random String
 	 * 
