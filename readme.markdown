@@ -1,5 +1,5 @@
 # Project BlackHawk #
-Version 0.2.0 RC1   
+Version 0.2.0 RC3   
 [![Build Status](https://secure.travis-ci.org/chriscct7/Project-BlackHawk.png)](http://travis-ci.org/chriscct7/Project-BlackHawk)
 
 ## Program Description ##

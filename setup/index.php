@@ -205,9 +205,29 @@ $mysql_users_recover = 'CREATE TABLE IF NOT EXISTS `users_recover` (
   `verCode` varchar(225) NOT NULL,
   `requestTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;';
-		
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;';	
 
+//time in next one is time of last update to totals
+$mysql_garage_list = 'CREATE TABLE IF NOT EXISTS `garage_list` (
+  `id` int(3) NOT NULL AUTO_INCREMENT,
+  `name` varchar(225) NOT NULL,
+  `numoftotalspots` int(8) NOT NULL,
+  `numspotsinuse` int(8) NOT NULL,
+  `percentageofuse` int(3) NOT NULL,
+  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;';
+//time in next one is time of first parking
+$mysql_garage_by_uid = 'CREATE TABLE IF NOT EXISTS `garage_by_uid` (
+  `uid` int(11) NOT NULL,
+  `name` varchar(225) NOT NULL,
+  `garage` int(8) NOT NULL,
+  `floor` int(8) NOT NULL,
+  `spot` int(8) NOT NULL,
+  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`uid`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;';
+	
 		/* mysql_users */
 		$statement = $pdo->prepare($mysql_users);
 		if($statement->execute()){
@@ -247,6 +267,21 @@ $mysql_users_recover = 'CREATE TABLE IF NOT EXISTS `users_recover` (
 		} else {
 			$notice->add('error', 'Could not populate users_recover!');
 		}
+		/* mysql_users_recover */
+		$statement = $pdo->prepare($mysql_garage_by_uid);
+		if($statement->execute()){
+			$notice->add('success', 'Table `garage_by_uid` populated!');
+		} else {
+			$notice->add('error', 'Could not populate garage_by_uid!');
+		}		
+		/* mysql_garage_list */
+		$statement = $pdo->prepare($mysql_garage_list);
+		if($statement->execute()){
+			$notice->add('success', 'Table `garage_list` populated!');
+		} else {
+			$notice->add('error', 'Could not populate garage_list!');
+		}		
+		
 		require_once("../assets/member.inc.php");
 		// Fire User Registration 
 		if($member->firstuserregister($first_user_email) == true){
