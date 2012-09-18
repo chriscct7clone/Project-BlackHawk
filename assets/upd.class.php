@@ -1,6 +1,6 @@
 <?php
 /*
- * Garage Class
+ * UPD Class
  */
 class Config {
 	// no other garage in use

@@ -1,6 +1,6 @@
 <?php
 /*
- * Garage Class
+ * Parking Services Class
  */
 class Config {
 	// no other garage in use
