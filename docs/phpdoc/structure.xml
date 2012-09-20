@@ -1311,11 +1311,6 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
       <error line="0" code="50007">No page-level DocBlock was found in file debug/masdebug.php</error>
     </parse_markers>
   </file>
-  <file path="docs/index.php" hash="8fc8b6b3746ffcb5b9ba53bb4f199600" package="Default">
-    <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file docs/index.php</error>
-    </parse_markers>
-  </file>
   <file path="errorcode.php" hash="39c45fc16122d82927fb5dd2288fa61e" package="Default"/>
   <file path="index.php" hash="dfbcdd4140e5674c71d6790c549a3028" package="Default">
     <include line="13" type="Include" package="Default">
