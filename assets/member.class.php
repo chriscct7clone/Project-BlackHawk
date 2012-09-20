@@ -34,7 +34,6 @@ class member {
 		/* Include Notice & Mailer Class */
 		require_once("notice.class.php");
 		require_once("mailer.class.php");
-		require_once("garage.php");
 	}
 	
 	

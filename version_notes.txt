@@ -1,5 +1,4 @@
 Version Notes:
-Updates for 0.2.0 RC3:
+Updates for 0.2.0 RC5:
 
-+ On install, we now install two garage tables
-+ Started the Garage class
++ 

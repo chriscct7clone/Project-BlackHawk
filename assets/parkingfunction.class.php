@@ -1,6 +1,7 @@
 <?php
 /*
- * Parking Services Class
+ * @ Version: 2.0
+ * @ Copyright: 
  */
 class Parkingsensors {
 	// no other garage in use

@@ -3,11 +3,19 @@
 # Standardize Charset
 AddDefaultCharset utf-8
 
+# don't even think about setting this to 'on'
+php_value register_globals off
+
+
+
 # Deny all from files
 <Files ~ "^\.(htaccess|htpasswd)$">
 deny from all
 </Files>
-
+<Directory ~ "\documentation">
+Order allow,deny
+Deny from all
+</Directory>
 AddType application/x-httpd-php .html
 
 # Define homepage as index.php
@@ -50,3 +58,4 @@ SetEnvIfNoCase ^User-Agent$ .*web(zip|emaile|enhancer|fetch|go.?is|auto|bandit|c
 SetEnvIfNoCase ^User-Agent$ .*(craftbot|download|extract|stripper|sucker|ninja|clshttp|webspider|leacher|collector|grabber|webpictures) HTTP_SAFE_BADBOT
 SetEnvIfNoCase ^User-Agent$ .*(libwww-perl|aesop_com_spiderman) HTTP_SAFE_BADBOT
 Deny from env=HTTP_SAFE_BADBOT
+
