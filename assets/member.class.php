@@ -753,7 +753,7 @@ class member {
 		<span>Captcha</span>
 		<span id="captcha">
 			<input type="text" name="captcha" value="" />
-			<img alt="Captcha" src="' . $this->currentPath() . 'assets/captcha.php" />
+			<img alt="Captcha" src="' . $this->currentPath() . 'assets/captcha.class.php" />
 		</span>
 	</label>
 			';

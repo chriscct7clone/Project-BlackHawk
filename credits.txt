@@ -5,3 +5,13 @@ This project wouldn't be where it is without the help of several individuals and
 + The codereview.stackexchange.com community
 + The devshed.com PHP community
 + The entire Stackoverflow.com community
+
+The following services:
++ Github
++ Travis-CI
++ PHPDocumentor2
++ VioletUML
++ ArgoUML
+
+And of course, our lead, master support ninja, and supreme commander:
+Chris Christoff

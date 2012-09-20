@@ -1,4 +1,4 @@
 Version Notes:
-Updates for 0.2.0 RC5:
+Updates for 0.3.0:
 
 + 

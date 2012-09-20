@@ -1,17 +1,16 @@
-BlackHawk 0.2.0 (planned)
-+ Client-side MD5 encryption of PIN (and maybe UIN as well) on login
-+ Enforce roles on login
-+ Make install script cleaner.
-+ The garage management classes have yet to be written
-+ Additional storage of User Names and both Garage and Login Roles in the Users table.
-+ Add check to make sure the $email passed to register user is an official FGCU email. Use PHP explode() on periods and dissect by part.
-+ Login script, clean up internal organization
-+ Prep for grarage intr.
+BlackHawk 0.3.0 (projected)
++ Write add/edit/del user and garage functions
++ initiate role management
++ check emails are FGCU
++ clean up the files
++ add features
++ (anticipated) Period of Rapid Development (unfeasible to document number of changes).
+
+BlackHawk 0.2.0
++ Period of Rapid Development (unfeasible to document number of changes).
 
 BlackHawk 0.1.0
-+ Basic functionality started
-+ Login script 80% done
-+ Garage script 5% done
++ Period of Rapid Development (unfeasible to document number of changes).
 
 BlackHawk .0.0.0
 + Initial Github Commit

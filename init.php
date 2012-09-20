@@ -4,16 +4,16 @@ ini_set('display_errors', 'off');
 ini_set("arg_separator.output", "&amp;");
 ini_set('default_charset', 'utf-8');
 // get full path to kombineer
-define("CL_ROOT", realpath(dirname(__FILE__)));
+define("BLACKHAWK_ROOT", realpath(dirname(__FILE__)));
 // configuration to load
-define("CL_CONFIG", "standard");
-// kombineer version
-define("CL_VERSION", 0.0);
-// kombineer subversion
-define("CL_SUBVERSION", .1);
-// commit version
-define("CL_COMMIT", 1);
-
+define("BLACKHAWK_CONFIG", "standard");
+// BLACKHAWK version
+define("BLACKHAWK_VERSION", 0.2);
+// BLACKHAWK subversion
+define("BLACKHAWK_SUBVERSION", .1);
+// BLACKHAWK version
+define("BLACKHAWK_COMMIT", 42);
+// Below only works if Init was included everywhere
 // uncomment for debugging
 //error_reporting(E_ALL | E_STRICT);
 

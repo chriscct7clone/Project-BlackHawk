@@ -227,6 +227,38 @@ $mysql_garage_by_uid = 'CREATE TABLE IF NOT EXISTS `garage_by_uid` (
   `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`uid`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;';
+
+	// TODO: Add all errorcode values here!
+	$fp = fopen("../.htaccess", "a");
+	fwrite($fp, "\n\n# ErrorDocuments \n");
+	fwrite($fp, "ErrorDocument 400 ". $installURL."/errorcode.php?error=400 \n");
+	fwrite($fp, "ErrorDocument 401 ". $installURL."/errorcode.php?error=401 \n");
+	fwrite($fp, "ErrorDocument 402 ". $installURL."/errorcode.php?error=402 \n");
+	fwrite($fp, "ErrorDocument 403 ". $installURL."/errorcode.php?error=403 \n");
+	fwrite($fp, "ErrorDocument 404 ". $installURL."/errorcode.php?error=404 \n");
+	fwrite($fp, "ErrorDocument 405 ". $installURL."/errorcode.php?error=405 \n");
+	fwrite($fp, "ErrorDocument 406 ". $installURL."/errorcode.php?error=406 \n");
+	fwrite($fp, "ErrorDocument 407 ". $installURL."/errorcode.php?error=407 \n");
+	fwrite($fp, "ErrorDocument 408 ". $installURL."/errorcode.php?error=408 \n");
+	fwrite($fp, "ErrorDocument 409 ". $installURL."/errorcode.php?error=409 \n");
+	fwrite($fp, "ErrorDocument 410 ". $installURL."/errorcode.php?error=410 \n");
+	fwrite($fp, "ErrorDocument 411 ". $installURL."/errorcode.php?error=411 \n");
+	fwrite($fp, "ErrorDocument 412 ". $installURL."/errorcode.php?error=412 \n");
+	fwrite($fp, "ErrorDocument 413 ". $installURL."/errorcode.php?error=413 \n");
+	fwrite($fp, "ErrorDocument 414 ". $installURL."/errorcode.php?error=414 \n");
+	fwrite($fp, "ErrorDocument 500 ". $installURL."/errorcode.php?error=500 \n");
+	fwrite($fp, "ErrorDocument 501 ". $installURL."/errorcode.php?error=501 \n");
+	fwrite($fp, "ErrorDocument 502 ". $installURL."/errorcode.php?error=502 \n");
+	fwrite($fp, "ErrorDocument 503 ". $installURL."/errorcode.php?error=503 \n");
+	fwrite($fp, "ErrorDocument 504 ". $installURL."/errorcode.php?error=504 \n");
+	fwrite($fp, "ErrorDocument 505 ". $installURL."/errorcode.php?error=505 \n");
+	fclose($fp);
+	if ($put) {
+		@chmod("../.htaccess", 0644);
+	}
+
+
+
 	
 		/* mysql_users */
 		$statement = $pdo->prepare($mysql_users);
@@ -498,3 +530,10 @@ foreach($templates as $template) {
 </div>
 </body>
 </html>
+<?php 
+// TODO: Add PHPVersion check
+// TODO: Add bycrypt() check
+// TODO: Add sessions check
+// TODO: Add cookies check
+// TODO: Add validate the admin emails
+?>

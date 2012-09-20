@@ -1,5 +1,5 @@
 # Project BlackHawk #
-Version 0.2.0 RC3   
+Version 0.2.0 RC4   
 [![Build Status](https://secure.travis-ci.org/chriscct7/Project-BlackHawk.png)](http://travis-ci.org/chriscct7/Project-BlackHawk)
 
 ## Program Description ##
@@ -64,7 +64,10 @@ Project BlackHawk is available under the terms and conditions of the
 (coming soon).
 Please see license.txt for full licensing terms and conditions.
 
+## Code Standards: ##
++ JavaDoc style PHPDocumenter2 function and class commenting
++ PSR-2 compliant
+
 ## Credits ##
 - Project BlackHawk is (c) Chris Christoff, James Stephens, Steve Curry, and Stetson Gafford.
-- Icons are partially taken from the Oxygen iconset.
 - Full credits in the credits.txt file.
