@@ -1,7 +1,10 @@
 <?php
-/*
- * Garage Class
- */
+
+/**
+  * @author My Name
+  * @author My Name <my.name@example.com>
+  */
+
 class Garage {
 	// no other garage in use
 	public function installgaragetable($name, $rolesallowed,$floors){

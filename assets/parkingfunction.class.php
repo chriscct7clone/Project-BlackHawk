@@ -2,7 +2,7 @@
 /*
  * Parking Services Class
  */
-class Config {
+class Parkingsensors {
 	// no other garage in use
 	public function addfirstgarage($name, $rolesallowed, ){
 	}

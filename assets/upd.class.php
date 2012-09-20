@@ -2,7 +2,7 @@
 /*
  * UPD Class
  */
-class Config {
+class UPD {
 	// no other garage in use
 	public function addfirstgarage($name, $rolesallowed, ){
 	}

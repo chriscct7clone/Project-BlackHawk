@@ -2,7 +2,7 @@
 /*
  * Sensors Class
  */
-class Config {
+class Sensors {
 	// no other garage in use
 	public function addfirstgarage($name, $rolesallowed, ){
 	}
