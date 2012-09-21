@@ -5,11 +5,9 @@
   * @author My Name <my.name@example.com>
   */
 
-class Garage {
+class garage {
 	// no other garage in use
 	public function installgaragetable($name, $rolesallowed,$floors){
-		require_once('config.inc.php');
-		require_once("database.class.php");
 		/* Start an instance of the Database Class */
 		$database = new database();
 		//TODO: STRreplace name
