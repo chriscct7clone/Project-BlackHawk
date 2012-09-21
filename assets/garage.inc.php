@@ -10,6 +10,6 @@ require_once("database.class.php");
 require_once("garage.class.php");
 /* Start an instance of the Database Class */
 $database = new database();
-/* Create an instance of the garage Class */
+/* Create an instance of the Garage Class */
 $garage = new garage();
 ?>
