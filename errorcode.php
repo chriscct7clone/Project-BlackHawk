@@ -26,9 +26,8 @@ function print_error_page()
   208 => 'Already Reported (WebDAV; RFC 5842)',
   226 => 'IM Used',
   269 => 'Call Back Later',
-  300 => 'Multiple Choices',
   /* Redirection Codes */ 
-  300 => '',
+  300 => 'Multiple Choices',
   301 => 'Moved Permanently',
   302 => 'Found',
   303 => 'See Other',

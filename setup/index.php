@@ -230,7 +230,6 @@ $mysql_garage_by_uid = 'CREATE TABLE IF NOT EXISTS `garage_by_uid` (
   `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`uid`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;';
-	// TODO: Add all errorcode values here!
 	$fp = fopen("../.htaccess", "a");
 	fwrite($fp, "\n\n# ErrorDocuments \n");
 	fwrite($fp, "ErrorDocument 400 ". $installURL."/errorcode.php?error=400 \n");
@@ -248,12 +247,43 @@ $mysql_garage_by_uid = 'CREATE TABLE IF NOT EXISTS `garage_by_uid` (
 	fwrite($fp, "ErrorDocument 412 ". $installURL."/errorcode.php?error=412 \n");
 	fwrite($fp, "ErrorDocument 413 ". $installURL."/errorcode.php?error=413 \n");
 	fwrite($fp, "ErrorDocument 414 ". $installURL."/errorcode.php?error=414 \n");
+	fwrite($fp, "ErrorDocument 415 ". $installURL."/errorcode.php?error=414 \n");
+	fwrite($fp, "ErrorDocument 416 ". $installURL."/errorcode.php?error=416 \n");
+	fwrite($fp, "ErrorDocument 417 ". $installURL."/errorcode.php?error=417 \n");
+	fwrite($fp, "ErrorDocument 418 ". $installURL."/errorcode.php?error=418 \n");
+	fwrite($fp, "ErrorDocument 420 ". $installURL."/errorcode.php?error=420 \n");
+	fwrite($fp, "ErrorDocument 422 ". $installURL."/errorcode.php?error=422 \n");
+	fwrite($fp, "ErrorDocument 423 ". $installURL."/errorcode.php?error=423 \n");
+	fwrite($fp, "ErrorDocument 424 ". $installURL."/errorcode.php?error=424 \n");
+	fwrite($fp, "ErrorDocument 425 ". $installURL."/errorcode.php?error=425 \n");
+	fwrite($fp, "ErrorDocument 426 ". $installURL."/errorcode.php?error=426 \n");
+	fwrite($fp, "ErrorDocument 428 ". $installURL."/errorcode.php?error=428 \n");
+	fwrite($fp, "ErrorDocument 429 ". $installURL."/errorcode.php?error=429 \n");
+	fwrite($fp, "ErrorDocument 431 ". $installURL."/errorcode.php?error=431 \n");
+	fwrite($fp, "ErrorDocument 444 ". $installURL."/errorcode.php?error=444 \n");
+	fwrite($fp, "ErrorDocument 449 ". $installURL."/errorcode.php?error=449 \n");
+	fwrite($fp, "ErrorDocument 450 ". $installURL."/errorcode.php?error=450 \n");
+	fwrite($fp, "ErrorDocument 451 ". $installURL."/errorcode.php?error=451 \n");
+	fwrite($fp, "ErrorDocument 494 ". $installURL."/errorcode.php?error=494 \n");
+	fwrite($fp, "ErrorDocument 495 ". $installURL."/errorcode.php?error=495 \n");
+	fwrite($fp, "ErrorDocument 496 ". $installURL."/errorcode.php?error=496 \n");
+	fwrite($fp, "ErrorDocument 497 ". $installURL."/errorcode.php?error=497 \n");
+	fwrite($fp, "ErrorDocument 499 ". $installURL."/errorcode.php?error=499 \n");
 	fwrite($fp, "ErrorDocument 500 ". $installURL."/errorcode.php?error=500 \n");
 	fwrite($fp, "ErrorDocument 501 ". $installURL."/errorcode.php?error=501 \n");
 	fwrite($fp, "ErrorDocument 502 ". $installURL."/errorcode.php?error=502 \n");
 	fwrite($fp, "ErrorDocument 503 ". $installURL."/errorcode.php?error=503 \n");
 	fwrite($fp, "ErrorDocument 504 ". $installURL."/errorcode.php?error=504 \n");
 	fwrite($fp, "ErrorDocument 505 ". $installURL."/errorcode.php?error=505 \n");
+	fwrite($fp, "ErrorDocument 506 ". $installURL."/errorcode.php?error=506 \n");
+	fwrite($fp, "ErrorDocument 507 ". $installURL."/errorcode.php?error=507 \n");
+	fwrite($fp, "ErrorDocument 508 ". $installURL."/errorcode.php?error=508 \n");
+	fwrite($fp, "ErrorDocument 509 ". $installURL."/errorcode.php?error=509 \n");
+	fwrite($fp, "ErrorDocument 510 ". $installURL."/errorcode.php?error=510 \n");
+	fwrite($fp, "ErrorDocument 511 ". $installURL."/errorcode.php?error=511 \n");
+	fwrite($fp, "ErrorDocument 598 ". $installURL."/errorcode.php?error=598 \n");
+	fwrite($fp, "ErrorDocument 599 ". $installURL."/errorcode.php?error=599 \n");
+	fwrite($fp, "ErrorDocument 999 ". $installURL."/errorcode.php?error=999 \n");
 	fclose($fp);
 	@chmod("../.htaccess", 0644);	
 		
