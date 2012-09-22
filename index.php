@@ -4,10 +4,7 @@ if(!file_exists('assets/config.inc.php')) {
 	echo '<a href="setup/">Please install the parking system first!</a>';
 } else {
 /*
-Below is the code that handles the contents for the pages. I am handling it the way I am just because it was convinient for me when I 
-wrote the script to keep it ultra simple. Obviously this way of having PHP send the entire contents of the page to the site is not
-feasible for what we are doing, because you can't do asyc. calls this way. At some point, we will need to convert to using a dedicated
-a seperate file for the secure page 
+TODO: Finish Stage 2 Seperation
 */
 /* Include Code */
 include("assets/member.inc.php");
@@ -19,8 +16,8 @@ if(isset($_GET['action'])) {
 }
 if($action == 'secure') {
 	$member->LoggedIn();
-	$title   = 'Live Statistics';
-	$content =  '<meta http-equiv="refresh" content="2;url=test.php" />';
+	$title   = 'Redirecting';
+	$content =  '<meta http-equiv="refresh" content="2;url=redirect.php" /><p>Redirecting....</p>';
 } else {
 	$title   = 'Welcome';
 	$content =  'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.';
@@ -36,7 +33,7 @@ if($action == 'secure') {
 <body>
 <div id="wrapper" class="group">
 	<div id="header" class="group">
-		<h1 id="logo">BlackHawk Login System</h1>
+		<h1 id="logo">BlackHawk</h1>
 		<div id="user">
 		<?php if($member->sessionIsSet() == true) { 
 			$user = $member->data();

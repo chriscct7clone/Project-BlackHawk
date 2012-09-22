@@ -1,5 +1,18 @@
 <?php
 include("assets/member.inc.php");
+/* TODO: Redirect
+if ($role=admin)
+redirect to...
+else if ($role=police)
+redirect to...
+else //role is student
+redirect to...
+
+On each, we need to check their cookie and then if not correct role, redirect them back to this.
+*/
+
+
+// TODO: User should be logged in on this page
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -11,9 +24,9 @@ include("assets/member.inc.php");
 <body>
 <div id="wrapper" class="group">
 	<div id="header" class="group">
-		<h1 id="logo">BlackHawk Login System</h1>
+		<h1 id="logo">BlackHawk</h1>
 		<div id="user">
-		<?php if($member->sessionIsSet() == true) { 
+		<?php 
 			$user = $member->data();
 		?>
 			<div id="user-info">Hello, <?php echo $user->username; ?></div>
@@ -21,18 +34,13 @@ include("assets/member.inc.php");
 				<li><a href="member.php?action=settings">Settings</a></li>
 				<li><a href="member.php?action=logout">Logout</a></li>
 			</ul>
-		<?php } else { ?>
-			<div id="user-info">Hello, Guest</div>
-			<ul id="user-ops">
-				<li><a href="member.php?action=login">Login</a></li>
-				<li><a href="member.php?action=register">Register</a></li>
-			</ul>
-		<?php } ?>
 		</div>
 	</div>
 	<ul id="navigation" class="group">
 		<li><a href="index.php">Index</a></li>
-		<li><a href="index.php?action=secure">Secure Page</a></li>
+		<li><a href="index.php?action=secure">Garage Status</a></li>
+		<li><a href="index.php?action=secure">Find My Car</a></li>
+		<li><a href="index.php?action=secure">Settings</a></li>
 	</ul>
 	<div id="body" class="group">
 <form name="register" action="" method="post">
@@ -59,6 +67,6 @@ include("assets/member.inc.php");
 </body>
 </html>
 <?php
-
+// interpret POST
 
 ?>
