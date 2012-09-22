@@ -115,7 +115,10 @@ if(isset($_POST['setup'])) {
 	if($notice->errorsExist() == false) {
 		$showForm = false;
 
-		
+		$installURL = "http://" . $_SERVER['HTTP_HOST'] . dirname($_SERVER['SCRIPT_NAME']);
+		$save= $installURL;
+		$str = str_replace( '/setup', '', $save ); //remove /setup/
+		$installURL= $str ;
 		//Create Config File
 		if($config_handle = fopen('../assets/config.inc.php', 'w')) {
 			$config_data = '<?php
@@ -227,7 +230,6 @@ $mysql_garage_by_uid = 'CREATE TABLE IF NOT EXISTS `garage_by_uid` (
   `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`uid`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;';
-
 	// TODO: Add all errorcode values here!
 	$fp = fopen("../.htaccess", "a");
 	fwrite($fp, "\n\n# ErrorDocuments \n");
@@ -253,13 +255,8 @@ $mysql_garage_by_uid = 'CREATE TABLE IF NOT EXISTS `garage_by_uid` (
 	fwrite($fp, "ErrorDocument 504 ". $installURL."/errorcode.php?error=504 \n");
 	fwrite($fp, "ErrorDocument 505 ". $installURL."/errorcode.php?error=505 \n");
 	fclose($fp);
-	if ($put) {
-		@chmod("../.htaccess", 0644);
-	}
-
-
-
-	
+	@chmod("../.htaccess", 0644);	
+		
 		/* mysql_users */
 		$statement = $pdo->prepare($mysql_users);
 		if($statement->execute()){

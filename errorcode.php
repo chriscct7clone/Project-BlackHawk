@@ -112,7 +112,7 @@ function print_error_page()
   205 => "The server successfully processed the request, but is not returning any content. Unlike a 204 response, this response requires that the requester reset the document view.",
   206 => "The server is delivering only part of the resource due to a range header sent by the client. The range header is used by tools like wget to enable resuming of interrupted downloads, or split a download into multiple simultaneous streams.",
   207 => "The message body that follows is an XML message and can contain a number of separate response codes, depending on how many sub-requests were made.",
-  208 => "The members of a DAV binding have already been enumerated in a previous reply to this request, and are not being included again."
+  208 => "The members of a DAV binding have already been enumerated in a previous reply to this request, and are not being included again.",
   226 => "The server has fulfilled a GET request for the resource, and the response is a representation of the result of one or more instance-manipulations applied to the current instance.",
   269 => "The server has received the request and needs time to process it asynchronously. The client should make a corresponding GET request again later. The server may specify this URI and callback timestamp with the X-Callback-At and X-Callback-In headers, respectively.",
   /* Redirection Codes */ 
@@ -201,7 +201,7 @@ function print_error_page()
   
   // if 404 return back to previous page
   if ($sc == 404){
-  // TO DO: add redirect
+  // TODO: add redirect
   }
  
   // Check range of code or issue 500

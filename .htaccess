@@ -12,10 +12,6 @@ php_value register_globals off
 <Files ~ "^\.(htaccess|htpasswd)$">
 deny from all
 </Files>
-<Directory ~ "\documentation">
-Order allow,deny
-Deny from all
-</Directory>
 AddType application/x-httpd-php .html
 
 # Define homepage as index.php

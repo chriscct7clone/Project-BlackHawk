@@ -503,7 +503,25 @@ class member {
 		$timestamp = date("Y-m-d H:i:s", time());
 		$database->query('INSERT INTO users_logs(userid, action, time, ip) VALUES(:userid, :action, :time, :ip)', array(':userid' => $userid, ':action' => $action, ':time' => $timestamp, ':ip' => $ip));
 	}
-	
+		/*
+     * Combo Validation
+	 *
+	 * Type of function: Dummy
+	 *
+	 * Purpose: Checks PIN/UID combo against FGCU Database to see if valid combo
+	 *
+	 * Input: $UID, $PIN
+	 *
+	 * Output: true (bool) if valid, else false (bool)
+	 *
+	 * Created in Version: 0.2.0
+	 *
+	 * Last Modified: 9/15/2012, by Chris Christoff
+	 */             
+	public function combovalidation($username, $password){
+	 // TODO: Check against a dummy DB, that is made manually by SQL import?
+	 return true;
+	 }
 	/*
 	 * Member Data
 	 *
@@ -601,7 +619,7 @@ class member {
 				$notice->add('error', 'Please enter a password');
 			}
 			// Dummy check against DB function
-			if (combovalidation($username, $password) == false)
+			if ($this->combovalidation($username, $password) == false)
 			{
 			$notice->add('error', 'Not a valid UID/PIN combo');
 			}
@@ -793,25 +811,7 @@ class member {
 		/* Return data */
 		return $notice->report() . $data;
 	}
-	/*
-     * Combo Validation
-	 *
-	 * Type of function: Dummy
-	 *
-	 * Purpose: Checks PIN/UID combo against FGCU Database to see if valid combo
-	 *
-	 * Input: $UID, $PIN
-	 *
-	 * Output: true (bool) if valid, else false (bool)
-	 *
-	 * Created in Version: 0.2.0
-	 *
-	 * Last Modified: 9/15/2012, by Chris Christoff
-	 */
-	 combovalidation($username, $password){
-	 // TODO: Check against a dummy DB, that is made manually by SQL import?
-	 return true;
-	 }
+
 	/*
 	 * Random String
 	 * 
