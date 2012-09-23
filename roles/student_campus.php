@@ -3,6 +3,8 @@ include("../assets/member.inc.php");
 
 // TODO: On each, we need to check their cookie and then if not correct role, redirect them back to this.
 // TODO: User should be logged in on this page
+$title="test";// temp to prevent PHP warnings from being thrown
+$username="test";
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
