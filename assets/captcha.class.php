@@ -14,7 +14,7 @@
   * @author  Chris Christoff <chris@futuregencode.com.com>
   *
   * @since 0.2
-  *
+  * @package BlackHawk
   * @param int    $example  This is an example function/method parameter description.
   * @param string $example2 This is a second example.
   */
