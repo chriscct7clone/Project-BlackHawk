@@ -9,6 +9,10 @@
 config.inc.php
 assets/config.inc.php
 
+#Editor project files
+*.sublime-project
+*.sublime-workspace
+
 # Compiled source #
 ###################
 *.com
