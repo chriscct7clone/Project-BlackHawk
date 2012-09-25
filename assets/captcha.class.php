@@ -19,7 +19,14 @@
   * @param string $example2 This is a second example.
   */
 class captcha {
-	/* Display Captcha */
+/**
+ * Creates a Captcha image
+ *
+ * @param  integer    $width  Dimension param
+ * @param  integer    $width  Dimension param
+ * @param  integer    $width  Dimension param
+ * @return image
+ */ 
 	public function display($width, $height, $text) {
 			require_once("garage.php");
 		/* Create Image */
