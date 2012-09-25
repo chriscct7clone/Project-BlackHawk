@@ -74,7 +74,7 @@
       </method>
     </class>
   </file>
-  <file path="assets/config.class.php" hash="fcad9b6844e19d2d1d2102f05284ed9e" package="BlackHawk\Internal Functions">
+  <file path="assets/config.class.php" hash="cc77ae3c6a5bf1a90d9c0fe0c82515ab" package="BlackHawk\Internal Functions">
     <docblock line="2">
       <description><![CDATA[Reads the Config file]]></description>
       <long-description><![CDATA[<p>This file reads the config.inc.class file cread during setup</p>
@@ -108,10 +108,24 @@
       <property final="false" static="true" visibility="public" line="37" namespace="global" package="Default">
         <name>$confArray</name>
         <default><![CDATA[]]></default>
+        <docblock line="32">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="32" name="var" description="Used to store all the configs" type="\$configArray">
+            <type by_reference="false">\$configArray</type>
+          </tag>
+        </docblock>
       </property>
       <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="45" package="BlackHawk\Internal Functions">
         <name>read</name>
         <full_name>read</full_name>
+        <docblock line="38">
+          <description><![CDATA[Config Read function]]></description>
+          <long-description><![CDATA[<p>Reads the config value from the $confArray</p>]]></long-description>
+          <tag line="38" name="param" description="the key in the array" type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
         <argument line="45">
           <name>$name</name>
           <default><![CDATA[]]></default>
@@ -121,6 +135,16 @@
       <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="56" package="BlackHawk\Internal Functions">
         <name>write</name>
         <full_name>write</full_name>
+        <docblock line="48">
+          <description><![CDATA[Config Write function]]></description>
+          <long-description><![CDATA[<p>Writes data to the $confArray</p>]]></long-description>
+          <tag line="48" name="param" description="the key in the array" type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="48" name="param" description="the value of the key in the array" type="string" variable="$value">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
         <argument line="56">
           <name>$name</name>
           <default><![CDATA[]]></default>
@@ -133,18 +157,13 @@
         </argument>
       </method>
     </class>
-    <parse_markers>
-      <error line="37" code="50018">No DocBlock was found for property $confArray</error>
-      <error line="45" code="50010">No DocBlock was found for method read()</error>
-      <error line="56" code="50010">No DocBlock was found for method write()</error>
-    </parse_markers>
   </file>
   <file path="assets/css/index.php" hash="8fc8b6b3746ffcb5b9ba53bb4f199600" package="Default">
     <parse_markers>
       <error line="0" code="50007">No page-level DocBlock was found in file assets/css/index.php</error>
     </parse_markers>
   </file>
-  <file path="assets/database.class.php" hash="fe2736e90d81bf6b241997199c76293a" package="BlackHawk\Internal Functions">
+  <file path="assets/database.class.php" hash="6abfe2c560d110bfaef8c53117780b18" package="BlackHawk\Internal Functions">
     <docblock line="2">
       <description><![CDATA[Implements Database Connections]]></description>
       <long-description><![CDATA[<p>This file defines our PDO connections</p>
@@ -179,18 +198,50 @@
       <property final="false" static="false" visibility="public" line="37" namespace="global" package="Default">
         <name>$pdo</name>
         <default><![CDATA[null]]></default>
+        <docblock line="33">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="33" name="var" description="A reference to the PDO instance; Also used for connecions via PDO." type="\$pdo">
+            <type by_reference="false">\$pdo</type>
+          </tag>
+        </docblock>
       </property>
       <property final="false" static="false" visibility="public" line="43" namespace="global" package="Default">
         <name>$statement</name>
         <default><![CDATA[null]]></default>
+        <docblock line="39">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="39" name="var" description="Used to contain query for prepared statments; Also used for value binding &amp; execution" type="\$statement">
+            <type by_reference="false">\$statement</type>
+          </tag>
+        </docblock>
       </property>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="50" package="BlackHawk\Internal Functions">
         <name>__construct</name>
         <full_name>__construct</full_name>
+        <docblock line="45">
+          <description><![CDATA[Database Constructor]]></description>
+          <long-description><![CDATA[<p>This method is used to create a new database object with a connection to a datbase</p>]]></long-description>
+        </docblock>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="71" package="BlackHawk\Internal Functions">
         <name>query</name>
         <full_name>query</full_name>
+        <docblock line="62">
+          <description><![CDATA[Database Query]]></description>
+          <long-description><![CDATA[<p>This method is used to create a new database prepared query</p>]]></long-description>
+          <tag line="62" name="param" description="The prepared statement query to the database" type="string" variable="$query">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="62" name="param" description="All the variables to bind to the prepared statement" type="array|string" variable="$bind">
+            <type by_reference="false">array</type>
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="62" name="return" description="the executed string" type="\return">
+            <type by_reference="false">\return</type>
+          </tag>
+        </docblock>
         <argument line="71">
           <name>$query</name>
           <default><![CDATA[]]></default>
@@ -209,10 +260,7 @@
       </method>
     </class>
     <parse_markers>
-      <error line="37" code="50018">No DocBlock was found for property $pdo</error>
-      <error line="43" code="50018">No DocBlock was found for property $statement</error>
-      <error line="50" code="50010">No DocBlock was found for method __construct()</error>
-      <error line="71" code="50010">No DocBlock was found for method query()</error>
+      <error line="62" code="50015">Argument $fetch is missing from the Docblock of query()</error>
     </parse_markers>
   </file>
   <file path="assets/email_templates/index.php" hash="8fc8b6b3746ffcb5b9ba53bb4f199600" package="Default">
@@ -269,7 +317,7 @@
       <error line="0" code="50007">No page-level DocBlock was found in file assets/index.php</error>
     </parse_markers>
   </file>
-  <file path="assets/mailer.class.php" hash="963a378d2665f30a15db394c711ba54d" package="BlackHawk\Mail">
+  <file path="assets/mailer.class.php" hash="13425abdfe87f6de548ac2623419de50" package="BlackHawk\Mail">
     <docblock line="2">
       <description><![CDATA[Creates Mail Class]]></description>
       <long-description><![CDATA[<p>This file creates functions used internally for garages</p>
@@ -304,14 +352,35 @@
       <property final="false" static="false" visibility="public" line="39" namespace="global" package="Default">
         <name>$email_master</name>
         <default><![CDATA[]]></default>
+        <docblock line="34">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="34" name="var" description="The Master E-Mail" type="\$email_master">
+            <type by_reference="false">\$email_master</type>
+          </tag>
+        </docblock>
       </property>
       <property final="false" static="false" visibility="public" line="45" namespace="global" package="Default">
         <name>$template</name>
         <default><![CDATA[]]></default>
+        <docblock line="40">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="40" name="var" description="Stores template choice" type="\$template">
+            <type by_reference="false">\$template</type>
+          </tag>
+        </docblock>
       </property>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="54" package="BlackHawk\Mail">
         <name>__construct</name>
         <full_name>__construct</full_name>
+        <docblock line="47">
+          <description><![CDATA[__construct]]></description>
+          <long-description><![CDATA[<p>Sets template</p>]]></long-description>
+          <tag line="47" name="param" description="Sets template" type="string" variable="$template">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
         <argument line="54">
           <name>$email_master</name>
           <default><![CDATA[]]></default>
@@ -326,6 +395,16 @@
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="67" package="BlackHawk\Mail">
         <name>genTemplate</name>
         <full_name>genTemplate</full_name>
+        <docblock line="59">
+          <description><![CDATA[genTemplate]]></description>
+          <long-description><![CDATA[<p>Parsers the template</p>]]></long-description>
+          <tag line="59" name="param" description="Subject of the email" type="string" variable="$subject">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="59" name="param" description="Content of the email" type="string" variable="$content">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
         <argument line="67">
           <name>$subject</name>
           <default><![CDATA[]]></default>
@@ -340,6 +419,22 @@
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="98" package="BlackHawk\Mail">
         <name>mail</name>
         <full_name>mail</full_name>
+        <docblock line="88">
+          <description><![CDATA[mail]]></description>
+          <long-description><![CDATA[<p>Mails inputed data</p>]]></long-description>
+          <tag line="88" name="param" description="The email reciver" type="string" variable="$email">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="88" name="param" description="Subject of the email" type="string" variable="$subject">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="88" name="param" description="Content of the email" type="string" variable="$content">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="88" name="return" description="$email Sends email" type="\email">
+            <type by_reference="false">\email</type>
+          </tag>
+        </docblock>
         <argument line="98">
           <name>$email</name>
           <default><![CDATA[]]></default>
@@ -358,11 +453,8 @@
       </method>
     </class>
     <parse_markers>
-      <error line="39" code="50018">No DocBlock was found for property $email_master</error>
-      <error line="45" code="50018">No DocBlock was found for property $template</error>
-      <error line="54" code="50010">No DocBlock was found for method __construct()</error>
-      <error line="67" code="50010">No DocBlock was found for method genTemplate()</error>
-      <error line="98" code="50010">No DocBlock was found for method mail()</error>
+      <error line="47" code="50014">Name of argument $email_master does not match with the DocBlock's name $template in __construct()</error>
+      <error line="47" code="50015">Argument $template is missing from the Docblock of __construct()</error>
     </parse_markers>
   </file>
   <file path="assets/member.class.php" hash="9919672a3b2d5b5d6e94a37faa76f925" package="Default">
