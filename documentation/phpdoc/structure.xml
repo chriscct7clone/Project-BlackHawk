@@ -158,7 +158,7 @@
       </method>
     </class>
   </file>
-  <file path="assets/css/index.php" hash="5fceb66d67662f5012cfc8abce659646" package="Default">
+  <file path="assets/css/index.php" hash="8e7825ad3c7f57b596b2d2d16657f58d" package="Default">
     <parse_markers>
       <error line="0" code="50007">No page-level DocBlock was found in file assets/css/index.php</error>
     </parse_markers>
@@ -263,12 +263,12 @@
       </method>
     </class>
   </file>
-  <file path="assets/email_templates/index.php" hash="5fceb66d67662f5012cfc8abce659646" package="Default">
+  <file path="assets/email_templates/index.php" hash="8e7825ad3c7f57b596b2d2d16657f58d" package="Default">
     <parse_markers>
       <error line="0" code="50007">No page-level DocBlock was found in file assets/email_templates/index.php</error>
     </parse_markers>
   </file>
-  <file path="assets/fonts/index.php" hash="5fceb66d67662f5012cfc8abce659646" package="Default">
+  <file path="assets/fonts/index.php" hash="8e7825ad3c7f57b596b2d2d16657f58d" package="Default">
     <parse_markers>
       <error line="0" code="50007">No page-level DocBlock was found in file assets/fonts/index.php</error>
     </parse_markers>
@@ -307,12 +307,12 @@
       <name>garage.class.php</name>
     </include>
   </file>
-  <file path="assets/images/index.php" hash="5fceb66d67662f5012cfc8abce659646" package="Default">
+  <file path="assets/images/index.php" hash="8e7825ad3c7f57b596b2d2d16657f58d" package="Default">
     <parse_markers>
       <error line="0" code="50007">No page-level DocBlock was found in file assets/images/index.php</error>
     </parse_markers>
   </file>
-  <file path="assets/index.php" hash="5fceb66d67662f5012cfc8abce659646" package="Default">
+  <file path="assets/index.php" hash="8e7825ad3c7f57b596b2d2d16657f58d" package="Default">
     <parse_markers>
       <error line="0" code="50007">No page-level DocBlock was found in file assets/index.php</error>
     </parse_markers>
@@ -1751,7 +1751,7 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
       <error line="0" code="50007">No page-level DocBlock was found in file debug/error_test_mysql.php</error>
     </parse_markers>
   </file>
-  <file path="debug/index.php" hash="5fceb66d67662f5012cfc8abce659646" package="Default">
+  <file path="debug/index.php" hash="8e7825ad3c7f57b596b2d2d16657f58d" package="Default">
     <parse_markers>
       <error line="0" code="50007">No page-level DocBlock was found in file debug/index.php</error>
     </parse_markers>
@@ -1839,7 +1839,7 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
       <error line="0" code="50007">No page-level DocBlock was found in file redirect.php</error>
     </parse_markers>
   </file>
-  <file path="roles/index.php" hash="5fceb66d67662f5012cfc8abce659646" package="Default">
+  <file path="roles/index.php" hash="8e7825ad3c7f57b596b2d2d16657f58d" package="Default">
     <parse_markers>
       <error line="0" code="50007">No page-level DocBlock was found in file roles/index.php</error>
     </parse_markers>
@@ -1940,10 +1940,22 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
       <error line="0" code="50007">No page-level DocBlock was found in file roles/visitor.php</error>
     </parse_markers>
   </file>
-  <file path="setup/css/index.php" hash="5fceb66d67662f5012cfc8abce659646" package="Default">
-    <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file setup/css/index.php</error>
-    </parse_markers>
+  <file path="setup/css/index.php" hash="cea2ab9624785b6333c83baf01836512" package="BlackHawk\Security">
+    <docblock line="2">
+      <description><![CDATA[Security Index Page]]></description>
+      <long-description><![CDATA[<p>This file prevents directory listing</p>
+
+<p>PHP version 5.2.17 or higher</p>
+
+<p>LICENSE: TBD</p>]]></long-description>
+      <tag line="2" name="package" description="BlackHawk"/>
+      <tag line="2" name="subpackage" description="Security"/>
+      <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
+      <tag line="2" name="copyright" description="2012 Project BlackHawk"/>
+      <tag line="2" name="license" description="http://www.futuregencode.com/blackhawk/404  License 1.00"/>
+      <tag line="2" name="version" description="0.3.0"/>
+      <tag line="2" name="since" description="File available since Release 0.3.0"/>
+    </docblock>
   </file>
   <file path="setup/index.php" hash="727c4e4be2b3c3aa010ebf614758836c" package="Default">
     <include line="3" type="Require Once" package="Default">
@@ -1974,7 +1986,7 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
       <error line="437" code="50009">No DocBlock was found for function \rrmdir()</error>
     </parse_markers>
   </file>
-  <file path="tests/index.php" hash="5fceb66d67662f5012cfc8abce659646" package="Default">
+  <file path="tests/index.php" hash="8e7825ad3c7f57b596b2d2d16657f58d" package="Default">
     <parse_markers>
       <error line="0" code="50007">No page-level DocBlock was found in file tests/index.php</error>
     </parse_markers>
@@ -1993,6 +2005,7 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
     <package name="Garage" full_name="BlackHawk\Garage"/>
     <package name="Internal Functions" full_name="BlackHawk\Internal Functions"/>
     <package name="Mail" full_name="BlackHawk\Mail"/>
+    <package name="Security" full_name="BlackHawk\Security"/>
   </package>
   <package name="Default" full_name="Default"/>
   <namespace name="global" full_name="global"/>
