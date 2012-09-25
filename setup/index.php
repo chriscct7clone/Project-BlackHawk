@@ -66,7 +66,7 @@ if(isset($_POST['setup'])) {
 			$notice->add('error', 'Database conncetion fail!<br />Make sure your database information is correct');
 		}
 	}
-	$bcrypt_rounds=intval($bcrypt_rounds)
+	$bcrypt_rounds=intval($bcrypt_rounds);
 	if(empty($bcrypt_rounds)) {
 		$bcrypt_rounds = 12;
 	}
