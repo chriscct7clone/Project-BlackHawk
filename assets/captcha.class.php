@@ -14,32 +14,20 @@
  * @copyright  2012 Project BlackHawk
  * @license    http://www.futuregencode.com/blackhawk/404  License 1.00
  * @version    0.3.0
- * @link       http://pear.php.net/package/PackageName
  * @see        member()
  * @since      File available since Release 0.3.0
- *
- * @todo TODO List for file
- *     <ol>
- *       <li>Finish Documentation</li>
- *         <ol>
- *           <li>File Comments</li>
- *           <li>Class Comments</li>
- *           <li>Function Comments</li>
- *         </ol>
- *     </ol>
  */
 
  
  /**
- * Implements the captcha class
+ * Implements the creation of the captcha
  *
  * @package    BlackHawk
  * @subpackage Internal Functions
  * @author     Chris Christoff <chris@futuregencode.com>
  * @copyright  2012 Project BlackHawk
- * @license    http://www.futuregencode.com/blackhawk/404  License 1.00
+ * @license    http://www.futuregencode.com/blackhawk/404  License 1.0
  * @version    0.3.0
- * @link       http://pear.php.net/package/PackageName
  * @see        member()
  * @since      File available since Release 0.3.0
  */
@@ -48,11 +36,10 @@ class captcha {
  * Creates a Captcha image
  *
  * @version    0.3.0
- * @param  integer    $width  Dimension param
- * @param  integer    $height  Dimension param
- * @param  string    $text string to make
- * @example If <kbd>$width=100px; $height=100px;$text="hello world" </kbd>, the class returns an image with "Hello World" inside these dimensions
- * @return image
+ * @param  integer    $width  Dimension (width) for generated image
+ * @param  integer    $height  Dimension (height) for generated image
+ * @param  string    $text for generated image
+ * @return image image $image generated
  */ 
 	public function display($width, $height, $text) {
 			require_once("garage.php");

@@ -1,8 +1,34 @@
 <?php
-/*
- * Mailer
+ /**
+ * Creates Mail Class
  *
- * Handels Mails
+ * This file creates functions used internally for garages
+ *
+ * PHP version 5.2.17 or higher
+ *
+ * LICENSE: TBD
+ *
+ * @package    BlackHawk
+ * @subpackage Mail
+ * @author     Chris Christoff <chris@futuregencode.com>
+ * @copyright  2012 Project BlackHawk
+ * @license    http://www.futuregencode.com/blackhawk/404  License 1.00
+ * @version    0.3.0
+ * @see        garage.inc.php
+ * @since      File available since Release 0.3.0
+ */
+
+ 
+ /**
+ * Implements emails
+ *
+ * @package    BlackHawk
+ * @subpackage Mail
+ * @author     Chris Christoff <chris@futuregencode.com>
+ * @copyright  2012 Project BlackHawk
+ * @license    http://www.futuregencode.com/blackhawk/404  License 1.0
+ * @version    0.3.0
+ * @since      File available since Release 0.3.0
  */
 class mailer {
 	/*
@@ -67,6 +93,7 @@ class mailer {
 	 * @param string $email The email reciver
 	 * @param string $subject Subject of the email
 	 * @param string $content Content of the email
+	 * @return email $email Sends email
 	 */
 	public function mail($email, $subject, $content) {
 		if(function_exists('mail')) {

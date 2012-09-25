@@ -1,10 +1,33 @@
 <?php
-/*
- * Config Class
- * 
- * Used to write config information into a static var to be
- * used anywhere
+ /**
+ * Reads the Config file
+ *
+ * This file reads the config.inc.class file cread during setup
+ *
+ * PHP version 5.2.17 or higher
+ *
+ * LICENSE: TBD
+ *
+ * @package    BlackHawk
+ * @subpackage Internal Functions
+ * @author     Chris Christoff <chris@futuregencode.com>
+ * @copyright  2012 Project BlackHawk
+ * @license    http://www.futuregencode.com/blackhawk/404  License 1.00
+ * @version    0.3.0
+ * @since      File available since Release 0.3.0
  */
+ 
+ /**
+ * Implements method to grab stored config values
+ *
+ * @package    BlackHawk
+ * @subpackage Internal Functions
+ * @author     Chris Christoff <chris@futuregencode.com>
+ * @copyright  2012 Project BlackHawk
+ * @license    http://www.futuregencode.com/blackhawk/404  License 1.0
+ * @version    0.3.0
+ * @since      File available since Release 0.3.0
+ */ 
 class Config {
 	/*
 	 * @var $configArray
