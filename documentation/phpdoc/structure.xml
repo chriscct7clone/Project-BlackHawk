@@ -1,110 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project version="2.0.0a10" title="">
-  <file path="assets/captcha.class.php" hash="049a324f7f74a8ea7c5a23a2c254e752" package="PackageName">
+  <file path="assets/captcha.class.php" hash="6332bd464ccae3d913a5dfe609c9c308" package="BlackHawk">
     <docblock line="2">
-      <description><![CDATA[Short description for file]]></description>
-      <long-description><![CDATA[<p>Long description for file (if any)...</p>
+      <description><![CDATA[Creates Captcha Image]]></description>
+      <long-description><![CDATA[<p>This file creates the image for the captcha, as long as Captcha has been turned on during setup.</p>
 
-<p>PHP version 5</p>
+<p>PHP version 5.2.17 or higher</p>
 
-<p>LICENSE: This source file is subject to version 3.01 of the PHP license
-that is available through the world-wide-web at the following URI:
-http://www.php.net/license/3_01.txt.  If you did not receive a copy of
-the PHP License and are unable to obtain it through the web, please
-send a note to license@php.net so we can mail you a copy immediately.</p>]]></long-description>
-      <tag line="2" name="category" description="CategoryName"/>
-      <tag line="2" name="package" description="PackageName"/>
-      <tag line="2" name="author" description="Original Author &lt;author@example.com&gt;"/>
-      <tag line="2" name="author" description="Another Author &lt;another@example.com&gt;"/>
-      <tag line="2" name="copyright" description="1997-2005 The PHP Group"/>
-      <tag line="2" name="license" description="http://www.php.net/license/3_01.txt  PHP License 3.01"/>
+<p>LICENSE: TBD</p>]]></long-description>
+      <tag line="2" name="package" description="BlackHawk"/>
+      <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
+      <tag line="2" name="copyright" description="2012 Project BlackHawk"/>
+      <tag line="2" name="license" description="http://www.futuregencode.com/blackhawk/404  License 1.00"/>
       <tag line="2" name="version" description="SVN: $Id$"/>
       <tag line="2" name="link" description="http://pear.php.net/package/PackageName" link="http://pear.php.net/package/PackageName"/>
-      <tag line="2" name="see" description="\NetOther," refers="\NetOther,"/>
-      <tag line="2" name="since" description="File available since Release 1.2.0"/>
-      <tag line="2" name="deprecated" description="File deprecated in Release 2.0.0"/>
+      <tag line="2" name="see" description="\member()" refers="\member()"/>
+      <tag line="2" name="since" description="File available since Release 0.3.0"/>
     </docblock>
-    <include line="85" type="Require Once" package="Default">
+    <include line="44" type="Require Once" package="Default">
       <name>garage.php</name>
     </include>
-    <class final="false" abstract="false" namespace="global" line="75" package="PackageName">
+    <class final="false" abstract="false" namespace="global" line="34" package="BlackHawk">
       <extends/>
       <name>captcha</name>
       <full_name>\captcha</full_name>
-      <docblock line="29">
-        <description><![CDATA[An example of how to write code to PEAR's standards]]></description>
-        <long-description><![CDATA[<p>Docblock comments start with "/**" at the top.  Notice how the "/"
-lines up with the normal indenting and the asterisks on subsequent rows
-are in line with the first asterisk.  The last line of comment text
-should be immediately followed on the next line by the closing asterisk
-and slash and then the item you are commenting on should be on the next
-line below that.  Don't add extra lines.  Please put a blank line
-between paragraphs as well as between the end of the description and
-the start of the @tags.  Wrap comments before 80 columns in order to
-ease readability for a wide variety of users.</p>
-
-<p>Docblocks can only be used for programming constructs which allow them
-(classes, properties, methods, defines, includes, globals).  See the
-phpDocumentor documentation for more information.
-http://phpdoc.org/docs/HTMLSmartyConverter/default/phpDocumentor/tutorial_phpDocumentor.howto.pkg.html</p>
-
-<p>The Javadoc Style Guide is an excellent resource for figuring out
-how to say what needs to be said in docblock comments.  Much of what is
-written here is a summary of what is found there, though there are some
-cases where what's said here overrides what is said there.
-http://java.sun.com/j2se/javadoc/writingdoccomments/index.html#styleguide</p>
-
-<p>The first line of any docblock is the summary.  Make them one short
-sentence, without a period at the end.  Summaries for classes, properties
-and constants should omit the subject and simply state the object,
-because they are describing things rather than actions or behaviors.</p>
-
-<p>Below are the tags commonly used for classes. @category through @version
-are required.  The remainder should only be used when necessary.
-Please use them in the order they appear here.  phpDocumentor has
-several other tags available, feel free to use them.</p>]]></long-description>
-        <tag line="29" name="category" description="CategoryName"/>
-        <tag line="29" name="package" description="PackageName"/>
-        <tag line="29" name="author" description="Original Author &lt;author@example.com&gt;"/>
-        <tag line="29" name="author" description="Another Author &lt;another@example.com&gt;"/>
-        <tag line="29" name="copyright" description="1997-2005 The PHP Group"/>
-        <tag line="29" name="license" description="http://www.php.net/license/3_01.txt  PHP License 3.01"/>
-        <tag line="29" name="version" description="Release: @package_version@"/>
-        <tag line="29" name="link" description="http://pear.php.net/package/PackageName" link="http://pear.php.net/package/PackageName"/>
-        <tag line="29" name="see" description="\global\NetOther," refers="\global\NetOther,"/>
-        <tag line="29" name="since" description="Class available since Release 1.2.0"/>
-        <tag line="29" name="deprecated" description="Class deprecated in Release 2.0.0"/>
+      <docblock line="22">
+        <description><![CDATA[Implements the captcha class]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="22" name="package" description="BlackHawk"/>
+        <tag line="22" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
+        <tag line="22" name="copyright" description="2012 Project BlackHawk"/>
+        <tag line="22" name="license" description="http://www.futuregencode.com/blackhawk/404  License 1.00"/>
+        <tag line="22" name="version" description="SVN: $Id$"/>
+        <tag line="22" name="link" description="http://pear.php.net/package/PackageName" link="http://pear.php.net/package/PackageName"/>
+        <tag line="22" name="see" description="\global\member()" refers="\global\member()"/>
+        <tag line="22" name="since" description="File available since Release 0.3.0"/>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="84" package="PackageName">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="43" package="BlackHawk">
         <name>display</name>
         <full_name>display</full_name>
-        <docblock line="76">
+        <docblock line="35">
           <description><![CDATA[Creates a Captcha image]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="76" name="param" description="Dimension param" type="integer" variable="$width">
+          <tag line="35" name="param" description="Dimension param" type="integer" variable="$width">
             <type by_reference="false">integer</type>
           </tag>
-          <tag line="76" name="param" description="Dimension param" type="integer" variable="$height">
+          <tag line="35" name="param" description="Dimension param" type="integer" variable="$height">
             <type by_reference="false">integer</type>
           </tag>
-          <tag line="76" name="param" description="string to make" type="string" variable="$text">
+          <tag line="35" name="param" description="string to make" type="string" variable="$text">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="76" name="return" description="" type="\image">
+          <tag line="35" name="return" description="" type="\image">
             <type by_reference="false">\image</type>
           </tag>
         </docblock>
-        <argument line="84">
+        <argument line="43">
           <name>$width</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="84">
+        <argument line="43">
           <name>$height</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="84">
+        <argument line="43">
           <name>$text</name>
           <default><![CDATA[]]></default>
           <type/>
@@ -1838,10 +1799,10 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
       <error line="0" code="50007">No page-level DocBlock was found in file update.php</error>
     </parse_markers>
   </file>
+  <package name="BlackHawk" full_name="BlackHawk"/>
   <package name="Default" full_name="Default"/>
-  <package name="PackageName" full_name="PackageName"/>
   <namespace name="global" full_name="global"/>
   <marker count="30">todo</marker>
   <marker count="0">fixme</marker>
-  <deprecated count="2"/>
+  <deprecated count="0"/>
 </project>
