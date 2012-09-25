@@ -1,8 +1,23 @@
 <?php
-/*
-Captcha Class
-Optional: TRUE
-*/
+ /**
+  * This is the short description for a DocBlock.
+  *
+  * This is the long description for a DocBlock. This text may contain
+  * multiple lines and even some _markdown_.
+  *
+  * * Markdown style lists function too
+  * * Just try this out once
+  *
+  * The section after the long description contains the tags; which provide
+  * structured meta-data concerning the given element.
+  *
+  * @author  Chris Christoff <chris@futuregencode.com.com>
+  *
+  * @since 0.2
+  *
+  * @param int    $example  This is an example function/method parameter description.
+  * @param string $example2 This is a second example.
+  */
 class captcha {
 	/* Display Captcha */
 	public function display($width, $height, $text) {
