@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project version="2.0.0a10" title="">
-  <file path="assets/captcha.class.php" hash="10cd9e2da3b1d0a060aa181436c736df" package="Default">
-    <include line="24" type="Require Once" package="Default">
+  <file path="assets/captcha.class.php" hash="388df5696cdc33615e31cdc8675bae31" package="Default">
+    <include line="31" type="Require Once" package="Default">
       <name>garage.php</name>
     </include>
-    <class final="false" abstract="false" namespace="global" line="21" package="Default">
+    <class final="false" abstract="false" namespace="global" line="21" package="BlackHawk">
       <extends/>
       <name>captcha</name>
       <full_name>\captcha</full_name>
@@ -22,6 +22,7 @@ multiple lines and even some <em>markdown</em>.</p>
 structured meta-data concerning the given element.</p>]]></long-description>
         <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com.com&gt;"/>
         <tag line="2" name="since" description="0.2"/>
+        <tag line="2" name="package" description="BlackHawk"/>
         <tag line="2" name="param" description="This is an example function/method parameter description." type="int" variable="$example">
           <type by_reference="false">int</type>
         </tag>
@@ -29,20 +30,36 @@ structured meta-data concerning the given element.</p>]]></long-description>
           <type by_reference="false">string</type>
         </tag>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="23" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="30" package="BlackHawk">
         <name>display</name>
         <full_name>display</full_name>
-        <argument line="23">
+        <docblock line="22">
+          <description><![CDATA[Creates a Captcha image]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="22" name="param" description="Dimension param" type="integer" variable="$width">
+            <type by_reference="false">integer</type>
+          </tag>
+          <tag line="22" name="param" description="Dimension param" type="integer" variable="$width">
+            <type by_reference="false">integer</type>
+          </tag>
+          <tag line="22" name="param" description="Dimension param" type="integer" variable="$width">
+            <type by_reference="false">integer</type>
+          </tag>
+          <tag line="22" name="return" description="" type="\image">
+            <type by_reference="false">\image</type>
+          </tag>
+        </docblock>
+        <argument line="30">
           <name>$width</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="23">
+        <argument line="30">
           <name>$height</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="23">
+        <argument line="30">
           <name>$text</name>
           <default><![CDATA[]]></default>
           <type/>
@@ -51,7 +68,8 @@ structured meta-data concerning the given element.</p>]]></long-description>
     </class>
     <parse_markers>
       <error line="0" code="50007">No page-level DocBlock was found in file assets/captcha.class.php</error>
-      <error line="23" code="50010">No DocBlock was found for method display()</error>
+      <error line="22" code="50014">Name of argument $height does not match with the DocBlock's name $width in display()</error>
+      <error line="22" code="50014">Name of argument $text does not match with the DocBlock's name $width in display()</error>
     </parse_markers>
   </file>
   <file path="assets/config.class.php" hash="097992dcea104ef739692aacc5cf1253" package="Default">
@@ -1780,6 +1798,7 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
       <error line="0" code="50007">No page-level DocBlock was found in file update.php</error>
     </parse_markers>
   </file>
+  <package name="BlackHawk" full_name="BlackHawk"/>
   <package name="Default" full_name="Default"/>
   <namespace name="global" full_name="global"/>
   <marker count="30">todo</marker>
