@@ -1,27 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project version="2.0.0a10" title="">
-  <file path="assets/captcha.class.php" hash="c2169eedacbad3473dbbb0cdc0a4bbd5" package="Default">
-    <include line="9" type="Require Once" package="Default">
+  <file path="assets/captcha.class.php" hash="10cd9e2da3b1d0a060aa181436c736df" package="Default">
+    <include line="24" type="Require Once" package="Default">
       <name>garage.php</name>
     </include>
-    <class final="false" abstract="false" namespace="global" line="6" package="Default">
+    <class final="false" abstract="false" namespace="global" line="21" package="Default">
       <extends/>
       <name>captcha</name>
       <full_name>\captcha</full_name>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="8" package="Default">
+      <docblock line="2">
+        <description><![CDATA[This is the short description for a DocBlock.]]></description>
+        <long-description><![CDATA[<p>This is the long description for a DocBlock. This text may contain
+multiple lines and even some <em>markdown</em>.</p>
+
+<ul>
+<li>Markdown style lists function too</li>
+<li>Just try this out once</li>
+</ul>
+
+<p>The section after the long description contains the tags; which provide
+structured meta-data concerning the given element.</p>]]></long-description>
+        <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com.com&gt;"/>
+        <tag line="2" name="since" description="0.2"/>
+        <tag line="2" name="param" description="This is an example function/method parameter description." type="int" variable="$example">
+          <type by_reference="false">int</type>
+        </tag>
+        <tag line="2" name="param" description="This is a second example." type="string" variable="$example2">
+          <type by_reference="false">string</type>
+        </tag>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="23" package="Default">
         <name>display</name>
         <full_name>display</full_name>
-        <argument line="8">
+        <argument line="23">
           <name>$width</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="8">
+        <argument line="23">
           <name>$height</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="8">
+        <argument line="23">
           <name>$text</name>
           <default><![CDATA[]]></default>
           <type/>
@@ -30,8 +51,7 @@
     </class>
     <parse_markers>
       <error line="0" code="50007">No page-level DocBlock was found in file assets/captcha.class.php</error>
-      <error line="6" code="50000">No DocBlock was found for \captcha</error>
-      <error line="8" code="50010">No DocBlock was found for method display()</error>
+      <error line="23" code="50010">No DocBlock was found for method display()</error>
     </parse_markers>
   </file>
   <file path="assets/config.class.php" hash="097992dcea104ef739692aacc5cf1253" package="Default">
@@ -238,7 +258,7 @@
       <error line="71" code="50010">No DocBlock was found for method mail()</error>
     </parse_markers>
   </file>
-  <file path="assets/member.class.php" hash="6d2ead0fa48893533c034777a08f2016" package="Default">
+  <file path="assets/member.class.php" hash="9919672a3b2d5b5d6e94a37faa76f925" package="Default">
     <include line="35" type="Require Once" package="Default">
       <name>notice.class.php</name>
     </include>
@@ -279,142 +299,142 @@
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="136" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="134" package="Default">
         <name>intcheck</name>
         <full_name>intcheck</full_name>
-        <argument line="136">
+        <argument line="134">
           <name>$int</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="168" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="166" package="Default">
         <name>verify</name>
         <full_name>verify</full_name>
-        <argument line="168">
+        <argument line="166">
           <name>$password</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="168">
+        <argument line="166">
           <name>$existingHash</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="194" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="192" package="Default">
         <name>login</name>
         <full_name>login</full_name>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="314" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="312" package="Default">
         <name>LoggedIn</name>
         <full_name>LoggedIn</full_name>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="361" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="359" package="Default">
         <name>sessionIsSet</name>
         <full_name>sessionIsSet</full_name>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="402" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="400" package="Default">
         <name>logout</name>
         <full_name>logout</full_name>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="432" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="430" package="Default">
         <name>createNewCookie</name>
         <full_name>createNewCookie</full_name>
-        <argument line="432">
+        <argument line="430">
           <name>$id</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="456" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="454" package="Default">
         <name>deleteCookie</name>
         <full_name>deleteCookie</full_name>
-        <argument line="456">
+        <argument line="454">
           <name>$id</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="479" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="477" package="Default">
         <name>userLogger</name>
         <full_name>userLogger</full_name>
-        <argument line="479">
+        <argument line="477">
           <name>$userid</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="479">
+        <argument line="477">
           <name>$action</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="523" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="521" package="Default">
         <name>combovalidation</name>
         <full_name>combovalidation</full_name>
-        <argument line="523">
+        <argument line="521">
           <name>$username</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="523">
+        <argument line="521">
           <name>$password</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="532" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="530" package="Default">
         <name>data</name>
         <full_name>data</full_name>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="556" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="554" package="Default">
         <name>register</name>
         <full_name>register</full_name>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="822" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="820" package="Default">
         <name>randomString</name>
         <full_name>randomString</full_name>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="838" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="836" package="Default">
         <name>recoverPassword</name>
         <full_name>recoverPassword</full_name>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="923" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="921" package="Default">
         <name>changePassword</name>
         <full_name>changePassword</full_name>
-        <argument line="923">
+        <argument line="921">
           <name>$user</name>
           <default><![CDATA[null]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1001" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="999" package="Default">
         <name>changeEmail</name>
         <full_name>changeEmail</full_name>
-        <argument line="1001">
+        <argument line="999">
           <name>$user</name>
           <default><![CDATA[null]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1083" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1081" package="Default">
         <name>deleteAccount</name>
         <full_name>deleteAccount</full_name>
-        <argument line="1083">
+        <argument line="1081">
           <name>$user</name>
           <default><![CDATA[null]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1126" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1124" package="Default">
         <name>verification</name>
         <full_name>verification</full_name>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1150" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1148" package="Default">
         <name>firstuserregister</name>
         <full_name>firstuserregister</full_name>
-        <argument line="1150">
+        <argument line="1148">
           <name>$email</name>
           <default><![CDATA[null]]></default>
           <type/>
@@ -422,10 +442,9 @@
       </method>
     </class>
     <markers>
-      <todo line="119">URGENT SECURITY ISSUE: Bycrpt rounds must be 2 digits. We need to ensure 7 is actually 07, 17 is okay, and 100 needs to be sent in as 99</todo>
-      <todo line="441">Save roles in cookie</todo>
-      <todo line="524">Check against a dummy DB, that is made manually by SQL import?</todo>
-      <todo line="741">, make register form pick type of student and pull that value</todo>
+      <todo line="439">Save roles in cookie</todo>
+      <todo line="522">Check against a dummy DB, that is made manually by SQL import?</todo>
+      <todo line="739">, make register form pick type of student and pull that value</todo>
     </markers>
     <parse_markers>
       <error line="0" code="50007">No page-level DocBlock was found in file assets/member.class.php</error>
@@ -435,25 +454,25 @@
       <error line="62" code="50010">No DocBlock was found for method currentPage()</error>
       <error line="82" code="50010">No DocBlock was found for method genSalt()</error>
       <error line="102" code="50010">No DocBlock was found for method genHash()</error>
-      <error line="136" code="50010">No DocBlock was found for method intcheck()</error>
-      <error line="168" code="50010">No DocBlock was found for method verify()</error>
-      <error line="194" code="50010">No DocBlock was found for method login()</error>
-      <error line="314" code="50010">No DocBlock was found for method LoggedIn()</error>
-      <error line="361" code="50010">No DocBlock was found for method sessionIsSet()</error>
-      <error line="402" code="50010">No DocBlock was found for method logout()</error>
-      <error line="432" code="50010">No DocBlock was found for method createNewCookie()</error>
-      <error line="456" code="50010">No DocBlock was found for method deleteCookie()</error>
-      <error line="479" code="50010">No DocBlock was found for method userLogger()</error>
-      <error line="523" code="50010">No DocBlock was found for method combovalidation()</error>
-      <error line="532" code="50010">No DocBlock was found for method data()</error>
-      <error line="556" code="50010">No DocBlock was found for method register()</error>
-      <error line="822" code="50010">No DocBlock was found for method randomString()</error>
-      <error line="838" code="50010">No DocBlock was found for method recoverPassword()</error>
-      <error line="923" code="50010">No DocBlock was found for method changePassword()</error>
-      <error line="1001" code="50010">No DocBlock was found for method changeEmail()</error>
-      <error line="1083" code="50010">No DocBlock was found for method deleteAccount()</error>
-      <error line="1126" code="50010">No DocBlock was found for method verification()</error>
-      <error line="1150" code="50010">No DocBlock was found for method firstuserregister()</error>
+      <error line="134" code="50010">No DocBlock was found for method intcheck()</error>
+      <error line="166" code="50010">No DocBlock was found for method verify()</error>
+      <error line="192" code="50010">No DocBlock was found for method login()</error>
+      <error line="312" code="50010">No DocBlock was found for method LoggedIn()</error>
+      <error line="359" code="50010">No DocBlock was found for method sessionIsSet()</error>
+      <error line="400" code="50010">No DocBlock was found for method logout()</error>
+      <error line="430" code="50010">No DocBlock was found for method createNewCookie()</error>
+      <error line="454" code="50010">No DocBlock was found for method deleteCookie()</error>
+      <error line="477" code="50010">No DocBlock was found for method userLogger()</error>
+      <error line="521" code="50010">No DocBlock was found for method combovalidation()</error>
+      <error line="530" code="50010">No DocBlock was found for method data()</error>
+      <error line="554" code="50010">No DocBlock was found for method register()</error>
+      <error line="820" code="50010">No DocBlock was found for method randomString()</error>
+      <error line="836" code="50010">No DocBlock was found for method recoverPassword()</error>
+      <error line="921" code="50010">No DocBlock was found for method changePassword()</error>
+      <error line="999" code="50010">No DocBlock was found for method changeEmail()</error>
+      <error line="1081" code="50010">No DocBlock was found for method deleteAccount()</error>
+      <error line="1124" code="50010">No DocBlock was found for method verification()</error>
+      <error line="1148" code="50010">No DocBlock was found for method firstuserregister()</error>
     </parse_markers>
   </file>
   <file path="assets/member.inc.php" hash="4386aab83ab278bd262a1fc74be0e354" package="Default">
@@ -1763,7 +1782,7 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
   </file>
   <package name="Default" full_name="Default"/>
   <namespace name="global" full_name="global"/>
-  <marker count="31">todo</marker>
+  <marker count="30">todo</marker>
   <marker count="0">fixme</marker>
   <deprecated count="0"/>
 </project>
