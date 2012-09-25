@@ -158,12 +158,12 @@
       </method>
     </class>
   </file>
-  <file path="assets/css/index.php" hash="8fc8b6b3746ffcb5b9ba53bb4f199600" package="Default">
+  <file path="assets/css/index.php" hash="5fceb66d67662f5012cfc8abce659646" package="Default">
     <parse_markers>
       <error line="0" code="50007">No page-level DocBlock was found in file assets/css/index.php</error>
     </parse_markers>
   </file>
-  <file path="assets/database.class.php" hash="6abfe2c560d110bfaef8c53117780b18" package="BlackHawk\Internal Functions">
+  <file path="assets/database.class.php" hash="e1ebd60d0d88af77d2e889ddb55db01b" package="BlackHawk\Internal Functions">
     <docblock line="2">
       <description><![CDATA[Implements Database Connections]]></description>
       <long-description><![CDATA[<p>This file defines our PDO connections</p>
@@ -225,7 +225,7 @@
           <long-description><![CDATA[<p>This method is used to create a new database object with a connection to a datbase</p>]]></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="71" package="BlackHawk\Internal Functions">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="72" package="BlackHawk\Internal Functions">
         <name>query</name>
         <full_name>query</full_name>
         <docblock line="62">
@@ -238,37 +238,37 @@
             <type by_reference="false">array</type>
             <type by_reference="false">string</type>
           </tag>
+          <tag line="62" name="param" description="fetch method" type="string" variable="$fetch">
+            <type by_reference="false">string</type>
+          </tag>
           <tag line="62" name="return" description="the executed string" type="\return">
             <type by_reference="false">\return</type>
           </tag>
         </docblock>
-        <argument line="71">
+        <argument line="72">
           <name>$query</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="71">
+        <argument line="72">
           <name>$bind</name>
           <default><![CDATA[null]]></default>
           <type/>
         </argument>
-        <argument line="71">
+        <argument line="72">
           <name>$fetch</name>
           <default><![CDATA['FETCH_ASSOC']]></default>
           <type/>
         </argument>
       </method>
     </class>
-    <parse_markers>
-      <error line="62" code="50015">Argument $fetch is missing from the Docblock of query()</error>
-    </parse_markers>
   </file>
-  <file path="assets/email_templates/index.php" hash="8fc8b6b3746ffcb5b9ba53bb4f199600" package="Default">
+  <file path="assets/email_templates/index.php" hash="5fceb66d67662f5012cfc8abce659646" package="Default">
     <parse_markers>
       <error line="0" code="50007">No page-level DocBlock was found in file assets/email_templates/index.php</error>
     </parse_markers>
   </file>
-  <file path="assets/fonts/index.php" hash="8fc8b6b3746ffcb5b9ba53bb4f199600" package="Default">
+  <file path="assets/fonts/index.php" hash="5fceb66d67662f5012cfc8abce659646" package="Default">
     <parse_markers>
       <error line="0" code="50007">No page-level DocBlock was found in file assets/fonts/index.php</error>
     </parse_markers>
@@ -307,17 +307,17 @@
       <name>garage.class.php</name>
     </include>
   </file>
-  <file path="assets/images/index.php" hash="8fc8b6b3746ffcb5b9ba53bb4f199600" package="Default">
+  <file path="assets/images/index.php" hash="5fceb66d67662f5012cfc8abce659646" package="Default">
     <parse_markers>
       <error line="0" code="50007">No page-level DocBlock was found in file assets/images/index.php</error>
     </parse_markers>
   </file>
-  <file path="assets/index.php" hash="8fc8b6b3746ffcb5b9ba53bb4f199600" package="Default">
+  <file path="assets/index.php" hash="5fceb66d67662f5012cfc8abce659646" package="Default">
     <parse_markers>
       <error line="0" code="50007">No page-level DocBlock was found in file assets/index.php</error>
     </parse_markers>
   </file>
-  <file path="assets/mailer.class.php" hash="13425abdfe87f6de548ac2623419de50" package="BlackHawk\Mail">
+  <file path="assets/mailer.class.php" hash="09a58d8c97729ae598203c19552d7944" package="BlackHawk\Mail">
     <docblock line="2">
       <description><![CDATA[Creates Mail Class]]></description>
       <long-description><![CDATA[<p>This file creates functions used internally for garages</p>
@@ -371,81 +371,87 @@
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="54" package="BlackHawk\Mail">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="55" package="BlackHawk\Mail">
         <name>__construct</name>
         <full_name>__construct</full_name>
         <docblock line="47">
           <description><![CDATA[__construct]]></description>
           <long-description><![CDATA[<p>Sets template</p>]]></long-description>
-          <tag line="47" name="param" description="Sets template" type="string" variable="$template">
+          <tag line="47" name="param" description="Which template to use" type="string" variable="$template">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="47" name="param" description="Which email to send from" type="string" variable="$email_master">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
-        <argument line="54">
+        <argument line="55">
           <name>$email_master</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="54">
+        <argument line="55">
           <name>$template</name>
           <default><![CDATA['default']]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="67" package="BlackHawk\Mail">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="68" package="BlackHawk\Mail">
         <name>genTemplate</name>
         <full_name>genTemplate</full_name>
-        <docblock line="59">
+        <docblock line="60">
           <description><![CDATA[genTemplate]]></description>
           <long-description><![CDATA[<p>Parsers the template</p>]]></long-description>
-          <tag line="59" name="param" description="Subject of the email" type="string" variable="$subject">
+          <tag line="60" name="param" description="Subject of the email" type="string" variable="$subject">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="59" name="param" description="Content of the email" type="string" variable="$content">
+          <tag line="60" name="param" description="Content of the email" type="string" variable="$content">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
-        <argument line="67">
+        <argument line="68">
           <name>$subject</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="67">
+        <argument line="68">
           <name>$content</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="98" package="BlackHawk\Mail">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="100" package="BlackHawk\Mail">
         <name>mail</name>
         <full_name>mail</full_name>
-        <docblock line="88">
+        <docblock line="89">
           <description><![CDATA[mail]]></description>
           <long-description><![CDATA[<p>Mails inputed data</p>]]></long-description>
-          <tag line="88" name="param" description="The email reciver" type="string" variable="$email">
+          <tag line="89" name="param" description="The email address to send from" type="string" variable="$emailmaster">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="88" name="param" description="Subject of the email" type="string" variable="$subject">
+          <tag line="89" name="param" description="The email reciver" type="string" variable="$email">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="88" name="param" description="Content of the email" type="string" variable="$content">
+          <tag line="89" name="param" description="Subject of the email" type="string" variable="$subject">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="88" name="return" description="$email Sends email" type="\email">
+          <tag line="89" name="param" description="Content of the email" type="string" variable="$content">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="89" name="return" description="$email Sends email" type="\email">
             <type by_reference="false">\email</type>
           </tag>
         </docblock>
-        <argument line="98">
+        <argument line="100">
           <name>$email</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="98">
+        <argument line="100">
           <name>$subject</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="98">
+        <argument line="100">
           <name>$content</name>
           <default><![CDATA[]]></default>
           <type/>
@@ -454,7 +460,11 @@
     </class>
     <parse_markers>
       <error line="47" code="50014">Name of argument $email_master does not match with the DocBlock's name $template in __construct()</error>
-      <error line="47" code="50015">Argument $template is missing from the Docblock of __construct()</error>
+      <error line="47" code="50014">Name of argument $template does not match with the DocBlock's name $email_master in __construct()</error>
+      <error line="89" code="50014">Name of argument $email does not match with the DocBlock's name $emailmaster in mail()</error>
+      <error line="89" code="50014">Name of argument $subject does not match with the DocBlock's name $email in mail()</error>
+      <error line="89" code="50014">Name of argument $content does not match with the DocBlock's name $subject in mail()</error>
+      <notice line="89" code="50013">Parameter $emailmaster could not be found in mail()</notice>
     </parse_markers>
   </file>
   <file path="assets/member.class.php" hash="9919672a3b2d5b5d6e94a37faa76f925" package="Default">
@@ -1741,7 +1751,7 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
       <error line="0" code="50007">No page-level DocBlock was found in file debug/error_test_mysql.php</error>
     </parse_markers>
   </file>
-  <file path="debug/index.php" hash="8fc8b6b3746ffcb5b9ba53bb4f199600" package="Default">
+  <file path="debug/index.php" hash="5fceb66d67662f5012cfc8abce659646" package="Default">
     <parse_markers>
       <error line="0" code="50007">No page-level DocBlock was found in file debug/index.php</error>
     </parse_markers>
@@ -1829,7 +1839,7 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
       <error line="0" code="50007">No page-level DocBlock was found in file redirect.php</error>
     </parse_markers>
   </file>
-  <file path="roles/index.php" hash="8fc8b6b3746ffcb5b9ba53bb4f199600" package="Default">
+  <file path="roles/index.php" hash="5fceb66d67662f5012cfc8abce659646" package="Default">
     <parse_markers>
       <error line="0" code="50007">No page-level DocBlock was found in file roles/index.php</error>
     </parse_markers>
@@ -1930,7 +1940,7 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
       <error line="0" code="50007">No page-level DocBlock was found in file roles/visitor.php</error>
     </parse_markers>
   </file>
-  <file path="setup/css/index.php" hash="8fc8b6b3746ffcb5b9ba53bb4f199600" package="Default">
+  <file path="setup/css/index.php" hash="5fceb66d67662f5012cfc8abce659646" package="Default">
     <parse_markers>
       <error line="0" code="50007">No page-level DocBlock was found in file setup/css/index.php</error>
     </parse_markers>
@@ -1964,7 +1974,7 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
       <error line="437" code="50009">No DocBlock was found for function \rrmdir()</error>
     </parse_markers>
   </file>
-  <file path="tests/index.php" hash="8fc8b6b3746ffcb5b9ba53bb4f199600" package="Default">
+  <file path="tests/index.php" hash="5fceb66d67662f5012cfc8abce659646" package="Default">
     <parse_markers>
       <error line="0" code="50007">No page-level DocBlock was found in file tests/index.php</error>
     </parse_markers>
