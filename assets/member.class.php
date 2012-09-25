@@ -117,6 +117,7 @@ class member {
 				/* $this->rounds is the workload factor */
 			/* GenHash */
 			//TODO: URGENT SECURITY ISSUE: Bycrpt rounds must be 2 digits. We need to ensure 7 is actually 07, 17 is okay, and 100 needs to be sent in as 99
+			
 			$hash = crypt($password, '$2y$' . Config::read('bcryptRounds') . '$' . $this->genSalt());
 		}
 		/* Return */

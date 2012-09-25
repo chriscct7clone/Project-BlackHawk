@@ -66,12 +66,20 @@ if(isset($_POST['setup'])) {
 			$notice->add('error', 'Database conncetion fail!<br />Make sure your database information is correct');
 		}
 	}
-	
+	$bcrypt_rounds=intval($bcrypt_rounds)
 	if(empty($bcrypt_rounds)) {
 		$bcrypt_rounds = 12;
 	}
-	
-	
+	if($bcrypt_rounds<9 && $bcrypt_rounds>0) {
+		$bcrypt_rounds = "0".$bcrypt_rounds;
+	}
+	if($bcrypt_rounds<1) {
+		$bcrypt_rounds = 12;
+	}
+	if($bcrypt_rounds>100) {
+	$notice->add('info', 'Bcrypt rounds is over the 99 limit. Installed using Bcrypt Rounds=99.');
+		$bcrypt_rounds = 99;
+	}
 	if(empty($email_master)) {
 		$notice->add('error', 'Please enter a E-Mail that will be used to contact users.');
 		$email_master = null;
