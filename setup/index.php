@@ -71,7 +71,7 @@ if(isset($_POST['setup'])) {
 		$bcrypt_rounds = 12;
 	}
 	if($bcrypt_rounds<9 && $bcrypt_rounds>0) {
-		$bcrypt_rounds = "0".$bcrypt_rounds;
+		$bcrypt_rounds = '"0".$bcrypt_rounds';
 	}
 	if($bcrypt_rounds<1) {
 		$bcrypt_rounds = 12;
