@@ -30,19 +30,19 @@
  * @since      File available since Release 0.3.0
  */ 
 class database {
-	/*
+	/**
 	 * @var $pdo A reference to the PDO instance;
 	 * 	Also used for connecions via PDO.
 	 */
 	public $pdo = null;
 	
-	/*
+	/**
 	 * @var $statement Used to contain query for prepared statments;
 	 * 	Also used for value binding & execution
 	 */
 	public $statement = null;
 	
-	/*
+	/**
 	 * Database Constructor
 	 * 
 	 * This method is used to create a new database object with a connection to a datbase
@@ -59,7 +59,7 @@ class database {
 		}
 	}
 	
-	/*
+	/**
 	 * Database Query
 	 * 
 	 * This method is used to create a new database prepared query

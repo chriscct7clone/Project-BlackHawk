@@ -31,20 +31,20 @@
  * @since      File available since Release 0.3.0
  */
 class mailer {
-	/*
+	/**
 	 * @var $email_master
 	 *
 	 * The Master E-Mail
 	 */
 	public $email_master;
-	/*
+	/**
 	 * @var $template
 	 *
 	 * Stores template choice
 	 */
 	public $template;
 	
-	/*
+	/**
 	 * __construct
 	 *
 	 * Sets template
@@ -56,7 +56,7 @@ class mailer {
 		$this->template = $template;
 	}
 	
-	/*
+	/**
 	 * genTemplate
 	 *
 	 * Parsers the template
@@ -85,7 +85,7 @@ class mailer {
 		return $body;
 	}
 	
-	/*
+	/**
 	 * mail
 	 *
 	 * Mails inputed data

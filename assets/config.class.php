@@ -29,13 +29,13 @@
  * @since      File available since Release 0.3.0
  */ 
 class Config {
-	/*
+	/**
 	 * @var $configArray
 	 *
 	 * Used to store all the configs
 	 */
 	static $confArray;
-	/*
+	/**
 	 * Config Read function
 	 * 
 	 * Reads the config value from the $confArray
@@ -45,7 +45,7 @@ class Config {
 	public static function read($name) {
 		return self::$confArray[$name];
 	}
-	/*
+	/**
 	 * Config Write function
 	 * 
 	 * Writes data to the $confArray
