@@ -48,8 +48,9 @@ class mailer {
 	 * __construct
 	 *
 	 * Sets template
-	 *
-	 * @param string $template Sets template
+	 * 
+	 * @param string $template Which template to use
+	 * @param string $email_master Which email to send from
 	 */
 	public function __construct($email_master, $template = 'default') {
 		$this->email_master = $email_master;
@@ -90,6 +91,7 @@ class mailer {
 	 *
 	 * Mails inputed data
 	 * 
+	 * @param string $emailmaster The email address to send from
 	 * @param string $email The email reciver
 	 * @param string $subject Subject of the email
 	 * @param string $content Content of the email

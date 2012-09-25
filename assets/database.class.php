@@ -66,6 +66,7 @@ class database {
 	 * 
 	 * @param string $query The prepared statement query to the database
 	 * @param array|string $bind All the variables to bind to the prepared statement
+	 * @param string $fetch fetch method
 	 * @return return the executed string
 	 */
 	public function query($query, $bind = null, $fetch = 'FETCH_ASSOC') {
