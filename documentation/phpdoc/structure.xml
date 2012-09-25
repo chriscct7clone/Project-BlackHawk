@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project version="2.0.0a10" title="">
-  <file path="assets/captcha.class.php" hash="6332bd464ccae3d913a5dfe609c9c308" package="BlackHawk">
+  <file path="assets/captcha.class.php" hash="a0c0aa372bd60e3cfd7f23e3147bb8cf" package="BlackHawk\Internal Functions">
     <docblock line="2">
       <description><![CDATA[Creates Captcha Image]]></description>
       <long-description><![CDATA[<p>This file creates the image for the captcha, as long as Captcha has been turned on during setup.</p>
@@ -9,63 +9,68 @@
 
 <p>LICENSE: TBD</p>]]></long-description>
       <tag line="2" name="package" description="BlackHawk"/>
+      <tag line="2" name="subpackage" description="Internal Functions"/>
       <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
       <tag line="2" name="copyright" description="2012 Project BlackHawk"/>
       <tag line="2" name="license" description="http://www.futuregencode.com/blackhawk/404  License 1.00"/>
-      <tag line="2" name="version" description="SVN: $Id$"/>
+      <tag line="2" name="version" description="0.3.0"/>
       <tag line="2" name="link" description="http://pear.php.net/package/PackageName" link="http://pear.php.net/package/PackageName"/>
       <tag line="2" name="see" description="\member()" refers="\member()"/>
       <tag line="2" name="since" description="File available since Release 0.3.0"/>
+      <tag line="2" name="todo" description="TODO List for file&#10;&lt;ol&gt;&#10;&lt;li&gt;Finish Documentation&lt;/li&gt;&#10;&lt;ol&gt;&#10;&lt;li&gt;File Comments&lt;/li&gt;&#10;&lt;li&gt;Class Comments&lt;/li&gt;&#10;&lt;li&gt;Function Comments&lt;/li&gt;&#10;&lt;/ol&gt;&#10;&lt;/ol&gt;"/>
     </docblock>
-    <include line="44" type="Require Once" package="Default">
+    <include line="58" type="Require Once" package="Default">
       <name>garage.php</name>
     </include>
-    <class final="false" abstract="false" namespace="global" line="34" package="BlackHawk">
+    <class final="false" abstract="false" namespace="global" line="46" package="BlackHawk\Internal Functions">
       <extends/>
       <name>captcha</name>
       <full_name>\captcha</full_name>
-      <docblock line="22">
+      <docblock line="33">
         <description><![CDATA[Implements the captcha class]]></description>
         <long-description><![CDATA[]]></long-description>
-        <tag line="22" name="package" description="BlackHawk"/>
-        <tag line="22" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
-        <tag line="22" name="copyright" description="2012 Project BlackHawk"/>
-        <tag line="22" name="license" description="http://www.futuregencode.com/blackhawk/404  License 1.00"/>
-        <tag line="22" name="version" description="SVN: $Id$"/>
-        <tag line="22" name="link" description="http://pear.php.net/package/PackageName" link="http://pear.php.net/package/PackageName"/>
-        <tag line="22" name="see" description="\global\member()" refers="\global\member()"/>
-        <tag line="22" name="since" description="File available since Release 0.3.0"/>
+        <tag line="33" name="package" description="BlackHawk"/>
+        <tag line="33" name="subpackage" description="Internal Functions"/>
+        <tag line="33" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
+        <tag line="33" name="copyright" description="2012 Project BlackHawk"/>
+        <tag line="33" name="license" description="http://www.futuregencode.com/blackhawk/404  License 1.00"/>
+        <tag line="33" name="version" description="0.3.0"/>
+        <tag line="33" name="link" description="http://pear.php.net/package/PackageName" link="http://pear.php.net/package/PackageName"/>
+        <tag line="33" name="see" description="\global\member()" refers="\global\member()"/>
+        <tag line="33" name="since" description="File available since Release 0.3.0"/>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="43" package="BlackHawk">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="57" package="BlackHawk\Internal Functions">
         <name>display</name>
         <full_name>display</full_name>
-        <docblock line="35">
+        <docblock line="47">
           <description><![CDATA[Creates a Captcha image]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="35" name="param" description="Dimension param" type="integer" variable="$width">
+          <tag line="47" name="version" description="0.3.0"/>
+          <tag line="47" name="param" description="Dimension param" type="integer" variable="$width">
             <type by_reference="false">integer</type>
           </tag>
-          <tag line="35" name="param" description="Dimension param" type="integer" variable="$height">
+          <tag line="47" name="param" description="Dimension param" type="integer" variable="$height">
             <type by_reference="false">integer</type>
           </tag>
-          <tag line="35" name="param" description="string to make" type="string" variable="$text">
+          <tag line="47" name="param" description="string to make" type="string" variable="$text">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="35" name="return" description="" type="\image">
+          <tag line="47" name="example" description="If &lt;kbd&gt;$width=100px; $height=100px;$text=&quot;hello world&quot; &lt;/kbd&gt;, the class returns an image with &quot;Hello World&quot; inside these dimensions"/>
+          <tag line="47" name="return" description="" type="\image">
             <type by_reference="false">\image</type>
           </tag>
         </docblock>
-        <argument line="43">
+        <argument line="57">
           <name>$width</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="43">
+        <argument line="57">
           <name>$height</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="43">
+        <argument line="57">
           <name>$text</name>
           <default><![CDATA[]]></default>
           <type/>
@@ -1799,10 +1804,12 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
       <error line="0" code="50007">No page-level DocBlock was found in file update.php</error>
     </parse_markers>
   </file>
-  <package name="BlackHawk" full_name="BlackHawk"/>
+  <package name="BlackHawk" full_name="BlackHawk">
+    <package name="Internal Functions" full_name="BlackHawk\Internal Functions"/>
+  </package>
   <package name="Default" full_name="Default"/>
   <namespace name="global" full_name="global"/>
-  <marker count="30">todo</marker>
+  <marker count="31">todo</marker>
   <marker count="0">fixme</marker>
   <deprecated count="0"/>
 </project>
