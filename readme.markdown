@@ -65,10 +65,12 @@ Project BlackHawk is available under the terms and conditions of the
 Please see license.txt for full licensing terms and conditions.
 
 ## Code Standards: ##
-+ JavaDoc style PHPDocumenter2 function and class commenting
++ PHPDocumenter2 compliant commenting
 + PSR-2 compliant
 + PSR-1 compliant
-+ PSR-0 compliant
++ PSR-0 compliant minus class file naming
++ PEAR compliant
++ Zend-Framework compliant minus class file naming and namespace management 
 
 ## Credits ##
 - Project BlackHawk is (c) Chris Christoff, James Stephens, Steve Curry, and Stetson Gafford.
