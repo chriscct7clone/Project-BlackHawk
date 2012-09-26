@@ -16,5 +16,7 @@
  * @version    0.3.0
  * @since      File available since Release 0.3.0
  */
- //echo "Test";
+header("HTTP/1.0 404 Not Found");
+// For Fast-CGI sites: Comment out previous line and uncomment this one
+// header("Status: 404 Not Found");
 ?>
