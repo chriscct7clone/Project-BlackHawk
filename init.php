@@ -1,6 +1,6 @@
 <?php
  /**
- * PBlackHawk Init
+ * BlackHawk Init
  *
  * Contains program constants
  *
