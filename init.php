@@ -1,4 +1,22 @@
 <?php
+ /**
+ * PBlackHawk Init
+ *
+ * Contains program constants
+ *
+ * PHP version 5.2.17 or higher
+ *
+ * LICENSE: TBD
+ *
+ * @package    BlackHawk
+ * @subpackage General
+ * @author     Chris Christoff <chris@futuregencode.com>
+ * @copyright  2012 Project BlackHawk
+ * @license    http://www.futuregencode.com/blackhawk/404  License 1.00
+ * @version    0.3.0
+ * @since      File available since Release 0.3.0
+ * @todo       Add All HTTP Header descriptions
+ */
 // turn off errors on prod
 ini_set('display_errors', 'off');
 ini_set("arg_separator.output", "&amp;");

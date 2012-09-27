@@ -1,4 +1,23 @@
 <?php
+ /**
+ * The Home Page
+ *
+ * Displays the home page, and does some redirecting work
+ *
+ * PHP version 5.2.17 or higher
+ *
+ * LICENSE: TBD
+ *
+ * @package    BlackHawk
+ * @subpackage Home
+ * @author     Chris Christoff <chris@futuregencode.com>
+ * @copyright  2012 Project BlackHawk
+ * @license    http://www.futuregencode.com/blackhawk/404  License 1.00
+ * @version    0.3.0
+ * @see        redirect.php
+ * @since      File available since Release 0.3.0
+ */
+
 /* If this file does not exist, it's because they haven't run the install yet. */
 if(!file_exists('assets/config.inc.php')) {
 	echo '<a href="setup/">Please install the parking system first!</a>';

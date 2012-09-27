@@ -69,7 +69,7 @@ Please see license.txt for full licensing terms and conditions.
 + PSR-2 compliant
 + PSR-1 compliant
 + PSR-0 compliant minus class file naming
-+ PEAR compliant
++ PEAR compliant minus error handling
 + Zend-Framework compliant minus class file naming and namespace management 
 
 ## Credits ##

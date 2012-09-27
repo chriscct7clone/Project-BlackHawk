@@ -1,11 +1,36 @@
 <?php
+ /**
+ * Project BlackHawk Errorcode
+ *
+ * Handles HTTP Headers
+ *
+ * PHP version 5.2.17 or higher
+ *
+ * LICENSE: TBD
+ *
+ * @package    BlackHawk
+ * @subpackage Debug
+ * @author     Chris Christoff <chris@futuregencode.com>
+ * @copyright  2012 Project BlackHawk
+ * @license    http://www.futuregencode.com/blackhawk/404  License 1.00
+ * @version    0.3.0
+ * @since      File available since Release 0.3.0
+ * @todo       Add All HTTP Header descriptions
+ */
 /* Debut of Project BlackHawk Errorcode 1.0 in BlackHawk 0.1.0 */
 ob_start();
 @set_time_limit(5);
 @ini_set('memory_limit', '64M');
 @ini_set('display_errors', 'Off');
 error_reporting(0);
- 
+	/* 
+	 * Print Error Page
+	 *
+	 * Dynamically Creates the Errorcode Page
+	 *
+	 * @param $int The code as passed from .htaccess or other file
+	 * @return void The the page
+	 */
 function print_error_page()
 {
  
@@ -229,7 +254,12 @@ function print_error_page()
   echo "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\n<html>";
   echo "<head>\n<title>{$sc} {$reason}</title>\n<h1>{$reason}</h1>\n<p>{$msg}<br />\n</p>\n";
 }
- 
+ 	/* 
+	 * askapache_global_debug
+	 *
+	 * Recursively walks backward to find issue
+	 *
+	 */
 function askapache_global_debug()
 {
   # http://www.php.net/manual/en/function.array-walk.php#100681

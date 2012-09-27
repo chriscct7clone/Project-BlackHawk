@@ -1,8 +1,34 @@
 <?php
-/*
- * Notice
+ /**
+ * Creates Notice Class
  *
- * Handles Error reporting for us
+ * This file creates the notice outputs
+ *
+ * PHP version 5.2.17 or higher
+ *
+ * LICENSE: TBD
+ *
+ * @package    BlackHawk
+ * @subpackage Notice
+ * @author     Chris Christoff <chris@futuregencode.com>
+ * @copyright  2012 Project BlackHawk
+ * @license    http://www.futuregencode.com/blackhawk/404  License 1.00
+ * @version    0.3.0
+ * @since      File available since Release 0.3.0
+ *
+ */
+
+ 
+ /**
+ * Implements Notice
+ *
+ * @package    BlackHawk
+ * @subpackage Notice
+ * @author     Chris Christoff <chris@futuregencode.com>
+ * @copyright  2012 Project BlackHawk
+ * @license    http://www.futuregencode.com/blackhawk/404  License 1.0
+ * @version    0.3.0
+ * @since      File available since Release 0.3.0
  */
 class notice {
 	/*
@@ -59,7 +85,7 @@ class notice {
 	/* 
 	 * errorsExist
 	 * 
-	 * Do errors exist?
+	 * @return bool True if errors exist, false if no errors
 	 */
 	public function errorsExist() {
 		if(empty($this->_notice['error'])) {

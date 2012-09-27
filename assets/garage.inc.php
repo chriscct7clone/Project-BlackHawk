@@ -17,7 +17,7 @@
  * @see        garage.class.php
  * @since      File available since Release 0.3.0
  */
-/* Include Class */
+/* include classes */
 require_once('config.inc.php');
 require_once("database.class.php");
 require_once("garage.class.php");
