@@ -158,10 +158,22 @@
       </method>
     </class>
   </file>
-  <file path="assets/css/index.php" hash="8e7825ad3c7f57b596b2d2d16657f58d" package="Default">
-    <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file assets/css/index.php</error>
-    </parse_markers>
+  <file path="assets/css/index.php" hash="037241acbe8cc1e37dce5cb495f70afc" package="BlackHawk\Security">
+    <docblock line="2">
+      <description><![CDATA[Security Index Page]]></description>
+      <long-description><![CDATA[<p>This file prevents directory listing</p>
+
+<p>PHP version 5.2.17 or higher</p>
+
+<p>LICENSE: TBD</p>]]></long-description>
+      <tag line="2" name="package" description="BlackHawk"/>
+      <tag line="2" name="subpackage" description="Security"/>
+      <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
+      <tag line="2" name="copyright" description="2012 Project BlackHawk"/>
+      <tag line="2" name="license" description="http://www.futuregencode.com/blackhawk/404  License 1.00"/>
+      <tag line="2" name="version" description="0.3.0"/>
+      <tag line="2" name="since" description="File available since Release 0.3.0"/>
+    </docblock>
   </file>
   <file path="assets/database.class.php" hash="e1ebd60d0d88af77d2e889ddb55db01b" package="BlackHawk\Internal Functions">
     <docblock line="2">
@@ -263,15 +275,39 @@
       </method>
     </class>
   </file>
-  <file path="assets/email_templates/index.php" hash="8e7825ad3c7f57b596b2d2d16657f58d" package="Default">
-    <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file assets/email_templates/index.php</error>
-    </parse_markers>
+  <file path="assets/email_templates/index.php" hash="037241acbe8cc1e37dce5cb495f70afc" package="BlackHawk\Security">
+    <docblock line="2">
+      <description><![CDATA[Security Index Page]]></description>
+      <long-description><![CDATA[<p>This file prevents directory listing</p>
+
+<p>PHP version 5.2.17 or higher</p>
+
+<p>LICENSE: TBD</p>]]></long-description>
+      <tag line="2" name="package" description="BlackHawk"/>
+      <tag line="2" name="subpackage" description="Security"/>
+      <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
+      <tag line="2" name="copyright" description="2012 Project BlackHawk"/>
+      <tag line="2" name="license" description="http://www.futuregencode.com/blackhawk/404  License 1.00"/>
+      <tag line="2" name="version" description="0.3.0"/>
+      <tag line="2" name="since" description="File available since Release 0.3.0"/>
+    </docblock>
   </file>
-  <file path="assets/fonts/index.php" hash="8e7825ad3c7f57b596b2d2d16657f58d" package="Default">
-    <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file assets/fonts/index.php</error>
-    </parse_markers>
+  <file path="assets/fonts/index.php" hash="037241acbe8cc1e37dce5cb495f70afc" package="BlackHawk\Security">
+    <docblock line="2">
+      <description><![CDATA[Security Index Page]]></description>
+      <long-description><![CDATA[<p>This file prevents directory listing</p>
+
+<p>PHP version 5.2.17 or higher</p>
+
+<p>LICENSE: TBD</p>]]></long-description>
+      <tag line="2" name="package" description="BlackHawk"/>
+      <tag line="2" name="subpackage" description="Security"/>
+      <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
+      <tag line="2" name="copyright" description="2012 Project BlackHawk"/>
+      <tag line="2" name="license" description="http://www.futuregencode.com/blackhawk/404  License 1.00"/>
+      <tag line="2" name="version" description="0.3.0"/>
+      <tag line="2" name="since" description="File available since Release 0.3.0"/>
+    </docblock>
   </file>
   <file path="assets/garage.class.php" hash="5b7c6c36ebf476c71fd3e7b2d07923f5" package="Default">
     <markers>
@@ -280,7 +316,7 @@
       <todo line="150">Reserved spots. Type 5 and pass uid along for the ride.</todo>
     </markers>
   </file>
-  <file path="assets/garage.inc.php" hash="dada17e95f40295017a7b5fd0d4e2822" package="BlackHawk\Garage">
+  <file path="assets/garage.inc.php" hash="908ea3562b61401f0cf74f76ed6dbd18" package="BlackHawk\Garage">
     <docblock line="2">
       <description><![CDATA[Creates Garage Class]]></description>
       <long-description><![CDATA[<p>Instantiates objects for member, database, and garage</p>
@@ -307,15 +343,39 @@
       <name>garage.class.php</name>
     </include>
   </file>
-  <file path="assets/images/index.php" hash="8e7825ad3c7f57b596b2d2d16657f58d" package="Default">
-    <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file assets/images/index.php</error>
-    </parse_markers>
+  <file path="assets/images/index.php" hash="037241acbe8cc1e37dce5cb495f70afc" package="BlackHawk\Security">
+    <docblock line="2">
+      <description><![CDATA[Security Index Page]]></description>
+      <long-description><![CDATA[<p>This file prevents directory listing</p>
+
+<p>PHP version 5.2.17 or higher</p>
+
+<p>LICENSE: TBD</p>]]></long-description>
+      <tag line="2" name="package" description="BlackHawk"/>
+      <tag line="2" name="subpackage" description="Security"/>
+      <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
+      <tag line="2" name="copyright" description="2012 Project BlackHawk"/>
+      <tag line="2" name="license" description="http://www.futuregencode.com/blackhawk/404  License 1.00"/>
+      <tag line="2" name="version" description="0.3.0"/>
+      <tag line="2" name="since" description="File available since Release 0.3.0"/>
+    </docblock>
   </file>
-  <file path="assets/index.php" hash="8e7825ad3c7f57b596b2d2d16657f58d" package="Default">
-    <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file assets/index.php</error>
-    </parse_markers>
+  <file path="assets/index.php" hash="037241acbe8cc1e37dce5cb495f70afc" package="BlackHawk\Security">
+    <docblock line="2">
+      <description><![CDATA[Security Index Page]]></description>
+      <long-description><![CDATA[<p>This file prevents directory listing</p>
+
+<p>PHP version 5.2.17 or higher</p>
+
+<p>LICENSE: TBD</p>]]></long-description>
+      <tag line="2" name="package" description="BlackHawk"/>
+      <tag line="2" name="subpackage" description="Security"/>
+      <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
+      <tag line="2" name="copyright" description="2012 Project BlackHawk"/>
+      <tag line="2" name="license" description="http://www.futuregencode.com/blackhawk/404  License 1.00"/>
+      <tag line="2" name="version" description="0.3.0"/>
+      <tag line="2" name="since" description="File available since Release 0.3.0"/>
+    </docblock>
   </file>
   <file path="assets/mailer.class.php" hash="09a58d8c97729ae598203c19552d7944" package="BlackHawk\Mail">
     <docblock line="2">
@@ -467,183 +527,210 @@
       <notice line="89" code="50013">Parameter $emailmaster could not be found in mail()</notice>
     </parse_markers>
   </file>
-  <file path="assets/member.class.php" hash="9919672a3b2d5b5d6e94a37faa76f925" package="Default">
-    <include line="35" type="Require Once" package="Default">
+  <file path="assets/member.class.php" hash="c56c450083cc6f766eb98dd4d25e5d8b" package="BlackHawk\Members">
+    <docblock line="2">
+      <description><![CDATA[Member Class]]></description>
+      <long-description><![CDATA[<p>The main hub of our login system</p>
+
+<p>PHP version 5.2.17 or higher</p>
+
+<p>LICENSE: TBD</p>]]></long-description>
+      <tag line="2" name="package" description="BlackHawk"/>
+      <tag line="2" name="subpackage" description="Members"/>
+      <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
+      <tag line="2" name="copyright" description="2012 Project BlackHawk"/>
+      <tag line="2" name="license" description="http://www.futuregencode.com/blackhawk/404  License 1.00"/>
+      <tag line="2" name="version" description="0.3.0"/>
+      <tag line="2" name="see" description="\garage.inc.php" refers="\garage.inc.php"/>
+      <tag line="2" name="since" description="File available since Release 0.3.0"/>
+    </docblock>
+    <include line="59" type="Require Once" package="Default">
       <name>notice.class.php</name>
     </include>
-    <include line="36" type="Require Once" package="Default">
+    <include line="60" type="Require Once" package="Default">
       <name>mailer.class.php</name>
     </include>
-    <class final="false" abstract="false" namespace="global" line="9" package="Default">
+    <class final="false" abstract="false" namespace="global" line="33" package="BlackHawk\Members">
       <extends/>
       <name>member</name>
       <full_name>\member</full_name>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="17" package="Default">
+      <docblock line="22">
+        <description><![CDATA[Member Class]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="22" name="package" description="BlackHawk"/>
+        <tag line="22" name="subpackage" description="Members"/>
+        <tag line="22" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
+        <tag line="22" name="copyright" description="2012 Project BlackHawk"/>
+        <tag line="22" name="license" description="http://www.futuregencode.com/blackhawk/404  License 1.0"/>
+        <tag line="22" name="version" description="0.3.0"/>
+        <tag line="22" name="since" description="File available since Release 0.3.0"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="41" package="BlackHawk\Members">
         <name>__construct</name>
         <full_name>__construct</full_name>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="50" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="74" package="BlackHawk\Members">
         <name>currentPath</name>
         <full_name>currentPath</full_name>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="62" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="86" package="BlackHawk\Members">
         <name>currentPage</name>
         <full_name>currentPage</full_name>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="82" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="106" package="BlackHawk\Members">
         <name>genSalt</name>
         <full_name>genSalt</full_name>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="102" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="126" package="BlackHawk\Members">
         <name>genHash</name>
         <full_name>genHash</full_name>
-        <argument line="102">
+        <argument line="126">
           <name>$salt</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="102">
+        <argument line="126">
           <name>$password</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="134" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="158" package="BlackHawk\Members">
         <name>intcheck</name>
         <full_name>intcheck</full_name>
-        <argument line="134">
+        <argument line="158">
           <name>$int</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="166" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="190" package="BlackHawk\Members">
         <name>verify</name>
         <full_name>verify</full_name>
-        <argument line="166">
+        <argument line="190">
           <name>$password</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="166">
+        <argument line="190">
           <name>$existingHash</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="192" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="216" package="BlackHawk\Members">
         <name>login</name>
         <full_name>login</full_name>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="312" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="336" package="BlackHawk\Members">
         <name>LoggedIn</name>
         <full_name>LoggedIn</full_name>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="359" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="383" package="BlackHawk\Members">
         <name>sessionIsSet</name>
         <full_name>sessionIsSet</full_name>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="400" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="424" package="BlackHawk\Members">
         <name>logout</name>
         <full_name>logout</full_name>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="430" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="454" package="BlackHawk\Members">
         <name>createNewCookie</name>
         <full_name>createNewCookie</full_name>
-        <argument line="430">
-          <name>$id</name>
-          <default><![CDATA[]]></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="454" package="Default">
-        <name>deleteCookie</name>
-        <full_name>deleteCookie</full_name>
         <argument line="454">
           <name>$id</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="477" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="478" package="BlackHawk\Members">
+        <name>deleteCookie</name>
+        <full_name>deleteCookie</full_name>
+        <argument line="478">
+          <name>$id</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="501" package="BlackHawk\Members">
         <name>userLogger</name>
         <full_name>userLogger</full_name>
-        <argument line="477">
+        <argument line="501">
           <name>$userid</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="477">
+        <argument line="501">
           <name>$action</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="521" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="545" package="BlackHawk\Members">
         <name>combovalidation</name>
         <full_name>combovalidation</full_name>
-        <argument line="521">
+        <argument line="545">
           <name>$username</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="521">
+        <argument line="545">
           <name>$password</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="530" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="554" package="BlackHawk\Members">
         <name>data</name>
         <full_name>data</full_name>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="554" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="578" package="BlackHawk\Members">
         <name>register</name>
         <full_name>register</full_name>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="820" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="844" package="BlackHawk\Members">
         <name>randomString</name>
         <full_name>randomString</full_name>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="836" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="860" package="BlackHawk\Members">
         <name>recoverPassword</name>
         <full_name>recoverPassword</full_name>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="921" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="945" package="BlackHawk\Members">
         <name>changePassword</name>
         <full_name>changePassword</full_name>
-        <argument line="921">
+        <argument line="945">
           <name>$user</name>
           <default><![CDATA[null]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="999" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1023" package="BlackHawk\Members">
         <name>changeEmail</name>
         <full_name>changeEmail</full_name>
-        <argument line="999">
+        <argument line="1023">
           <name>$user</name>
           <default><![CDATA[null]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1081" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1105" package="BlackHawk\Members">
         <name>deleteAccount</name>
         <full_name>deleteAccount</full_name>
-        <argument line="1081">
+        <argument line="1105">
           <name>$user</name>
           <default><![CDATA[null]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1124" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1148" package="BlackHawk\Members">
         <name>verification</name>
         <full_name>verification</full_name>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1148" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1172" package="BlackHawk\Members">
         <name>firstuserregister</name>
         <full_name>firstuserregister</full_name>
-        <argument line="1148">
+        <argument line="1172">
           <name>$email</name>
           <default><![CDATA[null]]></default>
           <type/>
@@ -651,97 +738,205 @@
       </method>
     </class>
     <markers>
-      <todo line="439">Save roles in cookie</todo>
-      <todo line="522">Check against a dummy DB, that is made manually by SQL import?</todo>
-      <todo line="739">, make register form pick type of student and pull that value</todo>
+      <todo line="463">Save roles in cookie</todo>
+      <todo line="546">Check against a dummy DB, that is made manually by SQL import?</todo>
+      <todo line="763">, make register form pick type of student and pull that value</todo>
     </markers>
     <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file assets/member.class.php</error>
-      <error line="9" code="50000">No DocBlock was found for \member</error>
-      <error line="17" code="50010">No DocBlock was found for method __construct()</error>
-      <error line="50" code="50010">No DocBlock was found for method currentPath()</error>
-      <error line="62" code="50010">No DocBlock was found for method currentPage()</error>
-      <error line="82" code="50010">No DocBlock was found for method genSalt()</error>
-      <error line="102" code="50010">No DocBlock was found for method genHash()</error>
-      <error line="134" code="50010">No DocBlock was found for method intcheck()</error>
-      <error line="166" code="50010">No DocBlock was found for method verify()</error>
-      <error line="192" code="50010">No DocBlock was found for method login()</error>
-      <error line="312" code="50010">No DocBlock was found for method LoggedIn()</error>
-      <error line="359" code="50010">No DocBlock was found for method sessionIsSet()</error>
-      <error line="400" code="50010">No DocBlock was found for method logout()</error>
-      <error line="430" code="50010">No DocBlock was found for method createNewCookie()</error>
-      <error line="454" code="50010">No DocBlock was found for method deleteCookie()</error>
-      <error line="477" code="50010">No DocBlock was found for method userLogger()</error>
-      <error line="521" code="50010">No DocBlock was found for method combovalidation()</error>
-      <error line="530" code="50010">No DocBlock was found for method data()</error>
-      <error line="554" code="50010">No DocBlock was found for method register()</error>
-      <error line="820" code="50010">No DocBlock was found for method randomString()</error>
-      <error line="836" code="50010">No DocBlock was found for method recoverPassword()</error>
-      <error line="921" code="50010">No DocBlock was found for method changePassword()</error>
-      <error line="999" code="50010">No DocBlock was found for method changeEmail()</error>
-      <error line="1081" code="50010">No DocBlock was found for method deleteAccount()</error>
-      <error line="1124" code="50010">No DocBlock was found for method verification()</error>
-      <error line="1148" code="50010">No DocBlock was found for method firstuserregister()</error>
+      <error line="41" code="50010">No DocBlock was found for method __construct()</error>
+      <error line="74" code="50010">No DocBlock was found for method currentPath()</error>
+      <error line="86" code="50010">No DocBlock was found for method currentPage()</error>
+      <error line="106" code="50010">No DocBlock was found for method genSalt()</error>
+      <error line="126" code="50010">No DocBlock was found for method genHash()</error>
+      <error line="158" code="50010">No DocBlock was found for method intcheck()</error>
+      <error line="190" code="50010">No DocBlock was found for method verify()</error>
+      <error line="216" code="50010">No DocBlock was found for method login()</error>
+      <error line="336" code="50010">No DocBlock was found for method LoggedIn()</error>
+      <error line="383" code="50010">No DocBlock was found for method sessionIsSet()</error>
+      <error line="424" code="50010">No DocBlock was found for method logout()</error>
+      <error line="454" code="50010">No DocBlock was found for method createNewCookie()</error>
+      <error line="478" code="50010">No DocBlock was found for method deleteCookie()</error>
+      <error line="501" code="50010">No DocBlock was found for method userLogger()</error>
+      <error line="545" code="50010">No DocBlock was found for method combovalidation()</error>
+      <error line="554" code="50010">No DocBlock was found for method data()</error>
+      <error line="578" code="50010">No DocBlock was found for method register()</error>
+      <error line="844" code="50010">No DocBlock was found for method randomString()</error>
+      <error line="860" code="50010">No DocBlock was found for method recoverPassword()</error>
+      <error line="945" code="50010">No DocBlock was found for method changePassword()</error>
+      <error line="1023" code="50010">No DocBlock was found for method changeEmail()</error>
+      <error line="1105" code="50010">No DocBlock was found for method deleteAccount()</error>
+      <error line="1148" code="50010">No DocBlock was found for method verification()</error>
+      <error line="1172" code="50010">No DocBlock was found for method firstuserregister()</error>
     </parse_markers>
   </file>
-  <file path="assets/member.inc.php" hash="4386aab83ab278bd262a1fc74be0e354" package="Default">
-    <include line="8" type="Require Once" package="Default">
+  <file path="assets/member.inc.php" hash="16b74ae622fa3d57315b253c68284e97" package="BlackHawk\Members">
+    <docblock line="2">
+      <description><![CDATA[Creates Members Class]]></description>
+      <long-description><![CDATA[<p>Instantiates objects for member, database, and config</p>
+
+<p>PHP version 5.2.17 or higher</p>
+
+<p>LICENSE: TBD</p>]]></long-description>
+      <tag line="2" name="package" description="BlackHawk"/>
+      <tag line="2" name="subpackage" description="Members"/>
+      <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
+      <tag line="2" name="copyright" description="2012 Project BlackHawk"/>
+      <tag line="2" name="license" description="http://www.futuregencode.com/blackhawk/404  License 1.00"/>
+      <tag line="2" name="version" description="0.3.0"/>
+      <tag line="2" name="see" description="\member.class.php" refers="\member.class.php"/>
+      <tag line="2" name="since" description="File available since Release 0.3.0"/>
+    </docblock>
+    <include line="21" type="Require Once" package="Default">
       <name>config.inc.php</name>
     </include>
-    <include line="9" type="Require Once" package="Default">
+    <include line="22" type="Require Once" package="Default">
       <name>database.class.php</name>
     </include>
-    <include line="10" type="Require Once" package="Default">
+    <include line="23" type="Require Once" package="Default">
       <name>member.class.php</name>
     </include>
-    <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file assets/member.inc.php</error>
-    </parse_markers>
   </file>
-  <file path="assets/notice.class.php" hash="768fcc8f38fae663d14ffff78aab2712" package="Default">
-    <class final="false" abstract="false" namespace="global" line="7" package="Default">
+  <file path="assets/notice.class.php" hash="e22fee0050c3f9fec98529f32341c903" package="BlackHawk\Notice">
+    <docblock line="2">
+      <description><![CDATA[Creates Notice Class]]></description>
+      <long-description><![CDATA[<p>This file creates the notice outputs</p>
+
+<p>PHP version 5.2.17 or higher</p>
+
+<p>LICENSE: TBD</p>]]></long-description>
+      <tag line="2" name="package" description="BlackHawk"/>
+      <tag line="2" name="subpackage" description="Notice"/>
+      <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
+      <tag line="2" name="copyright" description="2012 Project BlackHawk"/>
+      <tag line="2" name="license" description="http://www.futuregencode.com/blackhawk/404  License 1.00"/>
+      <tag line="2" name="version" description="0.3.0"/>
+      <tag line="2" name="since" description="File available since Release 0.3.0"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="global" line="33" package="BlackHawk\Notice">
       <extends/>
       <name>notice</name>
       <full_name>\notice</full_name>
-      <property final="false" static="false" visibility="private" line="13" namespace="global" package="Default">
+      <docblock line="22">
+        <description><![CDATA[Implements Notice]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="22" name="package" description="BlackHawk"/>
+        <tag line="22" name="subpackage" description="Notice"/>
+        <tag line="22" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
+        <tag line="22" name="copyright" description="2012 Project BlackHawk"/>
+        <tag line="22" name="license" description="http://www.futuregencode.com/blackhawk/404  License 1.0"/>
+        <tag line="22" name="version" description="0.3.0"/>
+        <tag line="22" name="since" description="File available since Release 0.3.0"/>
+      </docblock>
+      <property final="false" static="false" visibility="private" line="39" namespace="global" package="Default">
         <name>$_notices</name>
         <default><![CDATA[array()]]></default>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="23" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="49" package="BlackHawk\Notice">
         <name>add</name>
         <full_name>add</full_name>
-        <argument line="23">
+        <argument line="49">
           <name>$type</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="23">
+        <argument line="49">
           <name>$message</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="32" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="58" package="BlackHawk\Notice">
         <name>report</name>
         <full_name>report</full_name>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="64" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="90" package="BlackHawk\Notice">
         <name>errorsExist</name>
         <full_name>errorsExist</full_name>
       </method>
     </class>
     <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file assets/notice.class.php</error>
-      <error line="7" code="50000">No DocBlock was found for \notice</error>
-      <error line="13" code="50018">No DocBlock was found for property $_notices</error>
-      <error line="23" code="50010">No DocBlock was found for method add()</error>
-      <error line="32" code="50010">No DocBlock was found for method report()</error>
-      <error line="64" code="50010">No DocBlock was found for method errorsExist()</error>
+      <error line="39" code="50018">No DocBlock was found for property $_notices</error>
+      <error line="49" code="50010">No DocBlock was found for method add()</error>
+      <error line="58" code="50010">No DocBlock was found for method report()</error>
+      <error line="90" code="50010">No DocBlock was found for method errorsExist()</error>
     </parse_markers>
   </file>
-  <file path="assets/parkingfunction.class.php" hash="a07fafffaa9cdd28858ecb2bc89dc053" package="Default"/>
-  <file path="assets/sensors.class.php" hash="f0daa519ccaae80b936d36e20aba7884" package="Default"/>
-  <file path="assets/upd.class.php" hash="5ae9592653d9c305e0c846e575527cd6" package="Default"/>
+  <file path="assets/sensors.class.php" hash="f90d75dc2aa42428a47fd2dafb5ffcd0" package="BlackHawk\Garage">
+    <docblock line="2">
+      <description><![CDATA[Basic Parking Sensors Funcions]]></description>
+      <long-description><![CDATA[<p>Allows the sensors to send data into the system</p>
+
+<p>PHP version 5.2.17 or higher</p>
+
+<p>LICENSE: TBD</p>]]></long-description>
+      <tag line="2" name="package" description="BlackHawk"/>
+      <tag line="2" name="subpackage" description="Garage"/>
+      <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
+      <tag line="2" name="copyright" description="2012 Project BlackHawk"/>
+      <tag line="2" name="license" description="http://www.futuregencode.com/blackhawk/404  License 1.00"/>
+      <tag line="2" name="version" description="0.3.0"/>
+      <tag line="2" name="see" description="\garage.class.php" refers="\garage.class.php"/>
+      <tag line="2" name="since" description="File available since Release 0.3.0"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="global" line="35" package="BlackHawk\Garage">
+      <extends/>
+      <name>Sensors</name>
+      <full_name>\Sensors</full_name>
+      <docblock line="23">
+        <description><![CDATA[Basic Parking Sensors Funcions]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="23" name="package" description="BlackHawk"/>
+        <tag line="23" name="subpackage" description="Garage"/>
+        <tag line="23" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
+        <tag line="23" name="copyright" description="2012 Project BlackHawk"/>
+        <tag line="23" name="license" description="http://www.futuregencode.com/blackhawk/404  License 1.0"/>
+        <tag line="23" name="version" description="0.3.0"/>
+        <tag line="23" name="see" description="\global\garage.class.php" refers="\global\garage.class.php"/>
+        <tag line="23" name="since" description="File available since Release 0.3.0"/>
+      </docblock>
+    </class>
+    <markers>
+      <todo line="36">Add sensor functions</todo>
+    </markers>
+  </file>
+  <file path="assets/upd.class.php" hash="92006060e3ca6c7d3f2a0f03bc893427" package="BlackHawk\Garage">
+    <docblock line="2">
+      <description><![CDATA[UPD Funcions]]></description>
+      <long-description><![CDATA[<p>Functions that can be called from the UPD role file</p>
+
+<p>PHP version 5.2.17 or higher</p>
+
+<p>LICENSE: TBD</p>]]></long-description>
+      <tag line="2" name="package" description="BlackHawk"/>
+      <tag line="2" name="subpackage" description="Garage"/>
+      <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
+      <tag line="2" name="copyright" description="2012 Project BlackHawk"/>
+      <tag line="2" name="license" description="http://www.futuregencode.com/blackhawk/404  License 1.00"/>
+      <tag line="2" name="version" description="0.3.0"/>
+      <tag line="2" name="see" description="\garage.class.php" refers="\garage.class.php"/>
+      <tag line="2" name="since" description="File available since Release 0.3.0"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="global" line="35" package="BlackHawk\Garage">
+      <extends/>
+      <name>UPD</name>
+      <full_name>\UPD</full_name>
+      <docblock line="23">
+        <description><![CDATA[Functions that can be called from the UPD role file]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="23" name="package" description="BlackHawk"/>
+        <tag line="23" name="subpackage" description="Garage"/>
+        <tag line="23" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
+        <tag line="23" name="copyright" description="2012 Project BlackHawk"/>
+        <tag line="23" name="license" description="http://www.futuregencode.com/blackhawk/404  License 1.0"/>
+        <tag line="23" name="version" description="0.3.0"/>
+        <tag line="23" name="see" description="\global\garage.class.php" refers="\global\garage.class.php"/>
+        <tag line="23" name="since" description="File available since Release 0.3.0"/>
+      </docblock>
+    </class>
+    <markers>
+      <todo line="36">UPD ROLE SPECIFIC FUNCTIONS CALLED FROM UPD ROLE FILE</todo>
+    </markers>
+  </file>
   <file path="debug/error.php" hash="86a3632724f499b6d7352de389a908e7" package="Default">
     <include line="3" type="Include" package="Default">
       <name>./../init.php</name>
@@ -1751,10 +1946,22 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
       <error line="0" code="50007">No page-level DocBlock was found in file debug/error_test_mysql.php</error>
     </parse_markers>
   </file>
-  <file path="debug/index.php" hash="8e7825ad3c7f57b596b2d2d16657f58d" package="Default">
-    <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file debug/index.php</error>
-    </parse_markers>
+  <file path="debug/index.php" hash="037241acbe8cc1e37dce5cb495f70afc" package="BlackHawk\Security">
+    <docblock line="2">
+      <description><![CDATA[Security Index Page]]></description>
+      <long-description><![CDATA[<p>This file prevents directory listing</p>
+
+<p>PHP version 5.2.17 or higher</p>
+
+<p>LICENSE: TBD</p>]]></long-description>
+      <tag line="2" name="package" description="BlackHawk"/>
+      <tag line="2" name="subpackage" description="Security"/>
+      <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
+      <tag line="2" name="copyright" description="2012 Project BlackHawk"/>
+      <tag line="2" name="license" description="http://www.futuregencode.com/blackhawk/404  License 1.00"/>
+      <tag line="2" name="version" description="0.3.0"/>
+      <tag line="2" name="since" description="File available since Release 0.3.0"/>
+    </docblock>
   </file>
   <file path="debug/masdebug.php" hash="0febe40c29314f1331eac0613403ef4e" package="Default">
     <include line="3" type="Include" package="Default">
@@ -1764,61 +1971,102 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
       <error line="0" code="50007">No page-level DocBlock was found in file debug/masdebug.php</error>
     </parse_markers>
   </file>
-  <file path="errorcode.php" hash="f8f3707ee5affc2e2e688aedf6a0e730" package="Default">
-    <function namespace="global" line="9" package="Default">
+  <file path="errorcode.php" hash="9d1048278069c97a3fc40f460219560f" package="BlackHawk\Debug">
+    <docblock line="2">
+      <description><![CDATA[Project BlackHawk Errorcode]]></description>
+      <long-description><![CDATA[<p>Handles HTTP Headers</p>
+
+<p>PHP version 5.2.17 or higher</p>
+
+<p>LICENSE: TBD</p>]]></long-description>
+      <tag line="2" name="package" description="BlackHawk"/>
+      <tag line="2" name="subpackage" description="Debug"/>
+      <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
+      <tag line="2" name="copyright" description="2012 Project BlackHawk"/>
+      <tag line="2" name="license" description="http://www.futuregencode.com/blackhawk/404  License 1.00"/>
+      <tag line="2" name="version" description="0.3.0"/>
+      <tag line="2" name="since" description="File available since Release 0.3.0"/>
+      <tag line="2" name="todo" description="Add All HTTP Header descriptions"/>
+    </docblock>
+    <function namespace="global" line="34" package="BlackHawk\Debug">
       <name>print_error_page</name>
       <full_name>\print_error_page</full_name>
     </function>
-    <function namespace="global" line="233" package="Default">
+    <function namespace="global" line="263" package="BlackHawk\Debug">
       <name>askapache_global_debug</name>
       <full_name>\askapache_global_debug</full_name>
     </function>
     <markers>
-      <todo line="203">add redirect</todo>
+      <todo line="228">add redirect</todo>
     </markers>
     <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file errorcode.php</error>
-      <error line="9" code="50009">No DocBlock was found for function \print_error_page()</error>
-      <error line="233" code="50009">No DocBlock was found for function \askapache_global_debug()</error>
+      <error line="34" code="50009">No DocBlock was found for function \print_error_page()</error>
+      <error line="263" code="50009">No DocBlock was found for function \askapache_global_debug()</error>
     </parse_markers>
   </file>
-  <file path="index.php" hash="8ddcefa79017776417853a1ba378f910" package="Default">
-    <include line="10" type="Include" package="Default">
+  <file path="index.php" hash="fa1d5f47103328904253117263aab929" package="BlackHawk\Home">
+    <docblock line="2">
+      <description><![CDATA[The Home Page]]></description>
+      <long-description><![CDATA[<p>Displays the home page, and does some redirecting work</p>
+
+<p>PHP version 5.2.17 or higher</p>
+
+<p>LICENSE: TBD</p>]]></long-description>
+      <tag line="2" name="package" description="BlackHawk"/>
+      <tag line="2" name="subpackage" description="Home"/>
+      <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
+      <tag line="2" name="copyright" description="2012 Project BlackHawk"/>
+      <tag line="2" name="license" description="http://www.futuregencode.com/blackhawk/404  License 1.00"/>
+      <tag line="2" name="version" description="0.3.0"/>
+      <tag line="2" name="see" description="\redirect.php" refers="\redirect.php"/>
+      <tag line="2" name="since" description="File available since Release 0.3.0"/>
+    </docblock>
+    <include line="29" type="Include" package="Default">
       <name>assets/member.inc.php</name>
     </include>
-    <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file index.php</error>
-    </parse_markers>
   </file>
-  <file path="init.php" hash="f6a6b1980c4bf981070914c50925354c" package="Default">
-    <constant namespace="global" line="7" package="Default">
+  <file path="init.php" hash="216c94a651fa8fec79fc2b34484efd7c" package="BlackHawk\General">
+    <docblock line="2">
+      <description><![CDATA[BlackHawk Init]]></description>
+      <long-description><![CDATA[<p>Contains program constants</p>
+
+<p>PHP version 5.2.17 or higher</p>
+
+<p>LICENSE: TBD</p>]]></long-description>
+      <tag line="2" name="package" description="BlackHawk"/>
+      <tag line="2" name="subpackage" description="General"/>
+      <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
+      <tag line="2" name="copyright" description="2012 Project BlackHawk"/>
+      <tag line="2" name="license" description="http://www.futuregencode.com/blackhawk/404  License 1.00"/>
+      <tag line="2" name="version" description="0.3.0"/>
+      <tag line="2" name="since" description="File available since Release 0.3.0"/>
+      <tag line="2" name="todo" description="Add All HTTP Header descriptions"/>
+    </docblock>
+    <constant namespace="global" line="25" package="BlackHawk\General">
       <name>BLACKHAWK_ROOT</name>
       <full_name>\BLACKHAWK_ROOT</full_name>
       <value><![CDATA[realpath(dirname(__FILE__))]]></value>
     </constant>
-    <constant namespace="global" line="9" package="Default">
+    <constant namespace="global" line="27" package="BlackHawk\General">
       <name>BLACKHAWK_CONFIG</name>
       <full_name>\BLACKHAWK_CONFIG</full_name>
       <value><![CDATA["standard"]]></value>
     </constant>
-    <constant namespace="global" line="11" package="Default">
+    <constant namespace="global" line="29" package="BlackHawk\General">
       <name>BLACKHAWK_VERSION</name>
       <full_name>\BLACKHAWK_VERSION</full_name>
       <value><![CDATA[0.2]]></value>
     </constant>
-    <constant namespace="global" line="13" package="Default">
+    <constant namespace="global" line="31" package="BlackHawk\General">
       <name>BLACKHAWK_SUBVERSION</name>
       <full_name>\BLACKHAWK_SUBVERSION</full_name>
       <value><![CDATA[0.1]]></value>
     </constant>
-    <constant namespace="global" line="15" package="Default">
+    <constant namespace="global" line="33" package="BlackHawk\General">
       <name>BLACKHAWK_COMMIT</name>
       <full_name>\BLACKHAWK_COMMIT</full_name>
       <value><![CDATA[42]]></value>
     </constant>
-    <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file init.php</error>
-    </parse_markers>
   </file>
   <file path="member.php" hash="7b2046d81867d7c62a670da2ae34aeac" package="Default">
     <include line="6" type="Include" package="Default">
@@ -1839,10 +2087,22 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
       <error line="0" code="50007">No page-level DocBlock was found in file redirect.php</error>
     </parse_markers>
   </file>
-  <file path="roles/index.php" hash="8e7825ad3c7f57b596b2d2d16657f58d" package="Default">
-    <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file roles/index.php</error>
-    </parse_markers>
+  <file path="roles/index.php" hash="037241acbe8cc1e37dce5cb495f70afc" package="BlackHawk\Security">
+    <docblock line="2">
+      <description><![CDATA[Security Index Page]]></description>
+      <long-description><![CDATA[<p>This file prevents directory listing</p>
+
+<p>PHP version 5.2.17 or higher</p>
+
+<p>LICENSE: TBD</p>]]></long-description>
+      <tag line="2" name="package" description="BlackHawk"/>
+      <tag line="2" name="subpackage" description="Security"/>
+      <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
+      <tag line="2" name="copyright" description="2012 Project BlackHawk"/>
+      <tag line="2" name="license" description="http://www.futuregencode.com/blackhawk/404  License 1.00"/>
+      <tag line="2" name="version" description="0.3.0"/>
+      <tag line="2" name="since" description="File available since Release 0.3.0"/>
+    </docblock>
   </file>
   <file path="roles/parking_services.php" hash="194b7dacc804c7bdbb785be00c357599" package="Default">
     <include line="2" type="Include" package="Default">
@@ -1940,7 +2200,7 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
       <error line="0" code="50007">No page-level DocBlock was found in file roles/visitor.php</error>
     </parse_markers>
   </file>
-  <file path="setup/css/index.php" hash="cea2ab9624785b6333c83baf01836512" package="BlackHawk\Security">
+  <file path="setup/css/index.php" hash="037241acbe8cc1e37dce5cb495f70afc" package="BlackHawk\Security">
     <docblock line="2">
       <description><![CDATA[Security Index Page]]></description>
       <long-description><![CDATA[<p>This file prevents directory listing</p>
@@ -1986,10 +2246,22 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
       <error line="437" code="50009">No DocBlock was found for function \rrmdir()</error>
     </parse_markers>
   </file>
-  <file path="tests/index.php" hash="8e7825ad3c7f57b596b2d2d16657f58d" package="Default">
-    <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file tests/index.php</error>
-    </parse_markers>
+  <file path="tests/index.php" hash="037241acbe8cc1e37dce5cb495f70afc" package="BlackHawk\Security">
+    <docblock line="2">
+      <description><![CDATA[Security Index Page]]></description>
+      <long-description><![CDATA[<p>This file prevents directory listing</p>
+
+<p>PHP version 5.2.17 or higher</p>
+
+<p>LICENSE: TBD</p>]]></long-description>
+      <tag line="2" name="package" description="BlackHawk"/>
+      <tag line="2" name="subpackage" description="Security"/>
+      <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
+      <tag line="2" name="copyright" description="2012 Project BlackHawk"/>
+      <tag line="2" name="license" description="http://www.futuregencode.com/blackhawk/404  License 1.00"/>
+      <tag line="2" name="version" description="0.3.0"/>
+      <tag line="2" name="since" description="File available since Release 0.3.0"/>
+    </docblock>
   </file>
   <file path="travis.php" hash="89a086cf35523400c353bf5ef70a0e35" package="Default">
     <parse_markers>
@@ -2002,14 +2274,19 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
     </parse_markers>
   </file>
   <package name="BlackHawk" full_name="BlackHawk">
+    <package name="Debug" full_name="BlackHawk\Debug"/>
     <package name="Garage" full_name="BlackHawk\Garage"/>
+    <package name="General" full_name="BlackHawk\General"/>
+    <package name="Home" full_name="BlackHawk\Home"/>
     <package name="Internal Functions" full_name="BlackHawk\Internal Functions"/>
     <package name="Mail" full_name="BlackHawk\Mail"/>
+    <package name="Members" full_name="BlackHawk\Members"/>
+    <package name="Notice" full_name="BlackHawk\Notice"/>
     <package name="Security" full_name="BlackHawk\Security"/>
   </package>
   <package name="Default" full_name="Default"/>
   <namespace name="global" full_name="global"/>
-  <marker count="30">todo</marker>
+  <marker count="34">todo</marker>
   <marker count="0">fixme</marker>
   <deprecated count="0"/>
 </project>
