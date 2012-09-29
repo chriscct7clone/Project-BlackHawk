@@ -238,6 +238,17 @@ $mysql_garage_by_uid = 'CREATE TABLE IF NOT EXISTS `garage_by_uid` (
   `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`uid`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;';
+$mysql_statistics = 'CREATE TABLE IF NOT EXISTS `garage_by_uid` (
+  `uid` int(11) NOT NULL,
+  `name` varchar(225) NOT NULL,
+  `garage` int(8) NOT NULL,
+  `floor` int(8) NOT NULL,
+  `spot` int(8) NOT NULL,
+  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`uid`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;';
+
+//TODO: add all codes here
 	$fp = fopen("../.htaccess", "a");
 	fwrite($fp, "\n\n# ErrorDocuments \n");
 	fwrite($fp, "ErrorDocument 400 ". $installURL."/errorcode.php?error=400 \n");
@@ -334,7 +345,7 @@ $mysql_garage_by_uid = 'CREATE TABLE IF NOT EXISTS `garage_by_uid` (
 		} else {
 			$notice->add('error', 'Could not populate users_recover!');
 		}
-		/* mysql_users_recover */
+		/* mysql_garage_by_uid */
 		$statement = $pdo->prepare($mysql_garage_by_uid);
 		if($statement->execute()){
 			$notice->add('success', 'Table `garage_by_uid` populated!');
@@ -348,6 +359,14 @@ $mysql_garage_by_uid = 'CREATE TABLE IF NOT EXISTS `garage_by_uid` (
 		} else {
 			$notice->add('error', 'Could not populate garage_list!');
 		}		
+		/* mysql_statistics */
+		$statement = $pdo->prepare($mysql_statistics);
+		if($statement->execute()){
+			$notice->add('success', 'Table `statistics` populated!');
+		} else {
+			$notice->add('error', 'Could not populate statistics!');
+		}	
+		
 		
 		require_once("../assets/member.inc.php");
 		// Fire User Registration 
@@ -508,7 +527,7 @@ $("#myId").change(function() {
 				<option value="false"<?php if($remember_me == 'false') { echo ' selected="selected"'; } ?>>False</option>
 			</select>
 			
-			<label>Require Captcha on registration</label>
+			<label>Require Captcha on login?</label>
 			<select name="captcha">
 				<option value="true"<?php if($captcha == 'true') { echo ' selected="selected"'; } ?>>True</option>
 				<option value="false"<?php if($captcha == 'false') { echo ' selected="selected"'; } ?>>False</option> 
@@ -535,13 +554,13 @@ foreach($templates as $template) {
 				?>
 			</select>
 
-			<label>Send a welcome E-Mail on registration?</label>
+			<label>Send a welcome E-Mail?</label>
 			<select name="email_welcome">
 				<option value="true"<?php if($email_welcome == 'true') { echo ' selected="selected"'; }?>>True</option>
 				<option value="false"<?php if($email_welcome == 'false') { echo ' selected="selected"'; }?>>False</option>
 			</select>
 			
-			<label>Requre E-mail verification on registration?</label>
+			<label>Requre E-mail verification?</label>
 			<select name="email_verification">
 				<option value="true"<?php if($email_verification == 'true') { echo ' selected="selected"'; }?>>True</option>
 				<option value="false"<?php if($email_verification == 'false') { echo ' selected="selected"'; }?>>False</option>

@@ -32,9 +32,11 @@ if($action == 'logout') {
 		$title   = 'Settings';
 		$content = '<a href="member.php?action=settings&amp;subaction=password" class="button full">Change Password</a><a href="member.php?action=settings&amp;subaction=delete" class="button full">Delete Account</a>';
 	}
-} elseif($action == 'register') {
-	$title   = 'Create an account';
-	$content = $member->register() . '<p class="options group"><a href="member.php?action=login">Already have an account?</a> &bull; <a href="member.php?action=recover-password">Recover Password</a></p>';
+} 
+// self registration removed
+//elseif($action == 'register') {
+	//$title   = 'Create an account';
+	//$content = $member->register() . '<p class="options group"><a href="member.php?action=login">Already have an account?</a> &bull; <a href="member.php?action=recover-password">Recover Password</a></p>';
 } elseif($action == 'recover-password') {
 	$title   = 'Recover your password';
 	$content = $member->recoverPassword() . '<p class="options group"><a href="member.php?action=login">Already have an account?</a></p>';
@@ -43,7 +45,7 @@ if($action == 'logout') {
 	$content = $member->verification() . '<p class="options group"><a href="member.php?action=login">Already have an account?</a></p>';
 } else {
 	$title   = 'Login';
-	$content =  $member->login() . '<p class="options group"><a href="member.php?action=register">Register</a> &bull; <a href="member.php?action=recover-password">Recover Password</a></p>';
+	$content =  $member->login() . '<p class="options group"><a href="member.php?action=recover-password">Recover Password</a></p>';
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

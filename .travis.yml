@@ -5,7 +5,7 @@ php:
   - 5.4
 before_script:
   - mysql -e 'create database users;'
-script: "php travis.php" 
+script: "php tests/travis.php" 
 notifications:
   email:
     - chriscct7@gmail.com 

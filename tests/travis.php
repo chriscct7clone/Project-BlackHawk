@@ -14,5 +14,4 @@ else{ // On another planet o.O
 $status='God Save the Queen';
 var_dump($status); //To get results in Travis CI, you must use PHP's var_dump() function
 }
-echo '<h1>Hi There LocalHost Testers!</h1>'; // assertFalse() on Travis-CI upgrade
 ?>

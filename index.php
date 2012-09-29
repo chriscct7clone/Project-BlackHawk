@@ -36,7 +36,11 @@ if(isset($_GET['action'])) {
 if($action == 'secure') {
 	$member->LoggedIn();
 	$title   = 'Redirecting';
-	$content =  '<meta http-equiv="refresh" content="2;url=redirect.php" /><p>Redirecting....</p>';
+	// $role    = $member->role(); Gets role of user
+	$content =  '<meta http-equiv="refresh" content="2;url=$role.php" /><p>Redirecting....</p>';
+if($action == 'global') {
+	$title   = 'Redirecting';
+	$content =  '<meta http-equiv="refresh" content="2;url=global.php" /><p>Loading Statistics....</p>';
 } else {
 	$title   = 'Welcome';
 	$content =  'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.';
@@ -66,14 +70,14 @@ if($action == 'secure') {
 			<div id="user-info">Hello, Guest</div>
 			<ul id="user-ops">
 				<li><a href="member.php?action=login">Login</a></li>
-				<li><a href="member.php?action=register">Register</a></li>
 			</ul>
 		<?php } ?>
 		</div>
 	</div>
 	<ul id="navigation" class="group">
-		<li><a href="index.php">Index</a></li>
+		<li><a href="index.php">Home Page</a></li>
 		<li><a href="index.php?action=secure">Secure Page</a></li>
+		<li><a href="index.php?action=global">Public Statistics</a></li>
 	</ul>
 	<div id="body" class="group">
 <?php echo $content; ?>
