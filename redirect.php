@@ -14,7 +14,7 @@ On each, we need to check their cookie and then if not correct role, redirect th
 
 // TODO: User should be logged in on this page
 $title   = 'Passing through roles';
-$content =  '<meta http-equiv="refresh" content="2;url=./roles/student_commuter.php" /><p>Passing through roles....</p>';
+$content =  '<meta http-equiv="refresh" content="2;url=./roles/student_campus.php" /><p>Passing through roles....</p>';
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
