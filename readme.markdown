@@ -1,5 +1,5 @@
 # Project BlackHawk #
-Version 0.2.0 RC5   
+Version 0.4.0   
 [![Build Status](https://secure.travis-ci.org/chriscct7/Project-BlackHawk.png)](http://travis-ci.org/chriscct7/Project-BlackHawk)
 
 ## Program Description ##
@@ -52,6 +52,9 @@ Remove both entries, **if and only if** they are in the same version number's ch
    
 ## Found An Issue? ##
 Please open a ticket in Github.  
+
+## I would like to see feature X ##
+You can vote on and request new features on our [Github Issues page](https://github.com/chriscct7/project-blackhawk/issues)
 
 ## Automated Source Testing ##
 We test Project BlackHawk on every commit using a custom Travis-CI script (we are not currently using the default PHPUnit tests).

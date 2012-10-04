@@ -32,7 +32,6 @@ if($action == 'logout') {
 		$title   = 'Settings';
 		$content = '<a href="member.php?action=settings&amp;subaction=password" class="button full">Change Password</a><a href="member.php?action=settings&amp;subaction=delete" class="button full">Delete Account</a>';
 	}
-} 
 // self registration removed
 //elseif($action == 'register') {
 	//$title   = 'Create an account';

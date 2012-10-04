@@ -1,5 +1,5 @@
 Project BlackHawk Credits:
-This project wouldn't be where it is without the help of several individuals and groups:
+This project wouldn't be where it is without the help of several individuals,groups and open-source projects:
 
 + The authors of the Oxygen iconset
 + The codereview.stackexchange.com community
@@ -12,6 +12,47 @@ The following services:
 + PHPDocumentor2
 + VioletUML
 + ArgoUML
+
+The following open-source projects:
++ PHPUnit
++ PHPDocumenter2
++ JSLint
++ JSONLint
++ Antiscroll
++ Chosen
++ CLEditor
++ Colorbox
++ Colorpicker
++ Datatables
++ Datepicker
++ Floating Header
++ Flot
++ Fullclaendar
++ Google Code Prettify
++ jBreadcrumbs
++ jquery Complexify
++ jQuery File Upload
++ jQuery
++ jQuery Cookie
++ jQuery UI
++ jQuery Hosted CDN (Google)
++ jQuery Hosted CDN (Microsoft) 
++ jQuery Hosted CDN (jQuery)
++ jQuery Mousewheel
++ jQuery Spritely
++ list.js
++ moment.js
++ multiselect
++ plupload
++ qtip2
++ smoke
++ stepy
++ sticky
++ tag handler
++ tinyMCE
++ uniform
++ validation
++ Kombineer
 
 And of course, our lead, master support ninja, and supreme commander:
 Chris Christoff

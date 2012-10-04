@@ -38,6 +38,7 @@ if($action == 'secure') {
 	$title   = 'Redirecting';
 	// $role    = $member->role(); Gets role of user
 	$content =  '<meta http-equiv="refresh" content="2;url=$role.php" /><p>Redirecting....</p>';
+	}
 if($action == 'global') {
 	$title   = 'Redirecting';
 	$content =  '<meta http-equiv="refresh" content="2;url=global.php" /><p>Loading Statistics....</p>';

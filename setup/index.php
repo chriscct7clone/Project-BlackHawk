@@ -249,6 +249,7 @@ $mysql_statistics = 'CREATE TABLE IF NOT EXISTS `garage_by_uid` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;';
 
 //TODO: add all codes here
+//TODO: full paths not allowed?
 	$fp = fopen("../.htaccess", "a");
 	fwrite($fp, "\n\n# ErrorDocuments \n");
 	fwrite($fp, "ErrorDocument 400 ". $installURL."/errorcode.php?error=400 \n");

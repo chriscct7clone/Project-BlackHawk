@@ -1,10 +1,15 @@
-BlackHawk 0.3.0 (projected)
+BlackHawk 0.5.0
 + Write add/edit/del user and garage functions
 + initiate role management
 + check emails are FGCU
 + clean up the files
 + add features
-+ (anticipated) Period of Rapid Development (unfeasible to document number of changes).
+
+BlackHawk 0.4.0 
++ Period of Rapid Development (unfeasible to document number of changes).
+
+BlackHawk 0.3.0 (projected)
++ Period of Rapid Development (unfeasible to document number of changes).
 
 BlackHawk 0.2.0
 + Period of Rapid Development (unfeasible to document number of changes).

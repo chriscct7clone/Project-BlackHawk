@@ -369,7 +369,7 @@ class member {
 			/* Redirect Cookie */
 			setcookie("redirect", $this->currentPage(), time() + 31536000);  /* expire in 1 year */
 			/* Go to Login */
-			header("Location: member.php?action=login");
+			header("Location: ../member.php?action=login");
 		}
 	}
 	
@@ -1181,7 +1181,8 @@ class member {
 		$username = mt_rand(100000000, 999999999);
 		} while (strpos($username, '814') == 0);
 		// Generate Password randomly. TODO: How high should we allow for max?
-		$password=mt_rand(100000, 999999999);
+		//$password=mt_rand(100000, 999999999);
+		$password='444444';// TODO: make random again
 		$formailpass=$password;
 		$userrole=3;
 		$parkingrole=3;
