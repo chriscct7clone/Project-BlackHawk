@@ -250,6 +250,7 @@ $mysql_statistics = 'CREATE TABLE IF NOT EXISTS `garage_by_uid` (
 
 //TODO: add all codes here
 //TODO: full paths not allowed?
+	/*
 	$fp = fopen("../.htaccess", "a");
 	fwrite($fp, "\n\n# ErrorDocuments \n");
 	fwrite($fp, "ErrorDocument 400 ". $installURL."/errorcode.php?error=400 \n");
@@ -306,7 +307,7 @@ $mysql_statistics = 'CREATE TABLE IF NOT EXISTS `garage_by_uid` (
 	fwrite($fp, "ErrorDocument 999 ". $installURL."/errorcode.php?error=999 \n");
 	fclose($fp);
 	@chmod("../.htaccess", 0644);	
-		
+		*/
 		/* mysql_users */
 		$statement = $pdo->prepare($mysql_users);
 		if($statement->execute()){
@@ -379,7 +380,7 @@ $mysql_statistics = 'CREATE TABLE IF NOT EXISTS `garage_by_uid` (
 		}
 		
 		//Notify that everything is done
-		
+		// TODO: fix htaccess and make sure exists
 		//Ask to delete setup folder
 		
 		if($notice->errorsExist() == false) {
