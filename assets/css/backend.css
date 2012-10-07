@@ -542,7 +542,7 @@
 			#maincontainer {background: #fff}
 			.row > [class*="span"],.navbar-fixed-top {margin:0 !important}
 			.navbar-fixed-top .container-fluid {padding:0 !important}
-			.navbar .brand {width:auto;line-height:18px;margin:3px 0 6px 34px}
+			.navbar .brand {width:auto;line-height:18px;}
 			.navbar .user_menu {padding-top:5px}
 			.navbar .user_menu .dropdown-menu {margin:8px 10px 0 0}
 			.navbar .user_menu > li > a {padding:0 10px 0 0}

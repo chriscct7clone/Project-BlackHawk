@@ -111,7 +111,7 @@ $member->LoggedIn();
                             </ul>
                             <nav>
                                 <div>
-                                    <ul class="nav">
+                                    <ul class="nav user_menu pull-right">
                                         <li>
                                             <a href="#"><i class="icon-book icon-white"></i> Help</a>
                                         </li>
@@ -165,8 +165,8 @@ $member->LoggedIn();
 						 <div class="row-fluid">
                         <div class="span12">
 							<div class="heading clearfix">
-								<h3 class="pull-left">Parking Status</h3>
-								<span class="pull-left label label-important" style="margin-left: 10px;">1 Closed Parking Lot</span>
+								<h3 class="pull-left">Parking Status</h3>	
+								<span class="pull-left label label-important ttip_t" style="margin-left: 10px;" title="Garage XX is closed">1 Closed Parking Lot</span>
 							</div>
                             <table id="dt_e" class="table table-striped table-bordered dTableR">
                                 <thead>
@@ -197,7 +197,6 @@ $member->LoggedIn();
 						<div class="span7">
 							<div class="heading clearfix">
 								<h3 class="pull-left">Parking Spots</h3>
-								<span class="pull-right label label-info ttip_t" title="Here is a sample info tooltip">Info</span>
 							</div>
 							<div id="fl_1" style="height:270px;width:100%;margin:15px auto 0"></div>
 						</div>
