@@ -294,7 +294,7 @@ class member {
 						if(isset($_COOKIE['redirect'])) {
 							$redirect = $_COOKIE['redirect'];
 						} else {
-							$redirect = '';
+							$redirect = 'index.php&action=secure';
 						}
 						echo '<meta http-equiv="refresh" content="2;url=' . $redirect . '" />';
 					} else {
@@ -355,6 +355,21 @@ class member {
 					session_regenerate_id();
 					$_SESSION['member_id'] = $user->id;
 					$_SESSION['member_valid'] = 1;
+					$user = $database->query('SELECT id, username, email, date FROM users WHERE id = :id', array(':id' => $user->id), 'FETCH_OBJ');
+					$_SESSION['member_name'] = $user->username;
+					$_SESSION['user_role'] = null;
+					$_SESSION['garage_role'] =null ;
+					$_SESSION['colors'] = null;
+					$_SESSION['fixed_or_fluid'] = null;
+					$_SESSION['bgimage'] = null;
+					$_SESSION['favorite_garages'] = null;
+					$reservespot='yes';
+					if ($reservespot != null)
+					{
+					$_SESSION['reserve_spot'] = null;
+					}
+					
+				
 				} else {
 					/* Return false */
 					$status = false;
@@ -527,29 +542,13 @@ class member {
 		$timestamp = date("Y-m-d H:i:s", time());
 		$database->query('INSERT INTO users_logs(userid, action, time, ip) VALUES(:userid, :action, :time, :ip)', array(':userid' => $userid, ':action' => $action, ':time' => $timestamp, ':ip' => $ip));
 	}
-		/*
-     * Combo Validation
-	 *
-	 * Type of function: Dummy
-	 *
-	 * Purpose: Checks PIN/UID combo against FGCU Database to see if valid combo
-	 *
-	 * Input: $UID, $PIN
-	 *
-	 * Output: true (bool) if valid, else false (bool)
-	 *
-	 * Created in Version: 0.2.0
-	 *
-	 * Last Modified: 9/15/2012, by Chris Christoff
-	 */             
-	public function combovalidation($username, $password){
-	 // TODO: Check against a dummy DB, that is made manually by SQL import?
-	 return true;
-	 }
 	/*
 	 * Member Data
-	 *
+	 * 
 	 * Loads all the member data
+	 *
+	 * @deprecated: since 0.5.0
+	 *  No longer in active use
 	 */
 	public function data() {
 		global $database;
@@ -641,11 +640,6 @@ class member {
 				}
 			} else {
 				$notice->add('error', 'Please enter a password');
-			}
-			// Dummy check against DB function
-			if ($this->combovalidation($username, $password) == false)
-			{
-			$notice->add('error', 'Not a valid UID/PIN combo');
 			}
 			/* Check E-Mail */
 			if(!empty($_POST['email'])) {
