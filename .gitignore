@@ -2,16 +2,12 @@
 # repositories should ignore. It is recommended not to modify this file in your
 # local clone. 
 #
-# Folders #
+# Folders/Files   #
 ###################
 
 # Anti-Stetson #
 config.inc.php
 assets/config.inc.php
-
-# Temp Mac Solution
-assets/lib/validation/localization
-assets/lib/validation/localization/*
 
 # Compiled source #
 ###################

@@ -1,9 +1,6 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 
-# For Macs
-*.js = text eol=crlf
-
 # Custom for Visual Studio 2012
 *.cs     diff=csharp
 *.sln    merge=union

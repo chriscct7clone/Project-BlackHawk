@@ -31,7 +31,6 @@ grunt.initConfig({
 				'package.json',
 				'demo/**/*.*',
 				'lib/**/*.*',
-				'localization/**/*.*',
 				'test/**/*.*'
 			],
 			dest: 'dist/<%= pkg.name %>-<%= pkg.version %>.zip'
