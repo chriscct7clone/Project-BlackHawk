@@ -21,7 +21,7 @@
 ini_set('display_errors', 'off');
 ini_set("arg_separator.output", "&amp;");
 ini_set('default_charset', 'utf-8');
-// get full path to kombineer
+// get full path to blackhawk
 define("BLACKHAWK_ROOT", realpath(dirname(__FILE__)));
 // configuration to load
 define("BLACKHAWK_CONFIG", "standard");

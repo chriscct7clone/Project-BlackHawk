@@ -1,4 +1,5 @@
 <?php
+require_once("../init.php");
 /* Include Notice & Mailer Class */
 require_once("../assets/notice.class.php");
 $notice = new notice;
@@ -164,6 +165,9 @@ Config::write(\'email_template\', \'' . $email_template . '\');
 Config::write(\'email_master\', \''. $email_master . '\');
 Config::write(\'email_welcome\', ' . $email_welcome . ');
 Config::write(\'email_verification\', ' . $email_verification . ');
+
+Config::write(\'password\', \'' . BLACKHAWK_CONFIG . '\');
+Config::write(\'password\', \'' . BLACKHAWK_VERSION .'.'.BLACKHAWK_SUBVERSION . '.' . BLACKHAWK_COMMIT . '\');
 ?>';
 			fwrite($config_handle, $config_data);
 			$notice->add('success', 'Config file created');
