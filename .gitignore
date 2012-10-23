@@ -9,9 +9,9 @@
 config.inc.php
 assets/config.inc.php
 
-#Editor project files
-*.sublime-project
-*.sublime-workspace
+# Temp Mac Solution
+assets/lib/validation/localization
+assets/lib/validation/localization/*
 
 # Compiled source #
 ###################
@@ -41,7 +41,8 @@ assets/config.inc.php
 *.sql
 *.sqlite
 
-# OS generated files #
+# OS Generated Files #
+# Apple/Windows Only #
 ######################
 .DS_Store
 .DS_Store?
@@ -51,6 +52,60 @@ assets/config.inc.php
 Icon?
 ehthumbs.db
 Thumbs.db
+profile
+*.swp
+*~.nib
+Desktop.ini
+
+# NotePad++ Noise #
+#####################
+*.bak
+
+# Code::Blocks Noise #
+######################
+*.depend
+*.layout
+
+# NetBeans Noise #
+#####################
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+
+# XCode Noise #
+###############
+build/*
+*.mode1
+*.mode1v3
+*.mode2v3
+*.perspective
+*.perspectivev3
+*.pbxuser
+*.xcworkspace
+xcuserdata
+
+# Sublime Noise #
+#################
+*.sublime-project
+*.sublime-workspace
+
+
+# SVN and CVS #
+##############
+.svn
+CV
+
+# Extra Noise #
+###############
+.settings/*
+.buildpath
+.project
+nbproject
+deploy.sh
 
 # Chris's Developer Docs #
 # For now, I do not want to send these to Github #
