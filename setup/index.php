@@ -171,8 +171,8 @@ Config::write(\'blackhawkversion\', \'' . BLACKHAWK_VERSION .'.'.BLACKHAWK_SUBVE
 
 $mysql_users = 'CREATE TABLE IF NOT EXISTS `users` (
   `uid` int(11) NOT NULL,
-  `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `date` date NOT NULL,
   `garage_role` int(11) NOT NULL,
@@ -181,10 +181,10 @@ $mysql_users = 'CREATE TABLE IF NOT EXISTS `users` (
   `parked_location` varchar(255) NOT NULL,
   `profile_colors` varchar(255) NOT NULL,
   `profile_fixed` int(11) NOT NULL,
-  `profile_image` varchar(255) NOT NULL,
+  `profile_image` int(11) NOT NULL,
   `profile_fav_garages` varchar(255) NOT NULL, 
   PRIMARY KEY (`uid`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1;';
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;';
 
 $mysql_users_inactive = 'CREATE TABLE IF NOT EXISTS `users_inactive` (
   `verCode` varchar(255) NOT NULL,
@@ -539,14 +539,21 @@ ErrorDocument 510 '. $installURL.'/errorcode.php?error=510
 		
 		// Create Default User Roles
 		// Total Access: Not Used By FGCU
-		$user_role_1="INSERT INTO `user_roles` (`id`, `add_users`,`edit_users`,`delete_users`, `import_users`,`export_users`,`add_garages`,`edit_garages`,`delete_garages`, `import_garages`,`export_garages`,`edit_garage_status`, `add_tickets`,`edit_tickets`,`delete_tickets`, `pay_tickets`, `manage_system`, `adv_statistics`, `user_profile`) VALUES (NULL, 'Total Access', '1', '1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1');";
+		$user_role_1="INSERT INTO `user_roles` (`id`, `name`, `add_users`,`edit_users`,`delete_users`, `import_users`,`export_users`,`add_garages`,`edit_garages`,`delete_garages`, `import_garages`,`export_garages`,`edit_garage_status`, `add_tickets`,`edit_tickets`,`delete_tickets`, `pay_tickets`, `manage_system`, `adv_statistics`, `user_profile`) VALUES (NULL, 'Total Access', '1', '1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1');";
 		$statement = $pdo->prepare($user_role_1);
 		if($statement->execute()){
 			$notice->add('success', 'User Role `Total Access` added!');
 		} else {
 			$notice->add('error', 'Could not add `Total Access` role!');
 		}
-		
+		// Computing Services
+		$user_role_2="INSERT INTO `user_roles` (`id`,`name`, `add_users`,`edit_users`,`delete_users`, `import_users`,`export_users`,`add_garages`,`edit_garages`,`delete_garages`, `import_garages`,`export_garages`,`edit_garage_status`, `add_tickets`,`edit_tickets`,`delete_tickets`, `pay_tickets`, `manage_system`, `adv_statistics`, `user_profile`) VALUES (NULL, 'Computing Services', '1', '1','1','1','1','1','1','1','1','1','1','0','0','0','0','1','1','1');";
+		$statement = $pdo->prepare($user_role_2);
+		if($statement->execute()){
+			$notice->add('success', 'User Role `Computing Services` added!');
+		} else {
+			$notice->add('error', 'Could not add `Computing Services` role!');
+		}
 		
 		
 		

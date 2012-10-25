@@ -1208,7 +1208,6 @@ class member {
 		//$password=mt_rand(100000, 999999999);
 		$password='444444';// TODO: make random again
 		$formailpass=$password;
-		$parkingrole=1;
 		/* Create new instance of notice class */
 		$notice = new notice;
 		/* Set Message Array */
@@ -1220,7 +1219,7 @@ class member {
 				
 					/* Insert Data */
 					$date = date("Y-m-d", time());
-					$database->query('INSERT INTO users(username, password, email, date, rolesid) VALUES (:username, :password, :email, :date, :rolesid)', array(':username' => $username, 'password' => $password, 'email' => $email, 'date' => $date, 'rolesid' => $parkingrole));
+					$database->query('INSERT INTO users(uid, password, name, email, date, garage_role, user_role, parked_status, parked_location, profile_colors, profile_fixed, profile_image, profile_fav_garages) VALUES (:uid, :password, :name, :email, :date, :garage_role, :user_role, :parked_status, :parked_location, :profile_colors, :profile_fixed, :profile_image, :profile_fav_garages)', array(':uid' => $username, 'password' => $password, 'name' => 'Administrator','email' => $email, 'date' => $date, 'garage_role' => 5,'user_role' => 2,'parked_status' => 0,'parked_location' => 0,'parked_colors' => 0,'parked_fixed' => 0,'parked_image' => 0,'profile_fav_garages' => 'null'));
 					$mailer = new mailer(Config::read('email_master'));
 					$subject = 'Welcome ' . $username . '!';
 					$content = 'Thanks for installing BlackHawk <br />. Your admin username is' . $username . ' and password is ' . $formailpass. ',<br /> Please login and change these values! <br /><br /> Thanks for signing-up!<br /><br /><i>-The Project BlackHawk Team</i>';
