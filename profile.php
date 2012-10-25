@@ -5,34 +5,34 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>BlackHawk: Profile</title>
 		<!-- CSS Reset -->
-			<link rel="stylesheet" href="../assets/css/reset.css" />
+			<link rel="stylesheet" href="assets/css/reset.css" />
         <!-- Bootstrap framework -->
-            <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css" />
-            <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap-responsive.min.css" />
+            <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+            <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-responsive.min.css" />
         <!-- Blue theme-->
-            <link rel="stylesheet" href="../assets/css/blue.css" id="link_theme" />
+            <link rel="stylesheet" href="assets/css/blue.css" id="link_theme" />
         <!-- breadcrumbs-->
-            <link rel="stylesheet" href="../assets/lib/jBreadcrumbs/css/BreadCrumb.css" />
+            <link rel="stylesheet" href="assets/lib/jBreadcrumbs/css/BreadCrumb.css" />
         <!-- tooltips-->
-            <link rel="stylesheet" href="../assets/lib/qtip2/jquery.qtip.min.css" />
+            <link rel="stylesheet" href="assets/lib/qtip2/jquery.qtip.min.css" />
         <!-- colorbox -->
-            <link rel="stylesheet" href="../assets/lib/colorbox/colorbox.css" />    
+            <link rel="stylesheet" href="assets/lib/colorbox/colorbox.css" />    
         <!-- code prettify -->
-            <link rel="stylesheet" href="../assets/lib/google-code-prettify/prettify.css" />    
+            <link rel="stylesheet" href="assets/lib/google-code-prettify/prettify.css" />    
         <!-- notifications -->
-            <link rel="stylesheet" href="../assets/lib/sticky/sticky.css" />    
+            <link rel="stylesheet" href="assets/lib/sticky/sticky.css" />    
         <!-- splashy icons -->
-            <link rel="stylesheet" href="../assets/img/splashy/splashy.css" />
+            <link rel="stylesheet" href="assets/img/splashy/splashy.css" />
         <!-- main styles -->
-            <link rel="stylesheet" href="../assets/css/backend.css" />
+            <link rel="stylesheet" href="assets/css/backend.css" />
             <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans" />
         <!-- Favicon -->
-            <link rel="shortcut icon" href="../assets/favicon.ico" />
+            <link rel="shortcut icon" href="assets/img/favicon.ico" />
         <!--[if lte IE 8]>
             <link rel="stylesheet" href="css/ie.css" />
-            <script src="../assets/js/ie/html5.js"></script>
-			<script src="../assets/js/ie/respond.min.js"></script>
-			<script src="../assets/lib/flot/excanvas.min.js"></script>
+            <script src="assets/js/ie/html5.js"></script>
+			<script src="assets/js/ie/respond.min.js"></script>
+			<script src="assets/lib/flot/excanvas.min.js"></script>
         <![endif]-->
 		
 		<script>
@@ -41,7 +41,7 @@
 		</script>
     </head>
     <body class="menu_hover">
-		<div id="loading_layer" style="display:none"><img src="../assets/img/ajax_loader.gif" alt="" /></div>
+		<div id="loading_layer" style="display:none"><img src="assets/img/ajax_loader.gif" alt="" /></div>
 		<div class="style_switcher">
 			<div class="sepH_c">
 				<p class="whitetext_on_switcher">Colors:</p>
@@ -165,31 +165,31 @@
         
 			</div></div>
 			
-            <script src="../assets/js/jquery.min.js"></script>
+            <script src="assets/js/jquery.min.js"></script>
 			<!-- smart resize event -->
-			<script src="../assets/js/jquery.debouncedresize.min.js"></script>
+			<script src="assets/js/jquery.debouncedresize.min.js"></script>
 			<!-- hidden elements width/height -->
-			<script src="../assets/js/jquery.actual.min.js"></script>
+			<script src="assets/js/jquery.actual.min.js"></script>
 			<!-- js cookie plugin -->
-			<script src="../assets/js/jquery.cookie.min.js"></script>
+			<script src="assets/js/jquery.cookie.min.js"></script>
 			<!-- main bootstrap js -->
-			<script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+			<script src="assets/bootstrap/js/bootstrap.min.js"></script>
 			<!-- tooltips -->
-			<script src="../assets/lib/qtip2/jquery.qtip.min.js"></script>
+			<script src="assets/lib/qtip2/jquery.qtip.min.js"></script>
 			<!-- jBreadcrumbs -->
-			<script src="../assets/lib/jBreadcrumbs/js/jquery.jBreadCrumb.1.1.min.js"></script>
+			<script src="assets/lib/jBreadcrumbs/js/jquery.jBreadCrumb.1.1.min.js"></script>
 			<!-- fix for ios orientation change -->
-			<script src="../assets/js/ios-orientationchange-fix.js"></script>
+			<script src="assets/js/ios-orientationchange-fix.js"></script>
 			<!-- scrollbar -->
-			<script src="../assets/lib/antiscroll/antiscroll.js"></script>
-			<script src="../assets/lib/antiscroll/jquery-mousewheel.js"></script>
+			<script src="assets/lib/antiscroll/antiscroll.js"></script>
+			<script src="assets/lib/antiscroll/jquery-mousewheel.js"></script>
 			<!-- lightbox -->
-            <script src="../assets/lib/colorbox/jquery.colorbox.min.js"></script>
+            <script src="assets/lib/colorbox/jquery.colorbox.min.js"></script>
             <!-- common functions -->
-			<script src="../assets/js/blackhawk_common.js"></script>
+			<script src="assets/js/blackhawk_common.js"></script>
 			
 			<!-- user profile (static) functions -->
-			<script src="../assets/js/blackhawk_user_static.js"></script>
+			<script src="assets/js/blackhawk_user_static.js"></script>
 			
 			<script>
 				$(document).ready(function() {

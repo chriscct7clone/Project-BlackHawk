@@ -239,7 +239,7 @@ $mysql_roles = 'CREATE TABLE IF NOT EXISTS `roles` (
   `motorcycle` int(11) NOT NULL,  
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;';
-/*
+
 if($htaccess_handle = fopen('../.htaccess', 'a')) {
 $htaccess_data = '
 # ErrorDocuments
@@ -286,7 +286,7 @@ ErrorDocument 510 '. $installURL.'/errorcode.php?error=510
 	else {
 	$notice->add('error', 'Could not create htaccess file!<br />Check your folder permissions.');
 	}
-	*/
+	
 		/* mysql_users */
 		$statement = $pdo->prepare($mysql_users);
 		if($statement->execute()){

@@ -1,6 +1,5 @@
 <?php
-// Fork to become other roles
-include("../assets/member.inc.php");
+include("assets/member.inc.php");
 if(isset($_GET['action'])) {
 	$action = $_GET['action'];
 } else {
@@ -10,6 +9,13 @@ $member->LoggedIn();
 // TODO: Check to make sure logged in
 // TODO: Graphs need to have dynamic data
 // TODO: Cookie: Favorite garages and color data
+
+// Clear Jigoshop Session Data if present (For @chriscct7 only)
+//$_SESSION['jigoshop']=null;
+// Now let's grab session data
+//var_dump($_SESSION);
+// And halt so we can read that data
+//exit;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,34 +24,34 @@ $member->LoggedIn();
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>BlackHawk</title>
 		<!-- CSS Reset -->
-			<link rel="stylesheet" href="../assets/css/reset.css" />
+			<link rel="stylesheet" href="assets/css/reset.css" />
         <!-- Bootstrap framework -->
-            <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css" />
-            <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap-responsive.min.css" />
+            <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+            <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-responsive.min.css" />
         <!-- Blue theme-->
-            <link rel="stylesheet" href="../assets/css/<?php $color_requested_via_cookie="blue"; echo $color_requested_via_cookie; ?>.css" id="link_theme" /> <!-- default to blue -->
+            <link rel="stylesheet" href="assets/css/<?php $color_requested_via_cookie="blue"; echo $color_requested_via_cookie; ?>.css" id="link_theme" /> <!-- default to blue -->
         <!-- breadcrumbs-->
-            <link rel="stylesheet" href="../assets/lib/jBreadcrumbs/css/BreadCrumb.css" />
+            <link rel="stylesheet" href="assets/lib/jBreadcrumbs/css/BreadCrumb.css" />
         <!-- tooltips-->
-            <link rel="stylesheet" href="../assets/lib/qtip2/jquery.qtip.min.css" />
+            <link rel="stylesheet" href="assets/lib/qtip2/jquery.qtip.min.css" />
         <!-- colorbox -->
-            <link rel="stylesheet" href="../assets/lib/colorbox/colorbox.css" />    
+            <link rel="stylesheet" href="assets/lib/colorbox/colorbox.css" />    
         <!-- code prettify -->
-            <link rel="stylesheet" href="../assets/lib/google-code-prettify/prettify.css" />    
+            <link rel="stylesheet" href="assets/lib/google-code-prettify/prettify.css" />    
         <!-- notifications -->
-            <link rel="stylesheet" href="../assets/lib/sticky/sticky.css" />    
+            <link rel="stylesheet" href="assets/lib/sticky/sticky.css" />    
         <!-- splashy icons -->
-            <link rel="stylesheet" href="../assets/img/splashy/splashy.css" />
+            <link rel="stylesheet" href="assets/img/splashy/splashy.css" />
         <!-- main styles -->
-            <link rel="stylesheet" href="../assets/css/backend.css" />
+            <link rel="stylesheet" href="assets/css/backend.css" />
             <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans" />
         <!-- Favicon -->
-            <link rel="shortcut icon" href="../assets/favicon.ico" />
+            <link rel="shortcut icon" href="assets/img/favicon.ico" />
         <!--[if lte IE 8]>
             <link rel="stylesheet" href="css/ie.css" />
-            <script src="../assets/js/ie/html5.js"></script>
-			<script src="../assets/js/ie/respond.min.js"></script>
-			<script src="../assets/lib/flot/excanvas.min.js"></script>
+            <script src="assets/js/ie/html5.js"></script>
+			<script src="assets/js/ie/respond.min.js"></script>
+			<script src="assets/lib/flot/excanvas.min.js"></script>
         <![endif]-->
 		<script>
 			//* hide all elements & show preloader
@@ -53,7 +59,7 @@ $member->LoggedIn();
 		</script>
     </head>
     <body class="menu_hover">
-		<div id="loading_layer" style="display:none"><img src="../assets/img/ajax_loader.gif" alt="" /></div>
+		<div id="loading_layer" style="display:none"><img src="assets/img/ajax_loader.gif" alt="" /></div>
 		<div class="style_switcher">
 			<div class="sepH_c">
 				<p class="whitetext_on_switcher">Colors:</p>
@@ -97,49 +103,56 @@ $member->LoggedIn();
                     <div class="navbar-inner">
                         <div class="container-fluid">
                             <a class="brand" href="dashboard.html"><i class="icon-home icon-white"></i> BlackHawk</a>
-                            <ul class="nav user_menu pull-right">
+                            <ul class="nav user_menu  pull-right">
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php 
-									echo 'Johny Smith'; // TODO: Pull real name 
+									echo $_SESSION['member_name']; // TODO: Pull real name 
 									?> <b class="caret"></b></a>
                                     <ul class="dropdown-menu">
 										<li><a href="./profile.php">My Profile</a></li>
-										<li><a href="./profile.php#changepassword">Change Password</a></li>
+										<li><a href="./profile.php?action=changepassword">Change Password</a></li>
 										<li class="divider"></li>
 										<li><a href="students.php?action=logout">Log Out</a></li>
                                     </ul>
                                 </li>
                             </ul>
-							<a data-target=".nav-collapse" data-toggle="collapse" class="btn_menu">
+                            <nav>
+                                <div>
+                                    <ul class="nav user_menu pull-right">
+                                        <li>
+                                            <a href="#"><i class="icon-book icon-white"></i> Help</a>
+                                        </li>
+                                    </ul>
+								<a data-target=".nav-collapse" data-toggle="collapse" class="btn_menu">
 								<span class="icon-align-justify icon-white"></span>
 							</a>
+							<?php //start temp
+							$test=false;
+							if ($test == true){
+								?>
                             <nav>
                                 <div class="nav-collapse">
                                     <ul class="nav">
                                         <li class="dropdown">
-                                            <a data-toggle="dropdown" class="dropdown-toggle" href="#"><i class="icon-list-alt icon-white"></i> Config <b class="caret"></b></a>
+                                            <a data-toggle="dropdown" class="dropdown-toggle" href="#"><i class="icon-list-alt icon-white"></i> Forms <b class="caret"></b></a>
                                             <ul class="dropdown-menu">
-												<li class="dropdown">
-													<a href="#">Sub menu <b class="caret-right"></b></a>
-													<ul class="dropdown-menu">
-														<li><a href="#">Sub menu 1.1</a></li>
-														<li><a href="#">Sub menu 1.2</a></li>
-														<li><a href="#">Sub menu 1.3</a></li>
-														<li>
-															<a href="#">Sub menu 1.4 <b class="caret-right"></b></a>
-															<ul class="dropdown-menu">
-																<li><a href="#">Sub menu 1.4.1</a></li>
-																<li><a href="#">Sub menu 1.4.2</a></li>
-																<li><a href="#">Sub menu 1.4.3</a></li>
-															</ul>
-														</li>
-													</ul>
-												</li>
+                                                <li><a href="form_elements.html">Form elements</a></li>
+                                                <li><a href="form_extended.html">Extended form elements</a></li>
+                                                <li><a href="form_validation.html">Form Validation</a></li>
                                             </ul>
                                         </li>
                                         <li class="dropdown">
-                                            <a data-toggle="dropdown" class="dropdown-toggle" href="#"><i class="icon-th icon-white"></i> Menu <b class="caret"></b></a>
+                                            <a data-toggle="dropdown" class="dropdown-toggle" href="#"><i class="icon-th icon-white"></i> Components <b class="caret"></b></a>
                                             <ul class="dropdown-menu">
+                                                <li><a href="alerts_btns.html">Alerts & Buttons</a></li>
+                                                <li><a href="icons.html">Icons</a></li>
+                                                <li><a href="notifications.html">Notifications</a></li>
+                                                <li><a href="tables.html">Tables</a></li>
+												<li><a href="tables_more.html">Tables (more examples)</a></li>
+                                                <li><a href="tabs_accordion.html">Tabs & Accordion</a></li>
+                                                <li><a href="tooltips.html">Tooltips, Popovers</a></li>
+                                                <li><a href="typography.html">Typography</a></li>
+												<li><a href="widgets.html">Widget boxes</a></li>
 												<li class="dropdown">
 													<a href="#">Sub menu <b class="caret-right"></b></a>
 													<ul class="dropdown-menu">
@@ -161,34 +174,40 @@ $member->LoggedIn();
                                         <li class="dropdown">
                                             <a data-toggle="dropdown" class="dropdown-toggle" href="#"><i class="icon-wrench icon-white"></i> Plugins <b class="caret"></b></a>
                                             <ul class="dropdown-menu">
-												<li class="dropdown">
-													<a href="#">Sub menu <b class="caret-right"></b></a>
-													<ul class="dropdown-menu">
-														<li><a href="#">Sub menu 1.1</a></li>
-														<li><a href="#">Sub menu 1.2</a></li>
-														<li><a href="#">Sub menu 1.3</a></li>
-														<li>
-															<a href="#">Sub menu 1.4 <b class="caret-right"></b></a>
-															<ul class="dropdown-menu">
-																<li><a href="#">Sub menu 1.4.1</a></li>
-																<li><a href="#">Sub menu 1.4.2</a></li>
-																<li><a href="#">Sub menu 1.4.3</a></li>
-															</ul>
-														</li>
-													</ul>
-												</li>
+                                                <li><a href="charts.html">Charts</a></li>
+                                                <li><a href="calendar.html">Calendar</a></li>
+                                                <li><a href="datatable.html">Datatable</a></li>
+                                                <li><a href="file_manager.html">File Manager</a></li>
+                                                <li><a href="floating_header.html">Floating List Header</a></li>
+                                                <li><a href="google_maps.html">Google Maps</a></li>
+                                                <li><a href="gallery.html">Gallery Grid</a></li>
+                                                <li><a href="wizard.html">Wizard</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a data-toggle="dropdown" class="dropdown-toggle" href="#"><i class="icon-file icon-white"></i> Pages <b class="caret"></b></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="chat.html">Chat</a></li>
+                                                <li><a href="error_404.html">Error 404</a></li>
+												<li><a href="mailbox.html">Mailbox</a></li>
+                                                <li><a href="search_page.html">Search page</a></li>
+                                                <li><a href="user_profile.html">User profile</a></li>
+												<li><a href="user_static.html">User profile (static)</a></li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="#"><i class="icon-book icon-white"></i> Help</a>
                                         </li>
                                     </ul>
                                 </div>
                             </nav>
+							<?php } else{
+								
+							}
+							?>
+                                </div>
+                            </nav>
                         </div>
                     </div>
-               
-                
                 </div>
             </header>
             
@@ -223,7 +242,7 @@ $member->LoggedIn();
 								<li>
 									<div class="p_line_down p_canvas"><?php echo '20,16,14,18,15,14,14,13,12,10,10,8';?></div>
 									<div class="ov_text">
-										<strong><?php echo '30240';?></strong>
+										<strong><?php echo '2304';?></strong>
 										Something else
 									</div>
 								</li>
@@ -234,8 +253,8 @@ $member->LoggedIn();
 						 <div class="row-fluid">
                         <div class="span12">
 							<div class="heading clearfix">
-								<h3 class="pull-left">Parking Status</h3>
-								<span class="pull-left label label-important" style="margin-left: 10px;">1 Closed Parking Lot</span>
+								<h3 class="pull-left">Parking Status</h3>	
+								<span class="pull-left label label-important ttip_t" style="margin-left: 10px;" title="Closed Garageg is XXXXX">1 Closed Parking Lot</span>
 							</div>
                             <table id="dt_e" class="table table-striped table-bordered dTableR">
                                 <thead>
@@ -266,7 +285,6 @@ $member->LoggedIn();
 						<div class="span7">
 							<div class="heading clearfix">
 								<h3 class="pull-left">Parking Spots</h3>
-								<span class="pull-right label label-info ttip_t" title="Here is a sample info tooltip">Info</span>
 							</div>
 							<div id="fl_1" style="height:270px;width:100%;margin:15px auto 0"></div>
 						</div>
@@ -293,53 +311,53 @@ $member->LoggedIn();
             </div>
        </div>
             <!-- jquery -->
-            <script src="../assets/js/jquery.min.js"></script>
+            <script src="assets/js/jquery.min.js"></script>
 			<!-- smart resize event -->
-			<script src="../assets/js/jquery.debouncedresize.min.js"></script>
+			<script src="assets/js/jquery.debouncedresize.min.js"></script>
 			<!-- hidden elements width/height -->
-			<script src="../assets/js/jquery.actual.min.js"></script>
+			<script src="assets/js/jquery.actual.min.js"></script>
 			<!-- js cookie plugin -->
-			<script src="../assets/js/jquery.cookie.min.js"></script>
+			<script src="assets/js/jquery.cookie.min.js"></script>
 			<!-- main bootstrap js -->
-			<script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+			<script src="assets/bootstrap/js/bootstrap.min.js"></script>
 			<!-- tooltips -->
-			<script src="../assets/lib/qtip2/jquery.qtip.min.js"></script>
+			<script src="assets/lib/qtip2/jquery.qtip.min.js"></script>
 			<!-- jBreadcrumbs -->
-			<script src="../assets/lib/jBreadcrumbs/js/jquery.jBreadCrumb.1.1.min.js"></script>
+			<script src="assets/lib/jBreadcrumbs/js/jquery.jBreadCrumb.1.1.min.js"></script>
 			<!-- lightbox -->
-            <script src="../assets/lib/colorbox/jquery.colorbox.min.js"></script>
+            <script src="assets/lib/colorbox/jquery.colorbox.min.js"></script>
             <!-- fix for ios orientation change -->
-			<script src="../assets/js/ios-orientationchange-fix.js"></script>
+			<script src="assets/js/ios-orientationchange-fix.js"></script>
 			<!-- common functions -->
-			<script src="../assets/js/blackhawk_common.js"></script>
-			<script src="../assets/lib/jquery-ui/jquery-ui-1.8.20.custom.min.js"></script>
+			<script src="assets/js/blackhawk_common.js"></script>
+			<script src="assets/lib/jquery-ui/jquery-ui-1.8.20.custom.min.js"></script>
             <!-- touch events for jquery ui-->
-            <script src="../assets/js/forms/jquery.ui.touch-punch.min.js"></script>
+            <script src="assets/js/forms/jquery.ui.touch-punch.min.js"></script>
             <!-- multi-column layout -->
-            <script src="../assets/js/jquery.imagesloaded.min.js"></script>
-            <script src="../assets/js/jquery.wookmark.js"></script>
+            <script src="assets/js/jquery.imagesloaded.min.js"></script>
+            <script src="assets/js/jquery.wookmark.js"></script>
             <!-- responsive table -->
-            <script src="../assets/js/jquery.mediaTable.min.js"></script>
+            <script src="assets/js/jquery.mediaTable.min.js"></script>
             <!-- small charts -->
-            <script src="../assets/js/jquery.peity.min.js"></script>
+            <script src="assets/js/jquery.peity.min.js"></script>
             <!-- sortable/filterable list -->
-            <script src="../assets/lib/list_js/list.min.js"></script>
-            <script src="../assets/lib/list_js/plugins/paging/list.paging.min.js"></script>
+            <script src="assets/lib/list_js/list.min.js"></script>
+            <script src="assets/lib/list_js/plugins/paging/list.paging.min.js"></script>
             <!-- dashboard functions -->
-            <script src="../assets/js/blackhawk_dashboard.js"></script>
+            <script src="assets/js/blackhawk_dashboard.js"></script>
     		<!-- smoke_js -->
-			<script src="../assets/lib/smoke/smoke.js"></script>
+			<script src="assets/lib/smoke/smoke.js"></script>
             <!-- notifications functions -->
-            <script src="../assets/js/blackhawk_notifications.js"></script>
+            <script src="assets/js/blackhawk_notifications.js"></script>
             <!-- datatable -->
-            <script src="../assets/lib/datatables/jquery.dataTables.min.js"></script>
-            <script src="../assets/lib/datatables/extras/Scroller/media/js/Scroller.min.js"></script>
+            <script src="assets/lib/datatables/jquery.dataTables.min.js"></script>
+            <script src="assets/lib/datatables/extras/Scroller/media/js/Scroller.min.js"></script>
             <!-- datatable functions -->
-            <script src="../assets/js/blackhawk_datatables.js"></script>
+            <script src="assets/js/blackhawk_datatables.js"></script>
 			<!-- charts -->
-            <script src="../assets/lib/flot/jquery.flot.min.js"></script>
-            <script src="../assets/lib/flot/jquery.flot.resize.min.js"></script>
-            <script src="../assets/lib/flot/jquery.flot.pie.min.js"></script>
+            <script src="assets/lib/flot/jquery.flot.min.js"></script>
+            <script src="assets/lib/flot/jquery.flot.resize.min.js"></script>
+            <script src="assets/lib/flot/jquery.flot.pie.min.js"></script>
 			<script>
 				$(document).ready(function() {
 					//* show all elements & remove preloader
