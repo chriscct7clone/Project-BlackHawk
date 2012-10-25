@@ -5,8 +5,6 @@ if(isset($_GET['action'])) {
 } else {
 	$action = null;
 }
-$member->LoggedIn();
-// TODO: Check to make sure logged in
 // TODO: Graphs need to have dynamic data
 // TODO: Cookie: Favorite garages and color data
 
@@ -22,7 +20,7 @@ $member->LoggedIn();
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>BlackHawk</title>
+        <title>BlackHawk Dashboard</title>
 		<!-- CSS Reset -->
 			<link rel="stylesheet" href="assets/css/reset.css" />
         <!-- Bootstrap framework -->

@@ -618,6 +618,8 @@ ErrorDocument 510 '. $installURL.'/errorcode.php?error=510
 
 if(isset($_POST['finish'])) {
 		$showForm = false;
+		rrmdir('../documentation');
+		$notice->add('success', 'Documentation folder removed');
 		rrmdir('../setup');
 		$notice->add('success', 'Setup folder removed');
 		header('Location: ../index.php');
