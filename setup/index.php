@@ -554,9 +554,38 @@ ErrorDocument 510 '. $installURL.'/errorcode.php?error=510
 		} else {
 			$notice->add('error', 'Could not add `Computing Services` role!');
 		}
-		
-		
-		
+		// Police
+		$user_role_3="INSERT INTO `user_roles` (`id`,`name`, `add_users`,`edit_users`,`delete_users`, `import_users`,`export_users`,`add_garages`,`edit_garages`,`delete_garages`, `import_garages`,`export_garages`,`edit_garage_status`, `add_tickets`,`edit_tickets`,`delete_tickets`, `pay_tickets`, `manage_system`, `adv_statistics`, `user_profile`) VALUES (NULL, 'Police', '0', '1','0','0','0','0','0','0','0','0','1','1','1','1','1','0','1','0');";
+		$statement = $pdo->prepare($user_role_3);
+		if($statement->execute()){
+			$notice->add('success', 'User Role `Police` added!');
+		} else {
+			$notice->add('error', 'Could not add `Police` role!');
+		}
+		// Parking Services
+		$user_role_4="INSERT INTO `user_roles` (`id`,`name`, `add_users`,`edit_users`,`delete_users`, `import_users`,`export_users`,`add_garages`,`edit_garages`,`delete_garages`, `import_garages`,`export_garages`,`edit_garage_status`, `add_tickets`,`edit_tickets`,`delete_tickets`, `pay_tickets`, `manage_system`, `adv_statistics`, `user_profile`) VALUES (NULL, 'Computing Services', '1', '1','1','1','1','1','1','1','1','1','0','0','0','0','0','0','0','0');";
+		$statement = $pdo->prepare($user_role_4);
+		if($statement->execute()){
+			$notice->add('success', 'User Role `Parking Services` added!');
+		} else {
+			$notice->add('error', 'Could not add `Parking Services` role!');
+		}
+		// General
+		$user_role_5="INSERT INTO `user_roles` (`id`,`name`, `add_users`,`edit_users`,`delete_users`, `import_users`,`export_users`,`add_garages`,`edit_garages`,`delete_garages`, `import_garages`,`export_garages`,`edit_garage_status`, `add_tickets`,`edit_tickets`,`delete_tickets`, `pay_tickets`, `manage_system`, `adv_statistics`, `user_profile`) VALUES (NULL, 'General', '0', '0','0','0','0','0','0','0','0','0','0','0','0','0','1','0','0','1');";
+		$statement = $pdo->prepare($user_role_5);
+		if($statement->execute()){
+			$notice->add('success', 'User Role `General` added!');
+		} else {
+			$notice->add('error', 'Could not add `General` role!');
+		}
+		// Public
+		$user_role_6="INSERT INTO `user_roles` (`id`,`name`, `add_users`,`edit_users`,`delete_users`, `import_users`,`export_users`,`add_garages`,`edit_garages`,`delete_garages`, `import_garages`,`export_garages`,`edit_garage_status`, `add_tickets`,`edit_tickets`,`delete_tickets`, `pay_tickets`, `manage_system`, `adv_statistics`, `user_profile`) VALUES (NULL, 'Public', '0', '0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0');";
+		$statement = $pdo->prepare($user_role_6);
+		if($statement->execute()){
+			$notice->add('success', 'User Role `Public` added!');
+		} else {
+			$notice->add('error', 'Could not add `Public` role!');
+		}
 		require_once("../assets/member.inc.php");
 		// Fire User Registration 
 		if($member->firstuserregister($first_user_email) == true){
