@@ -103,9 +103,6 @@ if(isset($_POST['setup'])) {
 			}
 	if($hostname=='localhost' && (($email_verification==true)|| ($email_welcome == true))){
 	$notice->add('notice', 'Install Error #9. See User Manual for details'); 
-	//$email_verification=false;
-	//$email_welcome=false;
-	
 	/*
 	I want to figure out a better way describing this error. I think the best way is actually to return a direct link to a 
 	anchor tab in our documentation about this. Seems easy enough to do. However it can't be done till we set that up.
@@ -118,8 +115,6 @@ if(isset($_POST['setup'])) {
 	else {
 	// do nothing
 	}
-	
-	
 	
 	if($notice->errorsExist() == false) {
 		$showForm = false;
@@ -223,7 +218,7 @@ $mysql_users_recover = 'CREATE TABLE IF NOT EXISTS `users_recover` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;';	
 
 //time in next one is time of last update to totals
-$mysql_garage_list = 'CREATE TABLE IF NOT EXISTS `garage_list` (
+$mysql_garage_statistics = 'CREATE TABLE IF NOT EXISTS `garage_statistics` (
   `id` int(3) NOT NULL AUTO_INCREMENT,
   `name` varchar(225) NOT NULL,
   `numoftotalspots` int(8) NOT NULL,
@@ -242,7 +237,7 @@ $mysql_garage_by_uid = 'CREATE TABLE IF NOT EXISTS `garage_by_uid` (
   `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`uid`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;';
-$mysql_statistics = 'CREATE TABLE IF NOT EXISTS `garage_by_uid` (
+$mysql_statistics = 'CREATE TABLE IF NOT EXISTS `garage_statistics` (
   `uid` int(11) NOT NULL,
   `name` varchar(225) NOT NULL,
   `garage` int(8) NOT NULL,
@@ -357,11 +352,11 @@ $mysql_statistics = 'CREATE TABLE IF NOT EXISTS `garage_by_uid` (
 			$notice->add('error', 'Could not populate garage_by_uid!');
 		}		
 		/* mysql_garage_list */
-		$statement = $pdo->prepare($mysql_garage_list);
+		$statement = $pdo->prepare($mysql_garage_statistics);
 		if($statement->execute()){
-			$notice->add('success', 'Table `garage_list` populated!');
+			$notice->add('success', 'Table `garage_statistics` populated!');
 		} else {
-			$notice->add('error', 'Could not populate garage_list!');
+			$notice->add('error', 'Could not populate garage_statistics!');
 		}		
 		/* mysql_statistics */
 		$statement = $pdo->prepare($mysql_statistics);

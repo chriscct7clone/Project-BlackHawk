@@ -55,6 +55,7 @@
 
 class garage {
 	// no other garage in use
+	
 	public function installgaragetable($name, $rolesallowed,$floors){
 		/* Start an instance of the Database Class */
 		$database = new database();
@@ -155,6 +156,8 @@ for ($b=0, $b>$numspots, $b++){
 	}
 	}
 }
+	public function addgarage($name) {
+ 	}
 	public function editgarage($name) {
  	}
 	public function removegarage($name) {
@@ -165,5 +168,5 @@ for ($b=0, $b>$numspots, $b++){
  	}
 	public function findmycar($name) {
  	}
-}
+	}
 ?>
