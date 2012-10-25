@@ -1198,10 +1198,6 @@ class member {
 	}
 	
 	public function firstuserregister($email=null) {
-		if(file_exists('config.inc.php')) {
-			return false; //setup has been run already
-		} 
-		else {
 		global $database;
 		$username;
 		// Generate UID randomly, outside of 814 zone.
@@ -1212,8 +1208,7 @@ class member {
 		//$password=mt_rand(100000, 999999999);
 		$password='444444';// TODO: make random again
 		$formailpass=$password;
-		$userrole=3;
-		$parkingrole=3;
+		$parkingrole=1;
 		/* Create new instance of notice class */
 		$notice = new notice;
 		/* Set Message Array */
@@ -1225,7 +1220,7 @@ class member {
 				
 					/* Insert Data */
 					$date = date("Y-m-d", time());
-					$database->query('INSERT INTO users(username, password, email, date, parkingrole, userrole) VALUES (:username, :password, :email, :date,  :parkingrole, :userrole)', array(':username' => $username, 'password' => $password, 'email' => $email, 'date' => $date, 'parkingrole' => $parkingrole, 'userrole' => $userrole));
+					$database->query('INSERT INTO users(username, password, email, date, rolesid) VALUES (:username, :password, :email, :date, :rolesid)', array(':username' => $username, 'password' => $password, 'email' => $email, 'date' => $date, 'rolesid' => $parkingrole));
 					$mailer = new mailer(Config::read('email_master'));
 					$subject = 'Welcome ' . $username . '!';
 					$content = 'Thanks for installing BlackHawk <br />. Your admin username is' . $username . ' and password is ' . $formailpass. ',<br /> Please login and change these values! <br /><br /> Thanks for signing-up!<br /><br /><i>-The Project BlackHawk Team</i>';
@@ -1239,7 +1234,7 @@ class member {
 				return false;
 				}
 				return false; // errors occured (likely email)
-		}
+		
 	}
 	
 	

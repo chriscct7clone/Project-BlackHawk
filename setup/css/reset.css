@@ -166,6 +166,6 @@ CSS Reset
 	
 /* Notice */
 	.notice{background:#efefef;border:1px solid #dddddd;padding:10px 10px 10px 50px;margin:10px 0px 10px 0px;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;-o-border-radius:3px;-khtml-border-radius:3px;}
-	.notice.success{background:#efefef url("../img/good.png") no-repeat scroll 10px 50%;}
-	.notice.error{background:#efefef url("../img/error.png") no-repeat scroll 10px 50%;}
-	.notice.info{background:#efefef url("../img/info.png") no-repeat scroll 10px 50%;}
+	.notice.success{background:#efefef url("../../assets/img/good.png") no-repeat scroll 10px 50%;}
+	.notice.error{background:#efefef url("../../assets/img/error.png") no-repeat scroll 10px 50%;}
+	.notice.info{background:#efefef url("../../assets/img/info.png") no-repeat scroll 10px 50%;}

@@ -118,7 +118,6 @@ if(isset($_POST['setup'])) {
 	
 	if($notice->errorsExist() == false) {
 		$showForm = false;
-
 		$installURL = dirname($_SERVER['SCRIPT_NAME']);
 		$save= $installURL;
 		$str = str_replace( '/setup', '', $save ); //remove /setup/
@@ -161,8 +160,8 @@ Config::write(\'email_master\', \''. $email_master . '\');
 Config::write(\'email_welcome\', ' . $email_welcome . ');
 Config::write(\'email_verification\', ' . $email_verification . ');
 
-Config::write(\'password\', \'' . BLACKHAWK_CONFIG . '\');
-Config::write(\'password\', \'' . BLACKHAWK_VERSION .'.'.BLACKHAWK_SUBVERSION . '.' . BLACKHAWK_COMMIT . '\');
+Config::write(\'blackhawkconfig\', \'' . BLACKHAWK_CONFIG . '\');
+Config::write(\'blackhawkversion\', \'' . BLACKHAWK_VERSION .'.'.BLACKHAWK_SUBVERSION . '.' . BLACKHAWK_COMMIT . '\');
 ?>';
 			fwrite($config_handle, $config_data);
 			$notice->add('success', 'Config file created');
@@ -240,65 +239,54 @@ $mysql_roles = 'CREATE TABLE IF NOT EXISTS `roles` (
   `motorcycle` int(11) NOT NULL,  
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;';
-
-//TODO: add all codes here
-	$fp = fopen("../.htaccess", "a");
-	fwrite($fp, "\n\n# ErrorDocuments \n");
-	fwrite($fp, "ErrorDocument 400 ". $installURL."/errorcode.php?error=400 \n");
-	fwrite($fp, "ErrorDocument 401 ". $installURL."/errorcode.php?error=401 \n");
-	fwrite($fp, "ErrorDocument 402 ". $installURL."/errorcode.php?error=402 \n");
-	fwrite($fp, "ErrorDocument 403 ". $installURL."/errorcode.php?error=403 \n");
-	fwrite($fp, "ErrorDocument 404 ". $installURL."/errorcode.php?error=404 \n");
-	fwrite($fp, "ErrorDocument 405 ". $installURL."/errorcode.php?error=405 \n");
-	fwrite($fp, "ErrorDocument 406 ". $installURL."/errorcode.php?error=406 \n");
-	fwrite($fp, "ErrorDocument 407 ". $installURL."/errorcode.php?error=407 \n");
-	fwrite($fp, "ErrorDocument 408 ". $installURL."/errorcode.php?error=408 \n");
-	fwrite($fp, "ErrorDocument 409 ". $installURL."/errorcode.php?error=409 \n");
-	fwrite($fp, "ErrorDocument 410 ". $installURL."/errorcode.php?error=410 \n");
-	fwrite($fp, "ErrorDocument 411 ". $installURL."/errorcode.php?error=411 \n");
-	fwrite($fp, "ErrorDocument 412 ". $installURL."/errorcode.php?error=412 \n");
-	fwrite($fp, "ErrorDocument 413 ". $installURL."/errorcode.php?error=413 \n");
-	fwrite($fp, "ErrorDocument 414 ". $installURL."/errorcode.php?error=414 \n");
-	fwrite($fp, "ErrorDocument 415 ". $installURL."/errorcode.php?error=414 \n");
-	fwrite($fp, "ErrorDocument 416 ". $installURL."/errorcode.php?error=416 \n");
-	fwrite($fp, "ErrorDocument 417 ". $installURL."/errorcode.php?error=417 \n");
-	fwrite($fp, "ErrorDocument 418 ". $installURL."/errorcode.php?error=418 \n");
-	fwrite($fp, "ErrorDocument 420 ". $installURL."/errorcode.php?error=420 \n");
-	fwrite($fp, "ErrorDocument 422 ". $installURL."/errorcode.php?error=422 \n");
-	fwrite($fp, "ErrorDocument 423 ". $installURL."/errorcode.php?error=423 \n");
-	fwrite($fp, "ErrorDocument 424 ". $installURL."/errorcode.php?error=424 \n");
-	fwrite($fp, "ErrorDocument 425 ". $installURL."/errorcode.php?error=425 \n");
-	fwrite($fp, "ErrorDocument 426 ". $installURL."/errorcode.php?error=426 \n");
-	fwrite($fp, "ErrorDocument 428 ". $installURL."/errorcode.php?error=428 \n");
-	fwrite($fp, "ErrorDocument 429 ". $installURL."/errorcode.php?error=429 \n");
-	fwrite($fp, "ErrorDocument 431 ". $installURL."/errorcode.php?error=431 \n");
-	fwrite($fp, "ErrorDocument 444 ". $installURL."/errorcode.php?error=444 \n");
-	fwrite($fp, "ErrorDocument 449 ". $installURL."/errorcode.php?error=449 \n");
-	fwrite($fp, "ErrorDocument 450 ". $installURL."/errorcode.php?error=450 \n");
-	fwrite($fp, "ErrorDocument 451 ". $installURL."/errorcode.php?error=451 \n");
-	fwrite($fp, "ErrorDocument 494 ". $installURL."/errorcode.php?error=494 \n");
-	fwrite($fp, "ErrorDocument 495 ". $installURL."/errorcode.php?error=495 \n");
-	fwrite($fp, "ErrorDocument 496 ". $installURL."/errorcode.php?error=496 \n");
-	fwrite($fp, "ErrorDocument 497 ". $installURL."/errorcode.php?error=497 \n");
-	fwrite($fp, "ErrorDocument 499 ". $installURL."/errorcode.php?error=499 \n");
-	fwrite($fp, "ErrorDocument 500 ". $installURL."/errorcode.php?error=500 \n");
-	fwrite($fp, "ErrorDocument 501 ". $installURL."/errorcode.php?error=501 \n");
-	fwrite($fp, "ErrorDocument 502 ". $installURL."/errorcode.php?error=502 \n");
-	fwrite($fp, "ErrorDocument 503 ". $installURL."/errorcode.php?error=503 \n");
-	fwrite($fp, "ErrorDocument 504 ". $installURL."/errorcode.php?error=504 \n");
-	fwrite($fp, "ErrorDocument 505 ". $installURL."/errorcode.php?error=505 \n");
-	fwrite($fp, "ErrorDocument 506 ". $installURL."/errorcode.php?error=506 \n");
-	fwrite($fp, "ErrorDocument 507 ". $installURL."/errorcode.php?error=507 \n");
-	fwrite($fp, "ErrorDocument 508 ". $installURL."/errorcode.php?error=508 \n");
-	fwrite($fp, "ErrorDocument 509 ". $installURL."/errorcode.php?error=509 \n");
-	fwrite($fp, "ErrorDocument 510 ". $installURL."/errorcode.php?error=510 \n");
-	fwrite($fp, "ErrorDocument 511 ". $installURL."/errorcode.php?error=511 \n");
-	fwrite($fp, "ErrorDocument 598 ". $installURL."/errorcode.php?error=598 \n");
-	fwrite($fp, "ErrorDocument 599 ". $installURL."/errorcode.php?error=599 \n");
-	fwrite($fp, "ErrorDocument 999 ". $installURL."/errorcode.php?error=999 \n");
-	fclose($fp);
-	@chmod("../.htaccess", 0644);	
-		
+/*
+if($htaccess_handle = fopen('../.htaccess', 'a')) {
+$htaccess_data = '
+# ErrorDocuments
+ErrorDocument 400 '. $installURL.'/errorcode.php?error=400
+ErrorDocument 401 '. $installURL.'/errorcode.php?error=401
+ErrorDocument 402 '. $installURL.'/errorcode.php?error=402
+ErrorDocument 403 '. $installURL.'/errorcode.php?error=403
+ErrorDocument 404 '. $installURL.'/errorcode.php?error=404
+ErrorDocument 405 '. $installURL.'/errorcode.php?error=405
+ErrorDocument 406 '. $installURL.'/errorcode.php?error=406
+ErrorDocument 407 '. $installURL.'/errorcode.php?error=407
+ErrorDocument 408 '. $installURL.'/errorcode.php?error=408
+ErrorDocument 409 '. $installURL.'/errorcode.php?error=409
+ErrorDocument 410 '. $installURL.'/errorcode.php?error=410
+ErrorDocument 411 '. $installURL.'/errorcode.php?error=411
+ErrorDocument 412 '. $installURL.'/errorcode.php?error=412
+ErrorDocument 413 '. $installURL.'/errorcode.php?error=413
+ErrorDocument 414 '. $installURL.'/errorcode.php?error=414
+ErrorDocument 415 '. $installURL.'/errorcode.php?error=414
+ErrorDocument 416 '. $installURL.'/errorcode.php?error=416
+ErrorDocument 417 '. $installURL.'/errorcode.php?error=417
+ErrorDocument 418 '. $installURL.'/errorcode.php?error=418
+ErrorDocument 420 '. $installURL.'/errorcode.php?error=420
+ErrorDocument 422 '. $installURL.'/errorcode.php?error=422
+ErrorDocument 423 '. $installURL.'/errorcode.php?error=423
+ErrorDocument 424 '. $installURL.'/errorcode.php?error=424
+ErrorDocument 425 '. $installURL.'/errorcode.php?error=425
+ErrorDocument 426 '. $installURL.'/errorcode.php?error=426
+ErrorDocument 500 '. $installURL.'/errorcode.php?error=500
+ErrorDocument 501 '. $installURL.'/errorcode.php?error=501
+ErrorDocument 502 '. $installURL.'/errorcode.php?error=502
+ErrorDocument 503 '. $installURL.'/errorcode.php?error=503
+ErrorDocument 504 '. $installURL.'/errorcode.php?error=504
+ErrorDocument 505 '. $installURL.'/errorcode.php?error=505
+ErrorDocument 506 '. $installURL.'/errorcode.php?error=506
+ErrorDocument 507 '. $installURL.'/errorcode.php?error=507
+ErrorDocument 508 '. $installURL.'/errorcode.php?error=508
+ErrorDocument 509 '. $installURL.'/errorcode.php?error=509
+ErrorDocument 510 '. $installURL.'/errorcode.php?error=510
+';
+	fwrite($htaccess_handle, $htaccess_data);
+	$notice->add('success', 'htaccess file created');
+	} 
+	else {
+	$notice->add('error', 'Could not create htaccess file!<br />Check your folder permissions.');
+	}
+	*/
 		/* mysql_users */
 		$statement = $pdo->prepare($mysql_users);
 		if($statement->execute()){
@@ -355,42 +343,201 @@ $mysql_roles = 'CREATE TABLE IF NOT EXISTS `roles` (
 		}		
 		/* Insert Default Roles */
 		// Insert Before 1st user, so we can assign him to a role
-		
+			
 		// Total Access (not used by FGCU), but used as template for the other roles
-		$database->query('INSERT INTO roles(userrole, name, students_campus, students_offcampus, visitor,staff,reserved,police,admin,handicap,motorcycle) VALUES (:userrole, :name, :students_campus, :students_offcampus, :visitor, :staff, :reserved, :police, :admin, :handicap, :motorcycle)', array(':userrole' => 3, ':name' => 'Total Access', 'students_campus' => 1, 'students_offcampus' => 1,'visitor' => 1,'staff' => 1,'reserved' => 1,'police' => 1,'admin' => 1,'handicap' => 1,'motorcycle' => 1));
-		// Computing Services: Staff Parking
-		$database->query('INSERT INTO roles(userrole, name, students_campus, students_offcampus, visitor,staff,reserved,police,admin,handicap,motorcycle) VALUES (:userrole, :name, :students_campus, :students_offcampus, :visitor, :staff, :reserved, :police, :admin, :handicap, :motorcycle)', array(':userrole' => 3, ':name' => 'Computing Services', 'students_campus' => 1, 'students_offcampus' => 1,'visitor' => 1,'staff' => 1,'reserved' => 1,'police' => 0,'admin' => 0,'handicap' => 0,'motorcycle' => 0));
+		$role_1="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '3', 'Total Access', '1', '1', '1', '1', '1', '1', '1', '1', '1');";
+		$statement = $pdo->prepare($role_1);
+		if($statement->execute()){
+			$notice->add('success', 'Role `Total Access` added!');
+		} else {
+			$notice->add('error', 'Could not add `Total Access` role!');
+		}		
+		
+		// Computing Services: Standard
+		$role_2="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '3', 'Computing Services: Standard', '1', '1', '1', '1', '1', '0', '0', '0', '0');";
+		$statement = $pdo->prepare($role_2);
+		if($statement->execute()){
+			$notice->add('success', 'Role `Computing Services: Standard` added!');
+		} else {
+			$notice->add('error', 'Could not add `Computing Services: Standard` role!');
+		}
 		// Computing Services: Staff Parking w/Motorcycle
-		$database->query('INSERT INTO roles(userrole, name, students_campus, students_offcampus, visitor,staff,reserved,police,admin,handicap,motorcycle) VALUES (:userrole, :name, :students_campus, :students_offcampus, :visitor, :staff, :reserved, :police, :admin, :handicap, :motorcycle)', array(':userrole' => 3, ':name' => 'Computing Services: Motorcyle', 'students_campus' => 1, 'students_offcampus' => 1,'visitor' => 1,'staff' => 1,'reserved' => 1,'police' => 0,'admin' => 0,'handicap' => 0,'motorcycle' => 1));
+		$role_3="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '3', 'Computing Services: Motorcycle', '1', '1', '1', '1', '1', '0', '0', '0', '1');";
+		$statement = $pdo->prepare($role_3);
+		if($statement->execute()){
+			$notice->add('success', 'Role `Computing Services: Motorcycle` added!');
+		} else {
+			$notice->add('error', 'Could not add `Computing Services: Motorcycle` role!');
+		}
 		// Computing Services: Staff Parking w/Handicap
-		$database->query('INSERT INTO roles(userrole, name, students_campus, students_offcampus, visitor,staff,reserved,police,admin,handicap,motorcycle) VALUES (:userrole, :name, :students_campus, :students_offcampus, :visitor, :staff, :reserved, :police, :admin, :handicap, :motorcycle)', array(':userrole' => 3, ':name' => 'Computing Services: Handicap', 'students_campus' => 1, 'students_offcampus' => 1,'visitor' => 1,'staff' => 1,'reserved' => 1,'police' => 0,'admin' => 0,'handicap' => 1,'motorcycle' => 0));
+		$role_4="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '3', 'Computing Services: Handicap', '1', '1', '1', '1', '1', '0', '0', '1', '0');";
+		$statement = $pdo->prepare($role_4);
+		if($statement->execute()){
+			$notice->add('success', 'Role `Computing Services: Handicap` added!');
+		} else {
+			$notice->add('error', 'Could not add `Computing Services: Handicap` role!');
+		}
 		// Police: All Access on Parking, Second Tertiary on User Role
-		$database->query('INSERT INTO roles(userrole, name, students_campus, students_offcampus, visitor,staff,reserved,police,admin,handicap,motorcycle) VALUES (:userrole, :name, :students_campus, :students_offcampus, :visitor, :staff, :reserved, :police, :admin, :handicap, :motorcycle)', array(':userrole' => 2, ':name' => 'Computing Services', 'students_campus' => 1, 'students_offcampus' => 1,'visitor' => 1,'staff' => 1,'reserved' => 1,'police' => 1,'admin' => 1,'handicap' => 1,'motorcycle' => 1));
+		$role_5="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '2', 'Police', '1', '1', '1', '1', '1', '1', '1', '1', '1');";
+		$statement = $pdo->prepare($role_5);
+		if($statement->execute()){
+			$notice->add('success', 'Role `Police` added!');
+		} else {
+			$notice->add('error', 'Could not add `Police` role!');
+		}
 		// Admin: Standard
-		$database->query('INSERT INTO roles(userrole, name, students_campus, students_offcampus, visitor,staff,reserved,police,admin,handicap,motorcycle) VALUES (:userrole, :name, :students_campus, :students_offcampus, :visitor, :staff, :reserved, :police, :admin, :handicap, :motorcycle)', array(':userrole' => 1, ':name' => 'Admin: Standard', 'students_campus' => 1, 'students_offcampus' => 1,'visitor' => 1,'staff' => 1,'reserved' => 1,'police' => 0,'admin' => 1,'handicap' => 0,'motorcycle' => 0));
+		$role_6="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '1', 'Admin: Standard', '1', '1', '1', '1', '1', '0', '1', '0', '0');";
+		$statement = $pdo->prepare($role_6);
+		if($statement->execute()){
+			$notice->add('success', 'Role `Admin: Standard` added!');
+		} else {
+			$notice->add('error', 'Could not add `Admin: Standard` role!');
+		}
 		// Admin: Motorcyle
-		$database->query('INSERT INTO roles(userrole, name, students_campus, students_offcampus, visitor,staff,reserved,police,admin,handicap,motorcycle) VALUES (:userrole, :name, :students_campus, :students_offcampus, :visitor, :staff, :reserved, :police, :admin, :handicap, :motorcycle)', array(':userrole' => 1, ':name' => 'Admin: Motorcycle', 'students_campus' => 1, 'students_offcampus' => 1,'visitor' => 1,'staff' => 1,'reserved' => 1,'police' => 0,'admin' => 1,'handicap' => 0,'motorcycle' => 1));
+		$role_7="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '1', 'Admin: Motorcyle', '1', '1', '1', '1', '1', '0', '1', '0', '1');";
+		$statement = $pdo->prepare($role_7);
+		if($statement->execute()){
+			$notice->add('success', 'Role `Admin: Motorcyle` added!');
+		} else {
+			$notice->add('error', 'Could not add `Admin: Motorcyle` role!');
+		}
 		// Admin: Handicap
-		$database->query('INSERT INTO roles(userrole, name, students_campus, students_offcampus, visitor,staff,reserved,police,admin,handicap,motorcycle) VALUES (:userrole, :name, :students_campus, :students_offcampus, :visitor, :staff, :reserved, :police, :admin, :handicap, :motorcycle)', array(':userrole' => 1, ':name' => 'Admin: Handicap', 'students_campus' => 1, 'students_offcampus' => 1,'visitor' => 1,'staff' => 1,'reserved' => 1,'police' => 0,'admin' => 1,'handicap' => 1,'motorcycle' => 0));
+		$role_8="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '1', 'Admin: Handicap', '1', '1', '1', '1', '1', '0', '1', '1', '0');";
+		$statement = $pdo->prepare($role_8);
+		if($statement->execute()){
+			$notice->add('success', 'Role `Admin: Handicap` added!');
+		} else {
+			$notice->add('error', 'Could not add `Admin: Handicap` role!');
+		}
 		// Staff: Standard
-		$database->query('INSERT INTO roles(userrole, name, students_campus, students_offcampus, visitor,staff,reserved,police,admin,handicap,motorcycle) VALUES (:userrole, :name, :students_campus, :students_offcampus, :visitor, :staff, :reserved, :police, :admin, :handicap, :motorcycle)', array(':userrole' => 1, ':name' => 'Staff: Standard', 'students_campus' => 1, 'students_offcampus' => 1,'visitor' => 1,'staff' => 1,'reserved' => 1,'police' => 0,'admin' => 0,'handicap' => 0,'motorcycle' => 0));
+		$role_9="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '1', 'Staff: Standard', '1', '1', '1', '1', '1', '0', '0', '0', '0');";
+		$statement = $pdo->prepare($role_9);
+		if($statement->execute()){
+			$notice->add('success', 'Role `Staff: Standard` added!');
+		} else {
+			$notice->add('error', 'Could not add `Staff: Standard` role!');
+		}
 		// Staff: Motorcyle
-		$database->query('INSERT INTO roles(userrole, name, students_campus, students_offcampus, visitor,staff,reserved,police,admin,handicap,motorcycle) VALUES (:userrole, :name, :students_campus, :students_offcampus, :visitor, :staff, :reserved, :police, :admin, :handicap, :motorcycle)', array(':userrole' => 1, ':name' => 'Staff: Motorcycle', 'students_campus' => 1, 'students_offcampus' => 1,'visitor' => 1,'staff' => 1,'reserved' => 1,'police' => 0,'admin' => 0,'handicap' => 0,'motorcycle' => 1));
+		$role_10="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '1', 'Staff: Motorcyle', '1', '1', '1', '1', '1', '0', '0', '0', '1');";
+		$statement = $pdo->prepare($role_10);
+		if($statement->execute()){
+			$notice->add('success', 'Role `Staff: Motorcyle` added!');
+		} else {
+			$notice->add('error', 'Could not add `Staff: Motorcyle` role!');
+		}
 		// Staff: Handicap
-		$database->query('INSERT INTO roles(userrole, name, students_campus, students_offcampus, visitor,staff,reserved,police,admin,handicap,motorcycle) VALUES (:userrole, :name, :students_campus, :students_offcampus, :visitor, :staff, :reserved, :police, :admin, :handicap, :motorcycle)', array(':userrole' => 1, ':name' => 'Staff: Handicap', 'students_campus' => 1, 'students_offcampus' => 1,'visitor' => 1,'staff' => 1,'reserved' => 1,'police' => 0,'admin' => 0,'handicap' => 1,'motorcycle' => 0));
+		$role_11="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '1', 'Staff: Handicap', '1', '1', '1', '1', '1', '0', '0', '1', '0');";
+		$statement = $pdo->prepare($role_11);
+		if($statement->execute()){
+			$notice->add('success', 'Role `Staff: Handicap` added!');
+		} else {
+			$notice->add('error', 'Could not add `Staff: Handicap` role!');
+		}
 		// Student (Off Campus): Standard
-		$database->query('INSERT INTO roles(userrole, name, students_campus, students_offcampus, visitor,staff,reserved,police,admin,handicap,motorcycle) VALUES (:userrole, :name, :students_campus, :students_offcampus, :visitor, :staff, :reserved, :police, :admin, :handicap, :motorcycle)', array(':userrole' => 1, ':name' => 'Student (Off Campus): Standard', 'students_campus' => 0, 'students_offcampus' => 1,'visitor' => 0,'staff' => 0,'reserved' => 0,'police' => 0,'admin' => 0,'handicap' => 0,'motorcycle' => 0));
+		$role_12="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '1', 'Student (Off Campus): Standard', '0', '1', '0', '0', '0', '0', '0', '0', '0');";
+		$statement = $pdo->prepare($role_12);
+		if($statement->execute()){
+			$notice->add('success', 'Role `Student (Off Campus): Standard` added!');
+		} else {
+			$notice->add('error', 'Could not add `Student (Off Campus): Standard` role!');
+		}
 		// Student (Off Campus): Motorcyle
-		$database->query('INSERT INTO roles(userrole, name, students_campus, students_offcampus, visitor,staff,reserved,police,admin,handicap,motorcycle) VALUES (:userrole, :name, :students_campus, :students_offcampus, :visitor, :staff, :reserved, :police, :admin, :handicap, :motorcycle)', array(':userrole' => 1, ':name' => 'Student (Off Campus): Motorcyle', 'students_campus' => 0, 'students_offcampus' => 1,'visitor' => 0,'staff' => 0,'reserved' => 1,'police' => 0,'admin' => 0,'handicap' => 0,'motorcycle' => 1));
+		$role_13="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '1', 'Student (Off Campus): Motorcyle', '0', '1', '0', '0', '0', '0', '0', '0', '1');";
+		$statement = $pdo->prepare($role_13);
+		if($statement->execute()){
+			$notice->add('success', 'Role `Student (Off Campus): Motorcyle` added!');
+		} else {
+			$notice->add('error', 'Could not add `Student (Off Campus): Motorcyle` role!');
+		}
 		// Student (Off Campus): Handicap
-		$database->query('INSERT INTO roles(userrole, name, students_campus, students_offcampus, visitor,staff,reserved,police,admin,handicap,motorcycle) VALUES (:userrole, :name, :students_campus, :students_offcampus, :visitor, :staff, :reserved, :police, :admin, :handicap, :motorcycle)', array(':userrole' => 1, ':name' => 'Student (Off Campus): Handicap', 'students_campus' => 0, 'students_offcampus' => 1,'visitor' => 0,'staff' => 0,'reserved' => 0,'police' => 0,'admin' => 0,'handicap' => 1,'motorcycle' => 0));
+		$role_14="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '1', 'Student (Off Campus): Handicap', '0', '1', '0', '0', '0', '0', '0', '1', '0');";
+		$statement = $pdo->prepare($role_14);
+		if($statement->execute()){
+			$notice->add('success', 'Role `Student (Off Campus): Handicap` added!');
+		} else {
+			$notice->add('error', 'Could not add `Student (Off Campus): Handicap` role!');
+		}
 		// Student (On Campus): Standard
-		$database->query('INSERT INTO roles(userrole, name, students_campus, students_offcampus, visitor,staff,reserved,police,admin,handicap,motorcycle) VALUES (:userrole, :name, :students_campus, :students_offcampus, :visitor, :staff, :reserved, :police, :admin, :handicap, :motorcycle)', array(':userrole' => 1, ':name' => 'Student (Off Campus): Standard', 'students_campus' => 1, 'students_offcampus' => 0,'visitor' => 0,'staff' => 0,'reserved' => 0,'police' => 0,'admin' => 0,'handicap' => 0,'motorcycle' => 0));
+		$role_15="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '1', 'Student (On Campus): Standard', '1', '0', '0', '0', '0', '0', '0', '0', '0');";
+		$statement = $pdo->prepare($role_15);
+		if($statement->execute()){
+			$notice->add('success', 'Role `Student (On Campus): Standard` added!');
+		} else {
+			$notice->add('error', 'Could not add `Student (On Campus): Standard` role!');
+		}
 		// Student (On Campus): Motorcyle
-		$database->query('INSERT INTO roles(userrole, name, students_campus, students_offcampus, visitor,staff,reserved,police,admin,handicap,motorcycle) VALUES (:userrole, :name, :students_campus, :students_offcampus, :visitor, :staff, :reserved, :police, :admin, :handicap, :motorcycle)', array(':userrole' => 1, ':name' => 'Student (Off Campus): Motorcyle', 'students_campus' => 1, 'students_offcampus' => 0,'visitor' => 0,'staff' => 0,'reserved' => 1,'police' => 0,'admin' => 0,'handicap' => 0,'motorcycle' => 1));
+		$role_16="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '1', 'Student (On Campus): Motorcyle', '1', '0', '0', '0', '0', '0', '0', '0', '1');";
+		$statement = $pdo->prepare($role_16);
+		if($statement->execute()){
+			$notice->add('success', 'Role `Student (On Campus): Motorcyle` added!');
+		} else {
+			$notice->add('error', 'Could not add `Student (On Campus): Motorcyle` role!');
+		}
 		// Student (On Campus): Handicap
-		$database->query('INSERT INTO roles(userrole, name, students_campus, students_offcampus, visitor,staff,reserved,police,admin,handicap,motorcycle) VALUES (:userrole, :name, :students_campus, :students_offcampus, :visitor, :staff, :reserved, :police, :admin, :handicap, :motorcycle)', array(':userrole' => 1, ':name' => 'Student (Off Campus): Handicap', 'students_campus' => 1, 'students_offcampus' => 0,'visitor' => 0,'staff' => 0,'reserved' => 0,'police' => 0,'admin' => 0,'handicap' => 1,'motorcycle' => 0));
-	
+		$role_17="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '1', 'Student (On Campus): Handicap', '1', '0', '0', '0', '0', '0', '0', '1', '0');";
+		$statement = $pdo->prepare($role_17);
+		if($statement->execute()){
+			$notice->add('success', 'Role `Student (On Campus): Handicap` added!');
+		} else {
+			$notice->add('error', 'Could not add `Student (On Campus): Handicap` role!');
+		}
+		// Alumni: Standard
+		$role_18="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '1', 'Alumni: Standard', '1', '1', '1', '0', '0', '0', '0', '0', '0');";
+		$statement = $pdo->prepare($role_18);
+		if($statement->execute()){
+			$notice->add('success', 'Role `Alumni: Standard` added!');
+		} else {
+			$notice->add('error', 'Could not add `Alumni: Standard` role!');
+		}
+		// Alumni: Motorcycle
+		$role_19="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '1', 'Alumni: Motorcycle', '1', '1', '1', '0', '0', '0', '0', '0', '1');";
+		$statement = $pdo->prepare($role_19);
+		if($statement->execute()){
+			$notice->add('success', 'Role `Alumni: Motorcycle` added!');
+		} else {
+			$notice->add('error', 'Could not add `Alumni: Motorcycle` role!');
+		}
+		// Alumni: Handicap
+		$role_20="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '1', 'Alumni: Handicap', '1', '1', '1', '0', '0', '0', '0', '1', '0');";
+		$statement = $pdo->prepare($role_20);
+		if($statement->execute()){
+			$notice->add('success', 'Role `Alumni: Handicap` added!');
+		} else {
+			$notice->add('error', 'Could not add `Alumni: Handicap` role!');
+		}	
+		// Visitor: Standard
+		$role_21="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '1', 'Visitor: Standard', '0', '0', '1', '0', '0', '0', '0', '0', '0');";
+		$statement = $pdo->prepare($role_21);
+		if($statement->execute()){
+			$notice->add('success', 'Role `Visitor: Standard` added!');
+		} else {
+			$notice->add('error', 'Could not add `Visitor: Standard` role!');
+		}		
+		// Visitor: Motorcycle
+		$role_22="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '1', 'Visitor: Motorcycle', '0', '0', '1', '0', '0', '0', '0', '0', '1');";
+		$statement = $pdo->prepare($role_22);
+		if($statement->execute()){
+			$notice->add('success', 'Role `Visitor: Motorcycle` added!');
+		} else {
+			$notice->add('error', 'Could not add `Visitor: Motorcycle` role!');
+		}
+		// Visitor: Handicap
+		$role_23="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '1', 'Visitor: Handicap', '0', '0', '1', '0', '0', '0', '0', '1', '0');";
+		$statement = $pdo->prepare($role_23);
+		if($statement->execute()){
+			$notice->add('success', 'Role `Visitor: Handicap` added!');
+		} else {
+			$notice->add('error', 'Could not add `Visitor: Handicap` role!');
+		}
+		$countofroles = "SELECT count(*) FROM `roles` WHERE id"; 
+		$statement = $pdo->prepare($countofroles);
+		if($statement->execute() == 23){
+			$notice->add('success', 'All Roles Created!');
+		} else {
+			$notice->add('error', 'Role Creation Failed. Made'. $countofroles .' roles');
+		}
+		
+		
 		require_once("../assets/member.inc.php");
 		// Fire User Registration 
 		if($member->firstuserregister($first_user_email) == true){

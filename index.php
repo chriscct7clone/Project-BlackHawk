@@ -26,7 +26,7 @@ if(!file_exists('assets/config.inc.php')) {
 TODO: Finish Stage 2 Seperation
 */
 /* Include Code */
-include("assets/member.inc.php");
+require_once('assets/member.inc.php');
 /* Is an Action set? */
 if(isset($_GET['action'])) {
 	$action = $_GET['action'];
@@ -60,10 +60,9 @@ else if($action == 'global') {
 	<div id="header" class="group">
 		<h1 id="logo">BlackHawk</h1>
 		<div id="user">
-		<?php if($member->sessionIsSet() == true) { 
-			$user = $member->data();
+		<?php if ($member->sessionIsSet()==true){
 		?>
-			<div id="user-info">Hello, <?php echo $user->username; ?></div>
+			<div id="user-info">Hello, <?php echo $_SESSION['member_name']; ?></div>
 			<ul id="user-ops">
 				<li><a href="member.php?action=settings">Settings</a></li>
 				<li><a href="member.php?action=logout">Logout</a></li>
