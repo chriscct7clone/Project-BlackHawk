@@ -168,20 +168,23 @@ Config::write(\'blackhawkversion\', \'' . BLACKHAWK_VERSION .'.'.BLACKHAWK_SUBVE
 		} else {
 			$notice->add('error', 'Could not create config file!<br />Check your folder permissions.');
 		}
-		
-		//Run SQL
-	// 	Note the two roles are in there but are not being used yet. 
-	// Login role= 3=admin, 2=police, 1=students,visitors,teachers
+
 $mysql_users = 'CREATE TABLE IF NOT EXISTS `users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `uid` int(11) NOT NULL,
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `date` date NOT NULL,
-  `rolesid` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;';
-
+  `garage_role` int(11) NOT NULL,
+  `user_role` int(11) NOT NULL,
+  `parked_status` int(11) NOT NULL,
+  `parked_location` varchar(255) NOT NULL,
+  `profile_colors` varchar(255) NOT NULL,
+  `profile_fixed` int(11) NOT NULL,
+  `profile_image` varchar(255) NOT NULL,
+  `profile_fav_garages` varchar(255) NOT NULL, 
+  PRIMARY KEY (`uid`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1;';
 
 $mysql_users_inactive = 'CREATE TABLE IF NOT EXISTS `users_inactive` (
   `verCode` varchar(255) NOT NULL,
@@ -214,7 +217,7 @@ $mysql_users_recover = 'CREATE TABLE IF NOT EXISTS `users_recover` (
   `requestTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;';	
-//time in next one is time of first parking
+
 $mysql_statistics = 'CREATE TABLE IF NOT EXISTS `garage_statistics` (
   `uid` int(11) NOT NULL,
   `name` varchar(225) NOT NULL,
@@ -224,9 +227,8 @@ $mysql_statistics = 'CREATE TABLE IF NOT EXISTS `garage_statistics` (
   `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`uid`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;';
-$mysql_roles = 'CREATE TABLE IF NOT EXISTS `roles` (
+$mysql_garage_roles = 'CREATE TABLE IF NOT EXISTS `garage_roles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,	
-  `userrole` int(11) NOT NULL,
   `name` varchar(225) NOT NULL,
   `students_campus` int(11) NOT NULL,
   `students_offcampus` int(11) NOT NULL,  
@@ -236,7 +238,31 @@ $mysql_roles = 'CREATE TABLE IF NOT EXISTS `roles` (
   `police` int(11) NOT NULL,  
   `admin` int(11) NOT NULL,  
   `handicap` int(11) NOT NULL,  
-  `motorcycle` int(11) NOT NULL,  
+  `motorcycle` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;';
+
+$mysql_user_roles = 'CREATE TABLE IF NOT EXISTS `user_roles` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,	
+  `name` varchar(225) NOT NULL,
+  `add_users` int(11) NOT NULL,
+  `edit_users` int(11) NOT NULL,
+  `delete_users` int(11) NOT NULL,  
+  `import_users` int(11) NOT NULL,   
+  `export_users` int(11) NOT NULL,  
+  `add_garages` int(11) NOT NULL,
+  `edit_garages` int(11) NOT NULL,
+  `delete_garages` int(11) NOT NULL,  
+  `import_garages` int(11) NOT NULL,   
+  `export_garages` int(11) NOT NULL, 
+  `edit_garage_status` int(11) NOT NULL, 
+  `add_tickets` int(11) NOT NULL,  
+  `edit_tickets` int(11) NOT NULL,  
+  `delete_tickets` int(11) NOT NULL,  
+  `pay_tickets` int(11) NOT NULL, 
+  `manage_system` int(11) NOT NULL, 
+  `adv_statistics` int(11) NOT NULL,  
+  `user_profile` int(11) NOT NULL,  
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;';
 
@@ -326,13 +352,20 @@ ErrorDocument 510 '. $installURL.'/errorcode.php?error=510
 		} else {
 			$notice->add('error', 'Could not populate users_recover!');
 		}
-		/* mysql_roles */
-		$statement = $pdo->prepare($mysql_roles);
+		/* mysql_garage_roles */
+		$statement = $pdo->prepare($mysql_garage_roles);
 		if($statement->execute()){
-			$notice->add('success', 'Table `roles` populated!');
+			$notice->add('success', 'Table `garage_roles` populated!');
 		} else {
-			$notice->add('error', 'Could not populate roles!');
-		}		
+			$notice->add('error', 'Could not populate garage_roles!');
+		}
+		/* mysql_user_roles */
+		$statement = $pdo->prepare($mysql_user_roles);
+		if($statement->execute()){
+			$notice->add('success', 'Table `user_roles` populated!');
+		} else {
+			$notice->add('error', 'Could not populate user_roles!');
+		}
 		/* mysql_garage_statistics */
 		// logs statistics, but we also use this to keep our garage config data
 		$statement = $pdo->prepare($mysql_statistics);
@@ -341,201 +374,180 @@ ErrorDocument 510 '. $installURL.'/errorcode.php?error=510
 		} else {
 			$notice->add('error', 'Could not populate garage_statistics!');
 		}		
-		/* Insert Default Roles */
+		/* Insert Default Garage Roles */
 		// Insert Before 1st user, so we can assign him to a role
-			
-		// Total Access (not used by FGCU), but used as template for the other roles
-		$role_1="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '3', 'Total Access', '1', '1', '1', '1', '1', '1', '1', '1', '1');";
-		$statement = $pdo->prepare($role_1);
-		if($statement->execute()){
-			$notice->add('success', 'Role `Total Access` added!');
-		} else {
-			$notice->add('error', 'Could not add `Total Access` role!');
-		}		
-		
-		// Computing Services: Standard
-		$role_2="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '3', 'Computing Services: Standard', '1', '1', '1', '1', '1', '0', '0', '0', '0');";
-		$statement = $pdo->prepare($role_2);
-		if($statement->execute()){
-			$notice->add('success', 'Role `Computing Services: Standard` added!');
-		} else {
-			$notice->add('error', 'Could not add `Computing Services: Standard` role!');
-		}
-		// Computing Services: Staff Parking w/Motorcycle
-		$role_3="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '3', 'Computing Services: Motorcycle', '1', '1', '1', '1', '1', '0', '0', '0', '1');";
-		$statement = $pdo->prepare($role_3);
-		if($statement->execute()){
-			$notice->add('success', 'Role `Computing Services: Motorcycle` added!');
-		} else {
-			$notice->add('error', 'Could not add `Computing Services: Motorcycle` role!');
-		}
-		// Computing Services: Staff Parking w/Handicap
-		$role_4="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '3', 'Computing Services: Handicap', '1', '1', '1', '1', '1', '0', '0', '1', '0');";
-		$statement = $pdo->prepare($role_4);
-		if($statement->execute()){
-			$notice->add('success', 'Role `Computing Services: Handicap` added!');
-		} else {
-			$notice->add('error', 'Could not add `Computing Services: Handicap` role!');
-		}
 		// Police: All Access on Parking, Second Tertiary on User Role
-		$role_5="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '2', 'Police', '1', '1', '1', '1', '1', '1', '1', '1', '1');";
-		$statement = $pdo->prepare($role_5);
+		$garage_role_1="INSERT INTO `garage_roles` (`id`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, 'Police', '1', '1', '1', '1', '1', '1', '1', '1', '1');";
+		$statement = $pdo->prepare($garage_role_1);
 		if($statement->execute()){
-			$notice->add('success', 'Role `Police` added!');
+			$notice->add('success', 'Garage Role `Police` added!');
 		} else {
-			$notice->add('error', 'Could not add `Police` role!');
+			$notice->add('error', 'Could not add `Police` garage role!');
 		}
 		// Admin: Standard
-		$role_6="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '1', 'Admin: Standard', '1', '1', '1', '1', '1', '0', '1', '0', '0');";
-		$statement = $pdo->prepare($role_6);
+		$garage_role_2="INSERT INTO `garage_roles` (`id`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, 'Admin: Standard', '1', '1', '1', '1', '1', '0', '1', '0', '0');";
+		$statement = $pdo->prepare($garage_role_2);
 		if($statement->execute()){
-			$notice->add('success', 'Role `Admin: Standard` added!');
+			$notice->add('success', 'Garage Role `Admin: Standard` added!');
 		} else {
-			$notice->add('error', 'Could not add `Admin: Standard` role!');
+			$notice->add('error', 'Could not add `Admin: Standard` garage role!');
 		}
 		// Admin: Motorcyle
-		$role_7="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '1', 'Admin: Motorcyle', '1', '1', '1', '1', '1', '0', '1', '0', '1');";
-		$statement = $pdo->prepare($role_7);
+		$garage_role_3="INSERT INTO `garage_roles` (`id`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, 'Admin: Motorcyle', '1', '1', '1', '1', '1', '0', '1', '0', '1');";
+		$statement = $pdo->prepare($garage_role_3);
 		if($statement->execute()){
-			$notice->add('success', 'Role `Admin: Motorcyle` added!');
+			$notice->add('success', 'Garage Role `Admin: Motorcyle` added!');
 		} else {
-			$notice->add('error', 'Could not add `Admin: Motorcyle` role!');
+			$notice->add('error', 'Could not add `Admin: Motorcyle` garage role!');
 		}
 		// Admin: Handicap
-		$role_8="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '1', 'Admin: Handicap', '1', '1', '1', '1', '1', '0', '1', '1', '0');";
-		$statement = $pdo->prepare($role_8);
+		$garage_role_4="INSERT INTO `garage_roles` (`id`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, 'Admin: Handicap', '1', '1', '1', '1', '1', '0', '1', '1', '0');";
+		$statement = $pdo->prepare($garage_role_4);
 		if($statement->execute()){
-			$notice->add('success', 'Role `Admin: Handicap` added!');
+			$notice->add('success', 'Garage Role `Admin: Handicap` added!');
 		} else {
-			$notice->add('error', 'Could not add `Admin: Handicap` role!');
+			$notice->add('error', 'Could not add `Admin: Handicap` garage role!');
 		}
-		// Staff: Standard
-		$role_9="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '1', 'Staff: Standard', '1', '1', '1', '1', '1', '0', '0', '0', '0');";
-		$statement = $pdo->prepare($role_9);
+		// Staff: Standard (includes Parking Services staff and Computing Services)
+		$garage_role_5="INSERT INTO `garage_roles` (`id`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, 'Staff: Standard', '1', '1', '1', '1', '1', '0', '0', '0', '0');";
+		$statement = $pdo->prepare($garage_role_5);
 		if($statement->execute()){
-			$notice->add('success', 'Role `Staff: Standard` added!');
+			$notice->add('success', 'Garage Role `Staff: Standard` added!');
 		} else {
-			$notice->add('error', 'Could not add `Staff: Standard` role!');
+			$notice->add('error', 'Could not add `Staff: Standard` garage role!');
 		}
 		// Staff: Motorcyle
-		$role_10="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '1', 'Staff: Motorcyle', '1', '1', '1', '1', '1', '0', '0', '0', '1');";
-		$statement = $pdo->prepare($role_10);
+		$garage_role_6="INSERT INTO `garage_roles` (`id`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, 'Staff: Motorcyle', '1', '1', '1', '1', '1', '0', '0', '0', '1');";
+		$statement = $pdo->prepare($garage_role_6);
 		if($statement->execute()){
-			$notice->add('success', 'Role `Staff: Motorcyle` added!');
+			$notice->add('success', 'Garage Role `Staff: Motorcyle` added!');
 		} else {
-			$notice->add('error', 'Could not add `Staff: Motorcyle` role!');
+			$notice->add('error', 'Could not add `Staff: Motorcyle` garage role!');
 		}
 		// Staff: Handicap
-		$role_11="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '1', 'Staff: Handicap', '1', '1', '1', '1', '1', '0', '0', '1', '0');";
-		$statement = $pdo->prepare($role_11);
+		$garage_role_7="INSERT INTO `garage_roles` (`id`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, 'Staff: Handicap', '1', '1', '1', '1', '1', '0', '0', '1', '0');";
+		$statement = $pdo->prepare($garage_role_7);
 		if($statement->execute()){
-			$notice->add('success', 'Role `Staff: Handicap` added!');
+			$notice->add('success', 'Garage Role `Staff: Handicap` added!');
 		} else {
-			$notice->add('error', 'Could not add `Staff: Handicap` role!');
+			$notice->add('error', 'Could not add `Staff: Handicap`  garage role!');
 		}
 		// Student (Off Campus): Standard
-		$role_12="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '1', 'Student (Off Campus): Standard', '0', '1', '0', '0', '0', '0', '0', '0', '0');";
-		$statement = $pdo->prepare($role_12);
+		$garage_role_8="INSERT INTO `garage_roles` (`id`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, 'Student (Off Campus): Standard', '0', '1', '0', '0', '0', '0', '0', '0', '0');";
+		$statement = $pdo->prepare($garage_role_8);
 		if($statement->execute()){
-			$notice->add('success', 'Role `Student (Off Campus): Standard` added!');
+			$notice->add('success', 'Garage Role `Student (Off Campus): Standard` added!');
 		} else {
-			$notice->add('error', 'Could not add `Student (Off Campus): Standard` role!');
+			$notice->add('error', 'Could not add `Student (Off Campus): Standard`  garage role!');
 		}
 		// Student (Off Campus): Motorcyle
-		$role_13="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '1', 'Student (Off Campus): Motorcyle', '0', '1', '0', '0', '0', '0', '0', '0', '1');";
-		$statement = $pdo->prepare($role_13);
+		$garage_role_9="INSERT INTO `garage_roles` (`id`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, 'Student (Off Campus): Motorcyle', '0', '1', '0', '0', '0', '0', '0', '0', '1');";
+		$statement = $pdo->prepare($garage_role_9);
 		if($statement->execute()){
-			$notice->add('success', 'Role `Student (Off Campus): Motorcyle` added!');
+			$notice->add('success', 'Garage Role `Student (Off Campus): Motorcyle` added!');
 		} else {
-			$notice->add('error', 'Could not add `Student (Off Campus): Motorcyle` role!');
+			$notice->add('error', 'Could not add `Student (Off Campus): Motorcyle`  garage role!');
 		}
 		// Student (Off Campus): Handicap
-		$role_14="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '1', 'Student (Off Campus): Handicap', '0', '1', '0', '0', '0', '0', '0', '1', '0');";
-		$statement = $pdo->prepare($role_14);
+		$garage_role_10="INSERT INTO `garage_roles` (`id`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, 'Student (Off Campus): Handicap', '0', '1', '0', '0', '0', '0', '0', '1', '0');";
+		$statement = $pdo->prepare($garage_role_10);
 		if($statement->execute()){
-			$notice->add('success', 'Role `Student (Off Campus): Handicap` added!');
+			$notice->add('success', 'Garage Role `Student (Off Campus): Handicap` added!');
 		} else {
-			$notice->add('error', 'Could not add `Student (Off Campus): Handicap` role!');
+			$notice->add('error', 'Could not add `Student (Off Campus): Handicap` garage role!');
 		}
 		// Student (On Campus): Standard
-		$role_15="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '1', 'Student (On Campus): Standard', '1', '0', '0', '0', '0', '0', '0', '0', '0');";
-		$statement = $pdo->prepare($role_15);
+		$garage_role_11="INSERT INTO `garage_roles` (`id`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, 'Student (On Campus): Standard', '1', '0', '0', '0', '0', '0', '0', '0', '0');";
+		$statement = $pdo->prepare($garage_role_11);
 		if($statement->execute()){
-			$notice->add('success', 'Role `Student (On Campus): Standard` added!');
+			$notice->add('success', 'Garage Role `Student (On Campus): Standard` added!');
 		} else {
-			$notice->add('error', 'Could not add `Student (On Campus): Standard` role!');
+			$notice->add('error', 'Could not add `Student (On Campus): Standard` garage role!');
 		}
 		// Student (On Campus): Motorcyle
-		$role_16="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '1', 'Student (On Campus): Motorcyle', '1', '0', '0', '0', '0', '0', '0', '0', '1');";
-		$statement = $pdo->prepare($role_16);
+		$garage_role_12="INSERT INTO `garage_roles` (`id`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, 'Student (On Campus): Motorcyle', '1', '0', '0', '0', '0', '0', '0', '0', '1');";
+		$statement = $pdo->prepare($garage_role_12);
 		if($statement->execute()){
-			$notice->add('success', 'Role `Student (On Campus): Motorcyle` added!');
+			$notice->add('success', 'Garage Role `Student (On Campus): Motorcyle` added!');
 		} else {
-			$notice->add('error', 'Could not add `Student (On Campus): Motorcyle` role!');
+			$notice->add('error', 'Could not add `Student (On Campus): Motorcyle`  garage role!');
 		}
 		// Student (On Campus): Handicap
-		$role_17="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '1', 'Student (On Campus): Handicap', '1', '0', '0', '0', '0', '0', '0', '1', '0');";
-		$statement = $pdo->prepare($role_17);
+		$garage_role_13="INSERT INTO `garage_roles` (`id`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, 'Student (On Campus): Handicap', '1', '0', '0', '0', '0', '0', '0', '1', '0');";
+		$statement = $pdo->prepare($garage_role_13);
 		if($statement->execute()){
-			$notice->add('success', 'Role `Student (On Campus): Handicap` added!');
+			$notice->add('success', 'Garage Role `Student (On Campus): Handicap` added!');
 		} else {
-			$notice->add('error', 'Could not add `Student (On Campus): Handicap` role!');
+			$notice->add('error', 'Could not add `Student (On Campus): Handicap`  garage role!');
 		}
 		// Alumni: Standard
-		$role_18="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '1', 'Alumni: Standard', '1', '1', '1', '0', '0', '0', '0', '0', '0');";
-		$statement = $pdo->prepare($role_18);
+		$garage_role_14="INSERT INTO `garage_roles` (`id`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, 'Alumni: Standard', '1', '1', '1', '0', '0', '0', '0', '0', '0');";
+		$statement = $pdo->prepare($garage_role_14);
 		if($statement->execute()){
-			$notice->add('success', 'Role `Alumni: Standard` added!');
+			$notice->add('success', 'Garage Role `Alumni: Standard` added!');
 		} else {
-			$notice->add('error', 'Could not add `Alumni: Standard` role!');
+			$notice->add('error', 'Could not add `Alumni: Standard`  garage role!');
 		}
 		// Alumni: Motorcycle
-		$role_19="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '1', 'Alumni: Motorcycle', '1', '1', '1', '0', '0', '0', '0', '0', '1');";
-		$statement = $pdo->prepare($role_19);
+		$garage_role_15="INSERT INTO `garage_roles` (`id`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, 'Alumni: Motorcycle', '1', '1', '1', '0', '0', '0', '0', '0', '1');";
+		$statement = $pdo->prepare($garage_role_15);
 		if($statement->execute()){
-			$notice->add('success', 'Role `Alumni: Motorcycle` added!');
+			$notice->add('success', 'Garage Role `Alumni: Motorcycle` added!');
 		} else {
-			$notice->add('error', 'Could not add `Alumni: Motorcycle` role!');
+			$notice->add('error', 'Could not add `Alumni: Motorcycle`  garage role!');
 		}
 		// Alumni: Handicap
-		$role_20="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '1', 'Alumni: Handicap', '1', '1', '1', '0', '0', '0', '0', '1', '0');";
-		$statement = $pdo->prepare($role_20);
+		$garage_role_16="INSERT INTO `garage_roles` (`id`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, 'Alumni: Handicap', '1', '1', '1', '0', '0', '0', '0', '1', '0');";
+		$statement = $pdo->prepare($garage_role_16);
 		if($statement->execute()){
-			$notice->add('success', 'Role `Alumni: Handicap` added!');
+			$notice->add('success', 'Garage Role `Alumni: Handicap` added!');
 		} else {
-			$notice->add('error', 'Could not add `Alumni: Handicap` role!');
+			$notice->add('error', 'Could not add `Alumni: Handicap`  garage role!');
 		}	
 		// Visitor: Standard
-		$role_21="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '1', 'Visitor: Standard', '0', '0', '1', '0', '0', '0', '0', '0', '0');";
-		$statement = $pdo->prepare($role_21);
+		$garage_role_17="INSERT INTO `garage_roles` (`id`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, 'Visitor: Standard', '0', '0', '1', '0', '0', '0', '0', '0', '0');";
+		$statement = $pdo->prepare($garage_role_17);
 		if($statement->execute()){
-			$notice->add('success', 'Role `Visitor: Standard` added!');
+			$notice->add('success', 'Garage Role `Visitor: Standard` added!');
 		} else {
-			$notice->add('error', 'Could not add `Visitor: Standard` role!');
+			$notice->add('error', 'Could not add `Visitor: Standard` garage role!');
 		}		
 		// Visitor: Motorcycle
-		$role_22="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '1', 'Visitor: Motorcycle', '0', '0', '1', '0', '0', '0', '0', '0', '1');";
-		$statement = $pdo->prepare($role_22);
+		$garage_role_18="INSERT INTO `garage_roles` (`id`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, 'Visitor: Motorcycle', '0', '0', '1', '0', '0', '0', '0', '0', '1');";
+		$statement = $pdo->prepare($garage_role_18);
 		if($statement->execute()){
-			$notice->add('success', 'Role `Visitor: Motorcycle` added!');
+			$notice->add('success', 'Garage Role `Visitor: Motorcycle` added!');
 		} else {
-			$notice->add('error', 'Could not add `Visitor: Motorcycle` role!');
+			$notice->add('error', 'Could not add `Visitor: Motorcycle` garage role!');
 		}
 		// Visitor: Handicap
-		$role_23="INSERT INTO `roles` (`id`, `userrole`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, '1', 'Visitor: Handicap', '0', '0', '1', '0', '0', '0', '0', '1', '0');";
-		$statement = $pdo->prepare($role_23);
+		$garage_role_19="INSERT INTO `garage_roles` (`id`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, 'Visitor: Handicap', '0', '0', '1', '0', '0', '0', '0', '1', '0');";
+		$statement = $pdo->prepare($garage_role_19);
 		if($statement->execute()){
-			$notice->add('success', 'Role `Visitor: Handicap` added!');
+			$notice->add('success', 'Garage Role `Visitor: Handicap` added!');
 		} else {
-			$notice->add('error', 'Could not add `Visitor: Handicap` role!');
+			$notice->add('error', 'Could not add `Visitor: Handicap` garage role!');
 		}
-		$countofroles = "SELECT count(*) FROM `roles` WHERE id"; 
+		$countofroles = "SELECT count(*) FROM `garage_roles` WHERE id"; 
 		$statement = $pdo->prepare($countofroles);
-		if($statement->execute() == 23){
+		if($statement->execute() == 19){
 			$notice->add('success', 'All Roles Created!');
 		} else {
 			$notice->add('error', 'Role Creation Failed. Made'. $countofroles .' roles');
 		}
+		
+		
+		// Create Default User Roles
+		// Total Access: Not Used By FGCU
+		$user_role_1="INSERT INTO `user_roles` (`id`, `add_users`,`edit_users`,`delete_users`, `import_users`,`export_users`,`add_garages`,`edit_garages`,`delete_garages`, `import_garages`,`export_garages`,`edit_garage_status`, `add_tickets`,`edit_tickets`,`delete_tickets`, `pay_tickets`, `manage_system`, `adv_statistics`, `user_profile`) VALUES (NULL, 'Total Access', '1', '1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1');";
+		$statement = $pdo->prepare($user_role_1);
+		if($statement->execute()){
+			$notice->add('success', 'User Role `Total Access` added!');
+		} else {
+			$notice->add('error', 'Could not add `Total Access` role!');
+		}
+		
+		
 		
 		
 		require_once("../assets/member.inc.php");
