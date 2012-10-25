@@ -179,8 +179,7 @@ $mysql_users = 'CREATE TABLE IF NOT EXISTS `users` (
   `password` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `date` date NOT NULL,
-  `parkingrole` int(11) NOT NULL,
-  `userrole` int(11) NOT NULL,
+  `rolesid` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;';
 
@@ -216,27 +215,7 @@ $mysql_users_recover = 'CREATE TABLE IF NOT EXISTS `users_recover` (
   `requestTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;';	
-
-//time in next one is time of last update to totals
-$mysql_garage_statistics = 'CREATE TABLE IF NOT EXISTS `garage_statistics` (
-  `id` int(3) NOT NULL AUTO_INCREMENT,
-  `name` varchar(225) NOT NULL,
-  `numoftotalspots` int(8) NOT NULL,
-  `numspotsinuse` int(8) NOT NULL,
-  `percentageofuse` int(3) NOT NULL,
-  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;';
 //time in next one is time of first parking
-$mysql_garage_by_uid = 'CREATE TABLE IF NOT EXISTS `garage_by_uid` (
-  `uid` int(11) NOT NULL,
-  `name` varchar(225) NOT NULL,
-  `garage` int(8) NOT NULL,
-  `floor` int(8) NOT NULL,
-  `spot` int(8) NOT NULL,
-  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`uid`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;';
 $mysql_statistics = 'CREATE TABLE IF NOT EXISTS `garage_statistics` (
   `uid` int(11) NOT NULL,
   `name` varchar(225) NOT NULL,
@@ -245,6 +224,21 @@ $mysql_statistics = 'CREATE TABLE IF NOT EXISTS `garage_statistics` (
   `spot` int(8) NOT NULL,
   `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`uid`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;';
+$mysql_roles = 'CREATE TABLE IF NOT EXISTS `roles` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,	
+  `userrole` int(11) NOT NULL,
+  `name` varchar(225) NOT NULL,
+  `students_campus` int(11) NOT NULL,
+  `students_offcampus` int(11) NOT NULL,  
+  `vistor` int(11) NOT NULL,  
+  `staff` int(11) NOT NULL,  
+  `reserved` int(11) NOT NULL,  
+  `police` int(11) NOT NULL,  
+  `admin` int(11) NOT NULL,  
+  `handicap` int(11) NOT NULL,  
+  `motorcycle` int(11) NOT NULL,  
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;';
 
 //TODO: add all codes here
@@ -344,29 +338,40 @@ $mysql_statistics = 'CREATE TABLE IF NOT EXISTS `garage_statistics` (
 		} else {
 			$notice->add('error', 'Could not populate users_recover!');
 		}
-		/* mysql_garage_by_uid */
-		$statement = $pdo->prepare($mysql_garage_by_uid);
+		/* mysql_roles */
+		$statement = $pdo->prepare($mysql_roles);
 		if($statement->execute()){
-			$notice->add('success', 'Table `garage_by_uid` populated!');
+			$notice->add('success', 'Table `roles` populated!');
 		} else {
-			$notice->add('error', 'Could not populate garage_by_uid!');
+			$notice->add('error', 'Could not populate roles!');
 		}		
-		/* mysql_garage_list */
-		$statement = $pdo->prepare($mysql_garage_statistics);
+		/* mysql_garage_statistics */
+		// logs statistics, but we also use this to keep our garage config data
+		$statement = $pdo->prepare($mysql_statistics);
 		if($statement->execute()){
 			$notice->add('success', 'Table `garage_statistics` populated!');
 		} else {
 			$notice->add('error', 'Could not populate garage_statistics!');
 		}		
-		/* mysql_statistics */
-		$statement = $pdo->prepare($mysql_statistics);
-		if($statement->execute()){
-			$notice->add('success', 'Table `statistics` populated!');
-		} else {
-			$notice->add('error', 'Could not populate statistics!');
-		}	
+		/* Insert Default Roles */
+		// Insert Before 1st user, so we can assign him to a role
+		
+		// Total Access (not used by FGCU), but used as template for the other roles
+		$database->query('INSERT INTO roles(userrole, name, students_campus, students_offcampus, visitor,staff,reserved,police,admin) VALUES (:userrole, :name, :students_campus, :students_offcampus, :visitor, :staff, :reserved, :police, :admin)', array(':userrole' => 3, ':name' => 'Total Access', 'students_campus' => 1, 'students_offcampus' => 1,'visitor' => 1,'staff' => 1,'reserved' => 1,'police' => 1,'admin' => 1,'handicap' => 1,'motorcycle' => 1));
+		// Computing Services: Staff Parking
+		$database->query('INSERT INTO roles(userrole, name, students_campus, students_offcampus, visitor,staff,reserved,police,admin) VALUES (:userrole, :name, :students_campus, :students_offcampus, :visitor, :staff, :reserved, :police, :admin)', array(':userrole' => 3, ':name' => 'Computing Services', 'students_campus' => 1, 'students_offcampus' => 1,'visitor' => 1,'staff' => 1,'reserved' => 1,'police' => 0,'admin' => 0,'handicap' => 0,'motorcycle' => 0));
+		// Computing Services: Staff Parking w/Motorcycle
+		$database->query('INSERT INTO roles(userrole, name, students_campus, students_offcampus, visitor,staff,reserved,police,admin) VALUES (:userrole, :name, :students_campus, :students_offcampus, :visitor, :staff, :reserved, :police, :admin)', array(':userrole' => 3, ':name' => 'Computing Services With Motorcyle', 'students_campus' => 1, 'students_offcampus' => 1,'visitor' => 1,'staff' => 1,'reserved' => 1,'police' => 0,'admin' => 0,'handicap' => 0,'motorcycle' => 1));
+		// Computing Services: Staff Parking w/Handicap
+		$database->query('INSERT INTO roles(userrole, name, students_campus, students_offcampus, visitor,staff,reserved,police,admin) VALUES (:userrole, :name, :students_campus, :students_offcampus, :visitor, :staff, :reserved, :police, :admin)', array(':userrole' => 3, ':name' => 'Computing Services With Handicap', 'students_campus' => 1, 'students_offcampus' => 1,'visitor' => 1,'staff' => 1,'reserved' => 1,'police' => 0,'admin' => 0,'handicap' => 1,'motorcycle' => 0));
+		// Police: All Access on Parking, Second Tertiary on User Role
+		$database->query('INSERT INTO roles(userrole, name, students_campus, students_offcampus, visitor,staff,reserved,police,admin) VALUES (:userrole, :name, :students_campus, :students_offcampus, :visitor, :staff, :reserved, :police, :admin)', array(':userrole' => 2, ':name' => 'Computing Services', 'students_campus' => 1, 'students_offcampus' => 1,'visitor' => 1,'staff' => 1,'reserved' => 1,'police' => 1,'admin' => 1,'handicap' => 1,'motorcycle' => 1));
 		
 		
+		
+		
+		
+	
 		require_once("../assets/member.inc.php");
 		// Fire User Registration 
 		if($member->firstuserregister($first_user_email) == true){

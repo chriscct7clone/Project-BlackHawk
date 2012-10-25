@@ -9,6 +9,13 @@ $member->LoggedIn();
 // TODO: Check to make sure logged in
 // TODO: Graphs need to have dynamic data
 // TODO: Cookie: Favorite garages and color data
+
+// Clear Jigoshop Session Data if present (For @chriscct7 only)
+$_SESSION['jigoshop']=null;
+// Now let's grab session data
+var_dump($_SESSION);
+// And halt so we can read that data
+exit;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -96,10 +103,10 @@ $member->LoggedIn();
                     <div class="navbar-inner">
                         <div class="container-fluid">
                             <a class="brand" href="dashboard.html"><i class="icon-home icon-white"></i> BlackHawk</a>
-                            <ul class="nav user_menu pull-right">
+                            <ul class="nav user_menu  pull-right">
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php 
-									echo 'Johny Smith'; // TODO: Pull real name 
+									echo $_SESSION['member_name']; // TODO: Pull real name 
 									?> <b class="caret"></b></a>
                                     <ul class="dropdown-menu">
 										<li><a href="./profile.php">My Profile</a></li>
@@ -166,7 +173,7 @@ $member->LoggedIn();
                         <div class="span12">
 							<div class="heading clearfix">
 								<h3 class="pull-left">Parking Status</h3>	
-								<span class="pull-left label label-important ttip_t" style="margin-left: 10px;" title="Garage XX is closed">1 Closed Parking Lot</span>
+								<span class="pull-left label label-important ttip_t" style="margin-left: 10px;" title="Closed Garageg is XXXXX">1 Closed Parking Lot</span>
 							</div>
                             <table id="dt_e" class="table table-striped table-bordered dTableR">
                                 <thead>
