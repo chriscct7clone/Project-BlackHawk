@@ -392,13 +392,13 @@ ErrorDocument 510 '. $installURL.'/errorcode.php?error=510
 		} else {
 			$notice->add('error', 'Could not add `Admin: Standard` garage role!');
 		}
-		// Admin: Motorcyle
-		$garage_role_3="INSERT INTO `garage_roles` (`id`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, 'Admin: Motorcyle', '1', '1', '1', '1', '1', '0', '1', '0', '1');";
+		// Admin: Motorcycle
+		$garage_role_3="INSERT INTO `garage_roles` (`id`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, 'Admin: Motorcycle', '1', '1', '1', '1', '1', '0', '1', '0', '1');";
 		$statement = $pdo->prepare($garage_role_3);
 		if($statement->execute()){
-			$notice->add('success', 'Garage Role `Admin: Motorcyle` added!');
+			$notice->add('success', 'Garage Role `Admin: Motorcycle` added!');
 		} else {
-			$notice->add('error', 'Could not add `Admin: Motorcyle` garage role!');
+			$notice->add('error', 'Could not add `Admin: Motorcycle` garage role!');
 		}
 		// Admin: Handicap
 		$garage_role_4="INSERT INTO `garage_roles` (`id`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, 'Admin: Handicap', '1', '1', '1', '1', '1', '0', '1', '1', '0');";
@@ -416,13 +416,13 @@ ErrorDocument 510 '. $installURL.'/errorcode.php?error=510
 		} else {
 			$notice->add('error', 'Could not add `Staff: Standard` garage role!');
 		}
-		// Staff: Motorcyle
-		$garage_role_6="INSERT INTO `garage_roles` (`id`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, 'Staff: Motorcyle', '1', '1', '1', '1', '1', '0', '0', '0', '1');";
+		// Staff: Motorcycle
+		$garage_role_6="INSERT INTO `garage_roles` (`id`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, 'Staff: Motorcycle', '1', '1', '1', '1', '1', '0', '0', '0', '1');";
 		$statement = $pdo->prepare($garage_role_6);
 		if($statement->execute()){
-			$notice->add('success', 'Garage Role `Staff: Motorcyle` added!');
+			$notice->add('success', 'Garage Role `Staff: Motorcycle` added!');
 		} else {
-			$notice->add('error', 'Could not add `Staff: Motorcyle` garage role!');
+			$notice->add('error', 'Could not add `Staff: Motorcycle` garage role!');
 		}
 		// Staff: Handicap
 		$garage_role_7="INSERT INTO `garage_roles` (`id`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, 'Staff: Handicap', '1', '1', '1', '1', '1', '0', '0', '1', '0');";
@@ -440,13 +440,13 @@ ErrorDocument 510 '. $installURL.'/errorcode.php?error=510
 		} else {
 			$notice->add('error', 'Could not add `Student (Off Campus): Standard`  garage role!');
 		}
-		// Student (Off Campus): Motorcyle
-		$garage_role_9="INSERT INTO `garage_roles` (`id`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, 'Student (Off Campus): Motorcyle', '0', '1', '0', '0', '0', '0', '0', '0', '1');";
+		// Student (Off Campus): Motorcycle
+		$garage_role_9="INSERT INTO `garage_roles` (`id`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, 'Student (Off Campus): Motorcycle', '0', '1', '0', '0', '0', '0', '0', '0', '1');";
 		$statement = $pdo->prepare($garage_role_9);
 		if($statement->execute()){
-			$notice->add('success', 'Garage Role `Student (Off Campus): Motorcyle` added!');
+			$notice->add('success', 'Garage Role `Student (Off Campus): Motorcycle` added!');
 		} else {
-			$notice->add('error', 'Could not add `Student (Off Campus): Motorcyle`  garage role!');
+			$notice->add('error', 'Could not add `Student (Off Campus): Motorcycle`  garage role!');
 		}
 		// Student (Off Campus): Handicap
 		$garage_role_10="INSERT INTO `garage_roles` (`id`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, 'Student (Off Campus): Handicap', '0', '1', '0', '0', '0', '0', '0', '1', '0');";
@@ -464,13 +464,13 @@ ErrorDocument 510 '. $installURL.'/errorcode.php?error=510
 		} else {
 			$notice->add('error', 'Could not add `Student (On Campus): Standard` garage role!');
 		}
-		// Student (On Campus): Motorcyle
-		$garage_role_12="INSERT INTO `garage_roles` (`id`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, 'Student (On Campus): Motorcyle', '1', '0', '0', '0', '0', '0', '0', '0', '1');";
+		// Student (On Campus): Motorcycle
+		$garage_role_12="INSERT INTO `garage_roles` (`id`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, 'Student (On Campus): Motorcycle', '1', '0', '0', '0', '0', '0', '0', '0', '1');";
 		$statement = $pdo->prepare($garage_role_12);
 		if($statement->execute()){
-			$notice->add('success', 'Garage Role `Student (On Campus): Motorcyle` added!');
+			$notice->add('success', 'Garage Role `Student (On Campus): Motorcycle` added!');
 		} else {
-			$notice->add('error', 'Could not add `Student (On Campus): Motorcyle`  garage role!');
+			$notice->add('error', 'Could not add `Student (On Campus): Motorcycle`  garage role!');
 		}
 		// Student (On Campus): Handicap
 		$garage_role_13="INSERT INTO `garage_roles` (`id`, `name`, `students_campus`, `students_offcampus`, `vistor`, `staff`, `reserved`, `police`, `admin`, `handicap`, `motorcycle`) VALUES (NULL, 'Student (On Campus): Handicap', '1', '0', '0', '0', '0', '0', '0', '1', '0');";
