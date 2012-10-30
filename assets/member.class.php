@@ -224,19 +224,28 @@ class member {
 			$remember = "";
 		}
 		/* Login Form */
-		$form = '
-<form name="login" action="' . $this->currentPage() . '" method="post" class="group">
-	<label>
-		<span>Username</span>
-		<input type="text" name="username" />
-	</label>
-	<label>
-		<span>Password</span>
-		<input type="password" name="password" />
-	</label>
-	' . $remember . '
-	<input name="login" type="submit" value="Login" />
-</form>';
+$form= '<div class="login_box">
+			<form action="'.$this->currentPage().'" method="post" id="login_form">
+				<div class="top_b">Sign-in</div>    
+				<div class="cnt_b">
+					<div class="formRow">
+						<div class="input-prepend">
+							<span class="add-on"><i class="icon-user"></i></span><input type="text" id="username" name="username" placeholder="Username"/>
+						</div>
+					</div>
+					<div class="formRow">
+						<div class="input-prepend">
+							<span class="add-on"><i class="icon-lock"></i></span><input type="password" id="password" name="password" placeholder="Password" />
+						</div>
+					</div>
+					<div class="formRow clearfix">
+						<label class="checkbox"><input type="checkbox" /> Remember me</label>
+					</div>
+				</div>
+				<div class="btm_b clearfix">
+					<button class="btn btn-inverse pull-right" type="submit">Sign In</button>
+				</div>  
+			</form>';
 		/* Check if Login is set */
 		if(isset($_POST['login'])) {
 			/* Set username and password */
@@ -308,7 +317,7 @@ class member {
 						if(isset($_COOKIE['redirect'])) {
 							$redirect = $_COOKIE['redirect'];
 						} else {
-							$redirect = 'index.php';
+							$redirect = 'dashboard.php';
 						}
 						echo '<meta http-equiv="refresh" content="2;url=' . $redirect . '" />';
 					} else {
@@ -328,7 +337,6 @@ class member {
 			}
 		} else {
 			/* Report Status */
-			$notice->add('info', 'Please login');
 			$return_form = 1;
 		}
 		$data = "";
@@ -397,7 +405,7 @@ class member {
 			/* Redirect Cookie */
 			setcookie("redirect", $this->currentPage(), time() + 31536000);  /* expire in 1 year */
 			/* Go to Login */
-			header("Location: ../member.php?action=login");
+			header("Location: ../dashboard.php?action=login");
 		}
 	}
 	
@@ -467,7 +475,7 @@ class member {
 			$this->deleteCookie($_COOKIE['remember_me_id']);
 		}
 		/* Redirect */
-		header('Refresh: 2; url=index.php');
+		header('Refresh: 2; url=dashboard.php');
 	}
 	
 	/*
@@ -766,7 +774,7 @@ class member {
 							$verCode = md5(uniqid(rand(), true) . md5(uniqid(rand(), true)));
 							/* Email Info */
 							$subject = 'Thank you for creating an account, ' . $username;
-							$content = 'Hi ' . $username . ',<br />Thanks for signing-up!<br />To activate your account please click the link below, or copy past it into the address bar of your web browser<hr /><a href="' . $this->currentPath() . 'member.php?action=verification&vercode=' . $verCode . '">' . $this->currentPath() . 'member.php?action=verification&vercode=' . $verCode . '</a><br /><br /><i>-Admin</i>';
+							$content = 'Hi ' . $username . ',<br />Thanks for signing-up!<br />To activate your account please click the link below, or copy past it into the address bar of your web browser<hr /><a href="' . $this->currentPath() . 'dashboard.php?action=verification&vercode=' . $verCode . '">' . $this->currentPath() . 'dashboard.php?action=verification&vercode=' . $verCode . '</a><br /><br /><i>-Admin</i>';
 							/* Mail it! */
 							if($mailer->mail($email, $subject, $content) == true) {
 								/* Insert Data */
@@ -774,7 +782,7 @@ class member {
 								$database->query('INSERT INTO users_inactive(verCode, username, password, email, date) VALUES (:vercode, :username, :password, :email, :date)', array(':vercode' => $verCode, ':username' => $username, 'password' => $password, 'email' => $email, 'date' => $date));
 								$notice->add('info', 'Please check your e-mail to activate your account');
 								/* Redirect */
-								echo '<meta http-equiv="refresh" content="2;url=index.php" />';
+								echo '<meta http-equiv="refresh" content="2;url=dashboard.php" />';
 							} else {
 								$notice->add('error', 'Could not send e-mail!<br />Please contact the site admin.');
 							}
@@ -794,7 +802,7 @@ class member {
 					$database->query('INSERT INTO users(username, password, email, date) VALUES (:username, :password, :email, :date)', array(':username' => $username, 'password' => $password, 'email' => $email, 'date' => $date));
 					$notice->add('success', 'You account has been created!');
 					/* Redirect */
-					echo '<meta http-equiv="refresh" content="2;url=index.php" />';
+					echo '<meta http-equiv="refresh" content="2;url=dashboard.php" />';
 				}
 			} else {
 				if(Config::read('captcha') === true) {
@@ -908,12 +916,22 @@ class member {
 		/* If no; present form */
 		} else {
 			/* Recover Password Form */
-			$form = '
-<form name="recover" action="' . $this->currentPage() . '" method="post" class="group">
-	<input type="text" name="email" />
-	<input name="recover" type="submit" value="Recover" />
-</form>
-			';
+			$form = '<form action="'. $this->currentPage() . '" method="post" id="pass_form">
+				<div class="top_b">Can\'t sign in?</div>    
+					<div class="alert alert-info alert-login">
+					Please enter your email address. You will receive a link to create a new password via email.
+				</div>
+				<div class="cnt_b">
+					<div class="formRow clearfix">
+						<div class="input-prepend">
+							<span class="add-on">@</span><input type="text" placeholder="Your email address" />
+						</div>
+					</div>
+				</div>
+				<div class="btm_b tac">
+					<button class="btn btn-inverse" type="submit">Request New Password</button>
+				</div>  
+			</form>';
 			if(isset($_POST['recover'])) {
 				/* Get the users info */
 				$user = $database->query('SELECT id, username, email FROM users WHERE email = :email', array(':email' => $_POST['email']), 'FETCH_OBJ');
@@ -928,7 +946,7 @@ class member {
 						$mailer = new mailer(Config::read('email_master'));
 						/* Email Info */
 						$subject = 'Password change Request';
-						$content = 'Hi ' . $user->username . ',<br />We have a revived a request for a password change. Please click the link below to change your password:<br /><br /><a href="' . $this->currentPath() . 'member.php?action=recover-password&vercode=' . $verCode . '">' . $this->currentPath() . 'member.php?action=recover-password&vercode=' . $verCode . '</a><br /><br />If the link does not work when you click it, copy and paste the link directly into your browser. If you did not request a password change ignore this message.<br /><br />For security reason this link is only active for 24 hours upon request.<br /><br /><i>-Admin</i>';
+						$content = 'Hi ' . $user->username . ',<br />We have a revived a request for a password change. Please click the link below to change your password:<br /><br /><a href="' . $this->currentPath() . 'dashboard.php?action=recover-password&vercode=' . $verCode . '">' . $this->currentPath() . 'dashboard.php?action=recover-password&vercode=' . $verCode . '</a><br /><br />If the link does not work when you click it, copy and paste the link directly into your browser. If you did not request a password change ignore this message.<br /><br />For security reason this link is only active for 24 hours upon request.<br /><br /><i>-Admin</i>';
 						/* Mail it! */
 						if($mailer->mail($user->email, $subject, $content) == true) {
 							/* Upadte password only if you can mail them it! */
@@ -938,7 +956,7 @@ class member {
 							$notice->add('info', 'Please check your e-mail for further instructions.');
 							$return_form = 0;
 							/* Redirect */
-							echo '<meta http-equiv="refresh" content="2;url=index.php" />';
+							echo '<meta http-equiv="refresh" content="2;url=dashboard.php" />';
 						} else {
 							$notice->add('error', 'Could not send e-mail!<br />Contact the site admin.');
 							$return_form = 0;
@@ -952,7 +970,6 @@ class member {
 					$return_form = 1;
 				}
 			} else {
-				$notice->add('info', 'Please enter your e-mail');
 				$return_form = 1;
 			}
 			$data = "";
@@ -1002,7 +1019,7 @@ class member {
 					$notice->add('success', 'Password has been updated!');
 					$return_form = 0;
 					/* Redirect */
-					echo '<meta http-equiv="refresh" content="2;url=index.php" />';
+					echo '<meta http-equiv="refresh" content="2;url=dashboard.php" />';
 				} else {
 					$return_form = 1;
 				}
@@ -1086,7 +1103,7 @@ class member {
 					$notice->add('success', 'E-Mail has been updated!');
 					$return_form = 0;
 					/* Redirect */
-					echo '<meta http-equiv="refresh" content="2;url=index.php" />';
+					echo '<meta http-equiv="refresh" content="2;url=dashboard.php" />';
 				} else {
 					$return_form = 1;
 				}
@@ -1187,7 +1204,7 @@ class member {
 			/* Message */
 			$notice->add('success', 'You account has been verified!');
 			/* Redirect */
-			echo '<meta http-equiv="refresh" content="2;url=index.php" />';
+			echo '<meta http-equiv="refresh" content="2;url=dashboard.php" />';
 		} else {
 			$notice->add('info', 'No verCode (Verification Code)!');
 		}
@@ -1219,7 +1236,7 @@ class member {
 				
 					/* Insert Data */
 					$date = date("Y-m-d", time());
-					$database->query('INSERT INTO users(uid, password, name, email, date, garage_role, user_role, parked_status, parked_location, profile_colors, profile_fixed, profile_image, profile_fav_garages) VALUES (:uid, :password, :name, :email, :date, :garage_role, :user_role, :parked_status, :parked_location, :profile_colors, :profile_fixed, :profile_image, :profile_fav_garages)', array(':uid' => $username, 'password' => $password, 'name' => 'Administrator','email' => $email, 'date' => $date, 'garage_role' => 5,'user_role' => 2,'parked_status' => 0,'parked_location' => 0,'parked_colors' => 0,'parked_fixed' => 0,'parked_image' => 0,'profile_fav_garages' => 'null'));
+					$database->query('INSERT INTO users(username, password, name, email, date, garage_role, user_role, parked_status, parked_location, profile_colors, profile_fixed, profile_image, profile_fav_garages) VALUES (:username, :password, :name, :email, :date, :garage_role, :user_role, :parked_status, :parked_location, :profile_colors, :profile_fixed, :profile_image, :profile_fav_garages)', array(':username' => $username, 'password' => $password, 'name' => 'Administrator','email' => $email, 'date' => $date, 'garage_role' => 5,'user_role' => 2,'parked_status' => 0,'parked_location' => 0,'profile_colors' => 0,'profile_fixed' => 0,'profile_image' => 0,'profile_fav_garages' => 'null'));
 					$mailer = new mailer(Config::read('email_master'));
 					$subject = 'Welcome ' . $username . '!';
 					$content = 'Thanks for installing BlackHawk <br />. Your admin username is' . $username . ' and password is ' . $formailpass. ',<br /> Please login and change these values! <br /><br /> Thanks for signing-up!<br /><br /><i>-The Project BlackHawk Team</i>';

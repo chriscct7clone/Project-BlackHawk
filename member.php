@@ -36,7 +36,7 @@ if($action == 'logout') {
 //elseif($action == 'register') {
 	//$title   = 'Create an account';
 	//$content = $member->register() . '<p class="options group"><a href="member.php?action=login">Already have an account?</a> &bull; <a href="member.php?action=recover-password">Recover Password</a></p>';
-} elseif($action == 'recover-password') {
+ elseif($action == 'recover-password') {
 	$title   = 'Recover your password';
 	$content = $member->recoverPassword() . '<p class="options group"><a href="member.php?action=login">Already have an account?</a></p>';
 } elseif($action == 'verification') {

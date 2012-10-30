@@ -20,7 +20,7 @@
 
 /* If this file does not exist, it's because they haven't run the install yet. */
 if(!file_exists('assets/config.inc.php')) {
-	echo '<a href="setup/">Please install the parking system first!</a>';
+	echo '<a href="setup/index.php">Please install the parking system first!</a>';
 } else {
 /*
 TODO: Finish Stage 2 Seperation

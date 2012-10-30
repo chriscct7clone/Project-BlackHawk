@@ -1,5 +1,8 @@
 <?php
-include("assets/member.inc.php");
+if(!file_exists('assets/config.inc.php')) {
+	echo '<a href="setup/">Please install the parking system first!</a>';
+} else {
+require_once('assets/member.inc.php');
 if(isset($_GET['action'])) {
 	$action = $_GET['action'];
 } else {
@@ -14,7 +17,46 @@ if(isset($_GET['action'])) {
 //var_dump($_SESSION);
 // And halt so we can read that data
 //exit;
-?>
+$secure=false; //assume not logged in
+if ($member->sessionIsSet()==true){
+	$secure=true;
+}
+if($secure==true){ //Dashboard
+require_once('assets/member.inc.php');
+if(isset($_GET['action'])) {
+	$action = $_GET['action'];
+} else {
+	$action = null;
+}
+if(isset($_GET['subaction'])) {
+	$subaction = $_GET['subaction'];
+} else {
+	$subaction = null;
+}
+if($action == 'logout') {
+	echo $member->logout();
+}
+    //   self registration removed
+    //   elseif($action == 'register') {
+	//   $title   = 'Create an account';
+	//   $content = $member->register() . '<p class="options group"><a href="member.php?action=login">Already have an account?</a> &bull; <a href="member.php?action=recover-password">Recover Password</a></p>';
+// if($action == 'settings') {
+	// $member->LoggedIn();
+	// $user = $member->data();
+// }
+	// elseif($subaction == 'password') {
+		// $title   = 'Change Password';
+		// $content = $member->changePassword($user->id);
+	// } elseif($subaction == 'delete') {
+		// $title   = 'Delete Account';
+		// $content = $member->deleteAccount($user->id);
+	// } elseif($subaction == 'settings') {
+		// $title   = 'Settings';
+		// $content = '<a href="dashboard.php?action=settings&amp;subaction=password" class="button full">Change Password</a><a href="dashboard.php?action=settings&amp;subaction=delete" class="button full">Delete Account</a>';
+	// }
+	
+	
+	?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -110,7 +152,7 @@ if(isset($_GET['action'])) {
 										<li><a href="./profile.php">My Profile</a></li>
 										<li><a href="./profile.php?action=changepassword">Change Password</a></li>
 										<li class="divider"></li>
-										<li><a href="students.php?action=logout">Log Out</a></li>
+										<li><a href="dashboard.php?action=logout">Log Out</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -365,3 +407,136 @@ if(isset($_GET['action'])) {
 			</div>
 	</body>
 </html>
+<?php }
+else {
+if(isset($_GET['action'])) {
+	$action = $_GET['action'];
+} else {
+	$action = null;
+}
+if ($action != null){
+if($action == 'recover-password') {
+	$title   = 'Recover your password';
+	$content = $member->recoverPassword();
+} elseif($action == 'verification') {
+	$title   = 'Your account has been verified';
+	$content = $member->verification() . '<p class="options group"><a href="dashboard.php?action=login">Already have an account?</a></p>';
+}
+elseif($action == 'statistics') {
+	$title   = 'Redirecting';
+	$content = 'Not Available Yet';
+}
+
+else {
+	$title   = 'Login';
+	$content =  $member->login();
+}
+}
+else {
+	$title   = 'Welcome';
+	$content =  'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.';
+}
+	?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<?php if($action == null){ ?>
+	<title><?php echo $title ?></title>
+	<!--CSS Files-->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+<?php } else{ ?>	
+		<title><?php echo $title ?></title>
+	        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!--CSS Files-->
+	<link rel="stylesheet" type="text/css" href="assets/css/backend.css" />
+	        <!-- Bootstrap framework -->
+            <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+            <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-responsive.min.css" />
+        <!-- theme color-->
+            <link rel="stylesheet" href="assets/css/blue.css" />
+        <!-- tooltip -->    
+			<link rel="stylesheet" href="assets/lib/qtip2/jquery.qtip.min.css" />
+        <!-- main styles -->
+            <link rel="stylesheet" href="assets/css/style.css" />
+    
+        <!-- Favicons and the like (avoid using transparent .png) -->
+            <link rel="shortcut icon" href="favicon.ico" />
+            <link rel="apple-touch-icon-precomposed" href="assets/img/icon.png" />
+        <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+        <!--[if lte IE 8]>
+            <script src="assets/js/ie/html5.js"></script>
+			<script src="assets/js/ie/respond.min.js"></script>
+        <![endif]-->
+	<?php } ?>
+	
+</head>
+<?php if($action == null){ ?>
+<body>
+<?php } else{ ?>
+<body class="login_page">
+<?php } ?>
+<div id="wrapper" class="group">
+	<div id="header" class="group">
+		<h1 id="logo">BlackHawk</h1>
+		<div id="user">
+			<div id="user-info">Hello, Guest</div>
+			<ul id="user-ops">
+				<li><a href="dashboard.php?action=login">Login</a></li>
+			</ul>
+		</div>
+	</div>
+	<ul id="navigation" class="group">
+		<?php if($action != null){ ?><li><a href="dashboard.php">Home Page</a></li><?php } else{ }?>
+		<?php if($action != "login"){ ?><li><a href="dashboard.php?action=login">Login</a></li><?php } else{ }?>
+		<?php if($action != "statistics"){ ?><li><a href="dashboard.php?action=statistics">Public Statistics</a></li><?php } else{ }?>
+	</ul>
+	<?php if($action != 'recover-password' && $action != 'login'){ ?>	
+	<div  id="main" class="group">
+	<h1><?php echo $title; ?></h1>
+	<?php echo $content; ?>
+	</div>
+	<?php } else{ ?>	
+	<div class="login_box">
+	<?php echo $content; ?>
+	<div class="links_b links_btm clearfix">
+			<?php if($action != "recover-password"){?><span class="linkform"><a href="dashboard.php?action=recover-password">Forgot password?</a></span><?php } else{ }?>
+			<?php if($action != "login"){?><span class="linkform">Never mind, <a href="dashboard.php?action=login">send me back to the sign-in screen</a></span><?php } else{ }?>
+		</div>
+	</div>
+	    <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.actual.min.js"></script>
+        <script src="assets/lib/validation/jquery.validate.min.js"></script>
+		<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script>
+            $(document).ready(function(){
+		
+				//* validation
+				$('#login_form').validate({
+					onkeyup: false,
+					errorClass: 'error',
+					validClass: 'valid',
+					rules: {
+						username: { required: true, minlength: 9, maxlength: 9 },
+						password: { required: true, minlength: 6 }
+					},
+					highlight: function(element) {
+						$(element).closest('div').addClass("f_error");
+					},
+					unhighlight: function(element) {
+						$(element).closest('div').removeClass("f_error");
+					},
+					errorPlacement: function(error, element) {
+						$(element).closest('div').append(error);
+					}
+				});
+            });
+        </script>
+<?php } ?>
+	</body>
+	</html>
+		<?php
+		}
+}
+?>
+		

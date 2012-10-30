@@ -170,7 +170,8 @@ Config::write(\'blackhawkversion\', \'' . BLACKHAWK_VERSION .'.'.BLACKHAWK_SUBVE
 		}
 
 $mysql_users = 'CREATE TABLE IF NOT EXISTS `users` (
-  `uid` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` int(11) NOT NULL,
   `password` varchar(255) NOT NULL,
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
@@ -183,8 +184,8 @@ $mysql_users = 'CREATE TABLE IF NOT EXISTS `users` (
   `profile_fixed` int(11) NOT NULL,
   `profile_image` int(11) NOT NULL,
   `profile_fav_garages` varchar(255) NOT NULL, 
-  PRIMARY KEY (`uid`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;';
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=0;';
 
 $mysql_users_inactive = 'CREATE TABLE IF NOT EXISTS `users_inactive` (
   `verCode` varchar(255) NOT NULL,
