@@ -225,17 +225,17 @@ class member {
 		}
 		/* Login Form */
 $form= '<div class="login_box">
-			<form action="'.$this->currentPage().'" method="post" id="login_form">
+			<form value="Login" action="'.$this->currentPage().'" method="post" id="login_form" value="Login">
 				<div class="top_b">Sign-in</div>    
 				<div class="cnt_b">
 					<div class="formRow">
 						<div class="input-prepend">
-							<span class="add-on"><i class="icon-user"></i></span><input type="text" id="username" name="username" placeholder="Username"/>
+							<span class="add-on"><i class="icon-user"></i></span><input type="text" id="username" name="username" placeholder="Username" value="John Smith" />
 						</div>
 					</div>
 					<div class="formRow">
 						<div class="input-prepend">
-							<span class="add-on"><i class="icon-lock"></i></span><input type="password" id="password" name="password" placeholder="Password" />
+							<span class="add-on"><i class="icon-lock"></i></span><input type="password" id="password" name="password" placeholder="Password" value="password" />
 						</div>
 					</div>
 					<div class="formRow clearfix">
@@ -243,7 +243,7 @@ $form= '<div class="login_box">
 					</div>
 				</div>
 				<div class="btm_b clearfix">
-					<button class="btn btn-inverse pull-right" type="submit">Sign In</button>
+					<button value="Login" class="btn btn-inverse pull-right" type="submit" value="Login" >Sign In</button>
 				</div>  
 			</form>';
 		/* Check if Login is set */
@@ -916,7 +916,7 @@ $form= '<div class="login_box">
 		/* If no; present form */
 		} else {
 			/* Recover Password Form */
-			$form = '<form action="'. $this->currentPage() . '" method="post" id="pass_form">
+			$form = '<form name="recover" action="'. $this->currentPage() . '" method="post" id="pass_form">
 				<div class="top_b">Can\'t sign in?</div>    
 					<div class="alert alert-info alert-login">
 					Please enter your email address. You will receive a link to create a new password via email.
@@ -929,7 +929,7 @@ $form= '<div class="login_box">
 					</div>
 				</div>
 				<div class="btm_b tac">
-					<button class="btn btn-inverse" type="submit">Request New Password</button>
+					<button name="recover"  class="btn btn-inverse" type="submit" value="Recover" >Request New Password</button>
 				</div>  
 			</form>';
 			if(isset($_POST['recover'])) {
