@@ -5,6 +5,7 @@ Main Stylesheet:
 */
 /*Import Reset */
 @import url("reset.css"); 
+
 body {
 	background: #eeeeee url("../img/bg.png");
 	color: #42423d;

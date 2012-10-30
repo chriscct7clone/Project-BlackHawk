@@ -225,17 +225,17 @@ class member {
 		}
 		/* Login Form */
 $form= '<div class="login_box">
-			<form value="Login" action="'.$this->currentPage().'" method="post" id="login_form" value="Login">
+			<form value="login" action="'.$this->currentPage().'" method="post" id="login_form" value="Login">
 				<div class="top_b">Sign-in</div>    
 				<div class="cnt_b">
 					<div class="formRow">
 						<div class="input-prepend">
-							<span class="add-on"><i class="icon-user"></i></span><input type="text" id="username" name="username" placeholder="Username" value="John Smith" />
+							<span class="add-on"><i class="icon-user"></i></span><input type="text" id="username" name="username" placeholder="Username" />
 						</div>
 					</div>
 					<div class="formRow">
 						<div class="input-prepend">
-							<span class="add-on"><i class="icon-lock"></i></span><input type="password" id="password" name="password" placeholder="Password" value="password" />
+							<span class="add-on"><i class="icon-lock"></i></span><input type="password" id="password" name="password" placeholder="Password" />
 						</div>
 					</div>
 					<div class="formRow clearfix">
@@ -243,7 +243,7 @@ $form= '<div class="login_box">
 					</div>
 				</div>
 				<div class="btm_b clearfix">
-					<button value="Login" class="btn btn-inverse pull-right" type="submit" value="Login" >Sign In</button>
+					<center><input name="login" value="Login" class="btn btn-inverse pull-right" type="submit" ></center>
 				</div>  
 			</form>';
 		/* Check if Login is set */
@@ -921,15 +921,15 @@ $form= '<div class="login_box">
 					<div class="alert alert-info alert-login">
 					Please enter your email address. You will receive a link to create a new password via email.
 				</div>
-				<div class="cnt_b">
+				<div class="cnt_b reset-pswd-fix">
 					<div class="formRow clearfix">
 						<div class="input-prepend">
-							<span class="add-on">@</span><input type="text" placeholder="Your email address" />
+							<span class="add-on">@</span><input type="text" placeholder="Your email address"  id="resetpwd" class="email-fix" name="email"/>
 						</div>
 					</div>
 				</div>
-				<div class="btm_b tac">
-					<button name="recover"  class="btn btn-inverse" type="submit" value="Recover" >Request New Password</button>
+				<div class="btm_b tac clearfix recover-submit-fix">
+					<center><input name="recover" type="submit" class="btn btn-inverse" value="Request New Password" /></center>
 				</div>  
 			</form>';
 			if(isset($_POST['recover'])) {

@@ -601,3 +601,32 @@
 			#maincontainer {border-right:1px solid #ccc}
 			.main_content {border-left:none}
 		}
+		/* login fixes */
+		#username {
+		float: right;
+		width: 210px;
+		height: 16px;
+		}
+		#password {
+		float: right;
+		width: 210px;
+		height: 16px;
+		}
+		#resetpwd{
+		float: right;
+		width: 265px;
+		height: 16px;
+		}
+		.linkform {		
+		font-size: 14px;
+		}
+		.links_b.links_btm.clearfix{
+		margin-top: 5px;
+		margin-bottom: 5px;
+		}
+		.btm_b.tac.clearfix.recover-submit-fix{
+		padding-left: 40px;
+		}
+		.cnt_b.reset-pswd-fix{
+		width: 80%;
+		}
