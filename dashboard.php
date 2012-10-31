@@ -444,12 +444,12 @@ else {
 	<title><?php echo $title ?></title>
 	<!--CSS Files-->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
 <?php } else{ ?>	
-		<title><?php echo $title ?></title>
+			<title><?php echo $title ?></title>
 	        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<!--CSS Files-->
-	<link rel="stylesheet" type="text/css" href="assets/css/backend.css" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<link rel="stylesheet" type="text/css" href="assets/css/backend.css" />
 	        <!-- Bootstrap framework -->
             <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
             <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-responsive.min.css" />
