@@ -999,11 +999,11 @@ $form= '<div class="login_box">
 					if(isset($_POST['password_again']) && $_POST['password_again'] == $_POST['password']) {
 						/* Is the password long enough? */
 						$length = strlen($_POST['password']);
-						if($length >= 8) {
+						if($length >= 6) {
 						// ADD REGEX function to block non alphanumeric characters
 							$password = $_POST['password'];
 						} else {
-							$notice->add('error', 'Passwords must be atleast than 8 characters');
+							$notice->add('error', 'Passwords must be atleast than 6 characters');
 						}
 					} else {
 						$notice->add('error', 'Passwords must match');
