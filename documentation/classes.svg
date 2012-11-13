@@ -85,7 +85,7 @@
 </g>
 <!-- \\HelloWorldTest -->
 <g id="node11" class="node"><title>\\HelloWorldTest</title>
-<a xlink:href="tests.Test.html" xlink:title="HelloWorldTest" target="_parent">
+<a xlink:href="tests.HelloWorldTest.html" xlink:title="HelloWorldTest" target="_parent">
 <polygon fill="none" stroke="black" points="445.5,-106 334.5,-106 334.5,-70 445.5,-70 445.5,-106"/>
 <text text-anchor="middle" x="390" y="-85.2" font-family="Courier,monospace" font-size="11.00">HelloWorldTest</text>
 </a>
@@ -97,13 +97,8 @@
 </g>
 <!-- \\HelloWorldTest&#45;&gt;\\PHPUnit_Framework_TestCase -->
 <g id="edge3" class="edge"><title>\\HelloWorldTest&#45;&gt;\\PHPUnit_Framework_TestCase</title>
-<path fill="none" stroke="black" d="M334.497,-82.364C313.229,-81.6393 287.859,-81.2681 262.391,-81.2506"/>
-<polygon fill="none" stroke="black" points="262.248,-77.7507 252.252,-81.2624 262.256,-84.7507 262.248,-77.7507"/>
-</g>
-<!-- \\HelloWorldTest&#45;&gt;\\PHPUnit_Framework_TestCase -->
-<g id="edge5" class="edge"><title>\\HelloWorldTest&#45;&gt;\\PHPUnit_Framework_TestCase</title>
-<path fill="none" stroke="black" d="M334.497,-93.636C313.229,-94.3607 287.859,-94.7319 262.391,-94.7494"/>
-<polygon fill="none" stroke="black" points="262.256,-91.2493 252.252,-94.7376 262.248,-98.2493 262.256,-91.2493"/>
+<path fill="none" stroke="black" d="M334.497,-88C315.906,-88 294.18,-88 271.993,-88"/>
+<polygon fill="none" stroke="black" points="271.776,-84.5001 261.776,-88 271.776,-91.5001 271.776,-84.5001"/>
 </g>
 <!-- \\HelloWorld -->
 <g id="node12" class="node"><title>\\HelloWorld</title>

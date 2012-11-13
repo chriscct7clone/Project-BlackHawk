@@ -26,7 +26,7 @@
       <full_name>\captcha</full_name>
       <docblock line="22">
         <description>Implements the creation of the captcha</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="22" name="package" description="BlackHawk"/>
         <tag line="22" name="subpackage" description="Internal Functions"/>
         <tag line="22" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -41,7 +41,7 @@
         <full_name>display</full_name>
         <docblock line="35">
           <description>Creates a Captcha image</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="35" name="version" description="0.3.0"/>
           <tag line="35" name="param" description="Dimension (width) for generated image" type="integer" variable="$width">
             <type by_reference="false">integer</type>
@@ -58,17 +58,17 @@
         </docblock>
         <argument line="44">
           <name>$width</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="44">
           <name>$height</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="44">
           <name>$text</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -96,7 +96,7 @@
       <full_name>\Config</full_name>
       <docblock line="20">
         <description>Implements method to grab stored config values</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="20" name="package" description="BlackHawk"/>
         <tag line="20" name="subpackage" description="Internal Functions"/>
         <tag line="20" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -107,10 +107,10 @@
       </docblock>
       <property final="false" static="true" visibility="public" line="37" namespace="global" package="Default">
         <name>$confArray</name>
-        <default></default>
+        <default/>
         <docblock line="32">
-          <description></description>
-          <long-description></long-description>
+          <description/>
+          <long-description/>
           <tag line="32" name="var" description="Used to store all the configs" type="\$configArray">
             <type by_reference="false">\$configArray</type>
           </tag>
@@ -128,7 +128,7 @@
         </docblock>
         <argument line="45">
           <name>$name</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -147,24 +147,16 @@
         </docblock>
         <argument line="56">
           <name>$name</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="56">
           <name>$value</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
     </class>
-  </file>
-  <file path="assets\config.inc.php" hash="0ac1ab95446fdd91d6a7772c91d1ead7" package="Default">
-    <include line="12" type="Require Once" package="Default">
-      <name>config.class.php</name>
-    </include>
-    <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file assets\config.inc.php</error>
-    </parse_markers>
   </file>
   <file path="assets\css\index.php" hash="bfd6770f5b16662d2b1f67eea7cd7e65" package="BlackHawk\Security">
     <docblock line="2">
@@ -206,7 +198,7 @@
       <full_name>\database</full_name>
       <docblock line="21">
         <description>Implements method to store, delete and edit database values via PDO</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="21" name="package" description="BlackHawk"/>
         <tag line="21" name="subpackage" description="Internal Functions"/>
         <tag line="21" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -219,8 +211,8 @@
         <name>$pdo</name>
         <default>null</default>
         <docblock line="33">
-          <description></description>
-          <long-description></long-description>
+          <description/>
+          <long-description/>
           <tag line="33" name="var" description="A reference to the PDO instance; Also used for connecions via PDO." type="\$pdo">
             <type by_reference="false">\$pdo</type>
           </tag>
@@ -230,8 +222,8 @@
         <name>$statement</name>
         <default>null</default>
         <docblock line="39">
-          <description></description>
-          <long-description></long-description>
+          <description/>
+          <long-description/>
           <tag line="39" name="var" description="Used to contain query for prepared statments; Also used for value binding &amp; execution" type="\$statement">
             <type by_reference="false">\$statement</type>
           </tag>
@@ -267,7 +259,7 @@
         </docblock>
         <argument line="72">
           <name>$query</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="72">
@@ -459,7 +451,7 @@
       <full_name>\mailer</full_name>
       <docblock line="22">
         <description>Implements emails</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="22" name="package" description="BlackHawk"/>
         <tag line="22" name="subpackage" description="Mail"/>
         <tag line="22" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -470,10 +462,10 @@
       </docblock>
       <property final="false" static="false" visibility="public" line="39" namespace="global" package="Default">
         <name>$email_master</name>
-        <default></default>
+        <default/>
         <docblock line="34">
-          <description></description>
-          <long-description></long-description>
+          <description/>
+          <long-description/>
           <tag line="34" name="var" description="The Master E-Mail" type="\$email_master">
             <type by_reference="false">\$email_master</type>
           </tag>
@@ -481,10 +473,10 @@
       </property>
       <property final="false" static="false" visibility="public" line="45" namespace="global" package="Default">
         <name>$template</name>
-        <default></default>
+        <default/>
         <docblock line="40">
-          <description></description>
-          <long-description></long-description>
+          <description/>
+          <long-description/>
           <tag line="40" name="var" description="Stores template choice" type="\$template">
             <type by_reference="false">\$template</type>
           </tag>
@@ -505,7 +497,7 @@
         </docblock>
         <argument line="55">
           <name>$email_master</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="55">
@@ -529,12 +521,12 @@
         </docblock>
         <argument line="68">
           <name>$subject</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="68">
           <name>$content</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -562,17 +554,17 @@
         </docblock>
         <argument line="100">
           <name>$email</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="100">
           <name>$subject</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="100">
           <name>$content</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -586,7 +578,7 @@
       <notice line="89" code="50013">Parameter $emailmaster could not be found in mail()</notice>
     </parse_markers>
   </file>
-  <file path="assets\member.class.php" hash="7306de3893deaca751828a503baf16ab" package="BlackHawk\Members">
+  <file path="assets\member.class.php" hash="c10990ab49830511aa4a5f15f65f8c13" package="BlackHawk\Members">
     <docblock line="2">
       <description>Member Class</description>
       <long-description>&lt;p&gt;The main hub of our login system&lt;/p&gt;
@@ -627,12 +619,6 @@
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="41" package="BlackHawk\Members">
         <name>__construct</name>
         <full_name>__construct</full_name>
-        <docblock line="34">
-          <description>Member Construct</description>
-          <long-description>&lt;p&gt;Sets some basic settings for extra security
-Starts the session
-Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
-        </docblock>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="74" package="BlackHawk\Members">
         <name>currentPath</name>
@@ -809,6 +795,7 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
       <todo line="1226">make random again</todo>
     </markers>
     <parse_markers>
+      <error line="41" code="50010">No DocBlock was found for method __construct()</error>
       <error line="74" code="50010">No DocBlock was found for method currentPath()</error>
       <error line="86" code="50010">No DocBlock was found for method currentPage()</error>
       <error line="106" code="50010">No DocBlock was found for method genSalt()</error>
@@ -883,7 +870,7 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
       <full_name>\notice</full_name>
       <docblock line="22">
         <description>Implements Notice</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="22" name="package" description="BlackHawk"/>
         <tag line="22" name="subpackage" description="Notice"/>
         <tag line="22" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -901,12 +888,12 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
         <full_name>add</full_name>
         <argument line="49">
           <name>$type</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="49">
           <name>$message</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -949,7 +936,7 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
       <full_name>\Sensors</full_name>
       <docblock line="23">
         <description>Basic Parking Sensors Funcions</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="23" name="package" description="BlackHawk"/>
         <tag line="23" name="subpackage" description="Garage"/>
         <tag line="23" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -987,7 +974,7 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
       <full_name>\UPD</full_name>
       <docblock line="23">
         <description>Functions that can be called from the UPD role file</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="23" name="package" description="BlackHawk"/>
         <tag line="23" name="subpackage" description="Garage"/>
         <tag line="23" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -1001,22 +988,6 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
     <markers>
       <todo line="36">UPD ROLE SPECIFIC FUNCTIONS CALLED FROM UPD ROLE FILE</todo>
     </markers>
-  </file>
-  <file path="dashboard.php" hash="bada5a114136a8a6903fcd429b41a603" package="Default">
-    <include line="5" type="Require Once" package="Default">
-      <name>assets/member.inc.php</name>
-    </include>
-    <include line="25" type="Require Once" package="Default">
-      <name>assets/member.inc.php</name>
-    </include>
-    <markers>
-      <todo line="11">Graphs need to have dynamic data</todo>
-      <todo line="12">Cookie: Favorite garages and color data</todo>
-      <todo line="149">Pull real name</todo>
-    </markers>
-    <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file dashboard.php</error>
-    </parse_markers>
   </file>
   <file path="debug\error.php" hash="193cb2d874113241735c45907be07b76" package="Default">
     <include line="3" type="Include" package="Default">
@@ -1307,7 +1278,7 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
         <full_name>reset</full_name>
         <docblock line="85">
           <description>Reset all properties</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="105" package="Default">
@@ -1315,7 +1286,7 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
         <full_name>isBrowser</full_name>
         <docblock line="100">
           <description>Check to see if the specific browser is valid</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="100" name="param" description="" type="string" variable="$browserName">
             <type by_reference="false">string</type>
           </tag>
@@ -1325,7 +1296,7 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
         </docblock>
         <argument line="105">
           <name>$browserName</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -1345,12 +1316,12 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
         <full_name>setBrowser</full_name>
         <docblock line="112">
           <description>Set the name of the browser</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="112" name="param" description="The name of the Browser" type="\global\" variable="$browser"/>
         </docblock>
         <argument line="116">
           <name>$browser</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -1370,12 +1341,12 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
         <full_name>setPlatform</full_name>
         <docblock line="122">
           <description>Set the name of the platform</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="122" name="param" description="The name of the Platform" type="\global\" variable="$platform"/>
         </docblock>
         <argument line="126">
           <name>$platform</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -1384,7 +1355,7 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
         <full_name>getVersion</full_name>
         <docblock line="127">
           <description>The version of the browser.</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="127" name="return" description="Version of the browser (will only contain alpha-numeric characters and a period)" type="string">
             <type by_reference="false">string</type>
           </tag>
@@ -1395,12 +1366,12 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
         <full_name>setVersion</full_name>
         <docblock line="132">
           <description>Set the version of the browser</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="132" name="param" description="The version of the Browser" type="\global\" variable="$version"/>
         </docblock>
         <argument line="136">
           <name>$version</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -1409,7 +1380,7 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
         <full_name>getAolVersion</full_name>
         <docblock line="137">
           <description>The version of AOL.</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="137" name="return" description="Version of AOL (will only contain alpha-numeric characters and a period)" type="string">
             <type by_reference="false">string</type>
           </tag>
@@ -1420,12 +1391,12 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
         <full_name>setAolVersion</full_name>
         <docblock line="142">
           <description>Set the version of AOL</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="142" name="param" description="The version of AOL" type="\global\" variable="$version"/>
         </docblock>
         <argument line="146">
           <name>$version</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -1434,7 +1405,7 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
         <full_name>isAol</full_name>
         <docblock line="147">
           <description>Is the browser from AOL?</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="147" name="return" description="True if the browser is from AOL otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1445,7 +1416,7 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
         <full_name>isMobile</full_name>
         <docblock line="152">
           <description>Is the browser from a mobile device?</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="152" name="return" description="True if the browser is from a mobile device otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1456,7 +1427,7 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
         <full_name>isRobot</full_name>
         <docblock line="157">
           <description>Is the browser from a robot (ex Slurp,GoogleBot)?</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="157" name="return" description="True if the browser is from a robot otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1467,12 +1438,12 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
         <full_name>setAol</full_name>
         <docblock line="162">
           <description>Set the browser to be from AOL</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="162" name="param" description="" type="\global\" variable="$isAol"/>
         </docblock>
         <argument line="166">
           <name>$isAol</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -1481,7 +1452,7 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
         <full_name>setMobile</full_name>
         <docblock line="167">
           <description>Set the Browser to be mobile</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="167" name="param" description="is the browser a mobile brower or not" type="boolean" variable="$value">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1497,7 +1468,7 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
         <full_name>setRobot</full_name>
         <docblock line="172">
           <description>Set the Browser to be a robot</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="172" name="param" description="is the browser a robot or not" type="boolean" variable="$value">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1513,7 +1484,7 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
         <full_name>getUserAgent</full_name>
         <docblock line="177">
           <description>Get the user agent value in use to determine the browser</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="177" name="return" description="The user agent from the HTTP header" type="string">
             <type by_reference="false">string</type>
           </tag>
@@ -1524,12 +1495,12 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
         <full_name>setUserAgent</full_name>
         <docblock line="182">
           <description>Set the user agent value (the construction will use the HTTP header value - this will overwrite it)</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="182" name="param" description="The value for the User Agent" type="\global\" variable="$agent_string"/>
         </docblock>
         <argument line="186">
           <name>$agent_string</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -1538,7 +1509,7 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
         <full_name>isChromeFrame</full_name>
         <docblock line="191">
           <description>Used to determine if the browser is actually "chromeframe"</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="191" name="since" description="1.7"/>
           <tag line="191" name="return" description="True if the browser is using chromeframe" type="boolean">
             <type by_reference="false">boolean</type>
@@ -1550,7 +1521,7 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
         <full_name>__toString</full_name>
         <docblock line="199">
           <description>Returns a formatted string with a summary of the details of the browser.</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="199" name="return" description="formatted string with a summary of the browser" type="string">
             <type by_reference="false">string</type>
           </tag>
@@ -1561,7 +1532,7 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
         <full_name>determine</full_name>
         <docblock line="209">
           <description>Protected routine to calculate and determine what the browser is in use (including platform)</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="221" package="Default">
@@ -1569,7 +1540,7 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
         <full_name>checkBrowsers</full_name>
         <docblock line="217">
           <description>Protected routine to determine the browser type</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="217" name="return" description="True if the browser was detected otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1580,7 +1551,7 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
         <full_name>checkBrowserBlackBerry</full_name>
         <docblock line="276">
           <description>Determine if the user is using a BlackBerry (last updated 1.7)</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="276" name="return" description="True if the browser is the BlackBerry browser otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1591,7 +1562,7 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
         <full_name>checkForAol</full_name>
         <docblock line="292">
           <description>Determine if the user is using an AOL User Agent (last updated 1.7)</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="292" name="return" description="True if the browser is from AOL otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1602,7 +1573,7 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
         <full_name>checkBrowserGoogleBot</full_name>
         <docblock line="309">
           <description>Determine if the browser is the GoogleBot or not (last updated 1.7)</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="309" name="return" description="True if the browser is the GoogletBot otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1613,7 +1584,7 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
         <full_name>checkBrowserMSNBot</full_name>
         <docblock line="325">
           <description>Determine if the browser is the MSNBot or not (last updated 1.9)</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="325" name="return" description="True if the browser is the MSNBot otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1624,7 +1595,7 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
         <full_name>checkBrowserW3CValidator</full_name>
         <docblock line="341">
           <description>Determine if the browser is the W3C Validator or not (last updated 1.7)</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="341" name="return" description="True if the browser is the W3C Validator otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1635,7 +1606,7 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
         <full_name>checkBrowserSlurp</full_name>
         <docblock line="365">
           <description>Determine if the browser is the Yahoo! Slurp Robot or not (last updated 1.7)</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="365" name="return" description="True if the browser is the Yahoo! Slurp Robot otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1646,7 +1617,7 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
         <full_name>checkBrowserInternetExplorer</full_name>
         <docblock line="382">
           <description>Determine if the browser is Internet Explorer or not (last updated 1.7)</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="382" name="return" description="True if the browser is Internet Explorer otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1657,7 +1628,7 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
         <full_name>checkBrowserOpera</full_name>
         <docblock line="431">
           <description>Determine if the browser is Opera or not (last updated 1.7)</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="431" name="return" description="True if the browser is Opera otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1668,7 +1639,7 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
         <full_name>checkBrowserChrome</full_name>
         <docblock line="471">
           <description>Determine if the browser is Chrome or not (last updated 1.7)</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="471" name="return" description="True if the browser is Chrome otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1679,7 +1650,7 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
         <full_name>checkBrowserWebTv</full_name>
         <docblock line="487">
           <description>Determine if the browser is WebTv or not (last updated 1.7)</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="487" name="return" description="True if the browser is WebTv otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1690,7 +1661,7 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
         <full_name>checkBrowserNetPositive</full_name>
         <docblock line="502">
           <description>Determine if the browser is NetPositive or not (last updated 1.7)</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="502" name="return" description="True if the browser is NetPositive otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1701,7 +1672,7 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
         <full_name>checkBrowserGaleon</full_name>
         <docblock line="517">
           <description>Determine if the browser is Galeon or not (last updated 1.7)</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="517" name="return" description="True if the browser is Galeon otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1712,7 +1683,7 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
         <full_name>checkBrowserKonqueror</full_name>
         <docblock line="532">
           <description>Determine if the browser is Konqueror or not (last updated 1.7)</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="532" name="return" description="True if the browser is Konqueror otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1723,7 +1694,7 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
         <full_name>checkBrowserIcab</full_name>
         <docblock line="547">
           <description>Determine if the browser is iCab or not (last updated 1.7)</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="547" name="return" description="True if the browser is iCab otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1734,7 +1705,7 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
         <full_name>checkBrowserOmniWeb</full_name>
         <docblock line="561">
           <description>Determine if the browser is OmniWeb or not (last updated 1.7)</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="561" name="return" description="True if the browser is OmniWeb otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1745,7 +1716,7 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
         <full_name>checkBrowserPhoenix</full_name>
         <docblock line="576">
           <description>Determine if the browser is Phoenix or not (last updated 1.7)</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="576" name="return" description="True if the browser is Phoenix otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1756,7 +1727,7 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
         <full_name>checkBrowserFirebird</full_name>
         <docblock line="590">
           <description>Determine if the browser is Firebird or not (last updated 1.7)</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="590" name="return" description="True if the browser is Firebird otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1768,7 +1739,7 @@ Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
         <docblock line="604">
           <description>Determine if the browser is Netscape Navigator 9+ or not (last updated 1.7)
 NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="604" name="return" description="True if the browser is Netscape Navigator 9+ otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1779,7 +1750,7 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
         <full_name>checkBrowserShiretoko</full_name>
         <docblock line="623">
           <description>Determine if the browser is Shiretoko or not (https://wiki.mozilla.org/Projects/shiretoko) (last updated 1.7)</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="623" name="return" description="True if the browser is Shiretoko otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1790,7 +1761,7 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
         <full_name>checkBrowserIceCat</full_name>
         <docblock line="636">
           <description>Determine if the browser is Ice Cat or not (http://en.wikipedia.org/wiki/GNU_IceCat) (last updated 1.7)</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="636" name="return" description="True if the browser is Ice Cat otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1801,7 +1772,7 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
         <full_name>checkBrowserNokia</full_name>
         <docblock line="649">
           <description>Determine if the browser is Nokia or not (last updated 1.7)</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="649" name="return" description="True if the browser is Nokia otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1812,7 +1783,7 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
         <full_name>checkBrowserFirefox</full_name>
         <docblock line="668">
           <description>Determine if the browser is Firefox or not (last updated 1.7)</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="668" name="return" description="True if the browser is Firefox otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1823,7 +1794,7 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
         <full_name>checkBrowserIceweasel</full_name>
         <docblock line="688">
           <description>Determine if the browser is Firefox or not (last updated 1.7)</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="688" name="return" description="True if the browser is Firefox otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1834,7 +1805,7 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
         <full_name>checkBrowserMozilla</full_name>
         <docblock line="702">
           <description>Determine if the browser is Mozilla or not (last updated 1.7)</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="702" name="return" description="True if the browser is Mozilla otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1845,7 +1816,7 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
         <full_name>checkBrowserLynx</full_name>
         <docblock line="728">
           <description>Determine if the browser is Lynx or not (last updated 1.7)</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="728" name="return" description="True if the browser is Lynx otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1856,7 +1827,7 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
         <full_name>checkBrowserAmaya</full_name>
         <docblock line="743">
           <description>Determine if the browser is Amaya or not (last updated 1.7)</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="743" name="return" description="True if the browser is Amaya otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1867,7 +1838,7 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
         <full_name>checkBrowserSafari</full_name>
         <docblock line="758">
           <description>Determine if the browser is Safari or not (last updated 1.7)</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="758" name="return" description="True if the browser is Safari otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1878,7 +1849,7 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
         <full_name>checkBrowseriPhone</full_name>
         <docblock line="778">
           <description>Determine if the browser is iPhone or not (last updated 1.7)</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="778" name="return" description="True if the browser is iPhone otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1889,7 +1860,7 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
         <full_name>checkBrowseriPad</full_name>
         <docblock line="799">
           <description>Determine if the browser is iPod or not (last updated 1.7)</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="799" name="return" description="True if the browser is iPod otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1900,7 +1871,7 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
         <full_name>checkBrowseriPod</full_name>
         <docblock line="820">
           <description>Determine if the browser is iPod or not (last updated 1.7)</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="820" name="return" description="True if the browser is iPod otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1911,7 +1882,7 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
         <full_name>checkBrowserAndroid</full_name>
         <docblock line="841">
           <description>Determine if the browser is Android or not (last updated 1.7)</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="841" name="return" description="True if the browser is Android otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1922,7 +1893,7 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
         <full_name>checkPlatform</full_name>
         <docblock line="862">
           <description>Determine the user's platform (last updated 1.7)</description>
-          <long-description></long-description>
+          <long-description/>
         </docblock>
       </method>
     </class>
@@ -2075,7 +2046,23 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
       <error line="263" code="50009">No DocBlock was found for function \askapache_global_debug()</error>
     </parse_markers>
   </file>
-  <file path="init.php" hash="977805a675d43cda17dca8e576b72857" package="BlackHawk\General">
+  <file path="index.php" hash="1a80592662118100da3dea1e5422a016" package="Default">
+    <include line="5" type="Require Once" package="Default">
+      <name>assets/member.inc.php</name>
+    </include>
+    <include line="25" type="Require Once" package="Default">
+      <name>assets/member.inc.php</name>
+    </include>
+    <markers>
+      <todo line="11">Graphs need to have dynamic data</todo>
+      <todo line="12">Cookie: Favorite garages and color data</todo>
+      <todo line="149">Pull real name</todo>
+    </markers>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file index.php</error>
+    </parse_markers>
+  </file>
+  <file path="init.php" hash="3bb2ccd877ce949332f105f999afceb6" package="BlackHawk\General">
     <docblock line="2">
       <description>BlackHawk Init</description>
       <long-description>&lt;p&gt;Contains program constants&lt;/p&gt;
@@ -2088,7 +2075,7 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
       <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
       <tag line="2" name="copyright" description="2012 Project BlackHawk"/>
       <tag line="2" name="license" description="http://www.futuregencode.com/blackhawk/404  License 1.00"/>
-      <tag line="2" name="version" description="0.3.0"/>
+      <tag line="2" name="version" description="0.6.0"/>
       <tag line="2" name="since" description="File available since Release 0.3.0"/>
       <tag line="2" name="todo" description="Add All HTTP Header descriptions"/>
     </docblock>
@@ -2105,20 +2092,20 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
     <constant namespace="global" line="29" package="BlackHawk\General">
       <name>BLACKHAWK_VERSION</name>
       <full_name>\BLACKHAWK_VERSION</full_name>
-      <value>0.2</value>
+      <value>0.6</value>
     </constant>
     <constant namespace="global" line="31" package="BlackHawk\General">
       <name>BLACKHAWK_SUBVERSION</name>
       <full_name>\BLACKHAWK_SUBVERSION</full_name>
-      <value>0.1</value>
+      <value>0.0</value>
     </constant>
     <constant namespace="global" line="33" package="BlackHawk\General">
       <name>BLACKHAWK_COMMIT</name>
       <full_name>\BLACKHAWK_COMMIT</full_name>
-      <value>42</value>
+      <value>0</value>
     </constant>
   </file>
-  <file path="profile.php" hash="8f95a775114395d9d5351ef4e06ba74f" package="Default">
+  <file path="profile.php" hash="51b4eab06d4afd79fcc485fdc2876e3d" package="Default">
     <markers>
       <todo line="91">Pull real name</todo>
     </markers>
@@ -2169,7 +2156,7 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
       <full_name>\rrmdir</full_name>
       <argument line="677">
         <name>$dir</name>
-        <default></default>
+        <default/>
         <type/>
       </argument>
     </function>
@@ -2187,7 +2174,7 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
       <error line="677" code="50009">No DocBlock was found for function \rrmdir()</error>
     </parse_markers>
   </file>
-  <file path="tests\bootstrap.php" hash="02fb9f998a1aced8d1df7f17ed3b9555" package="Default">
+  <file path="tests\bootstrap.php" hash="f015d1b36caa14547d312e73e1ed85eb" package="Default">
     <include line="7" type="Require" package="Default">
       <name/>
     </include>
@@ -2205,7 +2192,7 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
       <error line="3" code="50009">No DocBlock was found for function \loader()</error>
     </parse_markers>
   </file>
-  <file path="tests\HelloWorldTest.php" hash="b1188bd18d189a28a8ace4d436b8080f" package="Default">
+  <file path="tests\HelloWorldTest.php" hash="d18d19f26b9ce0812e148818d81773ef" package="Default">
     <include line="2" type="Require Once" package="Default">
       <name>test_classes/HelloWorld.php</name>
     </include>
@@ -2278,23 +2265,7 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
       <tag line="2" name="since" description="File available since Release 0.3.0"/>
     </docblock>
   </file>
-  <file path="tests\Test.php" hash="6ee9b8cf832185e3f7ea970c721a01bf" package="Default">
-    <class final="false" abstract="false" namespace="global" line="3" package="Default">
-      <extends>\PHPUnit_Framework_TestCase</extends>
-      <name>HelloWorldTest</name>
-      <full_name>\HelloWorldTest</full_name>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="5" package="Default">
-        <name>testAddition</name>
-        <full_name>testAddition</full_name>
-      </method>
-    </class>
-    <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file tests\Test.php</error>
-      <error line="3" code="50000">No DocBlock was found for \HelloWorldTest</error>
-      <error line="5" code="50010">No DocBlock was found for method testAddition()</error>
-    </parse_markers>
-  </file>
-  <file path="tests\test_classes\HelloWorld.php" hash="fae50ee89a1d70ba096ae25ed4a467ea" package="Default">
+  <file path="tests\test_classes\HelloWorld.php" hash="28fa1b328ed486fdd455ba132b32284f" package="Default">
     <class final="false" abstract="false" namespace="global" line="3" package="Default">
       <extends/>
       <name>HelloWorld</name>
