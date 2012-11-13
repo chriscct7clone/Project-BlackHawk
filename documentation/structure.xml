@@ -578,7 +578,7 @@
       <notice line="89" code="50013">Parameter $emailmaster could not be found in mail()</notice>
     </parse_markers>
   </file>
-  <file path="assets\member.class.php" hash="c10990ab49830511aa4a5f15f65f8c13" package="BlackHawk\Members">
+  <file path="assets\member.class.php" hash="248882aa879d00726b403b17f0012eab" package="BlackHawk\Members">
     <docblock line="2">
       <description>Member Class</description>
       <long-description>&lt;p&gt;The main hub of our login system&lt;/p&gt;
@@ -619,169 +619,339 @@
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="41" package="BlackHawk\Members">
         <name>__construct</name>
         <full_name>__construct</full_name>
+        <docblock line="34">
+          <description>Member Construct</description>
+          <long-description>&lt;p&gt;Sets some basic settings for extra security
+Starts the session
+Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
+        </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="74" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="68" package="BlackHawk\Members">
         <name>currentPath</name>
         <full_name>currentPath</full_name>
+        <docblock line="63">
+          <description>CurrentPath functions</description>
+          <long-description>&lt;p&gt;Returns the current path of the url&lt;/p&gt;</long-description>
+        </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="86" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="80" package="BlackHawk\Members">
         <name>currentPage</name>
         <full_name>currentPage</full_name>
+        <docblock line="75">
+          <description>CurrentPage functions</description>
+          <long-description>&lt;p&gt;Returns the current page of the url&lt;/p&gt;</long-description>
+        </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="106" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="94" package="BlackHawk\Members">
         <name>genSalt</name>
         <full_name>genSalt</full_name>
+        <docblock line="89">
+          <description>genSalt</description>
+          <long-description>&lt;p&gt;This generates a random salt to be used in a password hasing&lt;/p&gt;</long-description>
+        </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="126" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="114" package="BlackHawk\Members">
         <name>genHash</name>
         <full_name>genHash</full_name>
-        <argument line="126">
+        <docblock line="105">
+          <description>genHash</description>
+          <long-description>&lt;p&gt;This creates a hash of the selected password and
+uses a unique salt provided by genSalt function&lt;/p&gt;</long-description>
+          <tag line="105" name="param" description="The random salt for the password" type="string" variable="$salt">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="105" name="param" description="The provided password" type="string" variable="$password">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="114">
           <name>$salt</name>
           <default></default>
           <type/>
         </argument>
-        <argument line="126">
+        <argument line="114">
           <name>$password</name>
           <default></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="158" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="146" package="BlackHawk\Members">
         <name>intcheck</name>
         <full_name>intcheck</full_name>
-        <argument line="158">
+        <docblock line="137">
+          <description>intcheck</description>
+          <long-description>&lt;p&gt;For UIN and inital password
+Checks to make sure string is all numbers&lt;/p&gt;</long-description>
+          <tag line="137" name="param" description="The string to test" type="string" variable="$int">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="137" name="return" description="INT=true, nonint=false" type="\(bool)">
+            <type by_reference="false">\(bool)</type>
+          </tag>
+        </docblock>
+        <argument line="146">
           <name>$int</name>
           <default></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="190" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="178" package="BlackHawk\Members">
         <name>verify</name>
         <full_name>verify</full_name>
-        <argument line="190">
+        <docblock line="169">
+          <description>verify</description>
+          <long-description>&lt;p&gt;This checks if the suppled password is equal
+to the current stored hashed password&lt;/p&gt;</long-description>
+          <tag line="169" name="param" description="The provided password" type="string" variable="$password">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="169" name="param" description="The current stored hashed password" type="string" variable="$existingHash">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="178">
           <name>$password</name>
           <default></default>
           <type/>
         </argument>
-        <argument line="190">
+        <argument line="178">
           <name>$existingHash</name>
           <default></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="216" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="204" package="BlackHawk\Members">
         <name>login</name>
         <full_name>login</full_name>
+        <docblock line="196">
+          <description>login</description>
+          <long-description>&lt;p&gt;Returns a login form that user can login with
+It then checks to see if the login is successful&lt;/p&gt;
+
+&lt;p&gt;If so create session and/or remember cookie&lt;/p&gt;</long-description>
+        </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="358" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="346" package="BlackHawk\Members">
         <name>LoggedIn</name>
         <full_name>LoggedIn</full_name>
+        <docblock line="338">
+          <description>LoggedIn</description>
+          <long-description>&lt;p&gt;Check if the user is logged-in
+Check for session and/or cookie is set then reference it
+in the database to see if it is valid if so allow the
+user to login&lt;/p&gt;</long-description>
+        </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="419" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="407" package="BlackHawk\Members">
         <name>sessionIsSet</name>
         <full_name>sessionIsSet</full_name>
+        <docblock line="400">
+          <description>sessionIsSet</description>
+          <long-description>&lt;p&gt;Checks and sees if the session is set
+Similar to LoggedIn however it does not
+rediect the user&lt;/p&gt;</long-description>
+        </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="460" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="448" package="BlackHawk\Members">
         <name>logout</name>
         <full_name>logout</full_name>
+        <docblock line="442">
+          <description>Logout</description>
+          <long-description>&lt;p&gt;Resets Session and destroyes it,
+deletes any cookies and redirects to index&lt;/p&gt;</long-description>
+        </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="490" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="478" package="BlackHawk\Members">
         <name>createNewCookie</name>
         <full_name>createNewCookie</full_name>
-        <argument line="490">
+        <docblock line="469">
+          <description>createNewCookie</description>
+          <long-description>&lt;p&gt;If the remember me feature is enabled and the
+user has selected it create a cookie for them.
+Log it in the database&lt;/p&gt;</long-description>
+          <tag line="469" name="param" description="The users id" type="string" variable="$id">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="478">
           <name>$id</name>
           <default></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="514" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="502" package="BlackHawk\Members">
         <name>deleteCookie</name>
         <full_name>deleteCookie</full_name>
-        <argument line="514">
+        <docblock line="495">
+          <description>deleteCookie</description>
+          <long-description>&lt;p&gt;Delete the users cookie&lt;/p&gt;</long-description>
+          <tag line="495" name="param" description="The users id" type="string" variable="$id">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="502">
           <name>$id</name>
           <default></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="537" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="525" package="BlackHawk\Members">
         <name>userLogger</name>
         <full_name>userLogger</full_name>
-        <argument line="537">
+        <docblock line="514">
+          <description>userLogger</description>
+          <long-description>&lt;p&gt;Logs users activity,
+Nothing personal.... just login times, logout times,
+when recover passwords have been activated
+All for security&lt;/p&gt;</long-description>
+          <tag line="514" name="param" description="The users id" type="string" variable="$userid">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="514" name="param" description="What action is happening and needs logging" type="string" variable="$action">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="525">
           <name>$userid</name>
           <default></default>
           <type/>
         </argument>
-        <argument line="537">
+        <argument line="525">
           <name>$action</name>
           <default></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="581" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="569" package="BlackHawk\Members">
         <name>combovalidation</name>
         <full_name>combovalidation</full_name>
-        <argument line="581">
+        <docblock line="554">
+          <description>Combo Validation</description>
+          <long-description>&lt;p&gt;Type of function: Dummy&lt;/p&gt;
+
+&lt;p&gt;Purpose: Checks PIN/UID combo against FGCU Database to see if valid combo&lt;/p&gt;</long-description>
+          <tag line="554" name="param" description="Username" type="integer" variable="$username">
+            <type by_reference="false">integer</type>
+          </tag>
+          <tag line="554" name="param" description="Password" type="integer|string" variable="$password">
+            <type by_reference="false">integer</type>
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="554" name="return" description="true if valid, else false&#13;&#10;Created in Version: 0.2.0&#13;&#10;Last Modified: 9/15/2012, by Chris Christoff" type="bool">
+            <type by_reference="false">bool</type>
+          </tag>
+        </docblock>
+        <argument line="569">
           <name>$username</name>
           <default></default>
           <type/>
         </argument>
-        <argument line="581">
+        <argument line="569">
           <name>$password</name>
           <default></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="590" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="578" package="BlackHawk\Members">
         <name>data</name>
         <full_name>data</full_name>
+        <docblock line="573">
+          <description>Member Data</description>
+          <long-description>&lt;p&gt;Loads all the member data&lt;/p&gt;</long-description>
+        </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="614" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="602" package="BlackHawk\Members">
         <name>register</name>
         <full_name>register</full_name>
+        <docblock line="597">
+          <description>Register</description>
+          <long-description>&lt;p&gt;This function allows user to register&lt;/p&gt;</long-description>
+        </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="880" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="868" package="BlackHawk\Members">
         <name>randomString</name>
         <full_name>randomString</full_name>
+        <docblock line="863">
+          <description>Random String</description>
+          <long-description>&lt;p&gt;Creates a random string of A-Z0-9&lt;/p&gt;</long-description>
+        </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="896" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="884" package="BlackHawk\Members">
         <name>recoverPassword</name>
         <full_name>recoverPassword</full_name>
+        <docblock line="878">
+          <description>Recover Password</description>
+          <long-description>&lt;p&gt;Checks and sees if a verCode is present and that a user is try to reover a password, otherwise
+Lets the user Recover their password using e-mail&lt;/p&gt;</long-description>
+        </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="990" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="978" package="BlackHawk\Members">
         <name>changePassword</name>
         <full_name>changePassword</full_name>
-        <argument line="990">
+        <docblock line="971">
+          <description>Change Password</description>
+          <long-description>&lt;p&gt;Chnages the selected users password&lt;/p&gt;</long-description>
+          <tag line="971" name="param" description="The users ID" type="string" variable="$user">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="978">
           <name>$user</name>
           <default>null</default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1068" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1056" package="BlackHawk\Members">
         <name>changeEmail</name>
         <full_name>changeEmail</full_name>
-        <argument line="1068">
+        <docblock line="1049">
+          <description>changeEmail</description>
+          <long-description>&lt;p&gt;Chnages the selected users email&lt;/p&gt;</long-description>
+          <tag line="1049" name="param" description="The users ID" type="string" variable="$user">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="1056">
           <name>$user</name>
           <default>null</default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1150" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1138" package="BlackHawk\Members">
         <name>deleteAccount</name>
         <full_name>deleteAccount</full_name>
-        <argument line="1150">
+        <docblock line="1131">
+          <description>deleteAccount</description>
+          <long-description>&lt;p&gt;Delete user account&lt;/p&gt;</long-description>
+          <tag line="1131" name="param" description="The users ID" type="string" variable="$user">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="1138">
           <name>$user</name>
           <default>null</default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1193" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1181" package="BlackHawk\Members">
         <name>verification</name>
         <full_name>verification</full_name>
+        <docblock line="1176">
+          <description>Verification</description>
+          <long-description>&lt;p&gt;If email verification is set this handels those verifications&lt;/p&gt;</long-description>
+        </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1217" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1211" package="BlackHawk\Members">
         <name>firstuserregister</name>
         <full_name>firstuserregister</full_name>
-        <argument line="1217">
+        <docblock line="1204">
+          <description>First User Registration</description>
+          <long-description>&lt;p&gt;Creates the Admin Account on setup&lt;/p&gt;</long-description>
+          <tag line="1204" name="param" description="Admin Email" type="string" variable="$email">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="1211">
           <name>$email</name>
           <default>null</default>
           <type/>
@@ -789,37 +959,11 @@
       </method>
     </class>
     <markers>
-      <todo line="499">Save roles in cookie</todo>
-      <todo line="582">Check against a dummy DB, that is made manually by SQL import?</todo>
-      <todo line="799">, make register form pick type of student and pull that value</todo>
-      <todo line="1226">make random again</todo>
+      <todo line="487">Save roles in cookie</todo>
+      <todo line="570">Check against a dummy DB, that is made manually by SQL import?</todo>
+      <todo line="787">, make register form pick type of student and pull that value</todo>
+      <todo line="1220">make random again</todo>
     </markers>
-    <parse_markers>
-      <error line="41" code="50010">No DocBlock was found for method __construct()</error>
-      <error line="74" code="50010">No DocBlock was found for method currentPath()</error>
-      <error line="86" code="50010">No DocBlock was found for method currentPage()</error>
-      <error line="106" code="50010">No DocBlock was found for method genSalt()</error>
-      <error line="126" code="50010">No DocBlock was found for method genHash()</error>
-      <error line="158" code="50010">No DocBlock was found for method intcheck()</error>
-      <error line="190" code="50010">No DocBlock was found for method verify()</error>
-      <error line="216" code="50010">No DocBlock was found for method login()</error>
-      <error line="358" code="50010">No DocBlock was found for method LoggedIn()</error>
-      <error line="419" code="50010">No DocBlock was found for method sessionIsSet()</error>
-      <error line="460" code="50010">No DocBlock was found for method logout()</error>
-      <error line="490" code="50010">No DocBlock was found for method createNewCookie()</error>
-      <error line="514" code="50010">No DocBlock was found for method deleteCookie()</error>
-      <error line="537" code="50010">No DocBlock was found for method userLogger()</error>
-      <error line="581" code="50010">No DocBlock was found for method combovalidation()</error>
-      <error line="590" code="50010">No DocBlock was found for method data()</error>
-      <error line="614" code="50010">No DocBlock was found for method register()</error>
-      <error line="880" code="50010">No DocBlock was found for method randomString()</error>
-      <error line="896" code="50010">No DocBlock was found for method recoverPassword()</error>
-      <error line="990" code="50010">No DocBlock was found for method changePassword()</error>
-      <error line="1068" code="50010">No DocBlock was found for method changeEmail()</error>
-      <error line="1150" code="50010">No DocBlock was found for method deleteAccount()</error>
-      <error line="1193" code="50010">No DocBlock was found for method verification()</error>
-      <error line="1217" code="50010">No DocBlock was found for method firstuserregister()</error>
-    </parse_markers>
   </file>
   <file path="assets\member.inc.php" hash="1c2c155c90ec0b7deaced5420bd56691" package="BlackHawk\Members">
     <docblock line="2">
@@ -2087,7 +2231,7 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
     <constant namespace="global" line="27" package="BlackHawk\General">
       <name>BLACKHAWK_CONFIG</name>
       <full_name>\BLACKHAWK_CONFIG</full_name>
-      <value></value>
+      <value/>
     </constant>
     <constant namespace="global" line="29" package="BlackHawk\General">
       <name>BLACKHAWK_VERSION</name>
@@ -2183,7 +2327,7 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
       <full_name>\loader</full_name>
       <argument line="3">
         <name>$class</name>
-        <default></default>
+        <default/>
         <type/>
       </argument>
     </function>
@@ -2202,10 +2346,10 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
       <full_name>\HelloWorldTest</full_name>
       <property final="false" static="false" visibility="private" line="8" namespace="global" package="Default">
         <name>$pdo</name>
-        <default></default>
+        <default/>
         <docblock line="5">
-          <description></description>
-          <long-description></long-description>
+          <description/>
+          <long-description/>
           <tag line="5" name="var" description="" type="\PDO">
             <type by_reference="false">\PDO</type>
           </tag>
@@ -2272,10 +2416,10 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
       <full_name>\HelloWorld</full_name>
       <property final="false" static="false" visibility="private" line="8" namespace="global" package="Default">
         <name>$pdo</name>
-        <default></default>
+        <default/>
         <docblock line="5">
-          <description></description>
-          <long-description></long-description>
+          <description/>
+          <long-description/>
           <tag line="5" name="var" description="" type="\PDO">
             <type by_reference="false">\PDO</type>
           </tag>
@@ -2286,7 +2430,7 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
         <full_name>__construct</full_name>
         <argument line="10">
           <name>$pdo</name>
-          <default></default>
+          <default/>
           <type>\PDO</type>
         </argument>
       </method>

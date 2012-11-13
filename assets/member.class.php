@@ -31,7 +31,7 @@
  * @since      File available since Release 0.3.0
  */
 class member {
-	/*
+	/**
 	 * Member Construct
 	 * 
 	 * Sets some basic settings for extra security
@@ -60,13 +60,7 @@ class member {
 		require_once("mailer.class.php");
 	}
 	
-	
-	/*
-	 * Basic functions
-	 * 
-	 * This area contains basic functions that are very usfull
-	 */
-	/*
+	/**
 	 * CurrentPath functions
 	 *
 	 * Returns the current path of the url
@@ -78,7 +72,7 @@ class member {
 		$currentPath .= dirname($_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"]) . '/';
 		return $currentPath;
 	}
-	/*
+	/**
 	 * CurrentPage functions
 	 *
 	 * Returns the current page of the url
@@ -92,13 +86,7 @@ class member {
 		return $currentPage;
 	}
 	
-	
-	/*
-	 * User Authentication
-	 *
-	 * This section contains all the user authentication
-	 */
-	/*
+	/**
 	 * genSalt
 	 *
 	 * This generates a random salt to be used in a password hasing
@@ -114,7 +102,7 @@ class member {
 		/* Return */
 		return $salt;
 	}
-	/*
+	/**
 	 * genHash
 	 *
 	 * This creates a hash of the selected password and
@@ -146,7 +134,7 @@ class member {
 		return $hash;
 	}
 	
-		/*
+	/**
 	 * intcheck
 	 *
 	 * For UIN and inital password
@@ -178,7 +166,7 @@ class member {
         }
     }
 
-	/*
+	/**
 	 * verify
 	 *
 	 * This checks if the suppled password is equal
@@ -205,7 +193,7 @@ class member {
 			return false;
 		}
 	}
-	/*
+	/**
 	 * login
 	 *
 	 * Returns a login form that user can login with
@@ -347,7 +335,7 @@ $form= '<div class="login_box">
 		/* Return data */
 		return $notice->report() . $data;
 	}
-	/*
+	/**
 	 * LoggedIn
 	 *
 	 * Check if the user is logged-in
@@ -409,7 +397,7 @@ $form= '<div class="login_box">
 		}
 	}
 	
-	/*
+	/**
 	 * sessionIsSet
 	 *
 	 * Checks and sees if the session is set
@@ -451,7 +439,7 @@ $form= '<div class="login_box">
 		return $status;
 	}
 	
-	/*
+	/**
 	 * Logout
 	 *
 	 * Resets Session and destroyes it,
@@ -478,7 +466,7 @@ $form= '<div class="login_box">
 		header('Refresh: 2; url=index.php');
 	}
 	
-	/*
+	/**
 	 * createNewCookie
 	 *
 	 * If the remember me feature is enabled and the
@@ -504,7 +492,7 @@ $form= '<div class="login_box">
 		}
 	}
 	
-	/*
+	/**
 	 * deleteCookie
 	 *
 	 * Delete the users cookie
@@ -523,7 +511,7 @@ $form= '<div class="login_box">
 		}
 	}
 	
-	/*
+	/**
 	 * userLogger
 	 *
 	 * Logs users activity,
@@ -563,16 +551,16 @@ $form= '<div class="login_box">
 		$timestamp = date("Y-m-d H:i:s", time());
 		$database->query('INSERT INTO users_logs(userid, action, time, ip) VALUES(:userid, :action, :time, :ip)', array(':userid' => $userid, ':action' => $action, ':time' => $timestamp, ':ip' => $ip));
 	}
-		/*
+	/**
      * Combo Validation
 	 *
 	 * Type of function: Dummy
 	 *
 	 * Purpose: Checks PIN/UID combo against FGCU Database to see if valid combo
 	 *
-	 * Input: $UID, $PIN
-	 *
-	 * Output: true (bool) if valid, else false (bool)
+	 * @param integer Username
+	 * @param integer|string Password
+	 * @return bool true if valid, else false
 	 *
 	 * Created in Version: 0.2.0
 	 *
@@ -582,7 +570,7 @@ $form= '<div class="login_box">
 	 // TODO: Check against a dummy DB, that is made manually by SQL import?
 	 return true;
 	 }
-	/*
+	/**
 	 * Member Data
 	 *
 	 * Loads all the member data
@@ -606,7 +594,7 @@ $form= '<div class="login_box">
 		}
 	}
 	
-	/*
+	/**
 	 * Register
 	 *
 	 * This function allows user to register
@@ -872,7 +860,7 @@ $form= '<div class="login_box">
 		return $notice->report() . $data;
 	}
 
-	/*
+	/**
 	 * Random String
 	 * 
 	 * Creates a random string of A-Z0-9
@@ -887,7 +875,7 @@ $form= '<div class="login_box">
 		return $_SESSION['captcha'];
 	}
 	
-	/*
+	/**
 	 * Recover Password
 	 * 
 	 * Checks and sees if a verCode is present and that a user is try to reover a password, otherwise
@@ -980,7 +968,7 @@ $form= '<div class="login_box">
 		}
 		return $notice->report() . $data;
 	}
-	/*
+	/**
 	 * Change Password
 	 *
 	 * Chnages the selected users password
@@ -1058,7 +1046,7 @@ $form= '<div class="login_box">
 		return $notice->report() . $data;
 	}
 	
-	/*
+	/**
 	 * changeEmail
 	 *
 	 * Chnages the selected users email
@@ -1140,7 +1128,7 @@ $form= '<div class="login_box">
 		return $notice->report() . $data;
 	}
 	
-	/*
+	/**
 	 * deleteAccount
 	 *
 	 * Delete user account
@@ -1185,7 +1173,7 @@ $form= '<div class="login_box">
 		return $notice->report() . $data;
 	}
 	
-	/*
+	/**
 	 * Verification
 	 *
 	 * If email verification is set this handels those verifications
@@ -1213,7 +1201,13 @@ $form= '<div class="login_box">
 		/* Return data */
 		return $notice->report() . $data;
 	}
-	
+	/**
+	* First User Registration
+	*
+	* Creates the Admin Account on setup
+	*
+	* @param string Admin Email
+	**/
 	public function firstuserregister($email=null) {
 		global $database;
 		$username;
