@@ -1,5 +1,5 @@
 # Project BlackHawk #
-Version 0.4.0   
+Version 0.6.0   
 [![Build Status](https://secure.travis-ci.org/chriscct7/Project-BlackHawk.png)](http://travis-ci.org/chriscct7/Project-BlackHawk)
 
 ## Program Description ##
@@ -7,14 +7,15 @@ A revolutionary new insanely great parking system ;)
    
 ## Requirements ##
 Server:
-- PHP 5.2.17 or very close
+- PHP 5.2.17 or very close*
 - MySQL 5.0 or higher
 - Apache 2.2 or higher
 - PHP bycrypt() library (optional)
 - PHPMyAdmin or equivolent until install script is finalized
 
+*Note: Unit Tests require 5.3+
 
-We highly recommend running local testing on WAMPServer version 2.2 (64 bit with add-on PHP 2.0.9-2 extension)
+We highly recommend running local testing on WAMPServer version 2.2 (64 bit with PHP 5.3.13)
 If you have a Mac, use MAMP.
 
 Client:
@@ -26,6 +27,12 @@ IE 10 Beta and Opera support is based on **limited** testing.
 We **highly** recommend using a modern browser like Google Chrome or Mozilla Firefox.
 We are testing/developing using Google Chrome version 22 or newer.
 
+We use the following PEAR Libraries:
++ Symfony
++ Composer
++ PHPUnit
++ PHPDocumenter2
+
 ## Installation instructions ##
 1. Unpack the archive.
 2. Upload everything to your server.
@@ -34,14 +41,14 @@ We are testing/developing using Google Chrome version 22 or newer.
 5. If the installation was successful, delete (coming soon)
 
 ## How To Contribute ##
-Please feel free to fork us and push back into the central Dev branch. Do not push or send pull request for the master branch.
+Please feel free to fork us and push back into the central Dev branch. Do not send pull request for the master branch. Ideally, please create a branch and pull request, based off the current Dev branch for each issue/bug/feature.
 Please make sure you note all changes in the changelog.txt file in the following format:
 
     Project BlackHawk (version number) 
 	+ (thing you added)
 	- (thing you removed)
 	
-Only increment version number with approval from Chriscct7. Unless you have approval, tack any changes onto current version.
+Unless you have approval, tack any changes onto current version.
 If you get into a scenario where this happens:
 
     Project BlackHawk 0.1.0
@@ -57,7 +64,7 @@ Please open a ticket in Github.
 You can vote on and request new features on our [Github Issues page](https://github.com/chriscct7/project-blackhawk/issues)
 
 ## Automated Source Testing ##
-We test Project BlackHawk on every commit using a custom Travis-CI script (we are not currently using the default PHPUnit tests).
+We test Project BlackHawk on every commit using a custom Travis-CI script (we are not currently using the default PHPUnit tests). In addition, we use Testify to test new PHPUnit Tests prior to inclusion in the tests folder. Find our Testify bundle in the vendors folder.
 If you add something that you think you needs to be tested on every commit, create a new issue.
 
 Build Status: [![Build Status](https://secure.travis-ci.org/chriscct7/Project-BlackHawk.png)](http://travis-ci.org/chriscct7/Project-BlackHawk)
