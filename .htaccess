@@ -14,8 +14,8 @@ deny from all
 </Files>
 AddType application/x-httpd-php .html
 
-# Define homepage as dashboard.php (temporarily)
-DirectoryIndex dashboard.php
+# Define homepage as index.php
+DirectoryIndex index.php
 order deny,allow
 
 # Disable ServerSignature on generated error pages

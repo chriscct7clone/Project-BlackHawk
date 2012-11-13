@@ -84,7 +84,7 @@
                 <div class="navbar navbar-fixed-top">
                     <div class="navbar-inner">
                         <div class="container-fluid">
-                            <a class="brand" href="dashboard.html"><i class="icon-home icon-white"></i> BlackHawk</a>
+                            <a class="brand" href="index.php"><i class="icon-home icon-white"></i> BlackHawk</a>
                             <ul class="nav user_menu pull-right">
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php 

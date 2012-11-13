@@ -317,7 +317,7 @@ $form= '<div class="login_box">
 						if(isset($_COOKIE['redirect'])) {
 							$redirect = $_COOKIE['redirect'];
 						} else {
-							$redirect = 'dashboard.php';
+							$redirect = 'index.php';
 						}
 						echo '<meta http-equiv="refresh" content="2;url=' . $redirect . '" />';
 					} else {
@@ -405,7 +405,7 @@ $form= '<div class="login_box">
 			/* Redirect Cookie */
 			setcookie("redirect", $this->currentPage(), time() + 31536000);  /* expire in 1 year */
 			/* Go to Login */
-			header("Location: ../dashboard.php?action=login");
+			header("Location: ../index.php?action=login");
 		}
 	}
 	
@@ -475,7 +475,7 @@ $form= '<div class="login_box">
 			$this->deleteCookie($_COOKIE['remember_me_id']);
 		}
 		/* Redirect */
-		header('Refresh: 2; url=dashboard.php');
+		header('Refresh: 2; url=index.php');
 	}
 	
 	/*
@@ -774,7 +774,7 @@ $form= '<div class="login_box">
 							$verCode = md5(uniqid(rand(), true) . md5(uniqid(rand(), true)));
 							/* Email Info */
 							$subject = 'Thank you for creating an account, ' . $username;
-							$content = 'Hi ' . $username . ',<br />Thanks for signing-up!<br />To activate your account please click the link below, or copy past it into the address bar of your web browser<hr /><a href="' . $this->currentPath() . 'dashboard.php?action=verification&vercode=' . $verCode . '">' . $this->currentPath() . 'dashboard.php?action=verification&vercode=' . $verCode . '</a><br /><br /><i>-Admin</i>';
+							$content = 'Hi ' . $username . ',<br />Thanks for signing-up!<br />To activate your account please click the link below, or copy past it into the address bar of your web browser<hr /><a href="' . $this->currentPath() . 'index.php?action=verification&vercode=' . $verCode . '">' . $this->currentPath() . 'index.php?action=verification&vercode=' . $verCode . '</a><br /><br /><i>-Admin</i>';
 							/* Mail it! */
 							if($mailer->mail($email, $subject, $content) == true) {
 								/* Insert Data */
@@ -782,7 +782,7 @@ $form= '<div class="login_box">
 								$database->query('INSERT INTO users_inactive(verCode, username, password, email, date) VALUES (:vercode, :username, :password, :email, :date)', array(':vercode' => $verCode, ':username' => $username, 'password' => $password, 'email' => $email, 'date' => $date));
 								$notice->add('info', 'Please check your e-mail to activate your account');
 								/* Redirect */
-								echo '<meta http-equiv="refresh" content="2;url=dashboard.php" />';
+								echo '<meta http-equiv="refresh" content="2;url=index.php" />';
 							} else {
 								$notice->add('error', 'Could not send e-mail!<br />Please contact the site admin.');
 							}
@@ -802,7 +802,7 @@ $form= '<div class="login_box">
 					$database->query('INSERT INTO users(username, password, email, date) VALUES (:username, :password, :email, :date)', array(':username' => $username, 'password' => $password, 'email' => $email, 'date' => $date));
 					$notice->add('success', 'You account has been created!');
 					/* Redirect */
-					echo '<meta http-equiv="refresh" content="2;url=dashboard.php" />';
+					echo '<meta http-equiv="refresh" content="2;url=index.php" />';
 				}
 			} else {
 				if(Config::read('captcha') === true) {
@@ -946,7 +946,7 @@ $form= '<div class="login_box">
 						$mailer = new mailer(Config::read('email_master'));
 						/* Email Info */
 						$subject = 'Password change Request';
-						$content = 'Hi ' . $user->username . ',<br />We have a revived a request for a password change. Please click the link below to change your password:<br /><br /><a href="' . $this->currentPath() . 'dashboard.php?action=recover-password&vercode=' . $verCode . '">' . $this->currentPath() . 'dashboard.php?action=recover-password&vercode=' . $verCode . '</a><br /><br />If the link does not work when you click it, copy and paste the link directly into your browser. If you did not request a password change ignore this message.<br /><br />For security reason this link is only active for 24 hours upon request.<br /><br /><i>-Admin</i>';
+						$content = 'Hi ' . $user->username . ',<br />We have a revived a request for a password change. Please click the link below to change your password:<br /><br /><a href="' . $this->currentPath() . 'index.php?action=recover-password&vercode=' . $verCode . '">' . $this->currentPath() . 'index.php?action=recover-password&vercode=' . $verCode . '</a><br /><br />If the link does not work when you click it, copy and paste the link directly into your browser. If you did not request a password change ignore this message.<br /><br />For security reason this link is only active for 24 hours upon request.<br /><br /><i>-Admin</i>';
 						/* Mail it! */
 						if($mailer->mail($user->email, $subject, $content) == true) {
 							/* Upadte password only if you can mail them it! */
@@ -956,7 +956,7 @@ $form= '<div class="login_box">
 							$notice->add('info', 'Please check your e-mail for further instructions.');
 							$return_form = 0;
 							/* Redirect */
-							echo '<meta http-equiv="refresh" content="2;url=dashboard.php" />';
+							echo '<meta http-equiv="refresh" content="2;url=index.php" />';
 						} else {
 							$notice->add('error', 'Could not send e-mail!<br />Contact the site admin.');
 							$return_form = 0;
@@ -1019,7 +1019,7 @@ $form= '<div class="login_box">
 					$notice->add('success', 'Password has been updated!');
 					$return_form = 0;
 					/* Redirect */
-					echo '<meta http-equiv="refresh" content="2;url=dashboard.php" />';
+					echo '<meta http-equiv="refresh" content="2;url=index.php" />';
 				} else {
 					$return_form = 1;
 				}
@@ -1103,7 +1103,7 @@ $form= '<div class="login_box">
 					$notice->add('success', 'E-Mail has been updated!');
 					$return_form = 0;
 					/* Redirect */
-					echo '<meta http-equiv="refresh" content="2;url=dashboard.php" />';
+					echo '<meta http-equiv="refresh" content="2;url=index.php" />';
 				} else {
 					$return_form = 1;
 				}
@@ -1204,7 +1204,7 @@ $form= '<div class="login_box">
 			/* Message */
 			$notice->add('success', 'You account has been verified!');
 			/* Redirect */
-			echo '<meta http-equiv="refresh" content="2;url=dashboard.php" />';
+			echo '<meta http-equiv="refresh" content="2;url=index.php" />';
 		} else {
 			$notice->add('info', 'No verCode (Verification Code)!');
 		}

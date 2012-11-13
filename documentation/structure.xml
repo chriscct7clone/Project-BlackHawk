@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<project version="2.0.0a10" title="">
-  <file path="assets/captcha.class.php" hash="9e55695c1e386795590fd6f0515a2b11" package="BlackHawk\Internal Functions">
+<project version="2.0.0a12" title="BlackHawk Developer">
+  <file path="assets\captcha.class.php" hash="7e79dc58ed8f4cf05178d3bb596548ad" package="BlackHawk\Internal Functions">
     <docblock line="2">
-      <description><![CDATA[Creates Captcha Image]]></description>
-      <long-description><![CDATA[<p>This file creates the image for the captcha, as long as Captcha has been turned on during setup.</p>
+      <description>Creates Captcha Image</description>
+      <long-description>&lt;p&gt;This file creates the image for the captcha, as long as Captcha has been turned on during setup.&lt;/p&gt;
 
-<p>PHP version 5.2.17 or higher</p>
+&lt;p&gt;PHP version 5.2.17 or higher&lt;/p&gt;
 
-<p>LICENSE: TBD</p>]]></long-description>
+&lt;p&gt;LICENSE: TBD&lt;/p&gt;</long-description>
       <tag line="2" name="package" description="BlackHawk"/>
       <tag line="2" name="subpackage" description="Internal Functions"/>
       <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -25,8 +25,8 @@
       <name>captcha</name>
       <full_name>\captcha</full_name>
       <docblock line="22">
-        <description><![CDATA[Implements the creation of the captcha]]></description>
-        <long-description><![CDATA[]]></long-description>
+        <description>Implements the creation of the captcha</description>
+        <long-description></long-description>
         <tag line="22" name="package" description="BlackHawk"/>
         <tag line="22" name="subpackage" description="Internal Functions"/>
         <tag line="22" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -40,8 +40,8 @@
         <name>display</name>
         <full_name>display</full_name>
         <docblock line="35">
-          <description><![CDATA[Creates a Captcha image]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Creates a Captcha image</description>
+          <long-description></long-description>
           <tag line="35" name="version" description="0.3.0"/>
           <tag line="35" name="param" description="Dimension (width) for generated image" type="integer" variable="$width">
             <type by_reference="false">integer</type>
@@ -58,30 +58,30 @@
         </docblock>
         <argument line="44">
           <name>$width</name>
-          <default><![CDATA[]]></default>
+          <default></default>
           <type/>
         </argument>
         <argument line="44">
           <name>$height</name>
-          <default><![CDATA[]]></default>
+          <default></default>
           <type/>
         </argument>
         <argument line="44">
           <name>$text</name>
-          <default><![CDATA[]]></default>
+          <default></default>
           <type/>
         </argument>
       </method>
     </class>
   </file>
-  <file path="assets/config.class.php" hash="cc77ae3c6a5bf1a90d9c0fe0c82515ab" package="BlackHawk\Internal Functions">
+  <file path="assets\config.class.php" hash="2c86b8c98ea8653fffa56bcab984fc9e" package="BlackHawk\Internal Functions">
     <docblock line="2">
-      <description><![CDATA[Reads the Config file]]></description>
-      <long-description><![CDATA[<p>This file reads the config.inc.class file cread during setup</p>
+      <description>Reads the Config file</description>
+      <long-description>&lt;p&gt;This file reads the config.inc.class file cread during setup&lt;/p&gt;
 
-<p>PHP version 5.2.17 or higher</p>
+&lt;p&gt;PHP version 5.2.17 or higher&lt;/p&gt;
 
-<p>LICENSE: TBD</p>]]></long-description>
+&lt;p&gt;LICENSE: TBD&lt;/p&gt;</long-description>
       <tag line="2" name="package" description="BlackHawk"/>
       <tag line="2" name="subpackage" description="Internal Functions"/>
       <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -95,8 +95,8 @@
       <name>Config</name>
       <full_name>\Config</full_name>
       <docblock line="20">
-        <description><![CDATA[Implements method to grab stored config values]]></description>
-        <long-description><![CDATA[]]></long-description>
+        <description>Implements method to grab stored config values</description>
+        <long-description></long-description>
         <tag line="20" name="package" description="BlackHawk"/>
         <tag line="20" name="subpackage" description="Internal Functions"/>
         <tag line="20" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -107,10 +107,10 @@
       </docblock>
       <property final="false" static="true" visibility="public" line="37" namespace="global" package="Default">
         <name>$confArray</name>
-        <default><![CDATA[]]></default>
+        <default></default>
         <docblock line="32">
-          <description><![CDATA[]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description></description>
+          <long-description></long-description>
           <tag line="32" name="var" description="Used to store all the configs" type="\$configArray">
             <type by_reference="false">\$configArray</type>
           </tag>
@@ -120,15 +120,15 @@
         <name>read</name>
         <full_name>read</full_name>
         <docblock line="38">
-          <description><![CDATA[Config Read function]]></description>
-          <long-description><![CDATA[<p>Reads the config value from the $confArray</p>]]></long-description>
+          <description>Config Read function</description>
+          <long-description>&lt;p&gt;Reads the config value from the $confArray&lt;/p&gt;</long-description>
           <tag line="38" name="param" description="the key in the array" type="string" variable="$name">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
         <argument line="45">
           <name>$name</name>
-          <default><![CDATA[]]></default>
+          <default></default>
           <type/>
         </argument>
       </method>
@@ -136,8 +136,8 @@
         <name>write</name>
         <full_name>write</full_name>
         <docblock line="48">
-          <description><![CDATA[Config Write function]]></description>
-          <long-description><![CDATA[<p>Writes data to the $confArray</p>]]></long-description>
+          <description>Config Write function</description>
+          <long-description>&lt;p&gt;Writes data to the $confArray&lt;/p&gt;</long-description>
           <tag line="48" name="param" description="the key in the array" type="string" variable="$name">
             <type by_reference="false">string</type>
           </tag>
@@ -147,25 +147,33 @@
         </docblock>
         <argument line="56">
           <name>$name</name>
-          <default><![CDATA[]]></default>
+          <default></default>
           <type/>
         </argument>
         <argument line="56">
           <name>$value</name>
-          <default><![CDATA[]]></default>
+          <default></default>
           <type/>
         </argument>
       </method>
     </class>
   </file>
-  <file path="assets/css/index.php" hash="037241acbe8cc1e37dce5cb495f70afc" package="BlackHawk\Security">
+  <file path="assets\config.inc.php" hash="0ac1ab95446fdd91d6a7772c91d1ead7" package="Default">
+    <include line="12" type="Require Once" package="Default">
+      <name>config.class.php</name>
+    </include>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file assets\config.inc.php</error>
+    </parse_markers>
+  </file>
+  <file path="assets\css\index.php" hash="bfd6770f5b16662d2b1f67eea7cd7e65" package="BlackHawk\Security">
     <docblock line="2">
-      <description><![CDATA[Security Index Page]]></description>
-      <long-description><![CDATA[<p>This file prevents directory listing</p>
+      <description>Security Index Page</description>
+      <long-description>&lt;p&gt;This file prevents directory listing&lt;/p&gt;
 
-<p>PHP version 5.2.17 or higher</p>
+&lt;p&gt;PHP version 5.2.17 or higher&lt;/p&gt;
 
-<p>LICENSE: TBD</p>]]></long-description>
+&lt;p&gt;LICENSE: TBD&lt;/p&gt;</long-description>
       <tag line="2" name="package" description="BlackHawk"/>
       <tag line="2" name="subpackage" description="Security"/>
       <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -175,14 +183,14 @@
       <tag line="2" name="since" description="File available since Release 0.3.0"/>
     </docblock>
   </file>
-  <file path="assets/database.class.php" hash="e1ebd60d0d88af77d2e889ddb55db01b" package="BlackHawk\Internal Functions">
+  <file path="assets\database.class.php" hash="f4ad5811fd5d86a6f6faae82af4763c3" package="BlackHawk\Internal Functions">
     <docblock line="2">
-      <description><![CDATA[Implements Database Connections]]></description>
-      <long-description><![CDATA[<p>This file defines our PDO connections</p>
+      <description>Implements Database Connections</description>
+      <long-description>&lt;p&gt;This file defines our PDO connections&lt;/p&gt;
 
-<p>PHP version 5.2.17 or higher</p>
+&lt;p&gt;PHP version 5.2.17 or higher&lt;/p&gt;
 
-<p>LICENSE: TBD</p>]]></long-description>
+&lt;p&gt;LICENSE: TBD&lt;/p&gt;</long-description>
       <tag line="2" name="package" description="BlackHawk"/>
       <tag line="2" name="subpackage" description="Internal Functions"/>
       <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -197,8 +205,8 @@
       <name>database</name>
       <full_name>\database</full_name>
       <docblock line="21">
-        <description><![CDATA[Implements method to store, delete and edit database values via PDO]]></description>
-        <long-description><![CDATA[]]></long-description>
+        <description>Implements method to store, delete and edit database values via PDO</description>
+        <long-description></long-description>
         <tag line="21" name="package" description="BlackHawk"/>
         <tag line="21" name="subpackage" description="Internal Functions"/>
         <tag line="21" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -209,10 +217,10 @@
       </docblock>
       <property final="false" static="false" visibility="public" line="37" namespace="global" package="Default">
         <name>$pdo</name>
-        <default><![CDATA[null]]></default>
+        <default>null</default>
         <docblock line="33">
-          <description><![CDATA[]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description></description>
+          <long-description></long-description>
           <tag line="33" name="var" description="A reference to the PDO instance; Also used for connecions via PDO." type="\$pdo">
             <type by_reference="false">\$pdo</type>
           </tag>
@@ -220,10 +228,10 @@
       </property>
       <property final="false" static="false" visibility="public" line="43" namespace="global" package="Default">
         <name>$statement</name>
-        <default><![CDATA[null]]></default>
+        <default>null</default>
         <docblock line="39">
-          <description><![CDATA[]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description></description>
+          <long-description></long-description>
           <tag line="39" name="var" description="Used to contain query for prepared statments; Also used for value binding &amp; execution" type="\$statement">
             <type by_reference="false">\$statement</type>
           </tag>
@@ -233,16 +241,16 @@
         <name>__construct</name>
         <full_name>__construct</full_name>
         <docblock line="45">
-          <description><![CDATA[Database Constructor]]></description>
-          <long-description><![CDATA[<p>This method is used to create a new database object with a connection to a datbase</p>]]></long-description>
+          <description>Database Constructor</description>
+          <long-description>&lt;p&gt;This method is used to create a new database object with a connection to a datbase&lt;/p&gt;</long-description>
         </docblock>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="72" package="BlackHawk\Internal Functions">
         <name>query</name>
         <full_name>query</full_name>
         <docblock line="62">
-          <description><![CDATA[Database Query]]></description>
-          <long-description><![CDATA[<p>This method is used to create a new database prepared query</p>]]></long-description>
+          <description>Database Query</description>
+          <long-description>&lt;p&gt;This method is used to create a new database prepared query&lt;/p&gt;</long-description>
           <tag line="62" name="param" description="The prepared statement query to the database" type="string" variable="$query">
             <type by_reference="false">string</type>
           </tag>
@@ -259,30 +267,30 @@
         </docblock>
         <argument line="72">
           <name>$query</name>
-          <default><![CDATA[]]></default>
+          <default></default>
           <type/>
         </argument>
         <argument line="72">
           <name>$bind</name>
-          <default><![CDATA[null]]></default>
+          <default>null</default>
           <type/>
         </argument>
         <argument line="72">
           <name>$fetch</name>
-          <default><![CDATA['FETCH_ASSOC']]></default>
+          <default>'FETCH_ASSOC'</default>
           <type/>
         </argument>
       </method>
     </class>
   </file>
-  <file path="assets/email_templates/index.php" hash="037241acbe8cc1e37dce5cb495f70afc" package="BlackHawk\Security">
+  <file path="assets\email_templates\index.php" hash="bfd6770f5b16662d2b1f67eea7cd7e65" package="BlackHawk\Security">
     <docblock line="2">
-      <description><![CDATA[Security Index Page]]></description>
-      <long-description><![CDATA[<p>This file prevents directory listing</p>
+      <description>Security Index Page</description>
+      <long-description>&lt;p&gt;This file prevents directory listing&lt;/p&gt;
 
-<p>PHP version 5.2.17 or higher</p>
+&lt;p&gt;PHP version 5.2.17 or higher&lt;/p&gt;
 
-<p>LICENSE: TBD</p>]]></long-description>
+&lt;p&gt;LICENSE: TBD&lt;/p&gt;</long-description>
       <tag line="2" name="package" description="BlackHawk"/>
       <tag line="2" name="subpackage" description="Security"/>
       <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -292,14 +300,14 @@
       <tag line="2" name="since" description="File available since Release 0.3.0"/>
     </docblock>
   </file>
-  <file path="assets/fonts/index.php" hash="037241acbe8cc1e37dce5cb495f70afc" package="BlackHawk\Security">
+  <file path="assets\fonts\index.php" hash="bfd6770f5b16662d2b1f67eea7cd7e65" package="BlackHawk\Security">
     <docblock line="2">
-      <description><![CDATA[Security Index Page]]></description>
-      <long-description><![CDATA[<p>This file prevents directory listing</p>
+      <description>Security Index Page</description>
+      <long-description>&lt;p&gt;This file prevents directory listing&lt;/p&gt;
 
-<p>PHP version 5.2.17 or higher</p>
+&lt;p&gt;PHP version 5.2.17 or higher&lt;/p&gt;
 
-<p>LICENSE: TBD</p>]]></long-description>
+&lt;p&gt;LICENSE: TBD&lt;/p&gt;</long-description>
       <tag line="2" name="package" description="BlackHawk"/>
       <tag line="2" name="subpackage" description="Security"/>
       <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -309,21 +317,21 @@
       <tag line="2" name="since" description="File available since Release 0.3.0"/>
     </docblock>
   </file>
-  <file path="assets/garage.class.php" hash="5b7c6c36ebf476c71fd3e7b2d07923f5" package="Default">
+  <file path="assets\garage.class.php" hash="dc1a7f4ed93fd20c1d1863d9392e28b9" package="Default">
     <markers>
-      <todo line="61">STRreplace name</todo>
-      <todo line="64">insert name into the garages_list</todo>
-      <todo line="150">Reserved spots. Type 5 and pass uid along for the ride.</todo>
+      <todo line="62">STRreplace name</todo>
+      <todo line="65">insert name into the garages_list</todo>
+      <todo line="151">Reserved spots. Type 5 and pass uid along for the ride.</todo>
     </markers>
   </file>
-  <file path="assets/garage.inc.php" hash="908ea3562b61401f0cf74f76ed6dbd18" package="BlackHawk\Garage">
+  <file path="assets\garage.inc.php" hash="8d2e1a14bc65778a71b7ebfac30c861e" package="BlackHawk\Garage">
     <docblock line="2">
-      <description><![CDATA[Creates Garage Class]]></description>
-      <long-description><![CDATA[<p>Instantiates objects for member, database, and garage</p>
+      <description>Creates Garage Class</description>
+      <long-description>&lt;p&gt;Instantiates objects for member, database, and garage&lt;/p&gt;
 
-<p>PHP version 5.2.17 or higher</p>
+&lt;p&gt;PHP version 5.2.17 or higher&lt;/p&gt;
 
-<p>LICENSE: TBD</p>]]></long-description>
+&lt;p&gt;LICENSE: TBD&lt;/p&gt;</long-description>
       <tag line="2" name="package" description="BlackHawk"/>
       <tag line="2" name="subpackage" description="Garage"/>
       <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -343,14 +351,14 @@
       <name>garage.class.php</name>
     </include>
   </file>
-  <file path="assets/images/index.php" hash="037241acbe8cc1e37dce5cb495f70afc" package="BlackHawk\Security">
+  <file path="assets\img\gCons\index.php" hash="bfd6770f5b16662d2b1f67eea7cd7e65" package="BlackHawk\Security">
     <docblock line="2">
-      <description><![CDATA[Security Index Page]]></description>
-      <long-description><![CDATA[<p>This file prevents directory listing</p>
+      <description>Security Index Page</description>
+      <long-description>&lt;p&gt;This file prevents directory listing&lt;/p&gt;
 
-<p>PHP version 5.2.17 or higher</p>
+&lt;p&gt;PHP version 5.2.17 or higher&lt;/p&gt;
 
-<p>LICENSE: TBD</p>]]></long-description>
+&lt;p&gt;LICENSE: TBD&lt;/p&gt;</long-description>
       <tag line="2" name="package" description="BlackHawk"/>
       <tag line="2" name="subpackage" description="Security"/>
       <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -360,14 +368,14 @@
       <tag line="2" name="since" description="File available since Release 0.3.0"/>
     </docblock>
   </file>
-  <file path="assets/index.php" hash="037241acbe8cc1e37dce5cb495f70afc" package="BlackHawk\Security">
+  <file path="assets\img\index.php" hash="bfd6770f5b16662d2b1f67eea7cd7e65" package="BlackHawk\Security">
     <docblock line="2">
-      <description><![CDATA[Security Index Page]]></description>
-      <long-description><![CDATA[<p>This file prevents directory listing</p>
+      <description>Security Index Page</description>
+      <long-description>&lt;p&gt;This file prevents directory listing&lt;/p&gt;
 
-<p>PHP version 5.2.17 or higher</p>
+&lt;p&gt;PHP version 5.2.17 or higher&lt;/p&gt;
 
-<p>LICENSE: TBD</p>]]></long-description>
+&lt;p&gt;LICENSE: TBD&lt;/p&gt;</long-description>
       <tag line="2" name="package" description="BlackHawk"/>
       <tag line="2" name="subpackage" description="Security"/>
       <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -377,14 +385,65 @@
       <tag line="2" name="since" description="File available since Release 0.3.0"/>
     </docblock>
   </file>
-  <file path="assets/mailer.class.php" hash="09a58d8c97729ae598203c19552d7944" package="BlackHawk\Mail">
+  <file path="assets\img\splashy\index.php" hash="bfd6770f5b16662d2b1f67eea7cd7e65" package="BlackHawk\Security">
     <docblock line="2">
-      <description><![CDATA[Creates Mail Class]]></description>
-      <long-description><![CDATA[<p>This file creates functions used internally for garages</p>
+      <description>Security Index Page</description>
+      <long-description>&lt;p&gt;This file prevents directory listing&lt;/p&gt;
 
-<p>PHP version 5.2.17 or higher</p>
+&lt;p&gt;PHP version 5.2.17 or higher&lt;/p&gt;
 
-<p>LICENSE: TBD</p>]]></long-description>
+&lt;p&gt;LICENSE: TBD&lt;/p&gt;</long-description>
+      <tag line="2" name="package" description="BlackHawk"/>
+      <tag line="2" name="subpackage" description="Security"/>
+      <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
+      <tag line="2" name="copyright" description="2012 Project BlackHawk"/>
+      <tag line="2" name="license" description="http://www.futuregencode.com/blackhawk/404  License 1.00"/>
+      <tag line="2" name="version" description="0.3.0"/>
+      <tag line="2" name="since" description="File available since Release 0.3.0"/>
+    </docblock>
+  </file>
+  <file path="assets\index.php" hash="bfd6770f5b16662d2b1f67eea7cd7e65" package="BlackHawk\Security">
+    <docblock line="2">
+      <description>Security Index Page</description>
+      <long-description>&lt;p&gt;This file prevents directory listing&lt;/p&gt;
+
+&lt;p&gt;PHP version 5.2.17 or higher&lt;/p&gt;
+
+&lt;p&gt;LICENSE: TBD&lt;/p&gt;</long-description>
+      <tag line="2" name="package" description="BlackHawk"/>
+      <tag line="2" name="subpackage" description="Security"/>
+      <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
+      <tag line="2" name="copyright" description="2012 Project BlackHawk"/>
+      <tag line="2" name="license" description="http://www.futuregencode.com/blackhawk/404  License 1.00"/>
+      <tag line="2" name="version" description="0.3.0"/>
+      <tag line="2" name="since" description="File available since Release 0.3.0"/>
+    </docblock>
+  </file>
+  <file path="assets\js\index.php" hash="bfd6770f5b16662d2b1f67eea7cd7e65" package="BlackHawk\Security">
+    <docblock line="2">
+      <description>Security Index Page</description>
+      <long-description>&lt;p&gt;This file prevents directory listing&lt;/p&gt;
+
+&lt;p&gt;PHP version 5.2.17 or higher&lt;/p&gt;
+
+&lt;p&gt;LICENSE: TBD&lt;/p&gt;</long-description>
+      <tag line="2" name="package" description="BlackHawk"/>
+      <tag line="2" name="subpackage" description="Security"/>
+      <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
+      <tag line="2" name="copyright" description="2012 Project BlackHawk"/>
+      <tag line="2" name="license" description="http://www.futuregencode.com/blackhawk/404  License 1.00"/>
+      <tag line="2" name="version" description="0.3.0"/>
+      <tag line="2" name="since" description="File available since Release 0.3.0"/>
+    </docblock>
+  </file>
+  <file path="assets\mailer.class.php" hash="926e166fac4c3cd012226da3da470c91" package="BlackHawk\Mail">
+    <docblock line="2">
+      <description>Creates Mail Class</description>
+      <long-description>&lt;p&gt;This file creates functions used internally for garages&lt;/p&gt;
+
+&lt;p&gt;PHP version 5.2.17 or higher&lt;/p&gt;
+
+&lt;p&gt;LICENSE: TBD&lt;/p&gt;</long-description>
       <tag line="2" name="package" description="BlackHawk"/>
       <tag line="2" name="subpackage" description="Mail"/>
       <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -399,8 +458,8 @@
       <name>mailer</name>
       <full_name>\mailer</full_name>
       <docblock line="22">
-        <description><![CDATA[Implements emails]]></description>
-        <long-description><![CDATA[]]></long-description>
+        <description>Implements emails</description>
+        <long-description></long-description>
         <tag line="22" name="package" description="BlackHawk"/>
         <tag line="22" name="subpackage" description="Mail"/>
         <tag line="22" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -411,10 +470,10 @@
       </docblock>
       <property final="false" static="false" visibility="public" line="39" namespace="global" package="Default">
         <name>$email_master</name>
-        <default><![CDATA[]]></default>
+        <default></default>
         <docblock line="34">
-          <description><![CDATA[]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description></description>
+          <long-description></long-description>
           <tag line="34" name="var" description="The Master E-Mail" type="\$email_master">
             <type by_reference="false">\$email_master</type>
           </tag>
@@ -422,10 +481,10 @@
       </property>
       <property final="false" static="false" visibility="public" line="45" namespace="global" package="Default">
         <name>$template</name>
-        <default><![CDATA[]]></default>
+        <default></default>
         <docblock line="40">
-          <description><![CDATA[]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description></description>
+          <long-description></long-description>
           <tag line="40" name="var" description="Stores template choice" type="\$template">
             <type by_reference="false">\$template</type>
           </tag>
@@ -435,8 +494,8 @@
         <name>__construct</name>
         <full_name>__construct</full_name>
         <docblock line="47">
-          <description><![CDATA[__construct]]></description>
-          <long-description><![CDATA[<p>Sets template</p>]]></long-description>
+          <description>__construct</description>
+          <long-description>&lt;p&gt;Sets template&lt;/p&gt;</long-description>
           <tag line="47" name="param" description="Which template to use" type="string" variable="$template">
             <type by_reference="false">string</type>
           </tag>
@@ -446,12 +505,12 @@
         </docblock>
         <argument line="55">
           <name>$email_master</name>
-          <default><![CDATA[]]></default>
+          <default></default>
           <type/>
         </argument>
         <argument line="55">
           <name>$template</name>
-          <default><![CDATA['default']]></default>
+          <default>'default'</default>
           <type/>
         </argument>
       </method>
@@ -459,8 +518,8 @@
         <name>genTemplate</name>
         <full_name>genTemplate</full_name>
         <docblock line="60">
-          <description><![CDATA[genTemplate]]></description>
-          <long-description><![CDATA[<p>Parsers the template</p>]]></long-description>
+          <description>genTemplate</description>
+          <long-description>&lt;p&gt;Parsers the template&lt;/p&gt;</long-description>
           <tag line="60" name="param" description="Subject of the email" type="string" variable="$subject">
             <type by_reference="false">string</type>
           </tag>
@@ -470,12 +529,12 @@
         </docblock>
         <argument line="68">
           <name>$subject</name>
-          <default><![CDATA[]]></default>
+          <default></default>
           <type/>
         </argument>
         <argument line="68">
           <name>$content</name>
-          <default><![CDATA[]]></default>
+          <default></default>
           <type/>
         </argument>
       </method>
@@ -483,8 +542,8 @@
         <name>mail</name>
         <full_name>mail</full_name>
         <docblock line="89">
-          <description><![CDATA[mail]]></description>
-          <long-description><![CDATA[<p>Mails inputed data</p>]]></long-description>
+          <description>mail</description>
+          <long-description>&lt;p&gt;Mails inputed data&lt;/p&gt;</long-description>
           <tag line="89" name="param" description="The email address to send from" type="string" variable="$emailmaster">
             <type by_reference="false">string</type>
           </tag>
@@ -503,17 +562,17 @@
         </docblock>
         <argument line="100">
           <name>$email</name>
-          <default><![CDATA[]]></default>
+          <default></default>
           <type/>
         </argument>
         <argument line="100">
           <name>$subject</name>
-          <default><![CDATA[]]></default>
+          <default></default>
           <type/>
         </argument>
         <argument line="100">
           <name>$content</name>
-          <default><![CDATA[]]></default>
+          <default></default>
           <type/>
         </argument>
       </method>
@@ -527,14 +586,14 @@
       <notice line="89" code="50013">Parameter $emailmaster could not be found in mail()</notice>
     </parse_markers>
   </file>
-  <file path="assets/member.class.php" hash="c56c450083cc6f766eb98dd4d25e5d8b" package="BlackHawk\Members">
+  <file path="assets\member.class.php" hash="7306de3893deaca751828a503baf16ab" package="BlackHawk\Members">
     <docblock line="2">
-      <description><![CDATA[Member Class]]></description>
-      <long-description><![CDATA[<p>The main hub of our login system</p>
+      <description>Member Class</description>
+      <long-description>&lt;p&gt;The main hub of our login system&lt;/p&gt;
 
-<p>PHP version 5.2.17 or higher</p>
+&lt;p&gt;PHP version 5.2.17 or higher&lt;/p&gt;
 
-<p>LICENSE: TBD</p>]]></long-description>
+&lt;p&gt;LICENSE: TBD&lt;/p&gt;</long-description>
       <tag line="2" name="package" description="BlackHawk"/>
       <tag line="2" name="subpackage" description="Members"/>
       <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -555,8 +614,8 @@
       <name>member</name>
       <full_name>\member</full_name>
       <docblock line="22">
-        <description><![CDATA[Member Class]]></description>
-        <long-description><![CDATA[]]></long-description>
+        <description>Member Class</description>
+        <long-description></long-description>
         <tag line="22" name="package" description="BlackHawk"/>
         <tag line="22" name="subpackage" description="Members"/>
         <tag line="22" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -568,6 +627,12 @@
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="41" package="BlackHawk\Members">
         <name>__construct</name>
         <full_name>__construct</full_name>
+        <docblock line="34">
+          <description>Member Construct</description>
+          <long-description>&lt;p&gt;Sets some basic settings for extra security
+Starts the session
+Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
+        </docblock>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="74" package="BlackHawk\Members">
         <name>currentPath</name>
@@ -586,12 +651,12 @@
         <full_name>genHash</full_name>
         <argument line="126">
           <name>$salt</name>
-          <default><![CDATA[]]></default>
+          <default></default>
           <type/>
         </argument>
         <argument line="126">
           <name>$password</name>
-          <default><![CDATA[]]></default>
+          <default></default>
           <type/>
         </argument>
       </method>
@@ -600,7 +665,7 @@
         <full_name>intcheck</full_name>
         <argument line="158">
           <name>$int</name>
-          <default><![CDATA[]]></default>
+          <default></default>
           <type/>
         </argument>
       </method>
@@ -609,12 +674,12 @@
         <full_name>verify</full_name>
         <argument line="190">
           <name>$password</name>
-          <default><![CDATA[]]></default>
+          <default></default>
           <type/>
         </argument>
         <argument line="190">
           <name>$existingHash</name>
-          <default><![CDATA[]]></default>
+          <default></default>
           <type/>
         </argument>
       </method>
@@ -622,128 +687,128 @@
         <name>login</name>
         <full_name>login</full_name>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="336" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="358" package="BlackHawk\Members">
         <name>LoggedIn</name>
         <full_name>LoggedIn</full_name>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="383" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="419" package="BlackHawk\Members">
         <name>sessionIsSet</name>
         <full_name>sessionIsSet</full_name>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="424" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="460" package="BlackHawk\Members">
         <name>logout</name>
         <full_name>logout</full_name>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="454" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="490" package="BlackHawk\Members">
         <name>createNewCookie</name>
         <full_name>createNewCookie</full_name>
-        <argument line="454">
+        <argument line="490">
           <name>$id</name>
-          <default><![CDATA[]]></default>
+          <default></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="478" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="514" package="BlackHawk\Members">
         <name>deleteCookie</name>
         <full_name>deleteCookie</full_name>
-        <argument line="478">
+        <argument line="514">
           <name>$id</name>
-          <default><![CDATA[]]></default>
+          <default></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="501" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="537" package="BlackHawk\Members">
         <name>userLogger</name>
         <full_name>userLogger</full_name>
-        <argument line="501">
+        <argument line="537">
           <name>$userid</name>
-          <default><![CDATA[]]></default>
+          <default></default>
           <type/>
         </argument>
-        <argument line="501">
+        <argument line="537">
           <name>$action</name>
-          <default><![CDATA[]]></default>
+          <default></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="545" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="581" package="BlackHawk\Members">
         <name>combovalidation</name>
         <full_name>combovalidation</full_name>
-        <argument line="545">
+        <argument line="581">
           <name>$username</name>
-          <default><![CDATA[]]></default>
+          <default></default>
           <type/>
         </argument>
-        <argument line="545">
+        <argument line="581">
           <name>$password</name>
-          <default><![CDATA[]]></default>
+          <default></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="554" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="590" package="BlackHawk\Members">
         <name>data</name>
         <full_name>data</full_name>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="578" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="614" package="BlackHawk\Members">
         <name>register</name>
         <full_name>register</full_name>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="844" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="880" package="BlackHawk\Members">
         <name>randomString</name>
         <full_name>randomString</full_name>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="860" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="896" package="BlackHawk\Members">
         <name>recoverPassword</name>
         <full_name>recoverPassword</full_name>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="945" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="990" package="BlackHawk\Members">
         <name>changePassword</name>
         <full_name>changePassword</full_name>
-        <argument line="945">
+        <argument line="990">
           <name>$user</name>
-          <default><![CDATA[null]]></default>
+          <default>null</default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1023" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1068" package="BlackHawk\Members">
         <name>changeEmail</name>
         <full_name>changeEmail</full_name>
-        <argument line="1023">
+        <argument line="1068">
           <name>$user</name>
-          <default><![CDATA[null]]></default>
+          <default>null</default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1105" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1150" package="BlackHawk\Members">
         <name>deleteAccount</name>
         <full_name>deleteAccount</full_name>
-        <argument line="1105">
+        <argument line="1150">
           <name>$user</name>
-          <default><![CDATA[null]]></default>
+          <default>null</default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1148" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1193" package="BlackHawk\Members">
         <name>verification</name>
         <full_name>verification</full_name>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1172" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1217" package="BlackHawk\Members">
         <name>firstuserregister</name>
         <full_name>firstuserregister</full_name>
-        <argument line="1172">
+        <argument line="1217">
           <name>$email</name>
-          <default><![CDATA[null]]></default>
+          <default>null</default>
           <type/>
         </argument>
       </method>
     </class>
     <markers>
-      <todo line="463">Save roles in cookie</todo>
-      <todo line="546">Check against a dummy DB, that is made manually by SQL import?</todo>
-      <todo line="763">, make register form pick type of student and pull that value</todo>
+      <todo line="499">Save roles in cookie</todo>
+      <todo line="582">Check against a dummy DB, that is made manually by SQL import?</todo>
+      <todo line="799">, make register form pick type of student and pull that value</todo>
+      <todo line="1226">make random again</todo>
     </markers>
     <parse_markers>
-      <error line="41" code="50010">No DocBlock was found for method __construct()</error>
       <error line="74" code="50010">No DocBlock was found for method currentPath()</error>
       <error line="86" code="50010">No DocBlock was found for method currentPage()</error>
       <error line="106" code="50010">No DocBlock was found for method genSalt()</error>
@@ -751,32 +816,32 @@
       <error line="158" code="50010">No DocBlock was found for method intcheck()</error>
       <error line="190" code="50010">No DocBlock was found for method verify()</error>
       <error line="216" code="50010">No DocBlock was found for method login()</error>
-      <error line="336" code="50010">No DocBlock was found for method LoggedIn()</error>
-      <error line="383" code="50010">No DocBlock was found for method sessionIsSet()</error>
-      <error line="424" code="50010">No DocBlock was found for method logout()</error>
-      <error line="454" code="50010">No DocBlock was found for method createNewCookie()</error>
-      <error line="478" code="50010">No DocBlock was found for method deleteCookie()</error>
-      <error line="501" code="50010">No DocBlock was found for method userLogger()</error>
-      <error line="545" code="50010">No DocBlock was found for method combovalidation()</error>
-      <error line="554" code="50010">No DocBlock was found for method data()</error>
-      <error line="578" code="50010">No DocBlock was found for method register()</error>
-      <error line="844" code="50010">No DocBlock was found for method randomString()</error>
-      <error line="860" code="50010">No DocBlock was found for method recoverPassword()</error>
-      <error line="945" code="50010">No DocBlock was found for method changePassword()</error>
-      <error line="1023" code="50010">No DocBlock was found for method changeEmail()</error>
-      <error line="1105" code="50010">No DocBlock was found for method deleteAccount()</error>
-      <error line="1148" code="50010">No DocBlock was found for method verification()</error>
-      <error line="1172" code="50010">No DocBlock was found for method firstuserregister()</error>
+      <error line="358" code="50010">No DocBlock was found for method LoggedIn()</error>
+      <error line="419" code="50010">No DocBlock was found for method sessionIsSet()</error>
+      <error line="460" code="50010">No DocBlock was found for method logout()</error>
+      <error line="490" code="50010">No DocBlock was found for method createNewCookie()</error>
+      <error line="514" code="50010">No DocBlock was found for method deleteCookie()</error>
+      <error line="537" code="50010">No DocBlock was found for method userLogger()</error>
+      <error line="581" code="50010">No DocBlock was found for method combovalidation()</error>
+      <error line="590" code="50010">No DocBlock was found for method data()</error>
+      <error line="614" code="50010">No DocBlock was found for method register()</error>
+      <error line="880" code="50010">No DocBlock was found for method randomString()</error>
+      <error line="896" code="50010">No DocBlock was found for method recoverPassword()</error>
+      <error line="990" code="50010">No DocBlock was found for method changePassword()</error>
+      <error line="1068" code="50010">No DocBlock was found for method changeEmail()</error>
+      <error line="1150" code="50010">No DocBlock was found for method deleteAccount()</error>
+      <error line="1193" code="50010">No DocBlock was found for method verification()</error>
+      <error line="1217" code="50010">No DocBlock was found for method firstuserregister()</error>
     </parse_markers>
   </file>
-  <file path="assets/member.inc.php" hash="16b74ae622fa3d57315b253c68284e97" package="BlackHawk\Members">
+  <file path="assets\member.inc.php" hash="1c2c155c90ec0b7deaced5420bd56691" package="BlackHawk\Members">
     <docblock line="2">
-      <description><![CDATA[Creates Members Class]]></description>
-      <long-description><![CDATA[<p>Instantiates objects for member, database, and config</p>
+      <description>Creates Members Class</description>
+      <long-description>&lt;p&gt;Instantiates objects for member, database, and config&lt;/p&gt;
 
-<p>PHP version 5.2.17 or higher</p>
+&lt;p&gt;PHP version 5.2.17 or higher&lt;/p&gt;
 
-<p>LICENSE: TBD</p>]]></long-description>
+&lt;p&gt;LICENSE: TBD&lt;/p&gt;</long-description>
       <tag line="2" name="package" description="BlackHawk"/>
       <tag line="2" name="subpackage" description="Members"/>
       <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -796,14 +861,14 @@
       <name>member.class.php</name>
     </include>
   </file>
-  <file path="assets/notice.class.php" hash="e22fee0050c3f9fec98529f32341c903" package="BlackHawk\Notice">
+  <file path="assets\notice.class.php" hash="5b2a3cc25e8c3b36c2fe9e8ab89c7f3a" package="BlackHawk\Notice">
     <docblock line="2">
-      <description><![CDATA[Creates Notice Class]]></description>
-      <long-description><![CDATA[<p>This file creates the notice outputs</p>
+      <description>Creates Notice Class</description>
+      <long-description>&lt;p&gt;This file creates the notice outputs&lt;/p&gt;
 
-<p>PHP version 5.2.17 or higher</p>
+&lt;p&gt;PHP version 5.2.17 or higher&lt;/p&gt;
 
-<p>LICENSE: TBD</p>]]></long-description>
+&lt;p&gt;LICENSE: TBD&lt;/p&gt;</long-description>
       <tag line="2" name="package" description="BlackHawk"/>
       <tag line="2" name="subpackage" description="Notice"/>
       <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -817,8 +882,8 @@
       <name>notice</name>
       <full_name>\notice</full_name>
       <docblock line="22">
-        <description><![CDATA[Implements Notice]]></description>
-        <long-description><![CDATA[]]></long-description>
+        <description>Implements Notice</description>
+        <long-description></long-description>
         <tag line="22" name="package" description="BlackHawk"/>
         <tag line="22" name="subpackage" description="Notice"/>
         <tag line="22" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -829,19 +894,19 @@
       </docblock>
       <property final="false" static="false" visibility="private" line="39" namespace="global" package="Default">
         <name>$_notices</name>
-        <default><![CDATA[array()]]></default>
+        <default>array()</default>
       </property>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="49" package="BlackHawk\Notice">
         <name>add</name>
         <full_name>add</full_name>
         <argument line="49">
           <name>$type</name>
-          <default><![CDATA[]]></default>
+          <default></default>
           <type/>
         </argument>
         <argument line="49">
           <name>$message</name>
-          <default><![CDATA[]]></default>
+          <default></default>
           <type/>
         </argument>
       </method>
@@ -861,14 +926,14 @@
       <error line="90" code="50010">No DocBlock was found for method errorsExist()</error>
     </parse_markers>
   </file>
-  <file path="assets/sensors.class.php" hash="f90d75dc2aa42428a47fd2dafb5ffcd0" package="BlackHawk\Garage">
+  <file path="assets\sensors.class.php" hash="b7ecaed6f5a8647b905f2f3c5029c8e8" package="BlackHawk\Garage">
     <docblock line="2">
-      <description><![CDATA[Basic Parking Sensors Funcions]]></description>
-      <long-description><![CDATA[<p>Allows the sensors to send data into the system</p>
+      <description>Basic Parking Sensors Funcions</description>
+      <long-description>&lt;p&gt;Allows the sensors to send data into the system&lt;/p&gt;
 
-<p>PHP version 5.2.17 or higher</p>
+&lt;p&gt;PHP version 5.2.17 or higher&lt;/p&gt;
 
-<p>LICENSE: TBD</p>]]></long-description>
+&lt;p&gt;LICENSE: TBD&lt;/p&gt;</long-description>
       <tag line="2" name="package" description="BlackHawk"/>
       <tag line="2" name="subpackage" description="Garage"/>
       <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -883,8 +948,8 @@
       <name>Sensors</name>
       <full_name>\Sensors</full_name>
       <docblock line="23">
-        <description><![CDATA[Basic Parking Sensors Funcions]]></description>
-        <long-description><![CDATA[]]></long-description>
+        <description>Basic Parking Sensors Funcions</description>
+        <long-description></long-description>
         <tag line="23" name="package" description="BlackHawk"/>
         <tag line="23" name="subpackage" description="Garage"/>
         <tag line="23" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -899,14 +964,14 @@
       <todo line="36">Add sensor functions</todo>
     </markers>
   </file>
-  <file path="assets/upd.class.php" hash="92006060e3ca6c7d3f2a0f03bc893427" package="BlackHawk\Garage">
+  <file path="assets\upd.class.php" hash="468143093efc2443b47bfcee0f530776" package="BlackHawk\Garage">
     <docblock line="2">
-      <description><![CDATA[UPD Funcions]]></description>
-      <long-description><![CDATA[<p>Functions that can be called from the UPD role file</p>
+      <description>UPD Funcions</description>
+      <long-description>&lt;p&gt;Functions that can be called from the UPD role file&lt;/p&gt;
 
-<p>PHP version 5.2.17 or higher</p>
+&lt;p&gt;PHP version 5.2.17 or higher&lt;/p&gt;
 
-<p>LICENSE: TBD</p>]]></long-description>
+&lt;p&gt;LICENSE: TBD&lt;/p&gt;</long-description>
       <tag line="2" name="package" description="BlackHawk"/>
       <tag line="2" name="subpackage" description="Garage"/>
       <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -921,8 +986,8 @@
       <name>UPD</name>
       <full_name>\UPD</full_name>
       <docblock line="23">
-        <description><![CDATA[Functions that can be called from the UPD role file]]></description>
-        <long-description><![CDATA[]]></long-description>
+        <description>Functions that can be called from the UPD role file</description>
+        <long-description></long-description>
         <tag line="23" name="package" description="BlackHawk"/>
         <tag line="23" name="subpackage" description="Garage"/>
         <tag line="23" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -937,7 +1002,23 @@
       <todo line="36">UPD ROLE SPECIFIC FUNCTIONS CALLED FROM UPD ROLE FILE</todo>
     </markers>
   </file>
-  <file path="debug/error.php" hash="86a3632724f499b6d7352de389a908e7" package="Default">
+  <file path="dashboard.php" hash="bada5a114136a8a6903fcd429b41a603" package="Default">
+    <include line="5" type="Require Once" package="Default">
+      <name>assets/member.inc.php</name>
+    </include>
+    <include line="25" type="Require Once" package="Default">
+      <name>assets/member.inc.php</name>
+    </include>
+    <markers>
+      <todo line="11">Graphs need to have dynamic data</todo>
+      <todo line="12">Cookie: Favorite garages and color data</todo>
+      <todo line="149">Pull real name</todo>
+    </markers>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file dashboard.php</error>
+    </parse_markers>
+  </file>
+  <file path="debug\error.php" hash="193cb2d874113241735c45907be07b76" package="Default">
     <include line="3" type="Include" package="Default">
       <name>./../init.php</name>
     </include>
@@ -948,276 +1029,276 @@
       <name>./error_os.php</name>
     </include>
     <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file debug/error.php</error>
+      <error line="0" code="50007">No page-level DocBlock was found in file debug\error.php</error>
     </parse_markers>
   </file>
-  <file path="debug/error_browser.php" hash="8001d6046fe9d691470ee9ec3a5fd76b" package="Default">
+  <file path="debug\error_browser.php" hash="d7fd5cd36c295798271e7b2228cf68b7" package="Default">
     <class final="false" abstract="false" namespace="global" line="3" package="Default">
       <extends/>
       <name>Browser</name>
       <full_name>\Browser</full_name>
       <property final="false" static="false" visibility="public" line="4" namespace="global" package="Default">
         <name>$_agent</name>
-        <default><![CDATA['']]></default>
+        <default>''</default>
       </property>
       <property final="false" static="false" visibility="public" line="5" namespace="global" package="Default">
         <name>$_browser_name</name>
-        <default><![CDATA['']]></default>
+        <default>''</default>
       </property>
       <property final="false" static="false" visibility="public" line="6" namespace="global" package="Default">
         <name>$_version</name>
-        <default><![CDATA['']]></default>
+        <default>''</default>
       </property>
       <property final="false" static="false" visibility="public" line="7" namespace="global" package="Default">
         <name>$_platform</name>
-        <default><![CDATA['']]></default>
+        <default>''</default>
       </property>
       <property final="false" static="false" visibility="public" line="8" namespace="global" package="Default">
         <name>$_os</name>
-        <default><![CDATA['']]></default>
+        <default>''</default>
       </property>
       <property final="false" static="false" visibility="public" line="9" namespace="global" package="Default">
         <name>$_is_aol</name>
-        <default><![CDATA[false]]></default>
+        <default>false</default>
       </property>
       <property final="false" static="false" visibility="public" line="10" namespace="global" package="Default">
         <name>$_is_mobile</name>
-        <default><![CDATA[false]]></default>
+        <default>false</default>
       </property>
       <property final="false" static="false" visibility="public" line="11" namespace="global" package="Default">
         <name>$_is_robot</name>
-        <default><![CDATA[false]]></default>
+        <default>false</default>
       </property>
       <property final="false" static="false" visibility="public" line="12" namespace="global" package="Default">
         <name>$_aol_version</name>
-        <default><![CDATA['']]></default>
+        <default>''</default>
       </property>
       <property final="false" static="false" visibility="public" line="14" namespace="global" package="Default">
         <name>$BROWSER_UNKNOWN</name>
-        <default><![CDATA['unknown']]></default>
+        <default>'unknown'</default>
       </property>
       <property final="false" static="false" visibility="public" line="15" namespace="global" package="Default">
         <name>$VERSION_UNKNOWN</name>
-        <default><![CDATA['unknown']]></default>
+        <default>'unknown'</default>
       </property>
       <property final="false" static="false" visibility="public" line="17" namespace="global" package="Default">
         <name>$BROWSER_OPERA</name>
-        <default><![CDATA['Opera']]></default>
+        <default>'Opera'</default>
       </property>
       <property final="false" static="false" visibility="public" line="18" namespace="global" package="Default">
         <name>$BROWSER_OPERA_MINI</name>
-        <default><![CDATA['Opera Mini']]></default>
+        <default>'Opera Mini'</default>
       </property>
       <property final="false" static="false" visibility="public" line="19" namespace="global" package="Default">
         <name>$BROWSER_WEBTV</name>
-        <default><![CDATA['WebTV']]></default>
+        <default>'WebTV'</default>
       </property>
       <property final="false" static="false" visibility="public" line="20" namespace="global" package="Default">
         <name>$BROWSER_IE</name>
-        <default><![CDATA['Internet Explorer']]></default>
+        <default>'Internet Explorer'</default>
       </property>
       <property final="false" static="false" visibility="public" line="21" namespace="global" package="Default">
         <name>$BROWSER_POCKET_IE</name>
-        <default><![CDATA['Pocket Internet Explorer']]></default>
+        <default>'Pocket Internet Explorer'</default>
       </property>
       <property final="false" static="false" visibility="public" line="22" namespace="global" package="Default">
         <name>$BROWSER_KONQUEROR</name>
-        <default><![CDATA['Konqueror']]></default>
+        <default>'Konqueror'</default>
       </property>
       <property final="false" static="false" visibility="public" line="23" namespace="global" package="Default">
         <name>$BROWSER_ICAB</name>
-        <default><![CDATA['iCab']]></default>
+        <default>'iCab'</default>
       </property>
       <property final="false" static="false" visibility="public" line="24" namespace="global" package="Default">
         <name>$BROWSER_OMNIWEB</name>
-        <default><![CDATA['OmniWeb']]></default>
+        <default>'OmniWeb'</default>
       </property>
       <property final="false" static="false" visibility="public" line="25" namespace="global" package="Default">
         <name>$BROWSER_FIREBIRD</name>
-        <default><![CDATA['Firebird']]></default>
+        <default>'Firebird'</default>
       </property>
       <property final="false" static="false" visibility="public" line="26" namespace="global" package="Default">
         <name>$BROWSER_FIREFOX</name>
-        <default><![CDATA['Firefox']]></default>
+        <default>'Firefox'</default>
       </property>
       <property final="false" static="false" visibility="public" line="27" namespace="global" package="Default">
         <name>$BROWSER_ICEWEASEL</name>
-        <default><![CDATA['Iceweasel']]></default>
+        <default>'Iceweasel'</default>
       </property>
       <property final="false" static="false" visibility="public" line="28" namespace="global" package="Default">
         <name>$BROWSER_SHIRETOKO</name>
-        <default><![CDATA['Shiretoko']]></default>
+        <default>'Shiretoko'</default>
       </property>
       <property final="false" static="false" visibility="public" line="29" namespace="global" package="Default">
         <name>$BROWSER_MOZILLA</name>
-        <default><![CDATA['Mozilla']]></default>
+        <default>'Mozilla'</default>
       </property>
       <property final="false" static="false" visibility="public" line="30" namespace="global" package="Default">
         <name>$BROWSER_AMAYA</name>
-        <default><![CDATA['Amaya']]></default>
+        <default>'Amaya'</default>
       </property>
       <property final="false" static="false" visibility="public" line="31" namespace="global" package="Default">
         <name>$BROWSER_LYNX</name>
-        <default><![CDATA['Lynx']]></default>
+        <default>'Lynx'</default>
       </property>
       <property final="false" static="false" visibility="public" line="32" namespace="global" package="Default">
         <name>$BROWSER_SAFARI</name>
-        <default><![CDATA['Safari']]></default>
+        <default>'Safari'</default>
       </property>
       <property final="false" static="false" visibility="public" line="33" namespace="global" package="Default">
         <name>$BROWSER_IPHONE</name>
-        <default><![CDATA['iPhone']]></default>
+        <default>'iPhone'</default>
       </property>
       <property final="false" static="false" visibility="public" line="34" namespace="global" package="Default">
         <name>$BROWSER_IPOD</name>
-        <default><![CDATA['iPod']]></default>
+        <default>'iPod'</default>
       </property>
       <property final="false" static="false" visibility="public" line="35" namespace="global" package="Default">
         <name>$BROWSER_IPAD</name>
-        <default><![CDATA['iPad']]></default>
+        <default>'iPad'</default>
       </property>
       <property final="false" static="false" visibility="public" line="36" namespace="global" package="Default">
         <name>$BROWSER_CHROME</name>
-        <default><![CDATA['Chrome']]></default>
+        <default>'Chrome'</default>
       </property>
       <property final="false" static="false" visibility="public" line="37" namespace="global" package="Default">
         <name>$BROWSER_ANDROID</name>
-        <default><![CDATA['Android']]></default>
+        <default>'Android'</default>
       </property>
       <property final="false" static="false" visibility="public" line="38" namespace="global" package="Default">
         <name>$BROWSER_GOOGLEBOT</name>
-        <default><![CDATA['GoogleBot']]></default>
+        <default>'GoogleBot'</default>
       </property>
       <property final="false" static="false" visibility="public" line="39" namespace="global" package="Default">
         <name>$BROWSER_SLURP</name>
-        <default><![CDATA['Yahoo! Slurp']]></default>
+        <default>'Yahoo! Slurp'</default>
       </property>
       <property final="false" static="false" visibility="public" line="40" namespace="global" package="Default">
         <name>$BROWSER_W3CVALIDATOR</name>
-        <default><![CDATA['W3C Validator']]></default>
+        <default>'W3C Validator'</default>
       </property>
       <property final="false" static="false" visibility="public" line="41" namespace="global" package="Default">
         <name>$BROWSER_BLACKBERRY</name>
-        <default><![CDATA['BlackBerry']]></default>
+        <default>'BlackBerry'</default>
       </property>
       <property final="false" static="false" visibility="public" line="42" namespace="global" package="Default">
         <name>$BROWSER_ICECAT</name>
-        <default><![CDATA['IceCat']]></default>
+        <default>'IceCat'</default>
       </property>
       <property final="false" static="false" visibility="public" line="43" namespace="global" package="Default">
         <name>$BROWSER_NOKIA_S60</name>
-        <default><![CDATA['Nokia S60 OSS Browser']]></default>
+        <default>'Nokia S60 OSS Browser'</default>
       </property>
       <property final="false" static="false" visibility="public" line="44" namespace="global" package="Default">
         <name>$BROWSER_NOKIA</name>
-        <default><![CDATA['Nokia Browser']]></default>
+        <default>'Nokia Browser'</default>
       </property>
       <property final="false" static="false" visibility="public" line="45" namespace="global" package="Default">
         <name>$BROWSER_MSN</name>
-        <default><![CDATA['MSN Browser']]></default>
+        <default>'MSN Browser'</default>
       </property>
       <property final="false" static="false" visibility="public" line="46" namespace="global" package="Default">
         <name>$BROWSER_MSNBOT</name>
-        <default><![CDATA['MSN Bot']]></default>
+        <default>'MSN Bot'</default>
       </property>
       <property final="false" static="false" visibility="public" line="49" namespace="global" package="Default">
         <name>$BROWSER_NETSCAPE_NAVIGATOR</name>
-        <default><![CDATA['Netscape Navigator']]></default>
+        <default>'Netscape Navigator'</default>
       </property>
       <property final="false" static="false" visibility="public" line="50" namespace="global" package="Default">
         <name>$BROWSER_GALEON</name>
-        <default><![CDATA['Galeon']]></default>
+        <default>'Galeon'</default>
       </property>
       <property final="false" static="false" visibility="public" line="51" namespace="global" package="Default">
         <name>$BROWSER_NETPOSITIVE</name>
-        <default><![CDATA['NetPositive']]></default>
+        <default>'NetPositive'</default>
       </property>
       <property final="false" static="false" visibility="public" line="52" namespace="global" package="Default">
         <name>$BROWSER_PHOENIX</name>
-        <default><![CDATA['Phoenix']]></default>
+        <default>'Phoenix'</default>
       </property>
       <property final="false" static="false" visibility="public" line="54" namespace="global" package="Default">
         <name>$PLATFORM_UNKNOWN</name>
-        <default><![CDATA['unknown']]></default>
+        <default>'unknown'</default>
       </property>
       <property final="false" static="false" visibility="public" line="55" namespace="global" package="Default">
         <name>$PLATFORM_WINDOWS</name>
-        <default><![CDATA['Windows']]></default>
+        <default>'Windows'</default>
       </property>
       <property final="false" static="false" visibility="public" line="56" namespace="global" package="Default">
         <name>$PLATFORM_WINDOWS_CE</name>
-        <default><![CDATA['Windows CE']]></default>
+        <default>'Windows CE'</default>
       </property>
       <property final="false" static="false" visibility="public" line="57" namespace="global" package="Default">
         <name>$PLATFORM_APPLE</name>
-        <default><![CDATA['Apple']]></default>
+        <default>'Apple'</default>
       </property>
       <property final="false" static="false" visibility="public" line="58" namespace="global" package="Default">
         <name>$PLATFORM_LINUX</name>
-        <default><![CDATA['Linux']]></default>
+        <default>'Linux'</default>
       </property>
       <property final="false" static="false" visibility="public" line="59" namespace="global" package="Default">
         <name>$PLATFORM_OS2</name>
-        <default><![CDATA['OS/2']]></default>
+        <default>'OS/2'</default>
       </property>
       <property final="false" static="false" visibility="public" line="60" namespace="global" package="Default">
         <name>$PLATFORM_BEOS</name>
-        <default><![CDATA['BeOS']]></default>
+        <default>'BeOS'</default>
       </property>
       <property final="false" static="false" visibility="public" line="61" namespace="global" package="Default">
         <name>$PLATFORM_IPHONE</name>
-        <default><![CDATA['iPhone']]></default>
+        <default>'iPhone'</default>
       </property>
       <property final="false" static="false" visibility="public" line="62" namespace="global" package="Default">
         <name>$PLATFORM_IPOD</name>
-        <default><![CDATA['iPod']]></default>
+        <default>'iPod'</default>
       </property>
       <property final="false" static="false" visibility="public" line="63" namespace="global" package="Default">
         <name>$PLATFORM_IPAD</name>
-        <default><![CDATA['iPad']]></default>
+        <default>'iPad'</default>
       </property>
       <property final="false" static="false" visibility="public" line="64" namespace="global" package="Default">
         <name>$PLATFORM_BLACKBERRY</name>
-        <default><![CDATA['BlackBerry']]></default>
+        <default>'BlackBerry'</default>
       </property>
       <property final="false" static="false" visibility="public" line="65" namespace="global" package="Default">
         <name>$PLATFORM_NOKIA</name>
-        <default><![CDATA['Nokia']]></default>
+        <default>'Nokia'</default>
       </property>
       <property final="false" static="false" visibility="public" line="66" namespace="global" package="Default">
         <name>$PLATFORM_FREEBSD</name>
-        <default><![CDATA['FreeBSD']]></default>
+        <default>'FreeBSD'</default>
       </property>
       <property final="false" static="false" visibility="public" line="67" namespace="global" package="Default">
         <name>$PLATFORM_OPENBSD</name>
-        <default><![CDATA['OpenBSD']]></default>
+        <default>'OpenBSD'</default>
       </property>
       <property final="false" static="false" visibility="public" line="68" namespace="global" package="Default">
         <name>$PLATFORM_NETBSD</name>
-        <default><![CDATA['NetBSD']]></default>
+        <default>'NetBSD'</default>
       </property>
       <property final="false" static="false" visibility="public" line="69" namespace="global" package="Default">
         <name>$PLATFORM_SUNOS</name>
-        <default><![CDATA['SunOS']]></default>
+        <default>'SunOS'</default>
       </property>
       <property final="false" static="false" visibility="public" line="70" namespace="global" package="Default">
         <name>$PLATFORM_OPENSOLARIS</name>
-        <default><![CDATA['OpenSolaris']]></default>
+        <default>'OpenSolaris'</default>
       </property>
       <property final="false" static="false" visibility="public" line="71" namespace="global" package="Default">
         <name>$PLATFORM_ANDROID</name>
-        <default><![CDATA['Android']]></default>
+        <default>'Android'</default>
       </property>
       <property final="false" static="false" visibility="public" line="73" namespace="global" package="Default">
         <name>$OPERATING_SYSTEM_UNKNOWN</name>
-        <default><![CDATA['unknown']]></default>
+        <default>'unknown'</default>
       </property>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="75" package="Default">
         <name>Browser</name>
         <full_name>Browser</full_name>
         <argument line="75">
           <name>$useragent</name>
-          <default><![CDATA[""]]></default>
+          <default>""</default>
           <type/>
         </argument>
       </method>
@@ -1225,16 +1306,16 @@
         <name>reset</name>
         <full_name>reset</full_name>
         <docblock line="85">
-          <description><![CDATA[Reset all properties]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Reset all properties</description>
+          <long-description></long-description>
         </docblock>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="105" package="Default">
         <name>isBrowser</name>
         <full_name>isBrowser</full_name>
         <docblock line="100">
-          <description><![CDATA[Check to see if the specific browser is valid]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Check to see if the specific browser is valid</description>
+          <long-description></long-description>
           <tag line="100" name="param" description="" type="string" variable="$browserName">
             <type by_reference="false">string</type>
           </tag>
@@ -1244,7 +1325,7 @@
         </docblock>
         <argument line="105">
           <name>$browserName</name>
-          <default><![CDATA[]]></default>
+          <default></default>
           <type/>
         </argument>
       </method>
@@ -1252,8 +1333,8 @@
         <name>getBrowser</name>
         <full_name>getBrowser</full_name>
         <docblock line="107">
-          <description><![CDATA[The name of the browser.]]></description>
-          <long-description><![CDATA[<p>All return types are from the class contants</p>]]></long-description>
+          <description>The name of the browser.</description>
+          <long-description>&lt;p&gt;All return types are from the class contants&lt;/p&gt;</long-description>
           <tag line="107" name="return" description="Name of the browser" type="string">
             <type by_reference="false">string</type>
           </tag>
@@ -1263,15 +1344,13 @@
         <name>setBrowser</name>
         <full_name>setBrowser</full_name>
         <docblock line="112">
-          <description><![CDATA[Set the name of the browser]]></description>
-          <long-description><![CDATA[]]></long-description>
-          <tag line="112" name="param" description="The name of the Browser" type="\$browser" variable="$browser">
-            <type by_reference="false">\$browser</type>
-          </tag>
+          <description>Set the name of the browser</description>
+          <long-description></long-description>
+          <tag line="112" name="param" description="The name of the Browser" type="\global\" variable="$browser"/>
         </docblock>
         <argument line="116">
           <name>$browser</name>
-          <default><![CDATA[]]></default>
+          <default></default>
           <type/>
         </argument>
       </method>
@@ -1279,8 +1358,8 @@
         <name>getPlatform</name>
         <full_name>getPlatform</full_name>
         <docblock line="117">
-          <description><![CDATA[The name of the platform.]]></description>
-          <long-description><![CDATA[<p>All return types are from the class contants</p>]]></long-description>
+          <description>The name of the platform.</description>
+          <long-description>&lt;p&gt;All return types are from the class contants&lt;/p&gt;</long-description>
           <tag line="117" name="return" description="Name of the browser" type="string">
             <type by_reference="false">string</type>
           </tag>
@@ -1290,15 +1369,13 @@
         <name>setPlatform</name>
         <full_name>setPlatform</full_name>
         <docblock line="122">
-          <description><![CDATA[Set the name of the platform]]></description>
-          <long-description><![CDATA[]]></long-description>
-          <tag line="122" name="param" description="The name of the Platform" type="\$platform" variable="$platform">
-            <type by_reference="false">\$platform</type>
-          </tag>
+          <description>Set the name of the platform</description>
+          <long-description></long-description>
+          <tag line="122" name="param" description="The name of the Platform" type="\global\" variable="$platform"/>
         </docblock>
         <argument line="126">
           <name>$platform</name>
-          <default><![CDATA[]]></default>
+          <default></default>
           <type/>
         </argument>
       </method>
@@ -1306,8 +1383,8 @@
         <name>getVersion</name>
         <full_name>getVersion</full_name>
         <docblock line="127">
-          <description><![CDATA[The version of the browser.]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>The version of the browser.</description>
+          <long-description></long-description>
           <tag line="127" name="return" description="Version of the browser (will only contain alpha-numeric characters and a period)" type="string">
             <type by_reference="false">string</type>
           </tag>
@@ -1317,15 +1394,13 @@
         <name>setVersion</name>
         <full_name>setVersion</full_name>
         <docblock line="132">
-          <description><![CDATA[Set the version of the browser]]></description>
-          <long-description><![CDATA[]]></long-description>
-          <tag line="132" name="param" description="The version of the Browser" type="\$version" variable="$version">
-            <type by_reference="false">\$version</type>
-          </tag>
+          <description>Set the version of the browser</description>
+          <long-description></long-description>
+          <tag line="132" name="param" description="The version of the Browser" type="\global\" variable="$version"/>
         </docblock>
         <argument line="136">
           <name>$version</name>
-          <default><![CDATA[]]></default>
+          <default></default>
           <type/>
         </argument>
       </method>
@@ -1333,8 +1408,8 @@
         <name>getAolVersion</name>
         <full_name>getAolVersion</full_name>
         <docblock line="137">
-          <description><![CDATA[The version of AOL.]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>The version of AOL.</description>
+          <long-description></long-description>
           <tag line="137" name="return" description="Version of AOL (will only contain alpha-numeric characters and a period)" type="string">
             <type by_reference="false">string</type>
           </tag>
@@ -1344,15 +1419,13 @@
         <name>setAolVersion</name>
         <full_name>setAolVersion</full_name>
         <docblock line="142">
-          <description><![CDATA[Set the version of AOL]]></description>
-          <long-description><![CDATA[]]></long-description>
-          <tag line="142" name="param" description="The version of AOL" type="\$version" variable="$version">
-            <type by_reference="false">\$version</type>
-          </tag>
+          <description>Set the version of AOL</description>
+          <long-description></long-description>
+          <tag line="142" name="param" description="The version of AOL" type="\global\" variable="$version"/>
         </docblock>
         <argument line="146">
           <name>$version</name>
-          <default><![CDATA[]]></default>
+          <default></default>
           <type/>
         </argument>
       </method>
@@ -1360,8 +1433,8 @@
         <name>isAol</name>
         <full_name>isAol</full_name>
         <docblock line="147">
-          <description><![CDATA[Is the browser from AOL?]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Is the browser from AOL?</description>
+          <long-description></long-description>
           <tag line="147" name="return" description="True if the browser is from AOL otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1371,8 +1444,8 @@
         <name>isMobile</name>
         <full_name>isMobile</full_name>
         <docblock line="152">
-          <description><![CDATA[Is the browser from a mobile device?]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Is the browser from a mobile device?</description>
+          <long-description></long-description>
           <tag line="152" name="return" description="True if the browser is from a mobile device otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1382,8 +1455,8 @@
         <name>isRobot</name>
         <full_name>isRobot</full_name>
         <docblock line="157">
-          <description><![CDATA[Is the browser from a robot (ex Slurp,GoogleBot)?]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Is the browser from a robot (ex Slurp,GoogleBot)?</description>
+          <long-description></long-description>
           <tag line="157" name="return" description="True if the browser is from a robot otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1393,13 +1466,13 @@
         <name>setAol</name>
         <full_name>setAol</full_name>
         <docblock line="162">
-          <description><![CDATA[Set the browser to be from AOL]]></description>
-          <long-description><![CDATA[]]></long-description>
-          <tag line="162" name="param" description="" type="" variable="$isAol"/>
+          <description>Set the browser to be from AOL</description>
+          <long-description></long-description>
+          <tag line="162" name="param" description="" type="\global\" variable="$isAol"/>
         </docblock>
         <argument line="166">
           <name>$isAol</name>
-          <default><![CDATA[]]></default>
+          <default></default>
           <type/>
         </argument>
       </method>
@@ -1407,15 +1480,15 @@
         <name>setMobile</name>
         <full_name>setMobile</full_name>
         <docblock line="167">
-          <description><![CDATA[Set the Browser to be mobile]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Set the Browser to be mobile</description>
+          <long-description></long-description>
           <tag line="167" name="param" description="is the browser a mobile brower or not" type="boolean" variable="$value">
             <type by_reference="false">boolean</type>
           </tag>
         </docblock>
         <argument line="171">
           <name>$value</name>
-          <default><![CDATA[true]]></default>
+          <default>true</default>
           <type/>
         </argument>
       </method>
@@ -1423,15 +1496,15 @@
         <name>setRobot</name>
         <full_name>setRobot</full_name>
         <docblock line="172">
-          <description><![CDATA[Set the Browser to be a robot]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Set the Browser to be a robot</description>
+          <long-description></long-description>
           <tag line="172" name="param" description="is the browser a robot or not" type="boolean" variable="$value">
             <type by_reference="false">boolean</type>
           </tag>
         </docblock>
         <argument line="176">
           <name>$value</name>
-          <default><![CDATA[true]]></default>
+          <default>true</default>
           <type/>
         </argument>
       </method>
@@ -1439,8 +1512,8 @@
         <name>getUserAgent</name>
         <full_name>getUserAgent</full_name>
         <docblock line="177">
-          <description><![CDATA[Get the user agent value in use to determine the browser]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Get the user agent value in use to determine the browser</description>
+          <long-description></long-description>
           <tag line="177" name="return" description="The user agent from the HTTP header" type="string">
             <type by_reference="false">string</type>
           </tag>
@@ -1450,15 +1523,13 @@
         <name>setUserAgent</name>
         <full_name>setUserAgent</full_name>
         <docblock line="182">
-          <description><![CDATA[Set the user agent value (the construction will use the HTTP header value - this will overwrite it)]]></description>
-          <long-description><![CDATA[]]></long-description>
-          <tag line="182" name="param" description="The value for the User Agent" type="\$agent_string" variable="$agent_string">
-            <type by_reference="false">\$agent_string</type>
-          </tag>
+          <description>Set the user agent value (the construction will use the HTTP header value - this will overwrite it)</description>
+          <long-description></long-description>
+          <tag line="182" name="param" description="The value for the User Agent" type="\global\" variable="$agent_string"/>
         </docblock>
         <argument line="186">
           <name>$agent_string</name>
-          <default><![CDATA[]]></default>
+          <default></default>
           <type/>
         </argument>
       </method>
@@ -1466,8 +1537,8 @@
         <name>isChromeFrame</name>
         <full_name>isChromeFrame</full_name>
         <docblock line="191">
-          <description><![CDATA[Used to determine if the browser is actually "chromeframe"]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Used to determine if the browser is actually "chromeframe"</description>
+          <long-description></long-description>
           <tag line="191" name="since" description="1.7"/>
           <tag line="191" name="return" description="True if the browser is using chromeframe" type="boolean">
             <type by_reference="false">boolean</type>
@@ -1478,8 +1549,8 @@
         <name>__toString</name>
         <full_name>__toString</full_name>
         <docblock line="199">
-          <description><![CDATA[Returns a formatted string with a summary of the details of the browser.]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Returns a formatted string with a summary of the details of the browser.</description>
+          <long-description></long-description>
           <tag line="199" name="return" description="formatted string with a summary of the browser" type="string">
             <type by_reference="false">string</type>
           </tag>
@@ -1489,16 +1560,16 @@
         <name>determine</name>
         <full_name>determine</full_name>
         <docblock line="209">
-          <description><![CDATA[Protected routine to calculate and determine what the browser is in use (including platform)]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Protected routine to calculate and determine what the browser is in use (including platform)</description>
+          <long-description></long-description>
         </docblock>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="221" package="Default">
         <name>checkBrowsers</name>
         <full_name>checkBrowsers</full_name>
         <docblock line="217">
-          <description><![CDATA[Protected routine to determine the browser type]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Protected routine to determine the browser type</description>
+          <long-description></long-description>
           <tag line="217" name="return" description="True if the browser was detected otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1508,8 +1579,8 @@
         <name>checkBrowserBlackBerry</name>
         <full_name>checkBrowserBlackBerry</full_name>
         <docblock line="276">
-          <description><![CDATA[Determine if the user is using a BlackBerry (last updated 1.7)]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Determine if the user is using a BlackBerry (last updated 1.7)</description>
+          <long-description></long-description>
           <tag line="276" name="return" description="True if the browser is the BlackBerry browser otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1519,8 +1590,8 @@
         <name>checkForAol</name>
         <full_name>checkForAol</full_name>
         <docblock line="292">
-          <description><![CDATA[Determine if the user is using an AOL User Agent (last updated 1.7)]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Determine if the user is using an AOL User Agent (last updated 1.7)</description>
+          <long-description></long-description>
           <tag line="292" name="return" description="True if the browser is from AOL otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1530,8 +1601,8 @@
         <name>checkBrowserGoogleBot</name>
         <full_name>checkBrowserGoogleBot</full_name>
         <docblock line="309">
-          <description><![CDATA[Determine if the browser is the GoogleBot or not (last updated 1.7)]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Determine if the browser is the GoogleBot or not (last updated 1.7)</description>
+          <long-description></long-description>
           <tag line="309" name="return" description="True if the browser is the GoogletBot otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1541,8 +1612,8 @@
         <name>checkBrowserMSNBot</name>
         <full_name>checkBrowserMSNBot</full_name>
         <docblock line="325">
-          <description><![CDATA[Determine if the browser is the MSNBot or not (last updated 1.9)]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Determine if the browser is the MSNBot or not (last updated 1.9)</description>
+          <long-description></long-description>
           <tag line="325" name="return" description="True if the browser is the MSNBot otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1552,8 +1623,8 @@
         <name>checkBrowserW3CValidator</name>
         <full_name>checkBrowserW3CValidator</full_name>
         <docblock line="341">
-          <description><![CDATA[Determine if the browser is the W3C Validator or not (last updated 1.7)]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Determine if the browser is the W3C Validator or not (last updated 1.7)</description>
+          <long-description></long-description>
           <tag line="341" name="return" description="True if the browser is the W3C Validator otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1563,8 +1634,8 @@
         <name>checkBrowserSlurp</name>
         <full_name>checkBrowserSlurp</full_name>
         <docblock line="365">
-          <description><![CDATA[Determine if the browser is the Yahoo! Slurp Robot or not (last updated 1.7)]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Determine if the browser is the Yahoo! Slurp Robot or not (last updated 1.7)</description>
+          <long-description></long-description>
           <tag line="365" name="return" description="True if the browser is the Yahoo! Slurp Robot otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1574,8 +1645,8 @@
         <name>checkBrowserInternetExplorer</name>
         <full_name>checkBrowserInternetExplorer</full_name>
         <docblock line="382">
-          <description><![CDATA[Determine if the browser is Internet Explorer or not (last updated 1.7)]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Determine if the browser is Internet Explorer or not (last updated 1.7)</description>
+          <long-description></long-description>
           <tag line="382" name="return" description="True if the browser is Internet Explorer otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1585,8 +1656,8 @@
         <name>checkBrowserOpera</name>
         <full_name>checkBrowserOpera</full_name>
         <docblock line="431">
-          <description><![CDATA[Determine if the browser is Opera or not (last updated 1.7)]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Determine if the browser is Opera or not (last updated 1.7)</description>
+          <long-description></long-description>
           <tag line="431" name="return" description="True if the browser is Opera otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1596,8 +1667,8 @@
         <name>checkBrowserChrome</name>
         <full_name>checkBrowserChrome</full_name>
         <docblock line="471">
-          <description><![CDATA[Determine if the browser is Chrome or not (last updated 1.7)]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Determine if the browser is Chrome or not (last updated 1.7)</description>
+          <long-description></long-description>
           <tag line="471" name="return" description="True if the browser is Chrome otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1607,8 +1678,8 @@
         <name>checkBrowserWebTv</name>
         <full_name>checkBrowserWebTv</full_name>
         <docblock line="487">
-          <description><![CDATA[Determine if the browser is WebTv or not (last updated 1.7)]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Determine if the browser is WebTv or not (last updated 1.7)</description>
+          <long-description></long-description>
           <tag line="487" name="return" description="True if the browser is WebTv otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1618,8 +1689,8 @@
         <name>checkBrowserNetPositive</name>
         <full_name>checkBrowserNetPositive</full_name>
         <docblock line="502">
-          <description><![CDATA[Determine if the browser is NetPositive or not (last updated 1.7)]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Determine if the browser is NetPositive or not (last updated 1.7)</description>
+          <long-description></long-description>
           <tag line="502" name="return" description="True if the browser is NetPositive otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1629,8 +1700,8 @@
         <name>checkBrowserGaleon</name>
         <full_name>checkBrowserGaleon</full_name>
         <docblock line="517">
-          <description><![CDATA[Determine if the browser is Galeon or not (last updated 1.7)]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Determine if the browser is Galeon or not (last updated 1.7)</description>
+          <long-description></long-description>
           <tag line="517" name="return" description="True if the browser is Galeon otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1640,8 +1711,8 @@
         <name>checkBrowserKonqueror</name>
         <full_name>checkBrowserKonqueror</full_name>
         <docblock line="532">
-          <description><![CDATA[Determine if the browser is Konqueror or not (last updated 1.7)]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Determine if the browser is Konqueror or not (last updated 1.7)</description>
+          <long-description></long-description>
           <tag line="532" name="return" description="True if the browser is Konqueror otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1651,8 +1722,8 @@
         <name>checkBrowserIcab</name>
         <full_name>checkBrowserIcab</full_name>
         <docblock line="547">
-          <description><![CDATA[Determine if the browser is iCab or not (last updated 1.7)]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Determine if the browser is iCab or not (last updated 1.7)</description>
+          <long-description></long-description>
           <tag line="547" name="return" description="True if the browser is iCab otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1662,8 +1733,8 @@
         <name>checkBrowserOmniWeb</name>
         <full_name>checkBrowserOmniWeb</full_name>
         <docblock line="561">
-          <description><![CDATA[Determine if the browser is OmniWeb or not (last updated 1.7)]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Determine if the browser is OmniWeb or not (last updated 1.7)</description>
+          <long-description></long-description>
           <tag line="561" name="return" description="True if the browser is OmniWeb otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1673,8 +1744,8 @@
         <name>checkBrowserPhoenix</name>
         <full_name>checkBrowserPhoenix</full_name>
         <docblock line="576">
-          <description><![CDATA[Determine if the browser is Phoenix or not (last updated 1.7)]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Determine if the browser is Phoenix or not (last updated 1.7)</description>
+          <long-description></long-description>
           <tag line="576" name="return" description="True if the browser is Phoenix otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1684,8 +1755,8 @@
         <name>checkBrowserFirebird</name>
         <full_name>checkBrowserFirebird</full_name>
         <docblock line="590">
-          <description><![CDATA[Determine if the browser is Firebird or not (last updated 1.7)]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Determine if the browser is Firebird or not (last updated 1.7)</description>
+          <long-description></long-description>
           <tag line="590" name="return" description="True if the browser is Firebird otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1695,9 +1766,9 @@
         <name>checkBrowserNetscapeNavigator9Plus</name>
         <full_name>checkBrowserNetscapeNavigator9Plus</full_name>
         <docblock line="604">
-          <description><![CDATA[Determine if the browser is Netscape Navigator 9+ or not (last updated 1.7)
-NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Determine if the browser is Netscape Navigator 9+ or not (last updated 1.7)
+NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)</description>
+          <long-description></long-description>
           <tag line="604" name="return" description="True if the browser is Netscape Navigator 9+ otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1707,8 +1778,8 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
         <name>checkBrowserShiretoko</name>
         <full_name>checkBrowserShiretoko</full_name>
         <docblock line="623">
-          <description><![CDATA[Determine if the browser is Shiretoko or not (https://wiki.mozilla.org/Projects/shiretoko) (last updated 1.7)]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Determine if the browser is Shiretoko or not (https://wiki.mozilla.org/Projects/shiretoko) (last updated 1.7)</description>
+          <long-description></long-description>
           <tag line="623" name="return" description="True if the browser is Shiretoko otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1718,8 +1789,8 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
         <name>checkBrowserIceCat</name>
         <full_name>checkBrowserIceCat</full_name>
         <docblock line="636">
-          <description><![CDATA[Determine if the browser is Ice Cat or not (http://en.wikipedia.org/wiki/GNU_IceCat) (last updated 1.7)]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Determine if the browser is Ice Cat or not (http://en.wikipedia.org/wiki/GNU_IceCat) (last updated 1.7)</description>
+          <long-description></long-description>
           <tag line="636" name="return" description="True if the browser is Ice Cat otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1729,8 +1800,8 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
         <name>checkBrowserNokia</name>
         <full_name>checkBrowserNokia</full_name>
         <docblock line="649">
-          <description><![CDATA[Determine if the browser is Nokia or not (last updated 1.7)]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Determine if the browser is Nokia or not (last updated 1.7)</description>
+          <long-description></long-description>
           <tag line="649" name="return" description="True if the browser is Nokia otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1740,8 +1811,8 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
         <name>checkBrowserFirefox</name>
         <full_name>checkBrowserFirefox</full_name>
         <docblock line="668">
-          <description><![CDATA[Determine if the browser is Firefox or not (last updated 1.7)]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Determine if the browser is Firefox or not (last updated 1.7)</description>
+          <long-description></long-description>
           <tag line="668" name="return" description="True if the browser is Firefox otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1751,8 +1822,8 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
         <name>checkBrowserIceweasel</name>
         <full_name>checkBrowserIceweasel</full_name>
         <docblock line="688">
-          <description><![CDATA[Determine if the browser is Firefox or not (last updated 1.7)]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Determine if the browser is Firefox or not (last updated 1.7)</description>
+          <long-description></long-description>
           <tag line="688" name="return" description="True if the browser is Firefox otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1762,8 +1833,8 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
         <name>checkBrowserMozilla</name>
         <full_name>checkBrowserMozilla</full_name>
         <docblock line="702">
-          <description><![CDATA[Determine if the browser is Mozilla or not (last updated 1.7)]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Determine if the browser is Mozilla or not (last updated 1.7)</description>
+          <long-description></long-description>
           <tag line="702" name="return" description="True if the browser is Mozilla otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1773,8 +1844,8 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
         <name>checkBrowserLynx</name>
         <full_name>checkBrowserLynx</full_name>
         <docblock line="728">
-          <description><![CDATA[Determine if the browser is Lynx or not (last updated 1.7)]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Determine if the browser is Lynx or not (last updated 1.7)</description>
+          <long-description></long-description>
           <tag line="728" name="return" description="True if the browser is Lynx otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1784,8 +1855,8 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
         <name>checkBrowserAmaya</name>
         <full_name>checkBrowserAmaya</full_name>
         <docblock line="743">
-          <description><![CDATA[Determine if the browser is Amaya or not (last updated 1.7)]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Determine if the browser is Amaya or not (last updated 1.7)</description>
+          <long-description></long-description>
           <tag line="743" name="return" description="True if the browser is Amaya otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1795,8 +1866,8 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
         <name>checkBrowserSafari</name>
         <full_name>checkBrowserSafari</full_name>
         <docblock line="758">
-          <description><![CDATA[Determine if the browser is Safari or not (last updated 1.7)]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Determine if the browser is Safari or not (last updated 1.7)</description>
+          <long-description></long-description>
           <tag line="758" name="return" description="True if the browser is Safari otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1806,8 +1877,8 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
         <name>checkBrowseriPhone</name>
         <full_name>checkBrowseriPhone</full_name>
         <docblock line="778">
-          <description><![CDATA[Determine if the browser is iPhone or not (last updated 1.7)]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Determine if the browser is iPhone or not (last updated 1.7)</description>
+          <long-description></long-description>
           <tag line="778" name="return" description="True if the browser is iPhone otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1817,8 +1888,8 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
         <name>checkBrowseriPad</name>
         <full_name>checkBrowseriPad</full_name>
         <docblock line="799">
-          <description><![CDATA[Determine if the browser is iPod or not (last updated 1.7)]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Determine if the browser is iPod or not (last updated 1.7)</description>
+          <long-description></long-description>
           <tag line="799" name="return" description="True if the browser is iPod otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1828,8 +1899,8 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
         <name>checkBrowseriPod</name>
         <full_name>checkBrowseriPod</full_name>
         <docblock line="820">
-          <description><![CDATA[Determine if the browser is iPod or not (last updated 1.7)]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Determine if the browser is iPod or not (last updated 1.7)</description>
+          <long-description></long-description>
           <tag line="820" name="return" description="True if the browser is iPod otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1839,8 +1910,8 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
         <name>checkBrowserAndroid</name>
         <full_name>checkBrowserAndroid</full_name>
         <docblock line="841">
-          <description><![CDATA[Determine if the browser is Android or not (last updated 1.7)]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Determine if the browser is Android or not (last updated 1.7)</description>
+          <long-description></long-description>
           <tag line="841" name="return" description="True if the browser is Android otherwise false" type="boolean">
             <type by_reference="false">boolean</type>
           </tag>
@@ -1850,13 +1921,13 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
         <name>checkPlatform</name>
         <full_name>checkPlatform</full_name>
         <docblock line="862">
-          <description><![CDATA[Determine the user's platform (last updated 1.7)]]></description>
-          <long-description><![CDATA[]]></long-description>
+          <description>Determine the user's platform (last updated 1.7)</description>
+          <long-description></long-description>
         </docblock>
       </method>
     </class>
     <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file debug/error_browser.php</error>
+      <error line="0" code="50007">No page-level DocBlock was found in file debug\error_browser.php</error>
       <error line="3" code="50000">No DocBlock was found for \Browser</error>
       <error line="4" code="50018">No DocBlock was found for property $_agent</error>
       <error line="5" code="50018">No DocBlock was found for property $_browser_name</error>
@@ -1925,17 +1996,17 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
       <error line="75" code="50010">No DocBlock was found for method Browser()</error>
     </parse_markers>
   </file>
-  <file path="debug/error_os.php" hash="4f696ad02523e8e0b29141a42c2eabe8" package="Default">
+  <file path="debug\error_os.php" hash="bc0e1e5811e24d7499465a55344b355f" package="Default">
     <function namespace="global" line="4" package="Default">
       <name>getOS</name>
       <full_name>\getOS</full_name>
     </function>
     <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file debug/error_os.php</error>
+      <error line="0" code="50007">No page-level DocBlock was found in file debug\error_os.php</error>
       <error line="4" code="50009">No DocBlock was found for function \getOS()</error>
     </parse_markers>
   </file>
-  <file path="debug/error_test_mysql.php" hash="b76e8eaf8e6df66e0f0c75d4480e6a52" package="Default">
+  <file path="debug\error_test_mysql.php" hash="5c58924f3775daab2cc943a044e49d94" package="Default">
     <include line="3" type="Include" package="Default">
       <name>./../init.php</name>
     </include>
@@ -1943,17 +2014,17 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
       <name>./../config/standard/config.php</name>
     </include>
     <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file debug/error_test_mysql.php</error>
+      <error line="0" code="50007">No page-level DocBlock was found in file debug\error_test_mysql.php</error>
     </parse_markers>
   </file>
-  <file path="debug/index.php" hash="037241acbe8cc1e37dce5cb495f70afc" package="BlackHawk\Security">
+  <file path="debug\index.php" hash="bfd6770f5b16662d2b1f67eea7cd7e65" package="BlackHawk\Security">
     <docblock line="2">
-      <description><![CDATA[Security Index Page]]></description>
-      <long-description><![CDATA[<p>This file prevents directory listing</p>
+      <description>Security Index Page</description>
+      <long-description>&lt;p&gt;This file prevents directory listing&lt;/p&gt;
 
-<p>PHP version 5.2.17 or higher</p>
+&lt;p&gt;PHP version 5.2.17 or higher&lt;/p&gt;
 
-<p>LICENSE: TBD</p>]]></long-description>
+&lt;p&gt;LICENSE: TBD&lt;/p&gt;</long-description>
       <tag line="2" name="package" description="BlackHawk"/>
       <tag line="2" name="subpackage" description="Security"/>
       <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -1963,22 +2034,22 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
       <tag line="2" name="since" description="File available since Release 0.3.0"/>
     </docblock>
   </file>
-  <file path="debug/masdebug.php" hash="0febe40c29314f1331eac0613403ef4e" package="Default">
+  <file path="debug\masdebug.php" hash="cf1999cdbc91f93686bdd3169a57ed8e" package="Default">
     <include line="3" type="Include" package="Default">
       <name>./error.php</name>
     </include>
     <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file debug/masdebug.php</error>
+      <error line="0" code="50007">No page-level DocBlock was found in file debug\masdebug.php</error>
     </parse_markers>
   </file>
-  <file path="errorcode.php" hash="9d1048278069c97a3fc40f460219560f" package="BlackHawk\Debug">
+  <file path="errorcode.php" hash="b8a6ccf0ec310f84b6b5eb29a6d6bcec" package="BlackHawk\Debug">
     <docblock line="2">
-      <description><![CDATA[Project BlackHawk Errorcode]]></description>
-      <long-description><![CDATA[<p>Handles HTTP Headers</p>
+      <description>Project BlackHawk Errorcode</description>
+      <long-description>&lt;p&gt;Handles HTTP Headers&lt;/p&gt;
 
-<p>PHP version 5.2.17 or higher</p>
+&lt;p&gt;PHP version 5.2.17 or higher&lt;/p&gt;
 
-<p>LICENSE: TBD</p>]]></long-description>
+&lt;p&gt;LICENSE: TBD&lt;/p&gt;</long-description>
       <tag line="2" name="package" description="BlackHawk"/>
       <tag line="2" name="subpackage" description="Debug"/>
       <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -2004,35 +2075,14 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
       <error line="263" code="50009">No DocBlock was found for function \askapache_global_debug()</error>
     </parse_markers>
   </file>
-  <file path="index.php" hash="fa1d5f47103328904253117263aab929" package="BlackHawk\Home">
+  <file path="init.php" hash="977805a675d43cda17dca8e576b72857" package="BlackHawk\General">
     <docblock line="2">
-      <description><![CDATA[The Home Page]]></description>
-      <long-description><![CDATA[<p>Displays the home page, and does some redirecting work</p>
+      <description>BlackHawk Init</description>
+      <long-description>&lt;p&gt;Contains program constants&lt;/p&gt;
 
-<p>PHP version 5.2.17 or higher</p>
+&lt;p&gt;PHP version 5.2.17 or higher&lt;/p&gt;
 
-<p>LICENSE: TBD</p>]]></long-description>
-      <tag line="2" name="package" description="BlackHawk"/>
-      <tag line="2" name="subpackage" description="Home"/>
-      <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
-      <tag line="2" name="copyright" description="2012 Project BlackHawk"/>
-      <tag line="2" name="license" description="http://www.futuregencode.com/blackhawk/404  License 1.00"/>
-      <tag line="2" name="version" description="0.3.0"/>
-      <tag line="2" name="see" description="\redirect.php" refers="\redirect.php"/>
-      <tag line="2" name="since" description="File available since Release 0.3.0"/>
-    </docblock>
-    <include line="29" type="Include" package="Default">
-      <name>assets/member.inc.php</name>
-    </include>
-  </file>
-  <file path="init.php" hash="216c94a651fa8fec79fc2b34484efd7c" package="BlackHawk\General">
-    <docblock line="2">
-      <description><![CDATA[BlackHawk Init]]></description>
-      <long-description><![CDATA[<p>Contains program constants</p>
-
-<p>PHP version 5.2.17 or higher</p>
-
-<p>LICENSE: TBD</p>]]></long-description>
+&lt;p&gt;LICENSE: TBD&lt;/p&gt;</long-description>
       <tag line="2" name="package" description="BlackHawk"/>
       <tag line="2" name="subpackage" description="General"/>
       <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -2045,38 +2095,38 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
     <constant namespace="global" line="25" package="BlackHawk\General">
       <name>BLACKHAWK_ROOT</name>
       <full_name>\BLACKHAWK_ROOT</full_name>
-      <value><![CDATA[realpath(dirname(__FILE__))]]></value>
+      <value>realpath(dirname(__FILE__))</value>
     </constant>
     <constant namespace="global" line="27" package="BlackHawk\General">
       <name>BLACKHAWK_CONFIG</name>
       <full_name>\BLACKHAWK_CONFIG</full_name>
-      <value><![CDATA["standard"]]></value>
+      <value></value>
     </constant>
     <constant namespace="global" line="29" package="BlackHawk\General">
       <name>BLACKHAWK_VERSION</name>
       <full_name>\BLACKHAWK_VERSION</full_name>
-      <value><![CDATA[0.2]]></value>
+      <value>0.2</value>
     </constant>
     <constant namespace="global" line="31" package="BlackHawk\General">
       <name>BLACKHAWK_SUBVERSION</name>
       <full_name>\BLACKHAWK_SUBVERSION</full_name>
-      <value><![CDATA[0.1]]></value>
+      <value>0.1</value>
     </constant>
     <constant namespace="global" line="33" package="BlackHawk\General">
       <name>BLACKHAWK_COMMIT</name>
       <full_name>\BLACKHAWK_COMMIT</full_name>
-      <value><![CDATA[42]]></value>
+      <value>42</value>
     </constant>
   </file>
-  <file path="member.php" hash="7b2046d81867d7c62a670da2ae34aeac" package="Default">
-    <include line="6" type="Include" package="Default">
-      <name>assets/member.inc.php</name>
-    </include>
+  <file path="profile.php" hash="8f95a775114395d9d5351ef4e06ba74f" package="Default">
+    <markers>
+      <todo line="91">Pull real name</todo>
+    </markers>
     <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file member.php</error>
+      <error line="0" code="50007">No page-level DocBlock was found in file profile.php</error>
     </parse_markers>
   </file>
-  <file path="redirect.php" hash="6071d042d57d772333e17407a5d7393d" package="Default">
+  <file path="redirect.php" hash="642e78ac491350633dbda2aac3fd14b9" package="Default">
     <include line="2" type="Include" package="Default">
       <name>assets/member.inc.php</name>
     </include>
@@ -2087,14 +2137,14 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
       <error line="0" code="50007">No page-level DocBlock was found in file redirect.php</error>
     </parse_markers>
   </file>
-  <file path="roles/index.php" hash="037241acbe8cc1e37dce5cb495f70afc" package="BlackHawk\Security">
+  <file path="setup\css\index.php" hash="bfd6770f5b16662d2b1f67eea7cd7e65" package="BlackHawk\Security">
     <docblock line="2">
-      <description><![CDATA[Security Index Page]]></description>
-      <long-description><![CDATA[<p>This file prevents directory listing</p>
+      <description>Security Index Page</description>
+      <long-description>&lt;p&gt;This file prevents directory listing&lt;/p&gt;
 
-<p>PHP version 5.2.17 or higher</p>
+&lt;p&gt;PHP version 5.2.17 or higher&lt;/p&gt;
 
-<p>LICENSE: TBD</p>]]></long-description>
+&lt;p&gt;LICENSE: TBD&lt;/p&gt;</long-description>
       <tag line="2" name="package" description="BlackHawk"/>
       <tag line="2" name="subpackage" description="Security"/>
       <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -2104,156 +2154,121 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
       <tag line="2" name="since" description="File available since Release 0.3.0"/>
     </docblock>
   </file>
-  <file path="roles/parking_services.php" hash="194b7dacc804c7bdbb785be00c357599" package="Default">
-    <include line="2" type="Include" package="Default">
-      <name>../assets/member.inc.php</name>
+  <file path="setup\index.php" hash="48f54e148930076793572398cbd9619e" package="Default">
+    <include line="2" type="Require Once" package="Default">
+      <name>../init.php</name>
     </include>
-    <markers>
-      <todo line="4">On each, we need to check their cookie and then if not correct role, redirect them back to this.</todo>
-      <todo line="5">User should be logged in on this page</todo>
-    </markers>
-    <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file roles/parking_services.php</error>
-    </parse_markers>
-  </file>
-  <file path="roles/police.php" hash="194b7dacc804c7bdbb785be00c357599" package="Default">
-    <include line="2" type="Include" package="Default">
-      <name>../assets/member.inc.php</name>
-    </include>
-    <markers>
-      <todo line="4">On each, we need to check their cookie and then if not correct role, redirect them back to this.</todo>
-      <todo line="5">User should be logged in on this page</todo>
-    </markers>
-    <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file roles/police.php</error>
-    </parse_markers>
-  </file>
-  <file path="roles/reserved.php" hash="194b7dacc804c7bdbb785be00c357599" package="Default">
-    <include line="2" type="Include" package="Default">
-      <name>../assets/member.inc.php</name>
-    </include>
-    <markers>
-      <todo line="4">On each, we need to check their cookie and then if not correct role, redirect them back to this.</todo>
-      <todo line="5">User should be logged in on this page</todo>
-    </markers>
-    <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file roles/reserved.php</error>
-    </parse_markers>
-  </file>
-  <file path="roles/staff.php" hash="194b7dacc804c7bdbb785be00c357599" package="Default">
-    <include line="2" type="Include" package="Default">
-      <name>../assets/member.inc.php</name>
-    </include>
-    <markers>
-      <todo line="4">On each, we need to check their cookie and then if not correct role, redirect them back to this.</todo>
-      <todo line="5">User should be logged in on this page</todo>
-    </markers>
-    <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file roles/staff.php</error>
-    </parse_markers>
-  </file>
-  <file path="roles/student_campus.php" hash="194b7dacc804c7bdbb785be00c357599" package="Default">
-    <include line="2" type="Include" package="Default">
-      <name>../assets/member.inc.php</name>
-    </include>
-    <markers>
-      <todo line="4">On each, we need to check their cookie and then if not correct role, redirect them back to this.</todo>
-      <todo line="5">User should be logged in on this page</todo>
-    </markers>
-    <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file roles/student_campus.php</error>
-    </parse_markers>
-  </file>
-  <file path="roles/student_commuter.php" hash="194b7dacc804c7bdbb785be00c357599" package="Default">
-    <include line="2" type="Include" package="Default">
-      <name>../assets/member.inc.php</name>
-    </include>
-    <markers>
-      <todo line="4">On each, we need to check their cookie and then if not correct role, redirect them back to this.</todo>
-      <todo line="5">User should be logged in on this page</todo>
-    </markers>
-    <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file roles/student_commuter.php</error>
-    </parse_markers>
-  </file>
-  <file path="roles/sysadmin.php" hash="194b7dacc804c7bdbb785be00c357599" package="Default">
-    <include line="2" type="Include" package="Default">
-      <name>../assets/member.inc.php</name>
-    </include>
-    <markers>
-      <todo line="4">On each, we need to check their cookie and then if not correct role, redirect them back to this.</todo>
-      <todo line="5">User should be logged in on this page</todo>
-    </markers>
-    <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file roles/sysadmin.php</error>
-    </parse_markers>
-  </file>
-  <file path="roles/visitor.php" hash="194b7dacc804c7bdbb785be00c357599" package="Default">
-    <include line="2" type="Include" package="Default">
-      <name>../assets/member.inc.php</name>
-    </include>
-    <markers>
-      <todo line="4">On each, we need to check their cookie and then if not correct role, redirect them back to this.</todo>
-      <todo line="5">User should be logged in on this page</todo>
-    </markers>
-    <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file roles/visitor.php</error>
-    </parse_markers>
-  </file>
-  <file path="setup/css/index.php" hash="037241acbe8cc1e37dce5cb495f70afc" package="BlackHawk\Security">
-    <docblock line="2">
-      <description><![CDATA[Security Index Page]]></description>
-      <long-description><![CDATA[<p>This file prevents directory listing</p>
-
-<p>PHP version 5.2.17 or higher</p>
-
-<p>LICENSE: TBD</p>]]></long-description>
-      <tag line="2" name="package" description="BlackHawk"/>
-      <tag line="2" name="subpackage" description="Security"/>
-      <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
-      <tag line="2" name="copyright" description="2012 Project BlackHawk"/>
-      <tag line="2" name="license" description="http://www.futuregencode.com/blackhawk/404  License 1.00"/>
-      <tag line="2" name="version" description="0.3.0"/>
-      <tag line="2" name="since" description="File available since Release 0.3.0"/>
-    </docblock>
-  </file>
-  <file path="setup/index.php" hash="727c4e4be2b3c3aa010ebf614758836c" package="Default">
-    <include line="3" type="Require Once" package="Default">
+    <include line="4" type="Require Once" package="Default">
       <name>../assets/notice.class.php</name>
     </include>
-    <include line="352" type="Require Once" package="Default">
+    <include line="590" type="Require Once" package="Default">
       <name>../assets/member.inc.php</name>
     </include>
-    <function namespace="global" line="437" package="Default">
+    <function namespace="global" line="677" package="Default">
       <name>rrmdir</name>
       <full_name>\rrmdir</full_name>
-      <argument line="437">
+      <argument line="677">
         <name>$dir</name>
-        <default><![CDATA[]]></default>
+        <default></default>
         <type/>
       </argument>
     </function>
     <markers>
-      <todo line="91">php explode to make sure its valid</todo>
-      <todo line="569">Add PHPVersion check</todo>
-      <todo line="570">Add bycrypt() check</todo>
-      <todo line="571">Add sessions check</todo>
-      <todo line="572">Add cookies check</todo>
-      <todo line="573">Add validate the admin emails</todo>
+      <todo line="92">php explode to make sure its valid</todo>
+      <todo line="600">make sure htaccess exists</todo>
+      <todo line="809">Add PHPVersion check</todo>
+      <todo line="810">Add bycrypt() check</todo>
+      <todo line="811">Add sessions check</todo>
+      <todo line="812">Add cookies check</todo>
+      <todo line="813">Add validate the admin emails</todo>
     </markers>
     <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file setup/index.php</error>
-      <error line="437" code="50009">No DocBlock was found for function \rrmdir()</error>
+      <error line="0" code="50007">No page-level DocBlock was found in file setup\index.php</error>
+      <error line="677" code="50009">No DocBlock was found for function \rrmdir()</error>
     </parse_markers>
   </file>
-  <file path="tests/index.php" hash="037241acbe8cc1e37dce5cb495f70afc" package="BlackHawk\Security">
+  <file path="tests\bootstrap.php" hash="02fb9f998a1aced8d1df7f17ed3b9555" package="Default">
+    <include line="7" type="Require" package="Default">
+      <name/>
+    </include>
+    <function namespace="global" line="3" package="Default">
+      <name>loader</name>
+      <full_name>\loader</full_name>
+      <argument line="3">
+        <name>$class</name>
+        <default></default>
+        <type/>
+      </argument>
+    </function>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file tests\bootstrap.php</error>
+      <error line="3" code="50009">No DocBlock was found for function \loader()</error>
+    </parse_markers>
+  </file>
+  <file path="tests\HelloWorldTest.php" hash="b1188bd18d189a28a8ace4d436b8080f" package="Default">
+    <include line="2" type="Require Once" package="Default">
+      <name>test_classes/HelloWorld.php</name>
+    </include>
+    <class final="false" abstract="false" namespace="global" line="3" package="Default">
+      <extends>\PHPUnit_Framework_TestCase</extends>
+      <name>HelloWorldTest</name>
+      <full_name>\HelloWorldTest</full_name>
+      <property final="false" static="false" visibility="private" line="8" namespace="global" package="Default">
+        <name>$pdo</name>
+        <default></default>
+        <docblock line="5">
+          <description></description>
+          <long-description></long-description>
+          <tag line="5" name="var" description="" type="\PDO">
+            <type by_reference="false">\PDO</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="9" package="Default">
+        <name>setUp</name>
+        <full_name>setUp</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="16" package="Default">
+        <name>tearDown</name>
+        <full_name>tearDown</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="21" package="Default">
+        <name>testHelloWorld</name>
+        <full_name>testHelloWorld</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="28" package="Default">
+        <name>testHello</name>
+        <full_name>testHello</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="35" package="Default">
+        <name>testAddition</name>
+        <full_name>testAddition</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="42" package="Default">
+        <name>testWhat</name>
+        <full_name>testWhat</full_name>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file tests\HelloWorldTest.php</error>
+      <error line="3" code="50000">No DocBlock was found for \HelloWorldTest</error>
+      <critical line="5" code="50019">No short description for property $pdo</critical>
+      <error line="9" code="50010">No DocBlock was found for method setUp()</error>
+      <error line="16" code="50010">No DocBlock was found for method tearDown()</error>
+      <error line="21" code="50010">No DocBlock was found for method testHelloWorld()</error>
+      <error line="28" code="50010">No DocBlock was found for method testHello()</error>
+      <error line="35" code="50010">No DocBlock was found for method testAddition()</error>
+      <error line="42" code="50010">No DocBlock was found for method testWhat()</error>
+    </parse_markers>
+  </file>
+  <file path="tests\index.php" hash="bfd6770f5b16662d2b1f67eea7cd7e65" package="BlackHawk\Security">
     <docblock line="2">
-      <description><![CDATA[Security Index Page]]></description>
-      <long-description><![CDATA[<p>This file prevents directory listing</p>
+      <description>Security Index Page</description>
+      <long-description>&lt;p&gt;This file prevents directory listing&lt;/p&gt;
 
-<p>PHP version 5.2.17 or higher</p>
+&lt;p&gt;PHP version 5.2.17 or higher&lt;/p&gt;
 
-<p>LICENSE: TBD</p>]]></long-description>
+&lt;p&gt;LICENSE: TBD&lt;/p&gt;</long-description>
       <tag line="2" name="package" description="BlackHawk"/>
       <tag line="2" name="subpackage" description="Security"/>
       <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -2263,12 +2278,71 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
       <tag line="2" name="since" description="File available since Release 0.3.0"/>
     </docblock>
   </file>
-  <file path="travis.php" hash="89a086cf35523400c353bf5ef70a0e35" package="Default">
+  <file path="tests\Test.php" hash="6ee9b8cf832185e3f7ea970c721a01bf" package="Default">
+    <class final="false" abstract="false" namespace="global" line="3" package="Default">
+      <extends>\PHPUnit_Framework_TestCase</extends>
+      <name>HelloWorldTest</name>
+      <full_name>\HelloWorldTest</full_name>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="5" package="Default">
+        <name>testAddition</name>
+        <full_name>testAddition</full_name>
+      </method>
+    </class>
     <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file travis.php</error>
+      <error line="0" code="50007">No page-level DocBlock was found in file tests\Test.php</error>
+      <error line="3" code="50000">No DocBlock was found for \HelloWorldTest</error>
+      <error line="5" code="50010">No DocBlock was found for method testAddition()</error>
     </parse_markers>
   </file>
-  <file path="update.php" hash="ec459bf27063a6c7a43314a4aeb03930" package="Default">
+  <file path="tests\test_classes\HelloWorld.php" hash="fae50ee89a1d70ba096ae25ed4a467ea" package="Default">
+    <class final="false" abstract="false" namespace="global" line="3" package="Default">
+      <extends/>
+      <name>HelloWorld</name>
+      <full_name>\HelloWorld</full_name>
+      <property final="false" static="false" visibility="private" line="8" namespace="global" package="Default">
+        <name>$pdo</name>
+        <default></default>
+        <docblock line="5">
+          <description></description>
+          <long-description></long-description>
+          <tag line="5" name="var" description="" type="\PDO">
+            <type by_reference="false">\PDO</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="10" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <argument line="10">
+          <name>$pdo</name>
+          <default></default>
+          <type>\PDO</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="15" package="Default">
+        <name>hello</name>
+        <full_name>hello</full_name>
+        <argument line="15">
+          <name>$what</name>
+          <default>'World'</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="23" package="Default">
+        <name>what</name>
+        <full_name>what</full_name>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file tests\test_classes\HelloWorld.php</error>
+      <error line="3" code="50000">No DocBlock was found for \HelloWorld</error>
+      <critical line="5" code="50019">No short description for property $pdo</critical>
+      <error line="10" code="50010">No DocBlock was found for method __construct()</error>
+      <error line="15" code="50010">No DocBlock was found for method hello()</error>
+      <error line="23" code="50010">No DocBlock was found for method what()</error>
+    </parse_markers>
+  </file>
+  <file path="update.php" hash="3e9155b99232a06ff8ab9e31f9e74650" package="Default">
     <parse_markers>
       <error line="0" code="50007">No page-level DocBlock was found in file update.php</error>
     </parse_markers>
@@ -2277,7 +2351,6 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
     <package name="Debug" full_name="BlackHawk\Debug"/>
     <package name="Garage" full_name="BlackHawk\Garage"/>
     <package name="General" full_name="BlackHawk\General"/>
-    <package name="Home" full_name="BlackHawk\Home"/>
     <package name="Internal Functions" full_name="BlackHawk\Internal Functions"/>
     <package name="Mail" full_name="BlackHawk\Mail"/>
     <package name="Members" full_name="BlackHawk\Members"/>
@@ -2286,7 +2359,7 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
   </package>
   <package name="Default" full_name="Default"/>
   <namespace name="global" full_name="global"/>
-  <marker count="34">todo</marker>
+  <marker count="24">todo</marker>
   <marker count="0">fixme</marker>
   <deprecated count="0"/>
 </project>

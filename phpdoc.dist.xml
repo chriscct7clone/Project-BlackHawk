@@ -1,12 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<phpdoc>
-  <parser>
-    <target>documentation/phpdoc</target>
-  </parser>
-  <transformer>
-    <target>documentation</target>
-  </transformer>
-  <files>
+<phpdocumentor>
+<title>My project</title>
+<parser>
+		<markers>
+				<item>TODO</item>
+				<item>FIXME</item>
+		</markers>
+	<default-package-name>BlackHawk</default-package-name>
+	<target>documentation</target>
+</parser>
+<transformer>
+	<target>documentation</target>
+</transformer>
+<transformations>
+	<template name="responsive" />
+</transformations>
+<files>
     <directory>.</directory>
-  </files>
-</phpdoc>
+    <ignore>vendor/*</ignore>
+	<ignore>assets/*</ignore>
+</files>
+<plugins>
+	<plugin path="Core">
+		<option name="a">value</option>
+	</plugin>
+</plugins>
+<logging>
+    <level>warn</level>
+    <paths>
+        <default>log/{DATE}.log</default>
+        <errors>log/{DATE}.errors.log</errors>
+    </paths>
+</logging>
+</phpdocumentor>

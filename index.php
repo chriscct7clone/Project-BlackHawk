@@ -52,7 +52,7 @@ if($action == 'logout') {
 		// $content = $member->deleteAccount($user->id);
 	// } elseif($subaction == 'settings') {
 		// $title   = 'Settings';
-		// $content = '<a href="dashboard.php?action=settings&amp;subaction=password" class="button full">Change Password</a><a href="dashboard.php?action=settings&amp;subaction=delete" class="button full">Delete Account</a>';
+		// $content = '<a href="index.php?action=settings&amp;subaction=password" class="button full">Change Password</a><a href="index.php?action=settings&amp;subaction=delete" class="button full">Delete Account</a>';
 	// }
 	
 	
@@ -142,7 +142,7 @@ if($action == 'logout') {
                 <div class="navbar navbar-fixed-top">
                     <div class="navbar-inner">
                         <div class="container-fluid">
-                            <a class="brand" href="dashboard.html"><i class="icon-home icon-white"></i> BlackHawk</a>
+                            <a class="brand" href="index.php"><i class="icon-home icon-white"></i> BlackHawk</a>
                             <ul class="nav user_menu  pull-right">
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php 
@@ -152,7 +152,7 @@ if($action == 'logout') {
 										<li><a href="./profile.php">My Profile</a></li>
 										<li><a href="./profile.php?action=changepassword">Change Password</a></li>
 										<li class="divider"></li>
-										<li><a href="dashboard.php?action=logout">Log Out</a></li>
+										<li><a href="index.php?action=logout">Log Out</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -420,7 +420,7 @@ if($action == 'recover-password') {
 	$content = $member->recoverPassword();
 } elseif($action == 'verification') {
 	$title   = 'Your account has been verified';
-	$content = $member->verification() . '<p class="options group"><a href="dashboard.php?action=login">Already have an account?</a></p>';
+	$content = $member->verification() . '<p class="options group"><a href="index.php?action=login">Already have an account?</a></p>';
 }
 elseif($action == 'statistics') {
 	$title   = 'Redirecting';
@@ -482,14 +482,14 @@ else {
 		<div id="user">
 			<div id="user-info">Hello, Guest</div>
 			<ul id="user-ops">
-				<li><a href="dashboard.php?action=login">Login</a></li>
+				<li><a href="index.php?action=login">Login</a></li>
 			</ul>
 		</div>
 	</div>
 	<ul id="navigation" class="group">
-		<?php if($action != null){ ?><li><a href="dashboard.php">Home Page</a></li><?php } else{ }?>
-		<?php if($action != "login"){ ?><li><a href="dashboard.php?action=login">Login</a></li><?php } else{ }?>
-		<?php if($action != "statistics"){ ?><li><a href="dashboard.php?action=statistics">Public Statistics</a></li><?php } else{ }?>
+		<?php if($action != null){ ?><li><a href="index.php">Home Page</a></li><?php } else{ }?>
+		<?php if($action != "login"){ ?><li><a href="index.php?action=login">Login</a></li><?php } else{ }?>
+		<?php if($action != "statistics"){ ?><li><a href="index.php?action=statistics">Public Statistics</a></li><?php } else{ }?>
 	</ul>
 	<?php if($action != 'recover-password' && $action != 'login'){ ?>	
 	<div  id="main" class="group">
@@ -500,8 +500,8 @@ else {
 	<div class="login_box">
 	<?php echo $content; ?>
 	<div class="links_b links_btm clearfix">
-			<?php if($action != "recover-password"){?><span class="linkform"><a href="dashboard.php?action=recover-password">Forgot password?</a></span><?php } else{ }?>
-			<?php if($action != "login"){?><span class="linkform">Never mind, <a href="dashboard.php?action=login">send me back to the sign-in screen</a></span><?php } else{ }?>
+			<?php if($action != "recover-password"){?><span class="linkform"><a href="index.php?action=recover-password">Forgot password?</a></span><?php } else{ }?>
+			<?php if($action != "login"){?><span class="linkform">Never mind, <a href="index.php?action=login">send me back to the sign-in screen</a></span><?php } else{ }?>
 		</div>
 	</div>
 	    <script src="assets/js/jquery.min.js"></script>
