@@ -4,8 +4,8 @@ php:
   - 5.3
   - 5.4
 before_script:
-  - mysql -e 'create database users;'
-script: "php tests/travis.php" 
+  - mysql -e 'create database blackhawk;'
+script: phpunit --configuration phpunit.xml --coverage-text
 notifications:
   email:
     - chriscct7@gmail.com 
