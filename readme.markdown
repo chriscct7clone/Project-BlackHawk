@@ -75,6 +75,19 @@ Please see license.txt for full licensing terms and conditions.
 + PEAR compliant minus error handling
 + Zend-Framework compliant minus class file naming and namespace management 
 
+## Shelved Features: ##
+Blackhawk had alot of features that were either done or near completition that did not make the final cut for the presentation. Some features would have taken too long to finish testing, or to document. Some were dropped do to legal reasons, and some were even done, but dropped due to stability reasons. These features will be added at a later date:
++ Gamification (rewards for parking smartly) (would not be finished in time)
++ Shortest Route/Parking by Schedule  (would not be finished in time)
++ Auto-ticket (legal reasons)
++ Advanced Live Statistics (stability)
++ Historical/Archived Statistics (stability)
++ BOSSCARS functionality
++ Reserved Spots
++ Premium Parking Mode
++ Targeted Advertisement by UID
+//TODO: Add the rest from Github Issues to this
+
 ## Credits ##
 - Project BlackHawk is (c) Chris Christoff, James Stephens, Steve Curry, and Stetson Gafford.
 - Full credits in the credits.txt file.
