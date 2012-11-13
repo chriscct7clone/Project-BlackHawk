@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>(<?php echo $suiteResults['pass'],'/', $suiteResults['fail']?>) <?php echo $title?> | Testify Suite</title>
+        <title>(<?php echo $suiteResults['pass'],'/', $suiteResults['fail']?>) <?php echo $title?> | BlackHawk Local Test Suite</title>
         
         <style>
         	*{
@@ -219,7 +219,7 @@
 		  		
 	  	</div>
 	  	
-        <footer> Powered by <a href="http://tutorialzine.com/projects/testify/">Testify</a> framework</footer>
+        <footer> Powered by <a href="http://www.futuregencode.com/blackhawk/">BlackHawk</a></footer>
         
     </body>
 </html>
