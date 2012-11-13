@@ -6,7 +6,7 @@ class HelloWorldTest extends PHPUnit_Framework_TestCase
      * @var PDO
      */
     private $pdo;
-
+	require_once('test_classes/HelloWorld.php');
     public function setUp()
     {
         $this->pdo = new PDO($GLOBALS['db_dsn'], $GLOBALS['db_username'], $GLOBALS['db_password']);
@@ -32,6 +32,13 @@ class HelloWorldTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals('Hello Bar', $helloWorld->hello('Bar'));
     }
+	   
+	public function testAddtipn()
+    {
+	$addition=1+1;
+	$this->assertEquals($addition,2);
+    }
+
 
     public function testWhat()
     {
