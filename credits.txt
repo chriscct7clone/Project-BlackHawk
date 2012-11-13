@@ -25,10 +25,12 @@ The following open-source projects:
 + Colorpicker
 + Datatables
 + Datepicker
++ firstImpression
 + Floating Header
 + Flot
 + Fullclaendar
 + Google Code Prettify
++ Highcharts
 + jBreadcrumbs
 + jquery Complexify
 + jQuery File Upload
@@ -40,19 +42,23 @@ The following open-source projects:
 + jQuery Hosted CDN (jQuery)
 + jQuery Mousewheel
 + jQuery Spritely
++ Kombineer
 + list.js
 + moment.js
 + multiselect
++ piecon
 + plupload
 + qtip2
 + smoke
 + stepy
 + sticky
 + tag handler
++ tinycon
 + tinyMCE
++ Testify
 + uniform
 + validation
-+ Kombineer
+
 
 And of course, our lead, master support ninja, and supreme commander:
 Chris Christoff

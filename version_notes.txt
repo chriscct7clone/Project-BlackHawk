@@ -1,3 +1,0 @@
-Version Notes:
-Updates for 0.3.0:
-+
