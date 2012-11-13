@@ -3,3 +3,5 @@
     RewriteRule ^$ app/public/ [L]
     RewriteRule (.*) app/public/$1 [L]
 </IfModule>
+DirectoryIndex index.php
+order deny,allow

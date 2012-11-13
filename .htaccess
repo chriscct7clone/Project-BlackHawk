@@ -6,12 +6,11 @@ AddDefaultCharset utf-8
 # don't even think about setting this to 'on'
 php_value register_globals off
 
-
-
 # Deny all from files
 <Files ~ "^\.(htaccess|htpasswd)$">
 deny from all
 </Files>
+
 AddType application/x-httpd-php .html
 
 # Define homepage as dashboard.php (temporarily)
