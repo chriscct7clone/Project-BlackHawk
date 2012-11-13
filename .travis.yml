@@ -5,7 +5,7 @@ php:
   - 5.4
 before_script:
   - mysql -e 'create database blackhawk;'
-script: phpunit --configuration phpunit.xml --coverage-text --coverage-clover "clover"
+script: phpunit --configuration phpunit.xml --coverage-text
 notifications:
   email:
     - chriscct7@gmail.com 
