@@ -607,7 +607,7 @@
       <full_name>\member</full_name>
       <docblock line="22">
         <description>Member Class</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="22" name="package" description="BlackHawk"/>
         <tag line="22" name="subpackage" description="Members"/>
         <tag line="22" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -666,12 +666,12 @@ uses a unique salt provided by genSalt function&lt;/p&gt;</long-description>
         </docblock>
         <argument line="114">
           <name>$salt</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="114">
           <name>$password</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -691,7 +691,7 @@ Checks to make sure string is all numbers&lt;/p&gt;</long-description>
         </docblock>
         <argument line="146">
           <name>$int</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -711,12 +711,12 @@ to the current stored hashed password&lt;/p&gt;</long-description>
         </docblock>
         <argument line="178">
           <name>$password</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="178">
           <name>$existingHash</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -775,7 +775,7 @@ Log it in the database&lt;/p&gt;</long-description>
         </docblock>
         <argument line="478">
           <name>$id</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -791,7 +791,7 @@ Log it in the database&lt;/p&gt;</long-description>
         </docblock>
         <argument line="502">
           <name>$id</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -813,12 +813,12 @@ All for security&lt;/p&gt;</long-description>
         </docblock>
         <argument line="525">
           <name>$userid</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="525">
           <name>$action</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -843,12 +843,12 @@ All for security&lt;/p&gt;</long-description>
         </docblock>
         <argument line="569">
           <name>$username</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="569">
           <name>$password</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -1133,7 +1133,7 @@ Lets the user Recover their password using e-mail&lt;/p&gt;</long-description>
       <todo line="36">UPD ROLE SPECIFIC FUNCTIONS CALLED FROM UPD ROLE FILE</todo>
     </markers>
   </file>
-  <file path="debug\error.php" hash="193cb2d874113241735c45907be07b76" package="Default">
+  <file path="debug\error.php" hash="f0917882f7cb58510fd106437013e521" package="Default">
     <include line="3" type="Include" package="Default">
       <name>./../init.php</name>
     </include>
@@ -1147,970 +1147,6 @@ Lets the user Recover their password using e-mail&lt;/p&gt;</long-description>
       <error line="0" code="50007">No page-level DocBlock was found in file debug\error.php</error>
     </parse_markers>
   </file>
-  <file path="debug\error_browser.php" hash="d7fd5cd36c295798271e7b2228cf68b7" package="Default">
-    <class final="false" abstract="false" namespace="global" line="3" package="Default">
-      <extends/>
-      <name>Browser</name>
-      <full_name>\Browser</full_name>
-      <property final="false" static="false" visibility="public" line="4" namespace="global" package="Default">
-        <name>$_agent</name>
-        <default>''</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="5" namespace="global" package="Default">
-        <name>$_browser_name</name>
-        <default>''</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="6" namespace="global" package="Default">
-        <name>$_version</name>
-        <default>''</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="7" namespace="global" package="Default">
-        <name>$_platform</name>
-        <default>''</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="8" namespace="global" package="Default">
-        <name>$_os</name>
-        <default>''</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="9" namespace="global" package="Default">
-        <name>$_is_aol</name>
-        <default>false</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="10" namespace="global" package="Default">
-        <name>$_is_mobile</name>
-        <default>false</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="11" namespace="global" package="Default">
-        <name>$_is_robot</name>
-        <default>false</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="12" namespace="global" package="Default">
-        <name>$_aol_version</name>
-        <default>''</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="14" namespace="global" package="Default">
-        <name>$BROWSER_UNKNOWN</name>
-        <default>'unknown'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="15" namespace="global" package="Default">
-        <name>$VERSION_UNKNOWN</name>
-        <default>'unknown'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="17" namespace="global" package="Default">
-        <name>$BROWSER_OPERA</name>
-        <default>'Opera'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="18" namespace="global" package="Default">
-        <name>$BROWSER_OPERA_MINI</name>
-        <default>'Opera Mini'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="19" namespace="global" package="Default">
-        <name>$BROWSER_WEBTV</name>
-        <default>'WebTV'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="20" namespace="global" package="Default">
-        <name>$BROWSER_IE</name>
-        <default>'Internet Explorer'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="21" namespace="global" package="Default">
-        <name>$BROWSER_POCKET_IE</name>
-        <default>'Pocket Internet Explorer'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="22" namespace="global" package="Default">
-        <name>$BROWSER_KONQUEROR</name>
-        <default>'Konqueror'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="23" namespace="global" package="Default">
-        <name>$BROWSER_ICAB</name>
-        <default>'iCab'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="24" namespace="global" package="Default">
-        <name>$BROWSER_OMNIWEB</name>
-        <default>'OmniWeb'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="25" namespace="global" package="Default">
-        <name>$BROWSER_FIREBIRD</name>
-        <default>'Firebird'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="26" namespace="global" package="Default">
-        <name>$BROWSER_FIREFOX</name>
-        <default>'Firefox'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="27" namespace="global" package="Default">
-        <name>$BROWSER_ICEWEASEL</name>
-        <default>'Iceweasel'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="28" namespace="global" package="Default">
-        <name>$BROWSER_SHIRETOKO</name>
-        <default>'Shiretoko'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="29" namespace="global" package="Default">
-        <name>$BROWSER_MOZILLA</name>
-        <default>'Mozilla'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="30" namespace="global" package="Default">
-        <name>$BROWSER_AMAYA</name>
-        <default>'Amaya'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="31" namespace="global" package="Default">
-        <name>$BROWSER_LYNX</name>
-        <default>'Lynx'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="32" namespace="global" package="Default">
-        <name>$BROWSER_SAFARI</name>
-        <default>'Safari'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="33" namespace="global" package="Default">
-        <name>$BROWSER_IPHONE</name>
-        <default>'iPhone'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="34" namespace="global" package="Default">
-        <name>$BROWSER_IPOD</name>
-        <default>'iPod'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="35" namespace="global" package="Default">
-        <name>$BROWSER_IPAD</name>
-        <default>'iPad'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="36" namespace="global" package="Default">
-        <name>$BROWSER_CHROME</name>
-        <default>'Chrome'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="37" namespace="global" package="Default">
-        <name>$BROWSER_ANDROID</name>
-        <default>'Android'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="38" namespace="global" package="Default">
-        <name>$BROWSER_GOOGLEBOT</name>
-        <default>'GoogleBot'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="39" namespace="global" package="Default">
-        <name>$BROWSER_SLURP</name>
-        <default>'Yahoo! Slurp'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="40" namespace="global" package="Default">
-        <name>$BROWSER_W3CVALIDATOR</name>
-        <default>'W3C Validator'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="41" namespace="global" package="Default">
-        <name>$BROWSER_BLACKBERRY</name>
-        <default>'BlackBerry'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="42" namespace="global" package="Default">
-        <name>$BROWSER_ICECAT</name>
-        <default>'IceCat'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="43" namespace="global" package="Default">
-        <name>$BROWSER_NOKIA_S60</name>
-        <default>'Nokia S60 OSS Browser'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="44" namespace="global" package="Default">
-        <name>$BROWSER_NOKIA</name>
-        <default>'Nokia Browser'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="45" namespace="global" package="Default">
-        <name>$BROWSER_MSN</name>
-        <default>'MSN Browser'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="46" namespace="global" package="Default">
-        <name>$BROWSER_MSNBOT</name>
-        <default>'MSN Bot'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="49" namespace="global" package="Default">
-        <name>$BROWSER_NETSCAPE_NAVIGATOR</name>
-        <default>'Netscape Navigator'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="50" namespace="global" package="Default">
-        <name>$BROWSER_GALEON</name>
-        <default>'Galeon'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="51" namespace="global" package="Default">
-        <name>$BROWSER_NETPOSITIVE</name>
-        <default>'NetPositive'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="52" namespace="global" package="Default">
-        <name>$BROWSER_PHOENIX</name>
-        <default>'Phoenix'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="54" namespace="global" package="Default">
-        <name>$PLATFORM_UNKNOWN</name>
-        <default>'unknown'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="55" namespace="global" package="Default">
-        <name>$PLATFORM_WINDOWS</name>
-        <default>'Windows'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="56" namespace="global" package="Default">
-        <name>$PLATFORM_WINDOWS_CE</name>
-        <default>'Windows CE'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="57" namespace="global" package="Default">
-        <name>$PLATFORM_APPLE</name>
-        <default>'Apple'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="58" namespace="global" package="Default">
-        <name>$PLATFORM_LINUX</name>
-        <default>'Linux'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="59" namespace="global" package="Default">
-        <name>$PLATFORM_OS2</name>
-        <default>'OS/2'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="60" namespace="global" package="Default">
-        <name>$PLATFORM_BEOS</name>
-        <default>'BeOS'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="61" namespace="global" package="Default">
-        <name>$PLATFORM_IPHONE</name>
-        <default>'iPhone'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="62" namespace="global" package="Default">
-        <name>$PLATFORM_IPOD</name>
-        <default>'iPod'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="63" namespace="global" package="Default">
-        <name>$PLATFORM_IPAD</name>
-        <default>'iPad'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="64" namespace="global" package="Default">
-        <name>$PLATFORM_BLACKBERRY</name>
-        <default>'BlackBerry'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="65" namespace="global" package="Default">
-        <name>$PLATFORM_NOKIA</name>
-        <default>'Nokia'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="66" namespace="global" package="Default">
-        <name>$PLATFORM_FREEBSD</name>
-        <default>'FreeBSD'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="67" namespace="global" package="Default">
-        <name>$PLATFORM_OPENBSD</name>
-        <default>'OpenBSD'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="68" namespace="global" package="Default">
-        <name>$PLATFORM_NETBSD</name>
-        <default>'NetBSD'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="69" namespace="global" package="Default">
-        <name>$PLATFORM_SUNOS</name>
-        <default>'SunOS'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="70" namespace="global" package="Default">
-        <name>$PLATFORM_OPENSOLARIS</name>
-        <default>'OpenSolaris'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="71" namespace="global" package="Default">
-        <name>$PLATFORM_ANDROID</name>
-        <default>'Android'</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="73" namespace="global" package="Default">
-        <name>$OPERATING_SYSTEM_UNKNOWN</name>
-        <default>'unknown'</default>
-      </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="75" package="Default">
-        <name>Browser</name>
-        <full_name>Browser</full_name>
-        <argument line="75">
-          <name>$useragent</name>
-          <default>""</default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="88" package="Default">
-        <name>reset</name>
-        <full_name>reset</full_name>
-        <docblock line="85">
-          <description>Reset all properties</description>
-          <long-description/>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="105" package="Default">
-        <name>isBrowser</name>
-        <full_name>isBrowser</full_name>
-        <docblock line="100">
-          <description>Check to see if the specific browser is valid</description>
-          <long-description/>
-          <tag line="100" name="param" description="" type="string" variable="$browserName">
-            <type by_reference="false">string</type>
-          </tag>
-          <tag line="100" name="return" description="if the browser is the specified browser" type="True">
-            <type by_reference="false">True</type>
-          </tag>
-        </docblock>
-        <argument line="105">
-          <name>$browserName</name>
-          <default/>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="111" package="Default">
-        <name>getBrowser</name>
-        <full_name>getBrowser</full_name>
-        <docblock line="107">
-          <description>The name of the browser.</description>
-          <long-description>&lt;p&gt;All return types are from the class contants&lt;/p&gt;</long-description>
-          <tag line="107" name="return" description="Name of the browser" type="string">
-            <type by_reference="false">string</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="116" package="Default">
-        <name>setBrowser</name>
-        <full_name>setBrowser</full_name>
-        <docblock line="112">
-          <description>Set the name of the browser</description>
-          <long-description/>
-          <tag line="112" name="param" description="The name of the Browser" type="\global\" variable="$browser"/>
-        </docblock>
-        <argument line="116">
-          <name>$browser</name>
-          <default/>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="121" package="Default">
-        <name>getPlatform</name>
-        <full_name>getPlatform</full_name>
-        <docblock line="117">
-          <description>The name of the platform.</description>
-          <long-description>&lt;p&gt;All return types are from the class contants&lt;/p&gt;</long-description>
-          <tag line="117" name="return" description="Name of the browser" type="string">
-            <type by_reference="false">string</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="126" package="Default">
-        <name>setPlatform</name>
-        <full_name>setPlatform</full_name>
-        <docblock line="122">
-          <description>Set the name of the platform</description>
-          <long-description/>
-          <tag line="122" name="param" description="The name of the Platform" type="\global\" variable="$platform"/>
-        </docblock>
-        <argument line="126">
-          <name>$platform</name>
-          <default/>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="131" package="Default">
-        <name>getVersion</name>
-        <full_name>getVersion</full_name>
-        <docblock line="127">
-          <description>The version of the browser.</description>
-          <long-description/>
-          <tag line="127" name="return" description="Version of the browser (will only contain alpha-numeric characters and a period)" type="string">
-            <type by_reference="false">string</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="136" package="Default">
-        <name>setVersion</name>
-        <full_name>setVersion</full_name>
-        <docblock line="132">
-          <description>Set the version of the browser</description>
-          <long-description/>
-          <tag line="132" name="param" description="The version of the Browser" type="\global\" variable="$version"/>
-        </docblock>
-        <argument line="136">
-          <name>$version</name>
-          <default/>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="141" package="Default">
-        <name>getAolVersion</name>
-        <full_name>getAolVersion</full_name>
-        <docblock line="137">
-          <description>The version of AOL.</description>
-          <long-description/>
-          <tag line="137" name="return" description="Version of AOL (will only contain alpha-numeric characters and a period)" type="string">
-            <type by_reference="false">string</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="146" package="Default">
-        <name>setAolVersion</name>
-        <full_name>setAolVersion</full_name>
-        <docblock line="142">
-          <description>Set the version of AOL</description>
-          <long-description/>
-          <tag line="142" name="param" description="The version of AOL" type="\global\" variable="$version"/>
-        </docblock>
-        <argument line="146">
-          <name>$version</name>
-          <default/>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="151" package="Default">
-        <name>isAol</name>
-        <full_name>isAol</full_name>
-        <docblock line="147">
-          <description>Is the browser from AOL?</description>
-          <long-description/>
-          <tag line="147" name="return" description="True if the browser is from AOL otherwise false" type="boolean">
-            <type by_reference="false">boolean</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="156" package="Default">
-        <name>isMobile</name>
-        <full_name>isMobile</full_name>
-        <docblock line="152">
-          <description>Is the browser from a mobile device?</description>
-          <long-description/>
-          <tag line="152" name="return" description="True if the browser is from a mobile device otherwise false" type="boolean">
-            <type by_reference="false">boolean</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="161" package="Default">
-        <name>isRobot</name>
-        <full_name>isRobot</full_name>
-        <docblock line="157">
-          <description>Is the browser from a robot (ex Slurp,GoogleBot)?</description>
-          <long-description/>
-          <tag line="157" name="return" description="True if the browser is from a robot otherwise false" type="boolean">
-            <type by_reference="false">boolean</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="166" package="Default">
-        <name>setAol</name>
-        <full_name>setAol</full_name>
-        <docblock line="162">
-          <description>Set the browser to be from AOL</description>
-          <long-description/>
-          <tag line="162" name="param" description="" type="\global\" variable="$isAol"/>
-        </docblock>
-        <argument line="166">
-          <name>$isAol</name>
-          <default/>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="171" package="Default">
-        <name>setMobile</name>
-        <full_name>setMobile</full_name>
-        <docblock line="167">
-          <description>Set the Browser to be mobile</description>
-          <long-description/>
-          <tag line="167" name="param" description="is the browser a mobile brower or not" type="boolean" variable="$value">
-            <type by_reference="false">boolean</type>
-          </tag>
-        </docblock>
-        <argument line="171">
-          <name>$value</name>
-          <default>true</default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="176" package="Default">
-        <name>setRobot</name>
-        <full_name>setRobot</full_name>
-        <docblock line="172">
-          <description>Set the Browser to be a robot</description>
-          <long-description/>
-          <tag line="172" name="param" description="is the browser a robot or not" type="boolean" variable="$value">
-            <type by_reference="false">boolean</type>
-          </tag>
-        </docblock>
-        <argument line="176">
-          <name>$value</name>
-          <default>true</default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="181" package="Default">
-        <name>getUserAgent</name>
-        <full_name>getUserAgent</full_name>
-        <docblock line="177">
-          <description>Get the user agent value in use to determine the browser</description>
-          <long-description/>
-          <tag line="177" name="return" description="The user agent from the HTTP header" type="string">
-            <type by_reference="false">string</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="186" package="Default">
-        <name>setUserAgent</name>
-        <full_name>setUserAgent</full_name>
-        <docblock line="182">
-          <description>Set the user agent value (the construction will use the HTTP header value - this will overwrite it)</description>
-          <long-description/>
-          <tag line="182" name="param" description="The value for the User Agent" type="\global\" variable="$agent_string"/>
-        </docblock>
-        <argument line="186">
-          <name>$agent_string</name>
-          <default/>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="196" package="Default">
-        <name>isChromeFrame</name>
-        <full_name>isChromeFrame</full_name>
-        <docblock line="191">
-          <description>Used to determine if the browser is actually "chromeframe"</description>
-          <long-description/>
-          <tag line="191" name="since" description="1.7"/>
-          <tag line="191" name="return" description="True if the browser is using chromeframe" type="boolean">
-            <type by_reference="false">boolean</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="203" package="Default">
-        <name>__toString</name>
-        <full_name>__toString</full_name>
-        <docblock line="199">
-          <description>Returns a formatted string with a summary of the details of the browser.</description>
-          <long-description/>
-          <tag line="199" name="return" description="formatted string with a summary of the browser" type="string">
-            <type by_reference="false">string</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="212" package="Default">
-        <name>determine</name>
-        <full_name>determine</full_name>
-        <docblock line="209">
-          <description>Protected routine to calculate and determine what the browser is in use (including platform)</description>
-          <long-description/>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="221" package="Default">
-        <name>checkBrowsers</name>
-        <full_name>checkBrowsers</full_name>
-        <docblock line="217">
-          <description>Protected routine to determine the browser type</description>
-          <long-description/>
-          <tag line="217" name="return" description="True if the browser was detected otherwise false" type="boolean">
-            <type by_reference="false">boolean</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="280" package="Default">
-        <name>checkBrowserBlackBerry</name>
-        <full_name>checkBrowserBlackBerry</full_name>
-        <docblock line="276">
-          <description>Determine if the user is using a BlackBerry (last updated 1.7)</description>
-          <long-description/>
-          <tag line="276" name="return" description="True if the browser is the BlackBerry browser otherwise false" type="boolean">
-            <type by_reference="false">boolean</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="296" package="Default">
-        <name>checkForAol</name>
-        <full_name>checkForAol</full_name>
-        <docblock line="292">
-          <description>Determine if the user is using an AOL User Agent (last updated 1.7)</description>
-          <long-description/>
-          <tag line="292" name="return" description="True if the browser is from AOL otherwise false" type="boolean">
-            <type by_reference="false">boolean</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="313" package="Default">
-        <name>checkBrowserGoogleBot</name>
-        <full_name>checkBrowserGoogleBot</full_name>
-        <docblock line="309">
-          <description>Determine if the browser is the GoogleBot or not (last updated 1.7)</description>
-          <long-description/>
-          <tag line="309" name="return" description="True if the browser is the GoogletBot otherwise false" type="boolean">
-            <type by_reference="false">boolean</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="329" package="Default">
-        <name>checkBrowserMSNBot</name>
-        <full_name>checkBrowserMSNBot</full_name>
-        <docblock line="325">
-          <description>Determine if the browser is the MSNBot or not (last updated 1.9)</description>
-          <long-description/>
-          <tag line="325" name="return" description="True if the browser is the MSNBot otherwise false" type="boolean">
-            <type by_reference="false">boolean</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="345" package="Default">
-        <name>checkBrowserW3CValidator</name>
-        <full_name>checkBrowserW3CValidator</full_name>
-        <docblock line="341">
-          <description>Determine if the browser is the W3C Validator or not (last updated 1.7)</description>
-          <long-description/>
-          <tag line="341" name="return" description="True if the browser is the W3C Validator otherwise false" type="boolean">
-            <type by_reference="false">boolean</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="369" package="Default">
-        <name>checkBrowserSlurp</name>
-        <full_name>checkBrowserSlurp</full_name>
-        <docblock line="365">
-          <description>Determine if the browser is the Yahoo! Slurp Robot or not (last updated 1.7)</description>
-          <long-description/>
-          <tag line="365" name="return" description="True if the browser is the Yahoo! Slurp Robot otherwise false" type="boolean">
-            <type by_reference="false">boolean</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="386" package="Default">
-        <name>checkBrowserInternetExplorer</name>
-        <full_name>checkBrowserInternetExplorer</full_name>
-        <docblock line="382">
-          <description>Determine if the browser is Internet Explorer or not (last updated 1.7)</description>
-          <long-description/>
-          <tag line="382" name="return" description="True if the browser is Internet Explorer otherwise false" type="boolean">
-            <type by_reference="false">boolean</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="435" package="Default">
-        <name>checkBrowserOpera</name>
-        <full_name>checkBrowserOpera</full_name>
-        <docblock line="431">
-          <description>Determine if the browser is Opera or not (last updated 1.7)</description>
-          <long-description/>
-          <tag line="431" name="return" description="True if the browser is Opera otherwise false" type="boolean">
-            <type by_reference="false">boolean</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="475" package="Default">
-        <name>checkBrowserChrome</name>
-        <full_name>checkBrowserChrome</full_name>
-        <docblock line="471">
-          <description>Determine if the browser is Chrome or not (last updated 1.7)</description>
-          <long-description/>
-          <tag line="471" name="return" description="True if the browser is Chrome otherwise false" type="boolean">
-            <type by_reference="false">boolean</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="491" package="Default">
-        <name>checkBrowserWebTv</name>
-        <full_name>checkBrowserWebTv</full_name>
-        <docblock line="487">
-          <description>Determine if the browser is WebTv or not (last updated 1.7)</description>
-          <long-description/>
-          <tag line="487" name="return" description="True if the browser is WebTv otherwise false" type="boolean">
-            <type by_reference="false">boolean</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="506" package="Default">
-        <name>checkBrowserNetPositive</name>
-        <full_name>checkBrowserNetPositive</full_name>
-        <docblock line="502">
-          <description>Determine if the browser is NetPositive or not (last updated 1.7)</description>
-          <long-description/>
-          <tag line="502" name="return" description="True if the browser is NetPositive otherwise false" type="boolean">
-            <type by_reference="false">boolean</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="521" package="Default">
-        <name>checkBrowserGaleon</name>
-        <full_name>checkBrowserGaleon</full_name>
-        <docblock line="517">
-          <description>Determine if the browser is Galeon or not (last updated 1.7)</description>
-          <long-description/>
-          <tag line="517" name="return" description="True if the browser is Galeon otherwise false" type="boolean">
-            <type by_reference="false">boolean</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="536" package="Default">
-        <name>checkBrowserKonqueror</name>
-        <full_name>checkBrowserKonqueror</full_name>
-        <docblock line="532">
-          <description>Determine if the browser is Konqueror or not (last updated 1.7)</description>
-          <long-description/>
-          <tag line="532" name="return" description="True if the browser is Konqueror otherwise false" type="boolean">
-            <type by_reference="false">boolean</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="551" package="Default">
-        <name>checkBrowserIcab</name>
-        <full_name>checkBrowserIcab</full_name>
-        <docblock line="547">
-          <description>Determine if the browser is iCab or not (last updated 1.7)</description>
-          <long-description/>
-          <tag line="547" name="return" description="True if the browser is iCab otherwise false" type="boolean">
-            <type by_reference="false">boolean</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="565" package="Default">
-        <name>checkBrowserOmniWeb</name>
-        <full_name>checkBrowserOmniWeb</full_name>
-        <docblock line="561">
-          <description>Determine if the browser is OmniWeb or not (last updated 1.7)</description>
-          <long-description/>
-          <tag line="561" name="return" description="True if the browser is OmniWeb otherwise false" type="boolean">
-            <type by_reference="false">boolean</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="580" package="Default">
-        <name>checkBrowserPhoenix</name>
-        <full_name>checkBrowserPhoenix</full_name>
-        <docblock line="576">
-          <description>Determine if the browser is Phoenix or not (last updated 1.7)</description>
-          <long-description/>
-          <tag line="576" name="return" description="True if the browser is Phoenix otherwise false" type="boolean">
-            <type by_reference="false">boolean</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="594" package="Default">
-        <name>checkBrowserFirebird</name>
-        <full_name>checkBrowserFirebird</full_name>
-        <docblock line="590">
-          <description>Determine if the browser is Firebird or not (last updated 1.7)</description>
-          <long-description/>
-          <tag line="590" name="return" description="True if the browser is Firebird otherwise false" type="boolean">
-            <type by_reference="false">boolean</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="609" package="Default">
-        <name>checkBrowserNetscapeNavigator9Plus</name>
-        <full_name>checkBrowserNetscapeNavigator9Plus</full_name>
-        <docblock line="604">
-          <description>Determine if the browser is Netscape Navigator 9+ or not (last updated 1.7)
-NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)</description>
-          <long-description/>
-          <tag line="604" name="return" description="True if the browser is Netscape Navigator 9+ otherwise false" type="boolean">
-            <type by_reference="false">boolean</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="627" package="Default">
-        <name>checkBrowserShiretoko</name>
-        <full_name>checkBrowserShiretoko</full_name>
-        <docblock line="623">
-          <description>Determine if the browser is Shiretoko or not (https://wiki.mozilla.org/Projects/shiretoko) (last updated 1.7)</description>
-          <long-description/>
-          <tag line="623" name="return" description="True if the browser is Shiretoko otherwise false" type="boolean">
-            <type by_reference="false">boolean</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="640" package="Default">
-        <name>checkBrowserIceCat</name>
-        <full_name>checkBrowserIceCat</full_name>
-        <docblock line="636">
-          <description>Determine if the browser is Ice Cat or not (http://en.wikipedia.org/wiki/GNU_IceCat) (last updated 1.7)</description>
-          <long-description/>
-          <tag line="636" name="return" description="True if the browser is Ice Cat otherwise false" type="boolean">
-            <type by_reference="false">boolean</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="653" package="Default">
-        <name>checkBrowserNokia</name>
-        <full_name>checkBrowserNokia</full_name>
-        <docblock line="649">
-          <description>Determine if the browser is Nokia or not (last updated 1.7)</description>
-          <long-description/>
-          <tag line="649" name="return" description="True if the browser is Nokia otherwise false" type="boolean">
-            <type by_reference="false">boolean</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="672" package="Default">
-        <name>checkBrowserFirefox</name>
-        <full_name>checkBrowserFirefox</full_name>
-        <docblock line="668">
-          <description>Determine if the browser is Firefox or not (last updated 1.7)</description>
-          <long-description/>
-          <tag line="668" name="return" description="True if the browser is Firefox otherwise false" type="boolean">
-            <type by_reference="false">boolean</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="692" package="Default">
-        <name>checkBrowserIceweasel</name>
-        <full_name>checkBrowserIceweasel</full_name>
-        <docblock line="688">
-          <description>Determine if the browser is Firefox or not (last updated 1.7)</description>
-          <long-description/>
-          <tag line="688" name="return" description="True if the browser is Firefox otherwise false" type="boolean">
-            <type by_reference="false">boolean</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="706" package="Default">
-        <name>checkBrowserMozilla</name>
-        <full_name>checkBrowserMozilla</full_name>
-        <docblock line="702">
-          <description>Determine if the browser is Mozilla or not (last updated 1.7)</description>
-          <long-description/>
-          <tag line="702" name="return" description="True if the browser is Mozilla otherwise false" type="boolean">
-            <type by_reference="false">boolean</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="732" package="Default">
-        <name>checkBrowserLynx</name>
-        <full_name>checkBrowserLynx</full_name>
-        <docblock line="728">
-          <description>Determine if the browser is Lynx or not (last updated 1.7)</description>
-          <long-description/>
-          <tag line="728" name="return" description="True if the browser is Lynx otherwise false" type="boolean">
-            <type by_reference="false">boolean</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="747" package="Default">
-        <name>checkBrowserAmaya</name>
-        <full_name>checkBrowserAmaya</full_name>
-        <docblock line="743">
-          <description>Determine if the browser is Amaya or not (last updated 1.7)</description>
-          <long-description/>
-          <tag line="743" name="return" description="True if the browser is Amaya otherwise false" type="boolean">
-            <type by_reference="false">boolean</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="762" package="Default">
-        <name>checkBrowserSafari</name>
-        <full_name>checkBrowserSafari</full_name>
-        <docblock line="758">
-          <description>Determine if the browser is Safari or not (last updated 1.7)</description>
-          <long-description/>
-          <tag line="758" name="return" description="True if the browser is Safari otherwise false" type="boolean">
-            <type by_reference="false">boolean</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="782" package="Default">
-        <name>checkBrowseriPhone</name>
-        <full_name>checkBrowseriPhone</full_name>
-        <docblock line="778">
-          <description>Determine if the browser is iPhone or not (last updated 1.7)</description>
-          <long-description/>
-          <tag line="778" name="return" description="True if the browser is iPhone otherwise false" type="boolean">
-            <type by_reference="false">boolean</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="803" package="Default">
-        <name>checkBrowseriPad</name>
-        <full_name>checkBrowseriPad</full_name>
-        <docblock line="799">
-          <description>Determine if the browser is iPod or not (last updated 1.7)</description>
-          <long-description/>
-          <tag line="799" name="return" description="True if the browser is iPod otherwise false" type="boolean">
-            <type by_reference="false">boolean</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="824" package="Default">
-        <name>checkBrowseriPod</name>
-        <full_name>checkBrowseriPod</full_name>
-        <docblock line="820">
-          <description>Determine if the browser is iPod or not (last updated 1.7)</description>
-          <long-description/>
-          <tag line="820" name="return" description="True if the browser is iPod otherwise false" type="boolean">
-            <type by_reference="false">boolean</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="845" package="Default">
-        <name>checkBrowserAndroid</name>
-        <full_name>checkBrowserAndroid</full_name>
-        <docblock line="841">
-          <description>Determine if the browser is Android or not (last updated 1.7)</description>
-          <long-description/>
-          <tag line="841" name="return" description="True if the browser is Android otherwise false" type="boolean">
-            <type by_reference="false">boolean</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="865" package="Default">
-        <name>checkPlatform</name>
-        <full_name>checkPlatform</full_name>
-        <docblock line="862">
-          <description>Determine the user's platform (last updated 1.7)</description>
-          <long-description/>
-        </docblock>
-      </method>
-    </class>
-    <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file debug\error_browser.php</error>
-      <error line="3" code="50000">No DocBlock was found for \Browser</error>
-      <error line="4" code="50018">No DocBlock was found for property $_agent</error>
-      <error line="5" code="50018">No DocBlock was found for property $_browser_name</error>
-      <error line="6" code="50018">No DocBlock was found for property $_version</error>
-      <error line="7" code="50018">No DocBlock was found for property $_platform</error>
-      <error line="8" code="50018">No DocBlock was found for property $_os</error>
-      <error line="9" code="50018">No DocBlock was found for property $_is_aol</error>
-      <error line="10" code="50018">No DocBlock was found for property $_is_mobile</error>
-      <error line="11" code="50018">No DocBlock was found for property $_is_robot</error>
-      <error line="12" code="50018">No DocBlock was found for property $_aol_version</error>
-      <error line="14" code="50018">No DocBlock was found for property $BROWSER_UNKNOWN</error>
-      <error line="15" code="50018">No DocBlock was found for property $VERSION_UNKNOWN</error>
-      <error line="17" code="50018">No DocBlock was found for property $BROWSER_OPERA</error>
-      <error line="18" code="50018">No DocBlock was found for property $BROWSER_OPERA_MINI</error>
-      <error line="19" code="50018">No DocBlock was found for property $BROWSER_WEBTV</error>
-      <error line="20" code="50018">No DocBlock was found for property $BROWSER_IE</error>
-      <error line="21" code="50018">No DocBlock was found for property $BROWSER_POCKET_IE</error>
-      <error line="22" code="50018">No DocBlock was found for property $BROWSER_KONQUEROR</error>
-      <error line="23" code="50018">No DocBlock was found for property $BROWSER_ICAB</error>
-      <error line="24" code="50018">No DocBlock was found for property $BROWSER_OMNIWEB</error>
-      <error line="25" code="50018">No DocBlock was found for property $BROWSER_FIREBIRD</error>
-      <error line="26" code="50018">No DocBlock was found for property $BROWSER_FIREFOX</error>
-      <error line="27" code="50018">No DocBlock was found for property $BROWSER_ICEWEASEL</error>
-      <error line="28" code="50018">No DocBlock was found for property $BROWSER_SHIRETOKO</error>
-      <error line="29" code="50018">No DocBlock was found for property $BROWSER_MOZILLA</error>
-      <error line="30" code="50018">No DocBlock was found for property $BROWSER_AMAYA</error>
-      <error line="31" code="50018">No DocBlock was found for property $BROWSER_LYNX</error>
-      <error line="32" code="50018">No DocBlock was found for property $BROWSER_SAFARI</error>
-      <error line="33" code="50018">No DocBlock was found for property $BROWSER_IPHONE</error>
-      <error line="34" code="50018">No DocBlock was found for property $BROWSER_IPOD</error>
-      <error line="35" code="50018">No DocBlock was found for property $BROWSER_IPAD</error>
-      <error line="36" code="50018">No DocBlock was found for property $BROWSER_CHROME</error>
-      <error line="37" code="50018">No DocBlock was found for property $BROWSER_ANDROID</error>
-      <error line="38" code="50018">No DocBlock was found for property $BROWSER_GOOGLEBOT</error>
-      <error line="39" code="50018">No DocBlock was found for property $BROWSER_SLURP</error>
-      <error line="40" code="50018">No DocBlock was found for property $BROWSER_W3CVALIDATOR</error>
-      <error line="41" code="50018">No DocBlock was found for property $BROWSER_BLACKBERRY</error>
-      <error line="42" code="50018">No DocBlock was found for property $BROWSER_ICECAT</error>
-      <error line="43" code="50018">No DocBlock was found for property $BROWSER_NOKIA_S60</error>
-      <error line="44" code="50018">No DocBlock was found for property $BROWSER_NOKIA</error>
-      <error line="45" code="50018">No DocBlock was found for property $BROWSER_MSN</error>
-      <error line="46" code="50018">No DocBlock was found for property $BROWSER_MSNBOT</error>
-      <error line="49" code="50018">No DocBlock was found for property $BROWSER_NETSCAPE_NAVIGATOR</error>
-      <error line="50" code="50018">No DocBlock was found for property $BROWSER_GALEON</error>
-      <error line="51" code="50018">No DocBlock was found for property $BROWSER_NETPOSITIVE</error>
-      <error line="52" code="50018">No DocBlock was found for property $BROWSER_PHOENIX</error>
-      <error line="54" code="50018">No DocBlock was found for property $PLATFORM_UNKNOWN</error>
-      <error line="55" code="50018">No DocBlock was found for property $PLATFORM_WINDOWS</error>
-      <error line="56" code="50018">No DocBlock was found for property $PLATFORM_WINDOWS_CE</error>
-      <error line="57" code="50018">No DocBlock was found for property $PLATFORM_APPLE</error>
-      <error line="58" code="50018">No DocBlock was found for property $PLATFORM_LINUX</error>
-      <error line="59" code="50018">No DocBlock was found for property $PLATFORM_OS2</error>
-      <error line="60" code="50018">No DocBlock was found for property $PLATFORM_BEOS</error>
-      <error line="61" code="50018">No DocBlock was found for property $PLATFORM_IPHONE</error>
-      <error line="62" code="50018">No DocBlock was found for property $PLATFORM_IPOD</error>
-      <error line="63" code="50018">No DocBlock was found for property $PLATFORM_IPAD</error>
-      <error line="64" code="50018">No DocBlock was found for property $PLATFORM_BLACKBERRY</error>
-      <error line="65" code="50018">No DocBlock was found for property $PLATFORM_NOKIA</error>
-      <error line="66" code="50018">No DocBlock was found for property $PLATFORM_FREEBSD</error>
-      <error line="67" code="50018">No DocBlock was found for property $PLATFORM_OPENBSD</error>
-      <error line="68" code="50018">No DocBlock was found for property $PLATFORM_NETBSD</error>
-      <error line="69" code="50018">No DocBlock was found for property $PLATFORM_SUNOS</error>
-      <error line="70" code="50018">No DocBlock was found for property $PLATFORM_OPENSOLARIS</error>
-      <error line="71" code="50018">No DocBlock was found for property $PLATFORM_ANDROID</error>
-      <error line="73" code="50018">No DocBlock was found for property $OPERATING_SYSTEM_UNKNOWN</error>
-      <error line="75" code="50010">No DocBlock was found for method Browser()</error>
-    </parse_markers>
-  </file>
   <file path="debug\error_os.php" hash="bc0e1e5811e24d7499465a55344b355f" package="Default">
     <function namespace="global" line="4" package="Default">
       <name>getOS</name>
@@ -2121,7 +1157,7 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
       <error line="4" code="50009">No DocBlock was found for function \getOS()</error>
     </parse_markers>
   </file>
-  <file path="debug\error_test_mysql.php" hash="5c58924f3775daab2cc943a044e49d94" package="Default">
+  <file path="debug\error_test_mysql.php" hash="4ca2dd1a5eaf5483cff604c6427a687d" package="Default">
     <include line="3" type="Include" package="Default">
       <name>./../init.php</name>
     </include>
@@ -2149,7 +1185,7 @@ NOTE: (http://browser.netscape.com/ - Official support ended on March 1st, 2008)
       <tag line="2" name="since" description="File available since Release 0.3.0"/>
     </docblock>
   </file>
-  <file path="debug\masdebug.php" hash="cf1999cdbc91f93686bdd3169a57ed8e" package="Default">
+  <file path="debug\masdebug.php" hash="cba03e1d4c2f9ed713242bc81a4f1c72" package="Default">
     <include line="3" type="Include" package="Default">
       <name>./error.php</name>
     </include>

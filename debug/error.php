@@ -43,10 +43,10 @@ if( isset($_GET['host']) )
    echo "<p>Results for http://$host$uri</p>";
    echo '<textarea cols="55" rows="14" wrap="off">';
    	  echo "BlackHawk Information: \n";
-	  echo "BlackHawk Version: " . CL_VERSION . "\n";
-	  echo "BlackHawk Full Version: " . CL_VERSION . CL_SUBVERSION . "\n";
-	  echo "BlackHawk Root: " . CL_ROOT."\n";
-	  echo "BlackHawk Commit #: " . CL_COMMIT . "\n";
+	  echo "BlackHawk Version: " . BLACKHAWK_VERSION . "\n";
+	  echo "BlackHawk Full Version: " . BLACKHAWK_VERSION . BLACKHAWK_SUBVERSION . "\n";
+	  echo "BlackHawk Root: " . BLACKHAWK_ROOT."\n";
+	  echo "BlackHawk Commit #: " . BLACKHAWK_COMMIT . "\n";
 	  echo "PHP Version: " . PHP_VERSION . "\n";
 	  echo "MySQL Version: " . mysql_get_server_info() . "\n" ;
 	  	  echo("MySQL Status: ");
@@ -82,8 +82,10 @@ What is the URI (the part of the URL after the domain name, or "/" if default pa
 <p> More Debug Info: <a href="./masdebug.php">Click here </a> </p>
 </form>
 <?php endif; ?>
-<?php if ($global_debug == 0): ?>
-<h1> Access Denied </h1> <!-- maybe a redirect to 404 here? -->
-<?php endif; ?>
+<?php if ($global_debug == 0){
+	header("HTTP/1.0 404 Not Found");
+// For Fast-CGI sites: Comment out previous line and uncomment this one
+// header("Status: 404 Not Found");
+}?>
 </body>
 </html>
