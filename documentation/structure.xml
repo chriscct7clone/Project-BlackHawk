@@ -1493,6 +1493,23 @@ Lets the user Recover their password using e-mail&lt;/p&gt;</long-description>
       <error line="23" code="50010">No DocBlock was found for method what()</error>
     </parse_markers>
   </file>
+  <file path="tests\test_classes\index.php" hash="bfd6770f5b16662d2b1f67eea7cd7e65" package="BlackHawk\Security">
+    <docblock line="2">
+      <description>Security Index Page</description>
+      <long-description>&lt;p&gt;This file prevents directory listing&lt;/p&gt;
+
+&lt;p&gt;PHP version 5.2.17 or higher&lt;/p&gt;
+
+&lt;p&gt;LICENSE: TBD&lt;/p&gt;</long-description>
+      <tag line="2" name="package" description="BlackHawk"/>
+      <tag line="2" name="subpackage" description="Security"/>
+      <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
+      <tag line="2" name="copyright" description="2012 Project BlackHawk"/>
+      <tag line="2" name="license" description="http://www.futuregencode.com/blackhawk/404  License 1.00"/>
+      <tag line="2" name="version" description="0.3.0"/>
+      <tag line="2" name="since" description="File available since Release 0.3.0"/>
+    </docblock>
+  </file>
   <file path="update.php" hash="3e9155b99232a06ff8ab9e31f9e74650" package="Default">
     <parse_markers>
       <error line="0" code="50007">No page-level DocBlock was found in file update.php</error>
