@@ -12,6 +12,9 @@ if (!$link) {
 echo 'Connection OK'; mysql_close($link); 
 ?>
 <?php endif; ?>
-<?php if ($global_debug == 0): ?>
-<h1> Access Denied </h1>
-<?php endif; ?>
+<?php if ($global_debug == 0){
+header("HTTP/1.0 404 Not Found");
+// For Fast-CGI sites: Comment out previous line and uncomment this one
+// header("Status: 404 Not Found");
+}
+ ?>
