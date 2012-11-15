@@ -1,4 +1,6 @@
 <?php
+
+$_SESSION['REMOTE_ADDR'] = $_SERVER['last_ip'];
 require_once('assets/member.inc.php');
 
 class MembersClassTest extends PHPUnit_Framework_TestCase
