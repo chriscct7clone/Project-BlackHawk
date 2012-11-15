@@ -1,5 +1,5 @@
 <?php
-require_once('../assets/member.inc.php');
+require_once('assets/member.inc.php');
 
 class MembersClassTest extends PHPUnit_Framework_TestCase
 {
