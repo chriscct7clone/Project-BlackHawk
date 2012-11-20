@@ -220,11 +220,14 @@ $mysql_users_recover = 'CREATE TABLE IF NOT EXISTS `users_recover` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;';	
 
 $mysql_statistics = 'CREATE TABLE IF NOT EXISTS `garage_statistics` (
-  `uid` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `name` varchar(225) NOT NULL,
-  `garage` int(8) NOT NULL,
-  `floor` int(8) NOT NULL,
-  `spot` int(8) NOT NULL,
+  `tablename` int(8) NOT NULL,
+  `numfloors` int(8) NOT NULL,
+  `status` int(8) varchar(225) NOT NULL,
+  `numfloors` int(8) NOT NULL,
+  `numspots` int(8) varchar(225) NOT NULL,
+  `spotsinsue` int(8) varchar(225) NOT NULL,
   `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`uid`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;';
