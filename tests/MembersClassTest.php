@@ -33,6 +33,7 @@ class MembersClassTest extends PHPUnit_Framework_TestCase
 	{	
 		global $database;
 		$result = $database->query("SELECT * FROM hello");
+		$result = if ($result!=null)? true : false;
 		$this->assertTrue($result);
 		unset ( $database);
 	}
