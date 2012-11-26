@@ -17,7 +17,7 @@ class MembersClassTest extends PHPUnit_Framework_TestCase
 
         $this->pdo->query("DROP TABLE hello");
     }
-	public testAddition(){
+	public function testAddition(){
 		assertEquals(1,1);
 		assertEquals((2-1),1);
 	}
