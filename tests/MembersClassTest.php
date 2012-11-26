@@ -15,13 +15,13 @@ class MembersClassTest extends PHPUnit_Framework_TestCase
     public function tearDown()
     {
 
-        $this->pdo->query("DROP TABLE hello");
+        $database->query("DROP TABLE hello");
     }
 	public function testAddition(){
 		assertEquals(1,1);
 		assertEquals((2-1),1);
 	}
-	public function testTableaddition()
+	public function testTableAddition()
 	{
 		$result = $database->query("SELECT * FROM hello");
 		assertTrue($result);
