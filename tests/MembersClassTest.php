@@ -37,9 +37,8 @@ class MembersClassTest extends PHPUnit_Framework_TestCase
 	{	
 		global $database;
 		$result = $database->query("INSERT INTO `garage_roles` (`id`, 	`name`) VALUES (1, 'Police');");
-		var_dump($result);
-		$result = ($result!=null)? true : false;
-		
+		// We only get return if failed.
+		$result = ($result==null)? true : false;
 		$this->assertTrue($result);
 		unset ( $database);
 	}
