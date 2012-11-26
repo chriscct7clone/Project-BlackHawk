@@ -32,10 +32,10 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">40</span></a></li>
+                <span class="label label-info">47</span></a></li>
 <li><a href="markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul><li>todo 
-                <span class="label label-info">24</span>
+                <span class="label label-info">28</span>
 </li></ul></a></li>
 <li><a href="deprecated.html"><i class="icon-stop"></i> Deprecated elements 
                 <span class="label label-info">0</span></a></li>
@@ -53,7 +53,10 @@
 <div class="row">
 <div class="span4"><ul class="side-nav nav nav-list">
 <li class="nav-header">Navigation</li>
+<li><a href="#assets%5Ccaptcha.class.php"><i class="icon-file"></i>assets\captcha.class.php</a></li>
 <li><a href="#assets%5Cgarage.class.php"><i class="icon-file"></i>assets\garage.class.php</a></li>
+<li><a href="#assets%5Clib%5Chighcharts%5Ctest.php"><i class="icon-file"></i>assets\lib\highcharts\test.php</a></li>
+<li><a href="#assets%5Clib%5CjQuery_File_Upload%5Crun.php"><i class="icon-file"></i>assets\lib\jQuery_File_Upload\run.php</a></li>
 <li><a href="#assets%5Cmember.class.php"><i class="icon-file"></i>assets\member.class.php</a></li>
 <li><a href="#assets%5Csensors.class.php"><i class="icon-file"></i>assets\sensors.class.php</a></li>
 <li><a href="#assets%5Cupd.class.php"><i class="icon-file"></i>assets\upd.class.php</a></li>
@@ -74,10 +77,27 @@
 <div class="alert alert-info">
                         The following markers were found:
                         <ul><li>todo 
-                <span class="label label-info">24</span>
+                <span class="label label-info">28</span>
 </li></ul>
 </div>
 <div id="marker-accordion">
+<div class="package-contents">
+<a name="assets%5Ccaptcha.class.php" id="assets\captcha.class.php"></a><h3>
+<i class="icon-file"></i>assets\captcha.class.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>todo</td>
+<td>74</td>
+<td>Evaluate whether we need this or not at all. Isn't the session created anyways when the login/captcha form is presented? This seems to be causing 5.2 Travis builds to fail.</td>
+</tr>
+</table></div>
+</div>
 <div class="package-contents">
 <a name="assets%5Cgarage.class.php" id="assets\garage.class.php"></a><h3>
 <i class="icon-file"></i>assets\garage.class.php<small style="float: right;padding-right: 10px;">3</small>
@@ -106,6 +126,45 @@
 </table></div>
 </div>
 <div class="package-contents">
+<a name="assets%5Clib%5Chighcharts%5Ctest.php" id="assets\lib\highcharts\test.php"></a><h3>
+<i class="icon-file"></i>assets\lib\highcharts\test.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>todo</td>
+<td>10</td>
+<td>Fix below, maybe int the result</td>
+</tr>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="assets%5Clib%5CjQuery_File_Upload%5Crun.php" id="assets\lib\jQuery_File_Upload\run.php"></a><h3>
+<i class="icon-file"></i>assets\lib\jQuery_File_Upload\run.php<small style="float: right;padding-right: 10px;">2</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>todo</td>
+<td>2</td>
+<td>block direct access</td>
+</tr>
+<tr>
+<td>todo</td>
+<td>3</td>
+<td>validate gets</td>
+</tr>
+</table></div>
+</div>
+<div class="package-contents">
 <a name="assets%5Cmember.class.php" id="assets\member.class.php"></a><h3>
 <i class="icon-file"></i>assets\member.class.php<small style="float: right;padding-right: 10px;">4</small>
 </h3>
@@ -117,22 +176,22 @@
 </tr>
 <tr>
 <td>todo</td>
-<td>487</td>
+<td>489</td>
 <td>Save roles in cookie</td>
 </tr>
 <tr>
 <td>todo</td>
-<td>570</td>
+<td>572</td>
 <td>Check against a dummy DB, that is made manually by SQL import?</td>
 </tr>
 <tr>
 <td>todo</td>
-<td>787</td>
+<td>789</td>
 <td>, make register form pick type of student and pull that value</td>
 </tr>
 <tr>
 <td>todo</td>
-<td>1220</td>
+<td>1222</td>
 <td>make random again</td>
 </tr>
 </table></div>
@@ -324,7 +383,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
-            generated on 2012-11-13T20:01:58-05:00.<br></footer></div>
+            generated on 2012-11-26T16:56:20-05:00.<br></footer></div>
 </div>
 </body>
 </html>

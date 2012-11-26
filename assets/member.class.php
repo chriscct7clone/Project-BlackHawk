@@ -42,7 +42,9 @@ class member {
 		/* Prevent JavaScript from reading Session cookies */
 		ini_set('session.cookie_httponly', true);
 		/* Start Session */
+		if (session_id() == ''){
 		session_start();
+		}
 		/* Check if last session is from the same pc */
 		if(!isset($_SESSION['last_ip'])) {
 			$_SESSION['last_ip'] = $_SERVER['REMOTE_ADDR'];

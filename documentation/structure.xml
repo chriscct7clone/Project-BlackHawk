@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project version="2.0.0a12" title="BlackHawk Developer">
-  <file path="assets\captcha.class.php" hash="7e79dc58ed8f4cf05178d3bb596548ad" package="BlackHawk\Internal Functions">
+  <file path="assets\captcha.class.php" hash="8cde67bae976c60366f7b9e0d54f7611" package="BlackHawk\Internal Functions">
     <docblock line="2">
       <description>Creates Captcha Image</description>
       <long-description>&lt;p&gt;This file creates the image for the captcha, as long as Captcha has been turned on during setup.&lt;/p&gt;
@@ -73,6 +73,9 @@
         </argument>
       </method>
     </class>
+    <markers>
+      <todo line="74">Evaluate whether we need this or not at all. Isn't the session created anyways when the login/captcha form is presented? This seems to be causing 5.2 Travis builds to fail.</todo>
+    </markers>
   </file>
   <file path="assets\config.class.php" hash="2c86b8c98ea8653fffa56bcab984fc9e" package="BlackHawk\Internal Functions">
     <docblock line="2">
@@ -428,6 +431,320 @@
       <tag line="2" name="since" description="File available since Release 0.3.0"/>
     </docblock>
   </file>
+  <file path="assets\lib\datatables\extras\Scroller\media\data\server_processing.php" hash="b83ed881fb6bbc913fa1258a1c5ec5ff" package="Default">
+    <include line="24" type="Include" package="Default">
+      <name/>
+    </include>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file assets\lib\datatables\extras\Scroller\media\data\server_processing.php</error>
+    </parse_markers>
+  </file>
+  <file path="assets\lib\datatables\server_side.php" hash="cb8323a0fbd0e3389df86f6d1a98889d" package="Default">
+    <include line="2" type="Require Once" package="Default">
+      <name>../../config.inc.php</name>
+    </include>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file assets\lib\datatables\server_side.php</error>
+    </parse_markers>
+  </file>
+  <file path="assets\lib\highcharts\test.php" hash="cdd21ddd6e7d0b637c9dbc061cfc8bc0" package="Default">
+    <markers>
+      <todo line="10">Fix below, maybe int the result</todo>
+    </markers>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file assets\lib\highcharts\test.php</error>
+    </parse_markers>
+  </file>
+  <file path="assets\lib\index.php" hash="bfd6770f5b16662d2b1f67eea7cd7e65" package="BlackHawk\Security">
+    <docblock line="2">
+      <description>Security Index Page</description>
+      <long-description>&lt;p&gt;This file prevents directory listing&lt;/p&gt;
+
+&lt;p&gt;PHP version 5.2.17 or higher&lt;/p&gt;
+
+&lt;p&gt;LICENSE: TBD&lt;/p&gt;</long-description>
+      <tag line="2" name="package" description="BlackHawk"/>
+      <tag line="2" name="subpackage" description="Security"/>
+      <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
+      <tag line="2" name="copyright" description="2012 Project BlackHawk"/>
+      <tag line="2" name="license" description="http://www.futuregencode.com/blackhawk/404  License 1.00"/>
+      <tag line="2" name="version" description="0.3.0"/>
+      <tag line="2" name="since" description="File available since Release 0.3.0"/>
+    </docblock>
+  </file>
+  <file path="assets\lib\jQuery_File_Upload\index.php" hash="080cfe9fbbbd72ff5e5ebd9fbcfbeae7" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file assets\lib\jQuery_File_Upload\index.php</error>
+    </parse_markers>
+  </file>
+  <file path="assets\lib\jQuery_File_Upload\run.php" hash="bec7f31b556baacfa81683af6917634b" package="Default">
+    <markers>
+      <todo line="2">block direct access</todo>
+      <todo line="3">validate gets</todo>
+    </markers>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file assets\lib\jQuery_File_Upload\run.php</error>
+    </parse_markers>
+  </file>
+  <file path="assets\lib\jQuery_File_Upload\server\php\index.php" hash="ce8c75e19a101d871488fc57ff98e038" package="Default">
+    <include line="15" type="Require" package="Default">
+      <name>upload.class.php</name>
+    </include>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file assets\lib\jQuery_File_Upload\server\php\index.php</error>
+    </parse_markers>
+  </file>
+  <file path="assets\lib\jQuery_File_Upload\server\php\upload.class.php" hash="b6350d2bfc158b372d34304be9ff9969" package="Default">
+    <class final="false" abstract="false" namespace="global" line="13" package="Default">
+      <extends/>
+      <name>UploadHandler</name>
+      <full_name>\UploadHandler</full_name>
+      <property final="false" static="false" visibility="protected" line="15" namespace="global" package="Default">
+        <name>$options</name>
+        <default/>
+      </property>
+      <property final="false" static="false" visibility="protected" line="18" namespace="global" package="Default">
+        <name>$error_messages</name>
+        <default>array(1 =&gt; 'The uploaded file exceeds the upload_max_filesize directive in php.ini', 2 =&gt; 'The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in the HTML form', 3 =&gt; 'The uploaded file was only partially uploaded', 4 =&gt; 'No file was uploaded', 6 =&gt; 'Missing a temporary folder', 7 =&gt; 'Failed to write file to disk', 8 =&gt; 'A PHP extension stopped the file upload', 'max_file_size' =&gt; 'File is too big', 'min_file_size' =&gt; 'File is too small', 'accept_file_types' =&gt; 'Filetype not allowed', 'max_number_of_files' =&gt; 'Maximum number of files exceeded', 'max_width' =&gt; 'Image exceeds maximum width', 'min_width' =&gt; 'Image requires a minimum width', 'max_height' =&gt; 'Image exceeds maximum height', 'min_height' =&gt; 'Image requires a minimum height')</default>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="36" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <argument line="36">
+          <name>$options</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="87" package="Default">
+        <name>get_full_url</name>
+        <full_name>get_full_url</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="98" package="Default">
+        <name>set_file_delete_url</name>
+        <full_name>set_file_delete_url</full_name>
+        <argument line="98">
+          <name>$file</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="109" package="Default">
+        <name>fix_integer_overflow</name>
+        <full_name>fix_integer_overflow</full_name>
+        <argument line="109">
+          <name>$size</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="116" package="Default">
+        <name>get_file_size</name>
+        <full_name>get_file_size</full_name>
+        <argument line="116">
+          <name>$file_path</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="116">
+          <name>$clear_stat_cache</name>
+          <default>false</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="124" package="Default">
+        <name>get_file_object</name>
+        <full_name>get_file_object</full_name>
+        <argument line="124">
+          <name>$file_name</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="143" package="Default">
+        <name>get_file_objects</name>
+        <full_name>get_file_objects</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="150" package="Default">
+        <name>create_scaled_image</name>
+        <full_name>create_scaled_image</full_name>
+        <argument line="150">
+          <name>$file_name</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="150">
+          <name>$options</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="211" package="Default">
+        <name>get_error_message</name>
+        <full_name>get_error_message</full_name>
+        <argument line="211">
+          <name>$error</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="216" package="Default">
+        <name>validate</name>
+        <full_name>validate</full_name>
+        <argument line="216">
+          <name>$uploaded_file</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="216">
+          <name>$file</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="216">
+          <name>$error</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="216">
+          <name>$index</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="274" package="Default">
+        <name>upcount_name_callback</name>
+        <full_name>upcount_name_callback</full_name>
+        <argument line="274">
+          <name>$matches</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="280" package="Default">
+        <name>upcount_name</name>
+        <full_name>upcount_name</full_name>
+        <argument line="280">
+          <name>$name</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="289" package="Default">
+        <name>trim_file_name</name>
+        <full_name>trim_file_name</full_name>
+        <argument line="289">
+          <name>$name</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="289">
+          <name>$type</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="289">
+          <name>$index</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="307" package="Default">
+        <name>handle_form_data</name>
+        <full_name>handle_form_data</full_name>
+        <argument line="307">
+          <name>$file</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="307">
+          <name>$index</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="311" package="Default">
+        <name>orient_image</name>
+        <full_name>orient_image</full_name>
+        <argument line="311">
+          <name>$file_path</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="340" package="Default">
+        <name>handle_file_upload</name>
+        <full_name>handle_file_upload</full_name>
+        <argument line="340">
+          <name>$uploaded_file</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="340">
+          <name>$name</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="340">
+          <name>$size</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="340">
+          <name>$type</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="340">
+          <name>$error</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="340">
+          <name>$index</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="395" package="Default">
+        <name>get</name>
+        <full_name>get</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="407" package="Default">
+        <name>post</name>
+        <full_name>post</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="464" package="Default">
+        <name>delete</name>
+        <full_name>delete</full_name>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file assets\lib\jQuery_File_Upload\server\php\upload.class.php</error>
+      <error line="13" code="50000">No DocBlock was found for \UploadHandler</error>
+      <error line="15" code="50018">No DocBlock was found for property $options</error>
+      <error line="18" code="50018">No DocBlock was found for property $error_messages</error>
+      <error line="36" code="50010">No DocBlock was found for method __construct()</error>
+      <error line="87" code="50010">No DocBlock was found for method get_full_url()</error>
+      <error line="98" code="50010">No DocBlock was found for method set_file_delete_url()</error>
+      <error line="109" code="50010">No DocBlock was found for method fix_integer_overflow()</error>
+      <error line="116" code="50010">No DocBlock was found for method get_file_size()</error>
+      <error line="124" code="50010">No DocBlock was found for method get_file_object()</error>
+      <error line="143" code="50010">No DocBlock was found for method get_file_objects()</error>
+      <error line="150" code="50010">No DocBlock was found for method create_scaled_image()</error>
+      <error line="211" code="50010">No DocBlock was found for method get_error_message()</error>
+      <error line="216" code="50010">No DocBlock was found for method validate()</error>
+      <error line="274" code="50010">No DocBlock was found for method upcount_name_callback()</error>
+      <error line="280" code="50010">No DocBlock was found for method upcount_name()</error>
+      <error line="289" code="50010">No DocBlock was found for method trim_file_name()</error>
+      <error line="307" code="50010">No DocBlock was found for method handle_form_data()</error>
+      <error line="311" code="50010">No DocBlock was found for method orient_image()</error>
+      <error line="340" code="50010">No DocBlock was found for method handle_file_upload()</error>
+      <error line="395" code="50010">No DocBlock was found for method get()</error>
+      <error line="407" code="50010">No DocBlock was found for method post()</error>
+      <error line="464" code="50010">No DocBlock was found for method delete()</error>
+    </parse_markers>
+  </file>
   <file path="assets\mailer.class.php" hash="926e166fac4c3cd012226da3da470c91" package="BlackHawk\Mail">
     <docblock line="2">
       <description>Creates Mail Class</description>
@@ -578,7 +895,7 @@
       <notice line="89" code="50013">Parameter $emailmaster could not be found in mail()</notice>
     </parse_markers>
   </file>
-  <file path="assets\member.class.php" hash="248882aa879d00726b403b17f0012eab" package="BlackHawk\Members">
+  <file path="assets\member.class.php" hash="d5962ea01b52440c489fdd7c44dee999" package="BlackHawk\Members">
     <docblock line="2">
       <description>Member Class</description>
       <long-description>&lt;p&gt;The main hub of our login system&lt;/p&gt;
@@ -595,10 +912,10 @@
       <tag line="2" name="see" description="\garage.inc.php" refers="\garage.inc.php"/>
       <tag line="2" name="since" description="File available since Release 0.3.0"/>
     </docblock>
-    <include line="59" type="Require Once" package="Default">
+    <include line="61" type="Require Once" package="Default">
       <name>notice.class.php</name>
     </include>
-    <include line="60" type="Require Once" package="Default">
+    <include line="62" type="Require Once" package="Default">
       <name>mailer.class.php</name>
     </include>
     <class final="false" abstract="false" namespace="global" line="33" package="BlackHawk\Members">
@@ -626,104 +943,104 @@ Starts the session
 Checks last know ip to prevent hijacking&lt;/p&gt;</long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="68" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="70" package="BlackHawk\Members">
         <name>currentPath</name>
         <full_name>currentPath</full_name>
-        <docblock line="63">
+        <docblock line="65">
           <description>CurrentPath functions</description>
           <long-description>&lt;p&gt;Returns the current path of the url&lt;/p&gt;</long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="80" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="82" package="BlackHawk\Members">
         <name>currentPage</name>
         <full_name>currentPage</full_name>
-        <docblock line="75">
+        <docblock line="77">
           <description>CurrentPage functions</description>
           <long-description>&lt;p&gt;Returns the current page of the url&lt;/p&gt;</long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="94" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="96" package="BlackHawk\Members">
         <name>genSalt</name>
         <full_name>genSalt</full_name>
-        <docblock line="89">
+        <docblock line="91">
           <description>genSalt</description>
           <long-description>&lt;p&gt;This generates a random salt to be used in a password hasing&lt;/p&gt;</long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="114" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="116" package="BlackHawk\Members">
         <name>genHash</name>
         <full_name>genHash</full_name>
-        <docblock line="105">
+        <docblock line="107">
           <description>genHash</description>
           <long-description>&lt;p&gt;This creates a hash of the selected password and
 uses a unique salt provided by genSalt function&lt;/p&gt;</long-description>
-          <tag line="105" name="param" description="The random salt for the password" type="string" variable="$salt">
+          <tag line="107" name="param" description="The random salt for the password" type="string" variable="$salt">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="105" name="param" description="The provided password" type="string" variable="$password">
+          <tag line="107" name="param" description="The provided password" type="string" variable="$password">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
-        <argument line="114">
+        <argument line="116">
           <name>$salt</name>
           <default/>
           <type/>
         </argument>
-        <argument line="114">
+        <argument line="116">
           <name>$password</name>
           <default/>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="146" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="148" package="BlackHawk\Members">
         <name>intcheck</name>
         <full_name>intcheck</full_name>
-        <docblock line="137">
+        <docblock line="139">
           <description>intcheck</description>
           <long-description>&lt;p&gt;For UIN and inital password
 Checks to make sure string is all numbers&lt;/p&gt;</long-description>
-          <tag line="137" name="param" description="The string to test" type="string" variable="$int">
+          <tag line="139" name="param" description="The string to test" type="string" variable="$int">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="137" name="return" description="INT=true, nonint=false" type="\(bool)">
+          <tag line="139" name="return" description="INT=true, nonint=false" type="\(bool)">
             <type by_reference="false">\(bool)</type>
           </tag>
         </docblock>
-        <argument line="146">
+        <argument line="148">
           <name>$int</name>
           <default/>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="178" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="180" package="BlackHawk\Members">
         <name>verify</name>
         <full_name>verify</full_name>
-        <docblock line="169">
+        <docblock line="171">
           <description>verify</description>
           <long-description>&lt;p&gt;This checks if the suppled password is equal
 to the current stored hashed password&lt;/p&gt;</long-description>
-          <tag line="169" name="param" description="The provided password" type="string" variable="$password">
+          <tag line="171" name="param" description="The provided password" type="string" variable="$password">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="169" name="param" description="The current stored hashed password" type="string" variable="$existingHash">
+          <tag line="171" name="param" description="The current stored hashed password" type="string" variable="$existingHash">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
-        <argument line="178">
+        <argument line="180">
           <name>$password</name>
           <default/>
           <type/>
         </argument>
-        <argument line="178">
+        <argument line="180">
           <name>$existingHash</name>
           <default/>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="204" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="206" package="BlackHawk\Members">
         <name>login</name>
         <full_name>login</full_name>
-        <docblock line="196">
+        <docblock line="198">
           <description>login</description>
           <long-description>&lt;p&gt;Returns a login form that user can login with
 It then checks to see if the login is successful&lt;/p&gt;
@@ -731,10 +1048,10 @@ It then checks to see if the login is successful&lt;/p&gt;
 &lt;p&gt;If so create session and/or remember cookie&lt;/p&gt;</long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="346" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="348" package="BlackHawk\Members">
         <name>LoggedIn</name>
         <full_name>LoggedIn</full_name>
-        <docblock line="338">
+        <docblock line="340">
           <description>LoggedIn</description>
           <long-description>&lt;p&gt;Check if the user is logged-in
 Check for session and/or cookie is set then reference it
@@ -742,216 +1059,216 @@ in the database to see if it is valid if so allow the
 user to login&lt;/p&gt;</long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="407" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="409" package="BlackHawk\Members">
         <name>sessionIsSet</name>
         <full_name>sessionIsSet</full_name>
-        <docblock line="400">
+        <docblock line="402">
           <description>sessionIsSet</description>
           <long-description>&lt;p&gt;Checks and sees if the session is set
 Similar to LoggedIn however it does not
 rediect the user&lt;/p&gt;</long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="448" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="450" package="BlackHawk\Members">
         <name>logout</name>
         <full_name>logout</full_name>
-        <docblock line="442">
+        <docblock line="444">
           <description>Logout</description>
           <long-description>&lt;p&gt;Resets Session and destroyes it,
 deletes any cookies and redirects to index&lt;/p&gt;</long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="478" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="480" package="BlackHawk\Members">
         <name>createNewCookie</name>
         <full_name>createNewCookie</full_name>
-        <docblock line="469">
+        <docblock line="471">
           <description>createNewCookie</description>
           <long-description>&lt;p&gt;If the remember me feature is enabled and the
 user has selected it create a cookie for them.
 Log it in the database&lt;/p&gt;</long-description>
-          <tag line="469" name="param" description="The users id" type="string" variable="$id">
+          <tag line="471" name="param" description="The users id" type="string" variable="$id">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
-        <argument line="478">
+        <argument line="480">
           <name>$id</name>
           <default/>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="502" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="504" package="BlackHawk\Members">
         <name>deleteCookie</name>
         <full_name>deleteCookie</full_name>
-        <docblock line="495">
+        <docblock line="497">
           <description>deleteCookie</description>
           <long-description>&lt;p&gt;Delete the users cookie&lt;/p&gt;</long-description>
-          <tag line="495" name="param" description="The users id" type="string" variable="$id">
+          <tag line="497" name="param" description="The users id" type="string" variable="$id">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
-        <argument line="502">
+        <argument line="504">
           <name>$id</name>
           <default/>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="525" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="527" package="BlackHawk\Members">
         <name>userLogger</name>
         <full_name>userLogger</full_name>
-        <docblock line="514">
+        <docblock line="516">
           <description>userLogger</description>
           <long-description>&lt;p&gt;Logs users activity,
 Nothing personal.... just login times, logout times,
 when recover passwords have been activated
 All for security&lt;/p&gt;</long-description>
-          <tag line="514" name="param" description="The users id" type="string" variable="$userid">
+          <tag line="516" name="param" description="The users id" type="string" variable="$userid">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="514" name="param" description="What action is happening and needs logging" type="string" variable="$action">
+          <tag line="516" name="param" description="What action is happening and needs logging" type="string" variable="$action">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
-        <argument line="525">
+        <argument line="527">
           <name>$userid</name>
           <default/>
           <type/>
         </argument>
-        <argument line="525">
+        <argument line="527">
           <name>$action</name>
           <default/>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="569" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="571" package="BlackHawk\Members">
         <name>combovalidation</name>
         <full_name>combovalidation</full_name>
-        <docblock line="554">
+        <docblock line="556">
           <description>Combo Validation</description>
           <long-description>&lt;p&gt;Type of function: Dummy&lt;/p&gt;
 
 &lt;p&gt;Purpose: Checks PIN/UID combo against FGCU Database to see if valid combo&lt;/p&gt;</long-description>
-          <tag line="554" name="param" description="Username" type="integer" variable="$username">
+          <tag line="556" name="param" description="Username" type="integer" variable="$username">
             <type by_reference="false">integer</type>
           </tag>
-          <tag line="554" name="param" description="Password" type="integer|string" variable="$password">
+          <tag line="556" name="param" description="Password" type="integer|string" variable="$password">
             <type by_reference="false">integer</type>
             <type by_reference="false">string</type>
           </tag>
-          <tag line="554" name="return" description="true if valid, else false&#13;&#10;Created in Version: 0.2.0&#13;&#10;Last Modified: 9/15/2012, by Chris Christoff" type="bool">
+          <tag line="556" name="return" description="true if valid, else false&#13;&#10;Created in Version: 0.2.0&#13;&#10;Last Modified: 9/15/2012, by Chris Christoff" type="bool">
             <type by_reference="false">bool</type>
           </tag>
         </docblock>
-        <argument line="569">
+        <argument line="571">
           <name>$username</name>
           <default/>
           <type/>
         </argument>
-        <argument line="569">
+        <argument line="571">
           <name>$password</name>
           <default/>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="578" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="580" package="BlackHawk\Members">
         <name>data</name>
         <full_name>data</full_name>
-        <docblock line="573">
+        <docblock line="575">
           <description>Member Data</description>
           <long-description>&lt;p&gt;Loads all the member data&lt;/p&gt;</long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="602" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="604" package="BlackHawk\Members">
         <name>register</name>
         <full_name>register</full_name>
-        <docblock line="597">
+        <docblock line="599">
           <description>Register</description>
           <long-description>&lt;p&gt;This function allows user to register&lt;/p&gt;</long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="868" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="870" package="BlackHawk\Members">
         <name>randomString</name>
         <full_name>randomString</full_name>
-        <docblock line="863">
+        <docblock line="865">
           <description>Random String</description>
           <long-description>&lt;p&gt;Creates a random string of A-Z0-9&lt;/p&gt;</long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="884" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="886" package="BlackHawk\Members">
         <name>recoverPassword</name>
         <full_name>recoverPassword</full_name>
-        <docblock line="878">
+        <docblock line="880">
           <description>Recover Password</description>
           <long-description>&lt;p&gt;Checks and sees if a verCode is present and that a user is try to reover a password, otherwise
 Lets the user Recover their password using e-mail&lt;/p&gt;</long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="978" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="980" package="BlackHawk\Members">
         <name>changePassword</name>
         <full_name>changePassword</full_name>
-        <docblock line="971">
+        <docblock line="973">
           <description>Change Password</description>
           <long-description>&lt;p&gt;Chnages the selected users password&lt;/p&gt;</long-description>
-          <tag line="971" name="param" description="The users ID" type="string" variable="$user">
+          <tag line="973" name="param" description="The users ID" type="string" variable="$user">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
-        <argument line="978">
+        <argument line="980">
           <name>$user</name>
           <default>null</default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1056" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1058" package="BlackHawk\Members">
         <name>changeEmail</name>
         <full_name>changeEmail</full_name>
-        <docblock line="1049">
+        <docblock line="1051">
           <description>changeEmail</description>
           <long-description>&lt;p&gt;Chnages the selected users email&lt;/p&gt;</long-description>
-          <tag line="1049" name="param" description="The users ID" type="string" variable="$user">
+          <tag line="1051" name="param" description="The users ID" type="string" variable="$user">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
-        <argument line="1056">
+        <argument line="1058">
           <name>$user</name>
           <default>null</default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1138" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1140" package="BlackHawk\Members">
         <name>deleteAccount</name>
         <full_name>deleteAccount</full_name>
-        <docblock line="1131">
+        <docblock line="1133">
           <description>deleteAccount</description>
           <long-description>&lt;p&gt;Delete user account&lt;/p&gt;</long-description>
-          <tag line="1131" name="param" description="The users ID" type="string" variable="$user">
+          <tag line="1133" name="param" description="The users ID" type="string" variable="$user">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
-        <argument line="1138">
+        <argument line="1140">
           <name>$user</name>
           <default>null</default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1181" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1183" package="BlackHawk\Members">
         <name>verification</name>
         <full_name>verification</full_name>
-        <docblock line="1176">
+        <docblock line="1178">
           <description>Verification</description>
           <long-description>&lt;p&gt;If email verification is set this handels those verifications&lt;/p&gt;</long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1211" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1213" package="BlackHawk\Members">
         <name>firstuserregister</name>
         <full_name>firstuserregister</full_name>
-        <docblock line="1204">
+        <docblock line="1206">
           <description>First User Registration</description>
           <long-description>&lt;p&gt;Creates the Admin Account on setup&lt;/p&gt;</long-description>
-          <tag line="1204" name="param" description="Admin Email" type="string" variable="$email">
+          <tag line="1206" name="param" description="Admin Email" type="string" variable="$email">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
-        <argument line="1211">
+        <argument line="1213">
           <name>$email</name>
           <default>null</default>
           <type/>
@@ -959,10 +1276,10 @@ Lets the user Recover their password using e-mail&lt;/p&gt;</long-description>
       </method>
     </class>
     <markers>
-      <todo line="487">Save roles in cookie</todo>
-      <todo line="570">Check against a dummy DB, that is made manually by SQL import?</todo>
-      <todo line="787">, make register form pick type of student and pull that value</todo>
-      <todo line="1220">make random again</todo>
+      <todo line="489">Save roles in cookie</todo>
+      <todo line="572">Check against a dummy DB, that is made manually by SQL import?</todo>
+      <todo line="789">, make register form pick type of student and pull that value</todo>
+      <todo line="1222">make random again</todo>
     </markers>
   </file>
   <file path="assets\member.inc.php" hash="1c2c155c90ec0b7deaced5420bd56691" package="BlackHawk\Members">
@@ -1133,66 +1450,6 @@ Lets the user Recover their password using e-mail&lt;/p&gt;</long-description>
       <todo line="36">UPD ROLE SPECIFIC FUNCTIONS CALLED FROM UPD ROLE FILE</todo>
     </markers>
   </file>
-  <file path="debug\error.php" hash="f0917882f7cb58510fd106437013e521" package="Default">
-    <include line="3" type="Include" package="Default">
-      <name>./../init.php</name>
-    </include>
-    <include line="4" type="Include" package="Default">
-      <name>./error_browser.php</name>
-    </include>
-    <include line="5" type="Include" package="Default">
-      <name>./error_os.php</name>
-    </include>
-    <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file debug\error.php</error>
-    </parse_markers>
-  </file>
-  <file path="debug\error_os.php" hash="bc0e1e5811e24d7499465a55344b355f" package="Default">
-    <function namespace="global" line="4" package="Default">
-      <name>getOS</name>
-      <full_name>\getOS</full_name>
-    </function>
-    <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file debug\error_os.php</error>
-      <error line="4" code="50009">No DocBlock was found for function \getOS()</error>
-    </parse_markers>
-  </file>
-  <file path="debug\error_test_mysql.php" hash="4ca2dd1a5eaf5483cff604c6427a687d" package="Default">
-    <include line="3" type="Include" package="Default">
-      <name>./../init.php</name>
-    </include>
-    <include line="4" type="Include" package="Default">
-      <name>./../config/standard/config.php</name>
-    </include>
-    <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file debug\error_test_mysql.php</error>
-    </parse_markers>
-  </file>
-  <file path="debug\index.php" hash="bfd6770f5b16662d2b1f67eea7cd7e65" package="BlackHawk\Security">
-    <docblock line="2">
-      <description>Security Index Page</description>
-      <long-description>&lt;p&gt;This file prevents directory listing&lt;/p&gt;
-
-&lt;p&gt;PHP version 5.2.17 or higher&lt;/p&gt;
-
-&lt;p&gt;LICENSE: TBD&lt;/p&gt;</long-description>
-      <tag line="2" name="package" description="BlackHawk"/>
-      <tag line="2" name="subpackage" description="Security"/>
-      <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
-      <tag line="2" name="copyright" description="2012 Project BlackHawk"/>
-      <tag line="2" name="license" description="http://www.futuregencode.com/blackhawk/404  License 1.00"/>
-      <tag line="2" name="version" description="0.3.0"/>
-      <tag line="2" name="since" description="File available since Release 0.3.0"/>
-    </docblock>
-  </file>
-  <file path="debug\masdebug.php" hash="cba03e1d4c2f9ed713242bc81a4f1c72" package="Default">
-    <include line="3" type="Include" package="Default">
-      <name>./error.php</name>
-    </include>
-    <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file debug\masdebug.php</error>
-    </parse_markers>
-  </file>
   <file path="errorcode.php" hash="b8a6ccf0ec310f84b6b5eb29a6d6bcec" package="BlackHawk\Debug">
     <docblock line="2">
       <description>Project BlackHawk Errorcode</description>
@@ -1354,162 +1611,6 @@ Lets the user Recover their password using e-mail&lt;/p&gt;</long-description>
       <error line="677" code="50009">No DocBlock was found for function \rrmdir()</error>
     </parse_markers>
   </file>
-  <file path="tests\bootstrap.php" hash="f015d1b36caa14547d312e73e1ed85eb" package="Default">
-    <include line="7" type="Require" package="Default">
-      <name/>
-    </include>
-    <function namespace="global" line="3" package="Default">
-      <name>loader</name>
-      <full_name>\loader</full_name>
-      <argument line="3">
-        <name>$class</name>
-        <default/>
-        <type/>
-      </argument>
-    </function>
-    <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file tests\bootstrap.php</error>
-      <error line="3" code="50009">No DocBlock was found for function \loader()</error>
-    </parse_markers>
-  </file>
-  <file path="tests\HelloWorldTest.php" hash="d18d19f26b9ce0812e148818d81773ef" package="Default">
-    <include line="2" type="Require Once" package="Default">
-      <name>test_classes/HelloWorld.php</name>
-    </include>
-    <class final="false" abstract="false" namespace="global" line="3" package="Default">
-      <extends>\PHPUnit_Framework_TestCase</extends>
-      <name>HelloWorldTest</name>
-      <full_name>\HelloWorldTest</full_name>
-      <property final="false" static="false" visibility="private" line="8" namespace="global" package="Default">
-        <name>$pdo</name>
-        <default/>
-        <docblock line="5">
-          <description/>
-          <long-description/>
-          <tag line="5" name="var" description="" type="\PDO">
-            <type by_reference="false">\PDO</type>
-          </tag>
-        </docblock>
-      </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="9" package="Default">
-        <name>setUp</name>
-        <full_name>setUp</full_name>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="16" package="Default">
-        <name>tearDown</name>
-        <full_name>tearDown</full_name>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="21" package="Default">
-        <name>testHelloWorld</name>
-        <full_name>testHelloWorld</full_name>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="28" package="Default">
-        <name>testHello</name>
-        <full_name>testHello</full_name>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="35" package="Default">
-        <name>testAddition</name>
-        <full_name>testAddition</full_name>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="42" package="Default">
-        <name>testWhat</name>
-        <full_name>testWhat</full_name>
-      </method>
-    </class>
-    <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file tests\HelloWorldTest.php</error>
-      <error line="3" code="50000">No DocBlock was found for \HelloWorldTest</error>
-      <critical line="5" code="50019">No short description for property $pdo</critical>
-      <error line="9" code="50010">No DocBlock was found for method setUp()</error>
-      <error line="16" code="50010">No DocBlock was found for method tearDown()</error>
-      <error line="21" code="50010">No DocBlock was found for method testHelloWorld()</error>
-      <error line="28" code="50010">No DocBlock was found for method testHello()</error>
-      <error line="35" code="50010">No DocBlock was found for method testAddition()</error>
-      <error line="42" code="50010">No DocBlock was found for method testWhat()</error>
-    </parse_markers>
-  </file>
-  <file path="tests\index.php" hash="bfd6770f5b16662d2b1f67eea7cd7e65" package="BlackHawk\Security">
-    <docblock line="2">
-      <description>Security Index Page</description>
-      <long-description>&lt;p&gt;This file prevents directory listing&lt;/p&gt;
-
-&lt;p&gt;PHP version 5.2.17 or higher&lt;/p&gt;
-
-&lt;p&gt;LICENSE: TBD&lt;/p&gt;</long-description>
-      <tag line="2" name="package" description="BlackHawk"/>
-      <tag line="2" name="subpackage" description="Security"/>
-      <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
-      <tag line="2" name="copyright" description="2012 Project BlackHawk"/>
-      <tag line="2" name="license" description="http://www.futuregencode.com/blackhawk/404  License 1.00"/>
-      <tag line="2" name="version" description="0.3.0"/>
-      <tag line="2" name="since" description="File available since Release 0.3.0"/>
-    </docblock>
-  </file>
-  <file path="tests\test_classes\HelloWorld.php" hash="28fa1b328ed486fdd455ba132b32284f" package="Default">
-    <class final="false" abstract="false" namespace="global" line="3" package="Default">
-      <extends/>
-      <name>HelloWorld</name>
-      <full_name>\HelloWorld</full_name>
-      <property final="false" static="false" visibility="private" line="8" namespace="global" package="Default">
-        <name>$pdo</name>
-        <default/>
-        <docblock line="5">
-          <description/>
-          <long-description/>
-          <tag line="5" name="var" description="" type="\PDO">
-            <type by_reference="false">\PDO</type>
-          </tag>
-        </docblock>
-      </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="10" package="Default">
-        <name>__construct</name>
-        <full_name>__construct</full_name>
-        <argument line="10">
-          <name>$pdo</name>
-          <default/>
-          <type>\PDO</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="15" package="Default">
-        <name>hello</name>
-        <full_name>hello</full_name>
-        <argument line="15">
-          <name>$what</name>
-          <default>'World'</default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="23" package="Default">
-        <name>what</name>
-        <full_name>what</full_name>
-      </method>
-    </class>
-    <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file tests\test_classes\HelloWorld.php</error>
-      <error line="3" code="50000">No DocBlock was found for \HelloWorld</error>
-      <critical line="5" code="50019">No short description for property $pdo</critical>
-      <error line="10" code="50010">No DocBlock was found for method __construct()</error>
-      <error line="15" code="50010">No DocBlock was found for method hello()</error>
-      <error line="23" code="50010">No DocBlock was found for method what()</error>
-    </parse_markers>
-  </file>
-  <file path="tests\test_classes\index.php" hash="bfd6770f5b16662d2b1f67eea7cd7e65" package="BlackHawk\Security">
-    <docblock line="2">
-      <description>Security Index Page</description>
-      <long-description>&lt;p&gt;This file prevents directory listing&lt;/p&gt;
-
-&lt;p&gt;PHP version 5.2.17 or higher&lt;/p&gt;
-
-&lt;p&gt;LICENSE: TBD&lt;/p&gt;</long-description>
-      <tag line="2" name="package" description="BlackHawk"/>
-      <tag line="2" name="subpackage" description="Security"/>
-      <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
-      <tag line="2" name="copyright" description="2012 Project BlackHawk"/>
-      <tag line="2" name="license" description="http://www.futuregencode.com/blackhawk/404  License 1.00"/>
-      <tag line="2" name="version" description="0.3.0"/>
-      <tag line="2" name="since" description="File available since Release 0.3.0"/>
-    </docblock>
-  </file>
   <file path="update.php" hash="3e9155b99232a06ff8ab9e31f9e74650" package="Default">
     <parse_markers>
       <error line="0" code="50007">No page-level DocBlock was found in file update.php</error>
@@ -1527,7 +1628,7 @@ Lets the user Recover their password using e-mail&lt;/p&gt;</long-description>
   </package>
   <package name="Default" full_name="Default"/>
   <namespace name="global" full_name="global"/>
-  <marker count="24">todo</marker>
+  <marker count="28">todo</marker>
   <marker count="0">fixme</marker>
   <deprecated count="0"/>
 </project>

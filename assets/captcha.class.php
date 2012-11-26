@@ -71,6 +71,6 @@ class captcha {
 }
 
 $captcha = new captcha();
-session_start();
+session_start(); // TODO: Evaluate whether we need this or not at all. Isn't the session created anyways when the login/captcha form is presented? This seems to be causing 5.2 Travis builds to fail.
 echo $captcha->display("170", "50", $_SESSION['captcha']);
 ?>
