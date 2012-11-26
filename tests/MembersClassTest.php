@@ -1,6 +1,6 @@
 <?php
-		session_start();
-		$_SERVER['REMOTE_ADDR']='127.0.0.1';
+session_start();
+$_SERVER['REMOTE_ADDR']='127.0.0.1';
 
 require_once('assets/member.inc.php');
 
@@ -17,8 +17,11 @@ class MembersClassTest extends PHPUnit_Framework_TestCase
 
         $this->pdo->query("DROP TABLE hello");
     }
-
-	public function checkTable()
+	public testAddition(){
+		assertEquals(1,1);
+		assertEquals((2-1),1);
+	}
+	public function testTableaddition()
 	{
 		$result = $database->query("SELECT * FROM hello");
 		assertTrue($result);
