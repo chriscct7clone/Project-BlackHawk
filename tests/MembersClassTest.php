@@ -13,7 +13,7 @@ class MembersClassTest extends PHPUnit_Framework_TestCase
   
     public function tearDown()
     {
-		$_SESSION['REMOTE_ADDR'] = $_SERVER['last_ip'];
+		$_SERVER['REMOTE_ADDR']='127.0.0.1';
         $this->pdo->query("DROP TABLE hello");
     }
 
