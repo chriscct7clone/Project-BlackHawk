@@ -1,4 +1,9 @@
 <?php
+/**
+* @backupGlobals disabled
+* @backupStaticAttributes disabled
+*/
+
 session_start();
 $_SERVER['REMOTE_ADDR']='127.0.0.1';
 
