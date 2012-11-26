@@ -20,7 +20,8 @@
     <ignore-symlinks>on</ignore-symlinks>
 	<ignore>.git/*</ignore>		
 	<ignore>assets/bin/*</ignore>
-	<ignore>assets/bootstrap/*</ignore>	
+	<ignore>assets/bootstrap/*</ignore>
+	<ignore>assets/lib/*</ignore>	
 	<ignore>tests/*</ignore>
 	<ignore>vendor/*</ignore>
 	<ignore>documentation/*</ignore>
