@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <phpdocumentor>
-<title>BlackHawk Developer</title>
+<title>BlackHawk Developer1</title>
   <parser>
     <default-package-name>BlackHawk</default-package-name>
     <target>output</target>
