@@ -14,10 +14,10 @@ class MembersClassTest extends PHPUnit_Framework_TestCase
   
     public function tearDown()
     {
-        $database->query("DROP TABLE hello");
+        $this->pdo->query("DROP TABLE hello");
     }
 
-	public function testCheckTable()
+	public function checkTable()
 	{
 		$result = $database->query("SELECT * FROM hello");
 		assertTrue($result);
