@@ -15,7 +15,11 @@ class MembersClassTest extends PHPUnit_Framework_TestCase
     public function setUp()
     {
 		global $database;
-        $database->query("CREATE TABLE hello (what VARCHAR(50) NOT NULL)");
+        $database->query("CREATE TABLE IF NOT EXISTS `garage_roles` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(225) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=20");
 		unset ( $database);
 	}
   
@@ -32,7 +36,7 @@ class MembersClassTest extends PHPUnit_Framework_TestCase
 	public function testTableAddition()
 	{	
 		global $database;
-		$result = $database->query("SELECT * FROM hello");
+		$result = $database->query("INSERT INTO `garage_roles` (`id`, 	`name`) VALUES (1, 'Police');");
 		$result = ($result!=null)? true : false;
 		$this->assertTrue($result);
 		unset ( $database);
