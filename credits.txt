@@ -20,7 +20,6 @@ The following open-source projects:
 + JSONLint
 + Antiscroll
 + Chosen
-+ CLEditor
 + Colorbox
 + Colorpicker
 + Datatables
