@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <phpdocumentor>
-<title>BlackHawk Developer1</title>
+<title>BlackHawk Developer</title>
   <parser>
     <default-package-name>BlackHawk</default-package-name>
     <target>output</target>
@@ -18,11 +18,13 @@
   <files>
     <ignore-hidden>on</ignore-hidden>
     <ignore-symlinks>on</ignore-symlinks>
-	<ignore>vendor/*</ignore>
-	<ignore>assets/lib/*</ignore>
-	<ignore>assets/bootstrap/*</ignore>
-	<ignore>debug/error_browser.php</ignore>
 	<ignore>.git/*</ignore>		
+	<ignore>assets/bin/*</ignore>
+	<ignore>assets/bootstrap/*</ignore>	
+	<ignore>tests/*</ignore>
+	<ignore>vendor/*</ignore>
+	<ignore>documentation/*</ignore>
+	<ignore>debug/*</ignore>	
   </files>
   <transformer>
     <target>output</target>
