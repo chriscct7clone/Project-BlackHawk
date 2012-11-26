@@ -42,15 +42,10 @@ class member {
 		/* Prevent JavaScript from reading Session cookies */
 		ini_set('session.cookie_httponly', true);
 		/* Start Session */
-		global $travis;
 		session_start();
 		/* Check if last session is from the same pc */
-		if(!isset($_SESSION['last_ip'])&& ($travis==false || $travis== null)) {
+		if(!isset($_SESSION['last_ip'])) {
 			$_SESSION['last_ip'] = $_SERVER['REMOTE_ADDR'];
-		}
-		else {
-		$_SESSION['last_ip'] = '127.0.0.1';
-		$_SERVER['REMOTE_ADDR']='127.0.0.1';
 		}
 		if($_SESSION['last_ip'] !== $_SERVER['REMOTE_ADDR']) {
 			/* Clear the SESSION */
