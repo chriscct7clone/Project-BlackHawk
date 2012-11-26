@@ -16,13 +16,15 @@ class MembersClassTest extends PHPUnit_Framework_TestCase
     {
 		global $database;
         $database->query("CREATE TABLE hello (what VARCHAR(50) NOT NULL)");
-    }
+		unset ( $database);
+	}
   
     public function tearDown()
     {
 		global $database;
         $database->query("DROP TABLE hello");
-    }
+		unset ( $database);
+	}
 	public function testAddition(){
 		assertEquals(1,1);
 		assertEquals((2-1),1);
@@ -32,5 +34,6 @@ class MembersClassTest extends PHPUnit_Framework_TestCase
 		global $database;
 		$result = $database->query("SELECT * FROM hello");
 		assertTrue($result);
+		unset ( $database);
 	}
 }
