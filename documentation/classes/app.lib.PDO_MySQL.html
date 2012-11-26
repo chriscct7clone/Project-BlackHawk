@@ -1,0 +1,300 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>Jigoshop Developer » \app\lib\PDO_MySQL</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">Jigoshop Developer</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/app.html"><i class="icon-th"></i> app</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
+<li><a href="../namespaces/nx.html"><i class="icon-th"></i> nx</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/BlackHawk.html"><i class="icon-folder-open"></i> BlackHawk</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">249</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul><li>todo 
+                <span class="label label-info">28</span>
+</li></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method_affected_rows" title="affected_rows :: Returns the number of rows affected by the last DELETE,
+ INSERT, or UPDATE query."><span class="description">Returns the number of rows affected by the last DELETE,
+ INSERT, or UPDATE query.</span><pre>affected_rows()</pre></a></li>
+<li class="method public "><a href="#method_close" title="close :: Closes the connection."><span class="description">Closes the connection.</span><pre>close()</pre></a></li>
+<li class="method public "><a href="#method_fetch" title="fetch :: Fetches the next row from the result set in memory (i.e., the one
+ that was created after running query())."><span class="description">Fetches the next row from the result set in memory (i.e., the one
+ that was created after running query()).</span><pre>fetch()</pre></a></li>
+<li class="method public "><a href="#method_get_errors" title="get_errors :: Returns the errors generated by PDOExceptions."><span class="description">Returns the errors generated by PDOExceptions.</span><pre>get_errors()</pre></a></li>
+<li class="method public "><a href="#method_insert" title="insert :: Inserts a record into the database."><span class="description">Inserts a record into the database.</span><pre>insert()</pre></a></li>
+<li class="method public "><a href="#method_insert_id" title="insert_id :: Returns the ID of the last inserted row or sequence value."><span class="description">Returns the ID of the last inserted row or sequence value.</span><pre>insert_id()</pre></a></li>
+<li class="method public "><a href="#method_query" title="query :: Executes SQL query."><span class="description">Executes SQL query.</span><pre>query()</pre></a></li>
+<li class="method public "><a href="#method_update" title="update :: Updates a record in the database."><span class="description">Updates a record in the database.</span><pre>update()</pre></a></li>
+<li class="method public "><a href="#method_upsert" title="upsert :: Inserts or updates (if exists) a record in the database."><span class="description">Inserts or updates (if exists) a record in the database.</span><pre>upsert()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul><li class="method protected "><a href="#method__set_fetch_mode" title="_set_fetch_mode :: Sets the fetch mode."><span class="description">Sets the fetch mode.</span><pre>_set_fetch_mode()</pre></a></li></ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected "><a href="#property__affected_rows" title="$_affected_rows :: Number of rows affected by MySQL query."><span class="description"></span><pre>$_affected_rows</pre></a></li>
+<li class="property protected "><a href="#property__dbh" title="$_dbh :: The db handle."><span class="description"></span><pre>$_dbh</pre></a></li>
+<li class="property protected "><a href="#property__errors" title="$_errors :: The error messages generated by PDOExceptions."><span class="description"></span><pre>$_errors</pre></a></li>
+<li class="property protected "><a href="#property__statement" title="$_statement :: The result set associated with a prepared statement."><span class="description"></span><pre>$_statement</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\app\lib\PDO_MySQL"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/app.html">app</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/app.lib.html">lib</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/app.lib.PDO_MySQL.html">PDO_MySQL</a>
+</li>
+</ul>
+<div class="element class"><div class="details">
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method_affected_rows"></a><div class="element clickable method public method_affected_rows" data-toggle="collapse" data-target=".method_affected_rows .collapse">
+<h2>Returns the number of rows affected by the last DELETE,
+ INSERT, or UPDATE query.</h2>
+<pre>affected_rows() : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>@access public</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a id="method_close"></a><div class="element clickable method public method_close" data-toggle="collapse" data-target=".method_close .collapse">
+<h2>Closes the connection.</h2>
+<pre>close() : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>@access public</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a id="method_fetch"></a><div class="element clickable method public method_fetch" data-toggle="collapse" data-target=".method_fetch .collapse">
+<h2>Fetches the next row from the result set in memory (i.e., the one
+ that was created after running query()).</h2>
+<pre>fetch($fetch_style, \app\lib\obj $obj) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>@param string $fetch_style    Controls how the rows will be returned.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$fetch_style</h4></div>
+<div class="subelement argument">
+<h4>$obj</h4>
+<code>\app\lib\obj</code><p>The object to be fetched into if $fetch_style is set to 'into'. @access public @return mixed</p>
+</div>
+</div></div>
+</div>
+<a id="method_get_errors"></a><div class="element clickable method public method_get_errors" data-toggle="collapse" data-target=".method_get_errors .collapse">
+<h2>Returns the errors generated by PDOExceptions.</h2>
+<pre>get_errors() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>@access public</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_insert"></a><div class="element clickable method public method_insert" data-toggle="collapse" data-target=".method_insert .collapse">
+<h2>Inserts a record into the database.</h2>
+<pre>insert($table, array $data) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>@param string $table    The table containing the record to be inserted.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$table</h4></div>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>array</code><p>An array containing the data to be inserted. Format should be as follows: array('column_name' => 'column_value'); @access public @return bool</p>
+</div>
+</div></div>
+</div>
+<a id="method_insert_id"></a><div class="element clickable method public method_insert_id" data-toggle="collapse" data-target=".method_insert_id .collapse">
+<h2>Returns the ID of the last inserted row or sequence value.</h2>
+<pre>insert_id() : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>@access public</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a id="method_query"></a><div class="element clickable method public method_query" data-toggle="collapse" data-target=".method_query .collapse">
+<h2>Executes SQL query.</h2>
+<pre>query($sql, array $parameters) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>@param string $sql          The SQL query to be executed.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$sql</h4></div>
+<div class="subelement argument">
+<h4>$parameters</h4>
+<code>array</code><p>An array containing the parameters to be bound. @access public @return bool</p>
+</div>
+</div></div>
+</div>
+<a id="method_update"></a><div class="element clickable method public method_update" data-toggle="collapse" data-target=".method_update .collapse">
+<h2>Updates a record in the database.</h2>
+<pre>update($table, array $data, $where) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>@param string $table    The table containing the record to be inserted.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$table</h4></div>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>array</code><p>An array containing the data to be inserted. Format should be as follows: array('column_name' => 'column_value'); @param array $where The WHERE clause of the SQL query. @access public @return bool</p>
+</div>
+<div class="subelement argument"><h4>$where</h4></div>
+</div></div>
+</div>
+<a id="method_upsert"></a><div class="element clickable method public method_upsert" data-toggle="collapse" data-target=".method_upsert .collapse">
+<h2>Inserts or updates (if exists) a record in the database.</h2>
+<pre>upsert($table, array $data) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>@param string $table    The table containing the record to be inserted.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$table</h4></div>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>array</code><p>An array containing the data to be inserted. Format should be as follows: array('column_name' => 'column_value'); @access public @return bool</p>
+</div>
+</div></div>
+</div>
+<a id="method__set_fetch_mode"></a><div class="element clickable method protected method__set_fetch_mode" data-toggle="collapse" data-target=".method__set_fetch_mode .collapse">
+<h2>Sets the fetch mode.</h2>
+<pre>_set_fetch_mode($fetch_style, \app\lib\obj $obj) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>@param string $fetch_style    Controls how the rows will be returned.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$fetch_style</h4></div>
+<div class="subelement argument">
+<h4>$obj</h4>
+<code>\app\lib\obj</code><p>The object to be fetched into for use with FETCH_INTO. @access protected @return int</p>
+</div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property__affected_rows"> </a><div class="element clickable property protected property__affected_rows" data-toggle="collapse" data-target=".property__affected_rows .collapse">
+<h2></h2>
+<pre>$_affected_rows </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>@var int</p></div>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>protected</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property__dbh"> </a><div class="element clickable property protected property__dbh" data-toggle="collapse" data-target=".property__dbh .collapse">
+<h2></h2>
+<pre>$_dbh </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>@var object</p></div>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>protected</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property__errors"> </a><div class="element clickable property protected property__errors" data-toggle="collapse" data-target=".property__errors .collapse">
+<h2></h2>
+<pre>$_errors </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>@var array</p></div>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>protected</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property__statement"> </a><div class="element clickable property protected property__statement" data-toggle="collapse" data-target=".property__statement .collapse">
+<h2></h2>
+<pre>$_statement </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>@var PDOStatement</p></div>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>protected</td>
+</tr></table>
+</div></div>
+</div>
+</div></div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2012-11-26T15:23:32-05:00.<br></footer></div>
+</div>
+</body>
+</html>
