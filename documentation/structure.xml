@@ -1578,37 +1578,37 @@ Lets the user Recover their password using e-mail&lt;/p&gt;</long-description>
       <tag line="2" name="since" description="File available since Release 0.3.0"/>
     </docblock>
   </file>
-  <file path="setup\index.php" hash="48f54e148930076793572398cbd9619e" package="Default">
+  <file path="setup\index.php" hash="0ca9b08f5d76f2075df4a26ccf33bc7e" package="Default">
     <include line="2" type="Require Once" package="Default">
       <name>../init.php</name>
     </include>
     <include line="4" type="Require Once" package="Default">
       <name>../assets/notice.class.php</name>
     </include>
-    <include line="590" type="Require Once" package="Default">
+    <include line="593" type="Require Once" package="Default">
       <name>../assets/member.inc.php</name>
     </include>
-    <function namespace="global" line="677" package="Default">
+    <function namespace="global" line="680" package="Default">
       <name>rrmdir</name>
       <full_name>\rrmdir</full_name>
-      <argument line="677">
+      <argument line="680">
         <name>$dir</name>
-        <default/>
+        <default></default>
         <type/>
       </argument>
     </function>
     <markers>
       <todo line="92">php explode to make sure its valid</todo>
-      <todo line="600">make sure htaccess exists</todo>
-      <todo line="809">Add PHPVersion check</todo>
-      <todo line="810">Add bycrypt() check</todo>
-      <todo line="811">Add sessions check</todo>
-      <todo line="812">Add cookies check</todo>
-      <todo line="813">Add validate the admin emails</todo>
+      <todo line="603">make sure htaccess exists</todo>
+      <todo line="812">Add PHPVersion check</todo>
+      <todo line="813">Add bycrypt() check</todo>
+      <todo line="814">Add sessions check</todo>
+      <todo line="815">Add cookies check</todo>
+      <todo line="816">Add validate the admin emails</todo>
     </markers>
     <parse_markers>
       <error line="0" code="50007">No page-level DocBlock was found in file setup\index.php</error>
-      <error line="677" code="50009">No DocBlock was found for function \rrmdir()</error>
+      <error line="680" code="50009">No DocBlock was found for function \rrmdir()</error>
     </parse_markers>
   </file>
   <file path="update.php" hash="3e9155b99232a06ff8ab9e31f9e74650" package="Default">
