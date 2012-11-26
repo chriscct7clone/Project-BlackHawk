@@ -26,14 +26,14 @@ class MembersClassTest extends PHPUnit_Framework_TestCase
 		unset ( $database);
 	}
 	public function testAddition(){
-		assertEquals(1,1);
-		assertEquals((2-1),1);
+		$this->assertEquals(1,1);
+		$this->assertEquals((2-1),1);
 	}
 	public function testTableAddition()
 	{	
 		global $database;
 		$result = $database->query("SELECT * FROM hello");
-		assertTrue($result);
+		$this->assertTrue($result);
 		unset ( $database);
 	}
 }
