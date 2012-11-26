@@ -1,5 +1,6 @@
 <?php
-
+		session_start();
+		$_SERVER['REMOTE_ADDR']='127.0.0.1';
 
 require_once('assets/member.inc.php');
 
@@ -13,7 +14,7 @@ class MembersClassTest extends PHPUnit_Framework_TestCase
   
     public function tearDown()
     {
-		$_SERVER['REMOTE_ADDR']='127.0.0.1';
+
         $this->pdo->query("DROP TABLE hello");
     }
 
