@@ -5,10 +5,6 @@
 # Folders/Files   #
 ###################
 
-# Anti-Stetson #
-config.inc.php
-assets/config.inc.php
-
 # Compiled source #
 ###################
 *.com
