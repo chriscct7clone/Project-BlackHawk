@@ -229,7 +229,7 @@ $mysql_statistics = 'CREATE TABLE IF NOT EXISTS `garage_statistics` (
   `numspots` int(8) varchar(225) NOT NULL,
   `spotsinsue` int(8) varchar(225) NOT NULL,
   `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`uid`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;';
 $mysql_garage_roles = 'CREATE TABLE IF NOT EXISTS `garage_roles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,	
