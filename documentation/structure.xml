@@ -143,7 +143,7 @@
         <full_name>parseString</full_name>
         <argument line="6">
           <name>$string</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="6">
@@ -157,7 +157,7 @@
         <full_name>escapeString</full_name>
         <argument line="41">
           <name>$string</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -166,7 +166,7 @@
         <full_name>_hasEndQuote</full_name>
         <argument line="54">
           <name>$token</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -175,7 +175,7 @@
         <full_name>detectSeparator</full_name>
         <argument line="69">
           <name>$filename</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="69">
@@ -219,7 +219,7 @@
         <full_name>__construct</full_name>
         <argument line="90">
           <name>$filename</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="90">
@@ -274,7 +274,7 @@
         <full_name>__construct</full_name>
         <argument line="150">
           <name>$filename</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="150">
@@ -292,7 +292,7 @@
         <full_name>addLine</full_name>
         <argument line="160">
           <name>$values</name>
-          <default></default>
+          <default/>
           <type>array</type>
         </argument>
       </method>
@@ -585,7 +585,7 @@
       <tag line="2" name="since" description="File available since Release 0.3.0"/>
     </docblock>
   </file>
-  <file path="assets\mailer.class.php" hash="f9bf2af3468127995fb5ebfe9dc64e4d" package="BlackHawk\Mail">
+  <file path="assets\mailer.class.php" hash="fc54c708fd111420de0e12c11ff20e80" package="BlackHawk\Mail">
     <docblock line="2">
       <description>Creates Mail Class</description>
       <long-description>&lt;p&gt;This file creates functions used internally for garages&lt;/p&gt;
@@ -608,7 +608,7 @@
       <full_name>\mailer</full_name>
       <docblock line="22">
         <description>Implements emails</description>
-        <long-description/>
+        <long-description></long-description>
         <tag line="22" name="package" description="BlackHawk"/>
         <tag line="22" name="subpackage" description="Mail"/>
         <tag line="22" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -619,10 +619,10 @@
       </docblock>
       <property final="false" static="false" visibility="public" line="39" namespace="global" package="Default">
         <name>$email_master</name>
-        <default/>
+        <default></default>
         <docblock line="34">
-          <description/>
-          <long-description/>
+          <description></description>
+          <long-description></long-description>
           <tag line="34" name="var" description="The Master E-Mail" type="\$email_master">
             <type by_reference="false">\$email_master</type>
           </tag>
@@ -630,10 +630,10 @@
       </property>
       <property final="false" static="false" visibility="public" line="45" namespace="global" package="Default">
         <name>$template</name>
-        <default/>
+        <default></default>
         <docblock line="40">
-          <description/>
-          <long-description/>
+          <description></description>
+          <long-description></long-description>
           <tag line="40" name="var" description="Stores template choice" type="\$template">
             <type by_reference="false">\$template</type>
           </tag>
@@ -654,7 +654,7 @@
         </docblock>
         <argument line="55">
           <name>$email_master</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
         <argument line="55">
@@ -678,24 +678,21 @@
         </docblock>
         <argument line="68">
           <name>$subject</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
         <argument line="68">
           <name>$content</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="100" package="BlackHawk\Mail">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="98" package="BlackHawk\Mail">
         <name>mail</name>
         <full_name>mail</full_name>
         <docblock line="89">
           <description>mail</description>
           <long-description>&lt;p&gt;Mails inputed data&lt;/p&gt;</long-description>
-          <tag line="89" name="param" description="The email address to send from" type="string" variable="$emailmaster">
-            <type by_reference="false">string</type>
-          </tag>
           <tag line="89" name="param" description="The email reciver" type="string" variable="$email">
             <type by_reference="false">string</type>
           </tag>
@@ -705,33 +702,24 @@
           <tag line="89" name="param" description="Content of the email" type="string" variable="$content">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="89" name="return" description="$email Sends email" type="\email">
-            <type by_reference="false">\email</type>
-          </tag>
         </docblock>
-        <argument line="100">
+        <argument line="98">
           <name>$email</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
-        <argument line="100">
+        <argument line="98">
           <name>$subject</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
-        <argument line="100">
+        <argument line="98">
           <name>$content</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
     </class>
-    <parse_markers>
-      <error line="89" code="50014">Name of argument $email does not match with the DocBlock's name $emailmaster in mail()</error>
-      <error line="89" code="50014">Name of argument $subject does not match with the DocBlock's name $email in mail()</error>
-      <error line="89" code="50014">Name of argument $content does not match with the DocBlock's name $subject in mail()</error>
-      <notice line="89" code="50013">Parameter $emailmaster could not be found in mail()</notice>
-    </parse_markers>
   </file>
   <file path="assets\member.class.php" hash="03e0eb805dfcc646f1c628c17f203b39" package="BlackHawk\Members">
     <docblock line="2">
@@ -1154,7 +1142,7 @@ Lets the user Recover their password using e-mail&lt;/p&gt;</long-description>
       <name>member.class.php</name>
     </include>
   </file>
-  <file path="assets\notice.class.php" hash="5b2a3cc25e8c3b36c2fe9e8ab89c7f3a" package="BlackHawk\Notice">
+  <file path="assets\notice.class.php" hash="e20017c4c154134819ea5b4b2d8a158c" package="BlackHawk\Notice">
     <docblock line="2">
       <description>Creates Notice Class</description>
       <long-description>&lt;p&gt;This file creates the notice outputs&lt;/p&gt;
@@ -1176,7 +1164,7 @@ Lets the user Recover their password using e-mail&lt;/p&gt;</long-description>
       <full_name>\notice</full_name>
       <docblock line="22">
         <description>Implements Notice</description>
-        <long-description/>
+        <long-description></long-description>
         <tag line="22" name="package" description="BlackHawk"/>
         <tag line="22" name="subpackage" description="Notice"/>
         <tag line="22" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -1188,36 +1176,54 @@ Lets the user Recover their password using e-mail&lt;/p&gt;</long-description>
       <property final="false" static="false" visibility="private" line="39" namespace="global" package="Default">
         <name>$_notices</name>
         <default>array()</default>
+        <docblock line="34">
+          <description></description>
+          <long-description></long-description>
+          <tag line="34" name="var" description="Used to store all the notices" type="\$_notices">
+            <type by_reference="false">\$_notices</type>
+          </tag>
+        </docblock>
       </property>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="49" package="BlackHawk\Notice">
         <name>add</name>
         <full_name>add</full_name>
+        <docblock line="41">
+          <description>Add Notice</description>
+          <long-description>&lt;p&gt;Adds a notice to the notice array&lt;/p&gt;</long-description>
+          <tag line="41" name="param" description="Type of notice (info, error, success)" type="\global\" variable="$type"/>
+          <tag line="41" name="param" description="The notice message" type="\global\" variable="$message"/>
+        </docblock>
         <argument line="49">
           <name>$type</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
         <argument line="49">
           <name>$message</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="58" package="BlackHawk\Notice">
         <name>report</name>
         <full_name>report</full_name>
+        <docblock line="53">
+          <description>Report</description>
+          <long-description>&lt;p&gt;Reports all notices (info, error, success)&lt;/p&gt;</long-description>
+        </docblock>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="90" package="BlackHawk\Notice">
         <name>errorsExist</name>
         <full_name>errorsExist</full_name>
+        <docblock line="85">
+          <description>errorsExist</description>
+          <long-description></long-description>
+          <tag line="85" name="return" description="True if errors exist, false if no errors" type="bool">
+            <type by_reference="false">bool</type>
+          </tag>
+        </docblock>
       </method>
     </class>
-    <parse_markers>
-      <error line="39" code="50018">No DocBlock was found for property $_notices</error>
-      <error line="49" code="50010">No DocBlock was found for method add()</error>
-      <error line="58" code="50010">No DocBlock was found for method report()</error>
-      <error line="90" code="50010">No DocBlock was found for method errorsExist()</error>
-    </parse_markers>
   </file>
   <file path="assets\sensors.class.php" hash="b7ecaed6f5a8647b905f2f3c5029c8e8" package="BlackHawk\Garage">
     <docblock line="2">
@@ -1295,7 +1301,7 @@ Lets the user Recover their password using e-mail&lt;/p&gt;</long-description>
       <todo line="36">UPD ROLE SPECIFIC FUNCTIONS CALLED FROM UPD ROLE FILE</todo>
     </markers>
   </file>
-  <file path="errorcode.php" hash="b8a6ccf0ec310f84b6b5eb29a6d6bcec" package="BlackHawk\Debug">
+  <file path="errorcode.php" hash="05a86f84d73a1aec97a2359d0b2c6184" package="BlackHawk\Debug">
     <docblock line="2">
       <description>Project BlackHawk Errorcode</description>
       <long-description>&lt;p&gt;Handles HTTP Headers&lt;/p&gt;
@@ -1312,21 +1318,25 @@ Lets the user Recover their password using e-mail&lt;/p&gt;</long-description>
       <tag line="2" name="since" description="File available since Release 0.3.0"/>
       <tag line="2" name="todo" description="Add All HTTP Header descriptions"/>
     </docblock>
-    <function namespace="global" line="34" package="BlackHawk\Debug">
+    <function namespace="global" line="32" package="BlackHawk\Debug">
       <name>print_error_page</name>
       <full_name>\print_error_page</full_name>
+      <docblock line="26">
+        <description>Print Error Page</description>
+        <long-description>&lt;p&gt;Dynamically Creates the Errorcode Page&lt;/p&gt;</long-description>
+      </docblock>
     </function>
-    <function namespace="global" line="263" package="BlackHawk\Debug">
+    <function namespace="global" line="261" package="BlackHawk\Debug">
       <name>askapache_global_debug</name>
       <full_name>\askapache_global_debug</full_name>
+      <docblock line="255">
+        <description>askapache_global_debug</description>
+        <long-description>&lt;p&gt;Recursively walks backward to find issue&lt;/p&gt;</long-description>
+      </docblock>
     </function>
     <markers>
-      <todo line="228">add redirect</todo>
+      <todo line="226">add redirect</todo>
     </markers>
-    <parse_markers>
-      <error line="34" code="50009">No DocBlock was found for function \print_error_page()</error>
-      <error line="263" code="50009">No DocBlock was found for function \askapache_global_debug()</error>
-    </parse_markers>
   </file>
   <file path="index.php" hash="1a80592662118100da3dea1e5422a016" package="Default">
     <include line="5" type="Require Once" package="Default">
@@ -1438,7 +1448,7 @@ Lets the user Recover their password using e-mail&lt;/p&gt;</long-description>
       <full_name>\rrmdir</full_name>
       <argument line="676">
         <name>$dir</name>
-        <default></default>
+        <default/>
         <type/>
       </argument>
     </function>
