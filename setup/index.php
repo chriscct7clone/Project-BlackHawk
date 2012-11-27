@@ -17,7 +17,6 @@ if(isset($_POST['setup'])) {
 	$bcrypt_rounds=12;
 	}
 	$remember_me         = $_POST['remember_me'];
-	$captcha             = $_POST['captcha'];
 	
 	$email_master        = $_POST['email_master'];
 	$email_template      = $_POST['email_template'];
@@ -151,8 +150,6 @@ Config::write(\'hash\', \'' . $hash . '\'); /* Once set DO NOT CHANGE (sha512/bc
 Config::write(\'bcryptRounds\', \'' . $bcrypt_rounds . '\');
 
 Config::write(\'remember\', ' . $remember_me . ');
-
-Config::write(\'captcha\', ' . $captcha . ');
 
 
 Config::write(\'email_template\', \'' . $email_template . '\');
@@ -656,7 +653,6 @@ ErrorDocument 510 '. $installURL.'/errorcode.php?error=510
 	
 	$bcrypt_rounds = 12;
 	$remember_me   = true;
-	$captcha       = true;
 	
 	$email_master  = null;
 	$email_welcome = true;
@@ -749,12 +745,6 @@ $("#myId").change(function() {
 			<select name="remember_me">
 				<option value="true"<?php if($remember_me == 'true') { echo ' selected="selected"'; } ?>>True</option>
 				<option value="false"<?php if($remember_me == 'false') { echo ' selected="selected"'; } ?>>False</option>
-			</select>
-			
-			<label>Require Captcha on login?</label>
-			<select name="captcha">
-				<option value="true"<?php if($captcha == 'true') { echo ' selected="selected"'; } ?>>True</option>
-				<option value="false"<?php if($captcha == 'false') { echo ' selected="selected"'; } ?>>False</option> 
 			</select>
 		</fieldset>
 

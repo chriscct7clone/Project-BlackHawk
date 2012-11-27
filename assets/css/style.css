@@ -124,16 +124,6 @@ form p.remember_me input[type=checkbox] {
 .options a {
 	text-decoration: none;
 }
-#captcha {
-	width: 300px;
-}
-#captcha input {
-	float: left;
-	width: 100px;
-}
-#captcha img {
-	float: right;
-}
 
 .button.full {
 	float: left;
