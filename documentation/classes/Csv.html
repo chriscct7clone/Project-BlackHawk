@@ -3,7 +3,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 <meta charset="utf-8">
-<title>BlackHawk Developer » \notice</title>
+<title>BlackHawk Developer » \Csv</title>
 <meta name="author" content="Mike van Riel">
 <meta name="description" content="">
 <link href="../css/template.css" rel="stylesheet" media="all">
@@ -55,115 +55,86 @@
 <span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
 <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
 </div>
-<ul class="side-nav nav nav-list">
-<li class="nav-header">
+<ul class="side-nav nav nav-list"><li class="nav-header">
 <i class="icon-custom icon-method"></i> Methods
                     <ul>
-<li class="method public "><a href="#method_add" title="add :: "><span class="description">add()
-        </span><pre>add()</pre></a></li>
-<li class="method public "><a href="#method_errorsExist" title="errorsExist :: "><span class="description">errorsExist()
-        </span><pre>errorsExist()</pre></a></li>
-<li class="method public "><a href="#method_report" title="report :: "><span class="description">report()
-        </span><pre>report()</pre></a></li>
+<li class="method public "><a href="#method__hasEndQuote" title="_hasEndQuote :: "><span class="description">_hasEndQuote()
+        </span><pre>_hasEndQuote()</pre></a></li>
+<li class="method public "><a href="#method_detectSeparator" title="detectSeparator :: "><span class="description">detectSeparator()
+        </span><pre>detectSeparator()</pre></a></li>
+<li class="method public "><a href="#method_escapeString" title="escapeString :: "><span class="description">escapeString()
+        </span><pre>escapeString()</pre></a></li>
+<li class="method public "><a href="#method_parseString" title="parseString :: "><span class="description">parseString()
+        </span><pre>parseString()</pre></a></li>
 </ul>
-</li>
-<li class="nav-header">
-<i class="icon-custom icon-property"></i> Properties
-                    <ul></ul>
-</li>
-<li class="nav-header private">» Private
-                    <ul><li class="property private "><a href="#property__notices" title="$_notices :: "><span class="description"></span><pre>$_notices</pre></a></li></ul>
-</li>
-</ul>
+</li></ul>
 </div>
 <div class="span8">
-<a id="\notice"></a><ul class="breadcrumb">
+<a id="\Csv"></a><ul class="breadcrumb">
 <li>
 <a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
 <li><a href="../namespaces/global.html">global</a></li>
 <li class="active">
-<span class="divider">\</span><a href="../classes/notice.html">notice</a>
+<span class="divider">\</span><a href="../classes/Csv.html">Csv</a>
 </li>
 </ul>
-<div class="element class">
-<p class="short_description">Implements Notice</p>
-<div class="details">
-<div class="long_description"></div>
-<table class="table table-bordered">
-<tr>
-<th>package</th>
-<td><a href="../packages/BlackHawk.Notice.html">BlackHawk</a></td>
-</tr>
-<tr>
-<th>subpackage</th>
-<td>Notice</td>
-</tr>
-<tr>
-<th>author</th>
-<td><a href="mailto:chris@futuregencode.com">Chris Christoff</a></td>
-</tr>
-<tr>
-<th>copyright</th>
-<td>2012 Project BlackHawk</td>
-</tr>
-<tr>
-<th>license</th>
-<td><a href="http://www.futuregencode.com/blackhawk/404">License 1.0</a></td>
-</tr>
-<tr>
-<th>version</th>
-<td>0.3.0</td>
-</tr>
-<tr>
-<th>since</th>
-<td>File available since Release 0.3.0</td>
-</tr>
-</table>
+<div class="element class"><div class="details">
 <h3>
 <i class="icon-custom icon-method"></i> Methods</h3>
-<a id="method_add"></a><div class="element clickable method public method_add" data-toggle="collapse" data-target=".method_add .collapse">
-<h2>add()
+<a id="method__hasEndQuote"></a><div class="element clickable method public method__hasEndQuote" data-toggle="collapse" data-target=".method__hasEndQuote .collapse">
+<h2>_hasEndQuote()
         </h2>
-<pre>add($type, $message) </pre>
-<div class="labels"></div>
+<pre>_hasEndQuote($token) </pre>
+<div class="labels"><span class="label">Static</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument"><h4>$type</h4></div>
-<div class="subelement argument"><h4>$message</h4></div>
+<div class="subelement argument"><h4>$token</h4></div>
 </div></div>
 </div>
-<a id="method_errorsExist"></a><div class="element clickable method public method_errorsExist" data-toggle="collapse" data-target=".method_errorsExist .collapse">
-<h2>errorsExist()
+<a id="method_detectSeparator"></a><div class="element clickable method public method_detectSeparator" data-toggle="collapse" data-target=".method_detectSeparator .collapse">
+<h2>detectSeparator()
         </h2>
-<pre>errorsExist() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<pre>detectSeparator($filename, $separators) </pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$filename</h4></div>
+<div class="subelement argument"><h4>$separators</h4></div>
+</div></div>
 </div>
-<a id="method_report"></a><div class="element clickable method public method_report" data-toggle="collapse" data-target=".method_report .collapse">
-<h2>report()
+<a id="method_escapeString"></a><div class="element clickable method public method_escapeString" data-toggle="collapse" data-target=".method_escapeString .collapse">
+<h2>escapeString()
         </h2>
-<pre>report() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<pre>escapeString($string) </pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$string</h4></div>
+</div></div>
 </div>
-<h3>
-<i class="icon-custom icon-property"></i> Properties</h3>
-<a id="property__notices"> </a><div class="element clickable property private property__notices" data-toggle="collapse" data-target=".property__notices .collapse">
-<h2></h2>
-<pre>$_notices </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<a id="method_parseString"></a><div class="element clickable method public method_parseString" data-toggle="collapse" data-target=".method_parseString .collapse">
+<h2>parseString()
+        </h2>
+<pre>parseString($string, $separator) </pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$string</h4></div>
+<div class="subelement argument"><h4>$separator</h4></div>
+</div></div>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 </div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
-            generated on 2012-11-27T09:19:35-05:00.<br></footer></div>
+            generated on 2012-11-27T09:19:34-05:00.<br></footer></div>
 </div>
 </body>
 </html>

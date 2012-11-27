@@ -178,7 +178,238 @@
       <tag line="2" name="since" description="File available since Release 0.3.0"/>
     </docblock>
   </file>
-  <file path="assets\database.class.php" hash="f4ad5811fd5d86a6f6faae82af4763c3" package="BlackHawk\Internal Functions">
+  <file path="assets\csv\read-file.php" hash="e5ff4945465ade8452cb49f9111f5462" package="Default">
+    <include line="2" type="Require Once" package="Default">
+      <name>../csv.class.php</name>
+    </include>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file assets\csv\read-file.php</error>
+    </parse_markers>
+  </file>
+  <file path="assets\csv\read-uploaded.php" hash="e6cc6b556b003b7f2e3fe7c78b4e8b61" package="Default">
+    <include line="7" type="Require Once" package="Default">
+      <name>../csv.php</name>
+    </include>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file assets\csv\read-uploaded.php</error>
+    </parse_markers>
+  </file>
+  <file path="assets\csv\write-direct-download.php" hash="ea0bf1763afa0228eaa8c15fd62f947a" package="Default">
+    <include line="2" type="Require Once" package="Default">
+      <name>../csv.php</name>
+    </include>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file assets\csv\write-direct-download.php</error>
+    </parse_markers>
+  </file>
+  <file path="assets\csv\write-file.php" hash="532ceda9f07ea81f0f7f5c4ff7ec6199" package="Default">
+    <include line="2" type="Require Once" package="Default">
+      <name>../csv.php</name>
+    </include>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file assets\csv\write-file.php</error>
+    </parse_markers>
+  </file>
+  <file path="assets\csv.class.php" hash="899e1900b7d77a58002aacf737ce750f" package="Default">
+    <class final="false" abstract="false" namespace="global" line="3" package="Default">
+      <extends/>
+      <name>Csv</name>
+      <full_name>\Csv</full_name>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="6" package="Default">
+        <name>parseString</name>
+        <full_name>parseString</full_name>
+        <argument line="6">
+          <name>$string</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="6">
+          <name>$separator</name>
+          <default>','</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="41" package="Default">
+        <name>escapeString</name>
+        <full_name>escapeString</full_name>
+        <argument line="41">
+          <name>$string</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="54" package="Default">
+        <name>_hasEndQuote</name>
+        <full_name>_hasEndQuote</full_name>
+        <argument line="54">
+          <name>$token</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="69" package="Default">
+        <name>detectSeparator</name>
+        <full_name>detectSeparator</full_name>
+        <argument line="69">
+          <name>$filename</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="69">
+          <name>$separators</name>
+          <default>array(',', ';')</default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <class final="false" abstract="false" namespace="global" line="80" package="Default">
+      <extends/>
+      <implements>\Iterator</implements>
+      <name>CsvReader</name>
+      <full_name>\CsvReader</full_name>
+      <property final="false" static="false" visibility="protected" line="82" namespace="global" package="Default">
+        <name>$fileHandle</name>
+        <default>null</default>
+      </property>
+      <property final="false" static="false" visibility="protected" line="83" namespace="global" package="Default">
+        <name>$position</name>
+        <default>null</default>
+      </property>
+      <property final="false" static="false" visibility="protected" line="84" namespace="global" package="Default">
+        <name>$filename</name>
+        <default>null</default>
+      </property>
+      <property final="false" static="false" visibility="protected" line="85" namespace="global" package="Default">
+        <name>$currentLine</name>
+        <default>null</default>
+      </property>
+      <property final="false" static="false" visibility="protected" line="86" namespace="global" package="Default">
+        <name>$currentArray</name>
+        <default>null</default>
+      </property>
+      <property final="false" static="false" visibility="protected" line="87" namespace="global" package="Default">
+        <name>$separator</name>
+        <default>','</default>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="90" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <argument line="90">
+          <name>$filename</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="90">
+          <name>$separator</name>
+          <default>','</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="99" package="Default">
+        <name>__destruct</name>
+        <full_name>__destruct</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="105" package="Default">
+        <name>close</name>
+        <full_name>close</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="112" package="Default">
+        <name>rewind</name>
+        <full_name>rewind</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="121" package="Default">
+        <name>current</name>
+        <full_name>current</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="125" package="Default">
+        <name>key</name>
+        <full_name>key</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="129" package="Default">
+        <name>next</name>
+        <full_name>next</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="134" package="Default">
+        <name>valid</name>
+        <full_name>valid</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="138" package="Default">
+        <name>_readLine</name>
+        <full_name>_readLine</full_name>
+      </method>
+    </class>
+    <class final="false" abstract="false" namespace="global" line="146" package="Default">
+      <extends/>
+      <name>CsvWriter</name>
+      <full_name>\CsvWriter</full_name>
+      <property final="false" static="false" visibility="protected" line="148" namespace="global" package="Default">
+        <name>$fileHandle</name>
+        <default>null</default>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="150" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <argument line="150">
+          <name>$filename</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="150">
+          <name>$mode</name>
+          <default>'w'</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="156" package="Default">
+        <name>__destruct</name>
+        <full_name>__destruct</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="160" package="Default">
+        <name>addLine</name>
+        <full_name>addLine</full_name>
+        <argument line="160">
+          <name>$values</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="171" package="Default">
+        <name>close</name>
+        <full_name>close</full_name>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file assets\csv.class.php</error>
+      <error line="3" code="50000">No DocBlock was found for \Csv</error>
+      <error line="6" code="50010">No DocBlock was found for method parseString()</error>
+      <error line="41" code="50010">No DocBlock was found for method escapeString()</error>
+      <error line="54" code="50010">No DocBlock was found for method _hasEndQuote()</error>
+      <error line="69" code="50010">No DocBlock was found for method detectSeparator()</error>
+      <error line="80" code="50000">No DocBlock was found for \CsvReader</error>
+      <error line="82" code="50018">No DocBlock was found for property $fileHandle</error>
+      <error line="83" code="50018">No DocBlock was found for property $position</error>
+      <error line="84" code="50018">No DocBlock was found for property $filename</error>
+      <error line="85" code="50018">No DocBlock was found for property $currentLine</error>
+      <error line="86" code="50018">No DocBlock was found for property $currentArray</error>
+      <error line="87" code="50018">No DocBlock was found for property $separator</error>
+      <error line="90" code="50010">No DocBlock was found for method __construct()</error>
+      <error line="99" code="50010">No DocBlock was found for method __destruct()</error>
+      <error line="105" code="50010">No DocBlock was found for method close()</error>
+      <error line="112" code="50010">No DocBlock was found for method rewind()</error>
+      <error line="121" code="50010">No DocBlock was found for method current()</error>
+      <error line="125" code="50010">No DocBlock was found for method key()</error>
+      <error line="129" code="50010">No DocBlock was found for method next()</error>
+      <error line="134" code="50010">No DocBlock was found for method valid()</error>
+      <error line="138" code="50010">No DocBlock was found for method _readLine()</error>
+      <error line="146" code="50000">No DocBlock was found for \CsvWriter</error>
+      <error line="148" code="50018">No DocBlock was found for property $fileHandle</error>
+      <error line="150" code="50010">No DocBlock was found for method __construct()</error>
+      <error line="156" code="50010">No DocBlock was found for method __destruct()</error>
+      <error line="160" code="50010">No DocBlock was found for method addLine()</error>
+      <error line="171" code="50010">No DocBlock was found for method close()</error>
+    </parse_markers>
+  </file>
+  <file path="assets\database.class.php" hash="84178baf4d6c21387b640e2a49e3e8bb" package="BlackHawk\Internal Functions">
     <docblock line="2">
       <description>Implements Database Connections</description>
       <long-description>&lt;p&gt;This file defines our PDO connections&lt;/p&gt;
@@ -201,7 +432,7 @@
       <full_name>\database</full_name>
       <docblock line="21">
         <description>Implements method to store, delete and edit database values via PDO</description>
-        <long-description/>
+        <long-description></long-description>
         <tag line="21" name="package" description="BlackHawk"/>
         <tag line="21" name="subpackage" description="Internal Functions"/>
         <tag line="21" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -214,8 +445,8 @@
         <name>$pdo</name>
         <default>null</default>
         <docblock line="33">
-          <description/>
-          <long-description/>
+          <description></description>
+          <long-description></long-description>
           <tag line="33" name="var" description="A reference to the PDO instance; Also used for connecions via PDO." type="\$pdo">
             <type by_reference="false">\$pdo</type>
           </tag>
@@ -225,8 +456,8 @@
         <name>$statement</name>
         <default>null</default>
         <docblock line="39">
-          <description/>
-          <long-description/>
+          <description></description>
+          <long-description></long-description>
           <tag line="39" name="var" description="Used to contain query for prepared statments; Also used for value binding &amp; execution" type="\$statement">
             <type by_reference="false">\$statement</type>
           </tag>
@@ -262,7 +493,7 @@
         </docblock>
         <argument line="72">
           <name>$query</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
         <argument line="72">
@@ -431,7 +662,7 @@
       <tag line="2" name="since" description="File available since Release 0.3.0"/>
     </docblock>
   </file>
-  <file path="assets\mailer.class.php" hash="926e166fac4c3cd012226da3da470c91" package="BlackHawk\Mail">
+  <file path="assets\mailer.class.php" hash="f9bf2af3468127995fb5ebfe9dc64e4d" package="BlackHawk\Mail">
     <docblock line="2">
       <description>Creates Mail Class</description>
       <long-description>&lt;p&gt;This file creates functions used internally for garages&lt;/p&gt;
@@ -454,7 +685,7 @@
       <full_name>\mailer</full_name>
       <docblock line="22">
         <description>Implements emails</description>
-        <long-description/>
+        <long-description></long-description>
         <tag line="22" name="package" description="BlackHawk"/>
         <tag line="22" name="subpackage" description="Mail"/>
         <tag line="22" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -465,10 +696,10 @@
       </docblock>
       <property final="false" static="false" visibility="public" line="39" namespace="global" package="Default">
         <name>$email_master</name>
-        <default/>
+        <default></default>
         <docblock line="34">
-          <description/>
-          <long-description/>
+          <description></description>
+          <long-description></long-description>
           <tag line="34" name="var" description="The Master E-Mail" type="\$email_master">
             <type by_reference="false">\$email_master</type>
           </tag>
@@ -476,10 +707,10 @@
       </property>
       <property final="false" static="false" visibility="public" line="45" namespace="global" package="Default">
         <name>$template</name>
-        <default/>
+        <default></default>
         <docblock line="40">
-          <description/>
-          <long-description/>
+          <description></description>
+          <long-description></long-description>
           <tag line="40" name="var" description="Stores template choice" type="\$template">
             <type by_reference="false">\$template</type>
           </tag>
@@ -491,16 +722,16 @@
         <docblock line="47">
           <description>__construct</description>
           <long-description>&lt;p&gt;Sets template&lt;/p&gt;</long-description>
-          <tag line="47" name="param" description="Which template to use" type="string" variable="$template">
+          <tag line="47" name="param" description="Which email to send from" type="string" variable="$email_master">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="47" name="param" description="Which email to send from" type="string" variable="$email_master">
+          <tag line="47" name="param" description="Which template to use" type="string" variable="$template">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
         <argument line="55">
           <name>$email_master</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
         <argument line="55">
@@ -524,12 +755,12 @@
         </docblock>
         <argument line="68">
           <name>$subject</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
         <argument line="68">
           <name>$content</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
@@ -557,31 +788,29 @@
         </docblock>
         <argument line="100">
           <name>$email</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
         <argument line="100">
           <name>$subject</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
         <argument line="100">
           <name>$content</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
     </class>
     <parse_markers>
-      <error line="47" code="50014">Name of argument $email_master does not match with the DocBlock's name $template in __construct()</error>
-      <error line="47" code="50014">Name of argument $template does not match with the DocBlock's name $email_master in __construct()</error>
       <error line="89" code="50014">Name of argument $email does not match with the DocBlock's name $emailmaster in mail()</error>
       <error line="89" code="50014">Name of argument $subject does not match with the DocBlock's name $email in mail()</error>
       <error line="89" code="50014">Name of argument $content does not match with the DocBlock's name $subject in mail()</error>
       <notice line="89" code="50013">Parameter $emailmaster could not be found in mail()</notice>
     </parse_markers>
   </file>
-  <file path="assets\member.class.php" hash="d5962ea01b52440c489fdd7c44dee999" package="BlackHawk\Members">
+  <file path="assets\member.class.php" hash="03e0eb805dfcc646f1c628c17f203b39" package="BlackHawk\Members">
     <docblock line="2">
       <description>Member Class</description>
       <long-description>&lt;p&gt;The main hub of our login system&lt;/p&gt;
@@ -610,7 +839,7 @@
       <full_name>\member</full_name>
       <docblock line="22">
         <description>Member Class</description>
-        <long-description/>
+        <long-description></long-description>
         <tag line="22" name="package" description="BlackHawk"/>
         <tag line="22" name="subpackage" description="Members"/>
         <tag line="22" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -669,12 +898,12 @@ uses a unique salt provided by genSalt function&lt;/p&gt;</long-description>
         </docblock>
         <argument line="116">
           <name>$salt</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
         <argument line="116">
           <name>$password</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
@@ -694,7 +923,7 @@ Checks to make sure string is all numbers&lt;/p&gt;</long-description>
         </docblock>
         <argument line="148">
           <name>$int</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
@@ -714,12 +943,12 @@ to the current stored hashed password&lt;/p&gt;</long-description>
         </docblock>
         <argument line="180">
           <name>$password</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
         <argument line="180">
           <name>$existingHash</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
@@ -764,197 +993,201 @@ rediect the user&lt;/p&gt;</long-description>
 deletes any cookies and redirects to index&lt;/p&gt;</long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="480" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="479" package="BlackHawk\Members">
+        <name>clearSession</name>
+        <full_name>clearSession</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="508" package="BlackHawk\Members">
         <name>createNewCookie</name>
         <full_name>createNewCookie</full_name>
-        <docblock line="471">
+        <docblock line="499">
           <description>createNewCookie</description>
           <long-description>&lt;p&gt;If the remember me feature is enabled and the
 user has selected it create a cookie for them.
 Log it in the database&lt;/p&gt;</long-description>
-          <tag line="471" name="param" description="The users id" type="string" variable="$id">
+          <tag line="499" name="param" description="The users id" type="string" variable="$id">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
-        <argument line="480">
+        <argument line="508">
           <name>$id</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="504" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="532" package="BlackHawk\Members">
         <name>deleteCookie</name>
         <full_name>deleteCookie</full_name>
-        <docblock line="497">
+        <docblock line="525">
           <description>deleteCookie</description>
           <long-description>&lt;p&gt;Delete the users cookie&lt;/p&gt;</long-description>
-          <tag line="497" name="param" description="The users id" type="string" variable="$id">
+          <tag line="525" name="param" description="The users id" type="string" variable="$id">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
-        <argument line="504">
+        <argument line="532">
           <name>$id</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="527" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="555" package="BlackHawk\Members">
         <name>userLogger</name>
         <full_name>userLogger</full_name>
-        <docblock line="516">
+        <docblock line="544">
           <description>userLogger</description>
           <long-description>&lt;p&gt;Logs users activity,
 Nothing personal.... just login times, logout times,
 when recover passwords have been activated
 All for security&lt;/p&gt;</long-description>
-          <tag line="516" name="param" description="The users id" type="string" variable="$userid">
+          <tag line="544" name="param" description="The users id" type="string" variable="$userid">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="516" name="param" description="What action is happening and needs logging" type="string" variable="$action">
+          <tag line="544" name="param" description="What action is happening and needs logging" type="string" variable="$action">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
-        <argument line="527">
+        <argument line="555">
           <name>$userid</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
-        <argument line="527">
+        <argument line="555">
           <name>$action</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="571" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="599" package="BlackHawk\Members">
         <name>combovalidation</name>
         <full_name>combovalidation</full_name>
-        <docblock line="556">
+        <docblock line="584">
           <description>Combo Validation</description>
           <long-description>&lt;p&gt;Type of function: Dummy&lt;/p&gt;
 
 &lt;p&gt;Purpose: Checks PIN/UID combo against FGCU Database to see if valid combo&lt;/p&gt;</long-description>
-          <tag line="556" name="param" description="Username" type="integer" variable="$username">
+          <tag line="584" name="param" description="Username" type="integer" variable="$username">
             <type by_reference="false">integer</type>
           </tag>
-          <tag line="556" name="param" description="Password" type="integer|string" variable="$password">
+          <tag line="584" name="param" description="Password" type="integer|string" variable="$password">
             <type by_reference="false">integer</type>
             <type by_reference="false">string</type>
           </tag>
-          <tag line="556" name="return" description="true if valid, else false&#13;&#10;Created in Version: 0.2.0&#13;&#10;Last Modified: 9/15/2012, by Chris Christoff" type="bool">
+          <tag line="584" name="return" description="true if valid, else false&#13;&#10;Created in Version: 0.2.0&#13;&#10;Last Modified: 9/15/2012, by Chris Christoff" type="bool">
             <type by_reference="false">bool</type>
           </tag>
         </docblock>
-        <argument line="571">
+        <argument line="599">
           <name>$username</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
-        <argument line="571">
+        <argument line="599">
           <name>$password</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="580" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="608" package="BlackHawk\Members">
         <name>data</name>
         <full_name>data</full_name>
-        <docblock line="575">
+        <docblock line="603">
           <description>Member Data</description>
           <long-description>&lt;p&gt;Loads all the member data&lt;/p&gt;</long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="604" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="632" package="BlackHawk\Members">
         <name>register</name>
         <full_name>register</full_name>
-        <docblock line="599">
+        <docblock line="627">
           <description>Register</description>
           <long-description>&lt;p&gt;This function allows user to register&lt;/p&gt;</long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="870" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="898" package="BlackHawk\Members">
         <name>randomString</name>
         <full_name>randomString</full_name>
-        <docblock line="865">
+        <docblock line="893">
           <description>Random String</description>
           <long-description>&lt;p&gt;Creates a random string of A-Z0-9&lt;/p&gt;</long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="886" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="914" package="BlackHawk\Members">
         <name>recoverPassword</name>
         <full_name>recoverPassword</full_name>
-        <docblock line="880">
+        <docblock line="908">
           <description>Recover Password</description>
           <long-description>&lt;p&gt;Checks and sees if a verCode is present and that a user is try to reover a password, otherwise
 Lets the user Recover their password using e-mail&lt;/p&gt;</long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="980" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1008" package="BlackHawk\Members">
         <name>changePassword</name>
         <full_name>changePassword</full_name>
-        <docblock line="973">
+        <docblock line="1001">
           <description>Change Password</description>
           <long-description>&lt;p&gt;Chnages the selected users password&lt;/p&gt;</long-description>
-          <tag line="973" name="param" description="The users ID" type="string" variable="$user">
+          <tag line="1001" name="param" description="The users ID" type="string" variable="$user">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
-        <argument line="980">
+        <argument line="1008">
           <name>$user</name>
           <default>null</default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1058" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1086" package="BlackHawk\Members">
         <name>changeEmail</name>
         <full_name>changeEmail</full_name>
-        <docblock line="1051">
+        <docblock line="1079">
           <description>changeEmail</description>
           <long-description>&lt;p&gt;Chnages the selected users email&lt;/p&gt;</long-description>
-          <tag line="1051" name="param" description="The users ID" type="string" variable="$user">
+          <tag line="1079" name="param" description="The users ID" type="string" variable="$user">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
-        <argument line="1058">
+        <argument line="1086">
           <name>$user</name>
           <default>null</default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1140" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1168" package="BlackHawk\Members">
         <name>deleteAccount</name>
         <full_name>deleteAccount</full_name>
-        <docblock line="1133">
+        <docblock line="1161">
           <description>deleteAccount</description>
           <long-description>&lt;p&gt;Delete user account&lt;/p&gt;</long-description>
-          <tag line="1133" name="param" description="The users ID" type="string" variable="$user">
+          <tag line="1161" name="param" description="The users ID" type="string" variable="$user">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
-        <argument line="1140">
+        <argument line="1168">
           <name>$user</name>
           <default>null</default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1183" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1211" package="BlackHawk\Members">
         <name>verification</name>
         <full_name>verification</full_name>
-        <docblock line="1178">
+        <docblock line="1206">
           <description>Verification</description>
           <long-description>&lt;p&gt;If email verification is set this handels those verifications&lt;/p&gt;</long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1213" package="BlackHawk\Members">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1241" package="BlackHawk\Members">
         <name>firstuserregister</name>
         <full_name>firstuserregister</full_name>
-        <docblock line="1206">
+        <docblock line="1234">
           <description>First User Registration</description>
           <long-description>&lt;p&gt;Creates the Admin Account on setup&lt;/p&gt;</long-description>
-          <tag line="1206" name="param" description="Admin Email" type="string" variable="$email">
+          <tag line="1234" name="param" description="Admin Email" type="string" variable="$email">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
-        <argument line="1213">
+        <argument line="1241">
           <name>$email</name>
           <default>null</default>
           <type/>
@@ -962,11 +1195,14 @@ Lets the user Recover their password using e-mail&lt;/p&gt;</long-description>
       </method>
     </class>
     <markers>
-      <todo line="489">Save roles in cookie</todo>
-      <todo line="572">Check against a dummy DB, that is made manually by SQL import?</todo>
-      <todo line="789">, make register form pick type of student and pull that value</todo>
-      <todo line="1222">make random again</todo>
+      <todo line="517">Save roles in cookie</todo>
+      <todo line="600">Check against a dummy DB, that is made manually by SQL import?</todo>
+      <todo line="817">, make register form pick type of student and pull that value</todo>
+      <todo line="1250">make random again</todo>
     </markers>
+    <parse_markers>
+      <error line="479" code="50010">No DocBlock was found for method clearSession()</error>
+    </parse_markers>
   </file>
   <file path="assets\member.inc.php" hash="1c2c155c90ec0b7deaced5420bd56691" package="BlackHawk\Members">
     <docblock line="2">
@@ -1301,6 +1537,23 @@ Lets the user Recover their password using e-mail&lt;/p&gt;</long-description>
     <parse_markers>
       <error line="0" code="50007">No page-level DocBlock was found in file update.php</error>
     </parse_markers>
+  </file>
+  <file path="uploads\index.php" hash="bfd6770f5b16662d2b1f67eea7cd7e65" package="BlackHawk\Security">
+    <docblock line="2">
+      <description>Security Index Page</description>
+      <long-description>&lt;p&gt;This file prevents directory listing&lt;/p&gt;
+
+&lt;p&gt;PHP version 5.2.17 or higher&lt;/p&gt;
+
+&lt;p&gt;LICENSE: TBD&lt;/p&gt;</long-description>
+      <tag line="2" name="package" description="BlackHawk"/>
+      <tag line="2" name="subpackage" description="Security"/>
+      <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
+      <tag line="2" name="copyright" description="2012 Project BlackHawk"/>
+      <tag line="2" name="license" description="http://www.futuregencode.com/blackhawk/404  License 1.00"/>
+      <tag line="2" name="version" description="0.3.0"/>
+      <tag line="2" name="since" description="File available since Release 0.3.0"/>
+    </docblock>
   </file>
   <package name="BlackHawk" full_name="BlackHawk">
     <package name="Debug" full_name="BlackHawk\Debug"/>
