@@ -51,7 +51,7 @@ class database {
 		/* Try the connections */
 		try {
 			/* Create a connections with the supplied values */
-			$this->pdo = new PDO("mysql:host=" . Config::read('hostname') . ";dbname=" . Config::read('database') . "", Config::read('username'), Config::read('password'), Config::read('drivers'));
+			$this->pdo = new PDO("mysql:host=" . Config::read('hostname') . ";dbname=" . Config::read('database'), Config::read('username'), Config::read('password'), Config::read('drivers'));
 		} catch(PDOException $e) {
 			/* If any errors echo the out and kill the script */
 			print "<b>[DATABASE] Error - Connection Failed:</b> " . $e->getMessage() . "<br/>";

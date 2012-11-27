@@ -465,8 +465,36 @@ $form= '<div class="login_box">
 			$this->deleteCookie($_COOKIE['remember_me_id']);
 		}
 		/* Redirect */
-		header('Refresh: 2; url=index.php');
+		header('Refresh: 0; url=index.php'); // Need to test 0, because on 2, we had delay between logout and true logout
 	}
+	
+	/*
+	 * clearSession
+	 *
+	 * Resets Session and destroyes it,
+	 * deletes any cookies
+	 *
+	 * Used to: Logout without redirect
+	 */
+	public function clearSession() {
+		/* Log */
+		if(isset($_SESSION['member_id'])) {
+			$user_id = $_SESSION['member_id'];
+		} else {
+			$user_id = $_COOKIE['remember_me_id'];
+		}
+		$this->userLogger($user_id, 1);
+		/* Clear the SESSION */
+		$_SESSION = array();
+		/* Destroy the SESSION */
+		session_unset();
+		session_destroy();
+		/* Delete all old cookies and user_logged */
+		if(isset($_COOKIE['remember_me_id'])) {
+			$this->deleteCookie($_COOKIE['remember_me_id']);
+		}
+	}
+	
 	
 	/**
 	 * createNewCookie
