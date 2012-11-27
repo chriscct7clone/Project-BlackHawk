@@ -1,4 +1,21 @@
 <?php
+/**
+ * Project BlackHawk Setup
+ *
+ * Handles setup of project blackhawk database and config files
+ *
+ * PHP version 5.2.17 or higher
+ *
+ * LICENSE: TBD
+ *
+ * @package    BlackHawk
+ * @subpackage Setup
+ * @author     Chris Christoff <chris@futuregencode.com>
+ * @copyright  2012 Project BlackHawk
+ * @license    http://www.futuregencode.com/blackhawk/404  License 1.00
+ * @version    0.3.0
+ * @since      File available since Release 0.3.0
+ */
 require_once("../init.php");
 /* Include Notice & Mailer Class */
 require_once("../assets/notice.class.php");
