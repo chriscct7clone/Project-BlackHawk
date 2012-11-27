@@ -3,12 +3,9 @@
 * @backupGlobals disabled
 * @backupStaticAttributes disabled
 */
-
 session_start();
 $_SERVER['REMOTE_ADDR']='127.0.0.1';
-
 require_once('assets/member.inc.php');
-
 class MembersClassTest extends PHPUnit_Framework_TestCase
 {
 	private $pdo;
