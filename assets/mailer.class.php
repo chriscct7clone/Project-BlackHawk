@@ -49,8 +49,8 @@ class mailer {
 	 *
 	 * Sets template
 	 * 
-	 * @param string $template Which template to use
 	 * @param string $email_master Which email to send from
+	 * @param string $template Which template to use
 	 */
 	public function __construct($email_master, $template = 'default') {
 		$this->email_master = $email_master;
