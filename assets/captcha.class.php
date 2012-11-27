@@ -42,7 +42,6 @@ class captcha {
  * @return image image $image generated
  */ 
 	public function display($width, $height, $text) {
-			require_once("garage.php");
 		/* Create Image */
 		$image = imagecreate($width, $height);
 		/* Set Background */
