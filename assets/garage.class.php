@@ -59,7 +59,6 @@ class garage {
 	public function installgaragetable($name, $floors){
 		/* Start an instance of the Database Class */
 		$database = new database();
-		//TODO: STRreplace name
 		$namefordb=$name;
 		// TODO: insert name into the garages_list
 		// create garage table
@@ -79,25 +78,30 @@ class garage {
 			} else {
 				$notice->add('error',  $name.' was not added!');
 			}
+	}
+	
+	public function addspotsviacsv($name){ //name of db table
+		require_once('csv.class.php');
+		$lines = new CsvReader('../uploads/two-line.csv');
+		foreach ($lines as $line_number => $values) {
+			$spotarray;
+			foreach ($values as $value) {
+			$spotarray[]=$value;
 			}
-	public function addspotsviacsv($spot){
-		require_once('../csv.php');
-		$lines = new CsvReader(dirname(__FILE__).'/../tests/data/one-line.csv');
-foreach ($lines as $line_number => $values) {
-	echo '<td>'.$line_number.'</td>';
-	foreach ($values as $value) {
+			addspot($spotarray,$name)
+		}
 	}
-}
+	public function addspot($spotarray,$name){ //name of db table
+		/* Start an instance of the Database Class */
+		$database = new database();
+		$namefordb=$name;
+		$database->query('INSERT INTO $namefordb(floor, spot, status, uid, type) VALUES(:floor, :spot, :status, :uid, :type)', array(':floor' => $spotarray[0], ':spot' => $spotarray[1],':status' => $spotarray[2] ':uid' => $spotarray[3],':type' => $spotarray[4]  ));
 	}
-	// TODO: Reserved spots. Type 5 and pass uid along for the ride.
-	$date = date("Y-m-d", time());
-	$uid=null; //no one's parked there
-	$status=0; //open	
-	$database->query('INSERT INTO $namefordb(floor, spot, status, uid, type, time) VALUES(:floor, :spot, :status, :uid, :type,:time)', array(':floor' => $floor, ':spot' => $spot,':status' => $status, ':uid' => $uid,':type' => $type,':time' => $time  ));
-	}
-	}
-}
 	public function addgarage($name) {
+		// get post of name and floors, and do some sanatizing for db name
+		installgaragetable($name,$floors);
+		addtogaragestatistics($name,$data);
+		addspotsviacsv($name);
  	}
 	public function editgarage($name) {
  	}
@@ -109,5 +113,7 @@ foreach ($lines as $line_number => $values) {
  	}
 	public function findmycar($name) {
  	}
+	public function addtogaragestatistics($name,$data)
+	}
 	}
 ?>
