@@ -608,7 +608,7 @@
       <full_name>\mailer</full_name>
       <docblock line="22">
         <description>Implements emails</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="22" name="package" description="BlackHawk"/>
         <tag line="22" name="subpackage" description="Mail"/>
         <tag line="22" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -619,10 +619,10 @@
       </docblock>
       <property final="false" static="false" visibility="public" line="39" namespace="global" package="Default">
         <name>$email_master</name>
-        <default></default>
+        <default/>
         <docblock line="34">
-          <description></description>
-          <long-description></long-description>
+          <description/>
+          <long-description/>
           <tag line="34" name="var" description="The Master E-Mail" type="\$email_master">
             <type by_reference="false">\$email_master</type>
           </tag>
@@ -630,10 +630,10 @@
       </property>
       <property final="false" static="false" visibility="public" line="45" namespace="global" package="Default">
         <name>$template</name>
-        <default></default>
+        <default/>
         <docblock line="40">
-          <description></description>
-          <long-description></long-description>
+          <description/>
+          <long-description/>
           <tag line="40" name="var" description="Stores template choice" type="\$template">
             <type by_reference="false">\$template</type>
           </tag>
@@ -654,7 +654,7 @@
         </docblock>
         <argument line="55">
           <name>$email_master</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="55">
@@ -678,12 +678,12 @@
         </docblock>
         <argument line="68">
           <name>$subject</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="68">
           <name>$content</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -705,23 +705,23 @@
         </docblock>
         <argument line="98">
           <name>$email</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="98">
           <name>$subject</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="98">
           <name>$content</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
     </class>
   </file>
-  <file path="assets\member.class.php" hash="03e0eb805dfcc646f1c628c17f203b39" package="BlackHawk\Members">
+  <file path="assets\member.class.php" hash="761a8da1e3ac7e49d73b7576dea65e61" package="BlackHawk\Members">
     <docblock line="2">
       <description>Member Class</description>
       <long-description>&lt;p&gt;The main hub of our login system&lt;/p&gt;
@@ -750,7 +750,7 @@
       <full_name>\member</full_name>
       <docblock line="22">
         <description>Member Class</description>
-        <long-description/>
+        <long-description></long-description>
         <tag line="22" name="package" description="BlackHawk"/>
         <tag line="22" name="subpackage" description="Members"/>
         <tag line="22" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -809,12 +809,12 @@ uses a unique salt provided by genSalt function&lt;/p&gt;</long-description>
         </docblock>
         <argument line="116">
           <name>$salt</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
         <argument line="116">
           <name>$password</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
@@ -834,7 +834,7 @@ Checks to make sure string is all numbers&lt;/p&gt;</long-description>
         </docblock>
         <argument line="148">
           <name>$int</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
@@ -854,12 +854,12 @@ to the current stored hashed password&lt;/p&gt;</long-description>
         </docblock>
         <argument line="180">
           <name>$password</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
         <argument line="180">
           <name>$existingHash</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
@@ -907,6 +907,13 @@ deletes any cookies and redirects to index&lt;/p&gt;</long-description>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="479" package="BlackHawk\Members">
         <name>clearSession</name>
         <full_name>clearSession</full_name>
+        <docblock line="471">
+          <description>clearSession</description>
+          <long-description>&lt;p&gt;Resets Session and destroyes it,
+deletes any cookies&lt;/p&gt;
+
+&lt;p&gt;Used to: Logout without redirect&lt;/p&gt;</long-description>
+        </docblock>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="508" package="BlackHawk\Members">
         <name>createNewCookie</name>
@@ -922,7 +929,7 @@ Log it in the database&lt;/p&gt;</long-description>
         </docblock>
         <argument line="508">
           <name>$id</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
@@ -938,7 +945,7 @@ Log it in the database&lt;/p&gt;</long-description>
         </docblock>
         <argument line="532">
           <name>$id</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
@@ -960,12 +967,12 @@ All for security&lt;/p&gt;</long-description>
         </docblock>
         <argument line="555">
           <name>$userid</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
         <argument line="555">
           <name>$action</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
@@ -990,12 +997,12 @@ All for security&lt;/p&gt;</long-description>
         </docblock>
         <argument line="599">
           <name>$username</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
         <argument line="599">
           <name>$password</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
@@ -1111,9 +1118,6 @@ Lets the user Recover their password using e-mail&lt;/p&gt;</long-description>
       <todo line="817">, make register form pick type of student and pull that value</todo>
       <todo line="1250">make random again</todo>
     </markers>
-    <parse_markers>
-      <error line="479" code="50010">No DocBlock was found for method clearSession()</error>
-    </parse_markers>
   </file>
   <file path="assets\member.inc.php" hash="1c2c155c90ec0b7deaced5420bd56691" package="BlackHawk\Members">
     <docblock line="2">
@@ -1164,7 +1168,7 @@ Lets the user Recover their password using e-mail&lt;/p&gt;</long-description>
       <full_name>\notice</full_name>
       <docblock line="22">
         <description>Implements Notice</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="22" name="package" description="BlackHawk"/>
         <tag line="22" name="subpackage" description="Notice"/>
         <tag line="22" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -1177,8 +1181,8 @@ Lets the user Recover their password using e-mail&lt;/p&gt;</long-description>
         <name>$_notices</name>
         <default>array()</default>
         <docblock line="34">
-          <description></description>
-          <long-description></long-description>
+          <description/>
+          <long-description/>
           <tag line="34" name="var" description="Used to store all the notices" type="\$_notices">
             <type by_reference="false">\$_notices</type>
           </tag>
@@ -1195,12 +1199,12 @@ Lets the user Recover their password using e-mail&lt;/p&gt;</long-description>
         </docblock>
         <argument line="49">
           <name>$type</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="49">
           <name>$message</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -1217,7 +1221,7 @@ Lets the user Recover their password using e-mail&lt;/p&gt;</long-description>
         <full_name>errorsExist</full_name>
         <docblock line="85">
           <description>errorsExist</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="85" name="return" description="True if errors exist, false if no errors" type="bool">
             <type by_reference="false">bool</type>
           </tag>
@@ -1433,38 +1437,55 @@ Lets the user Recover their password using e-mail&lt;/p&gt;</long-description>
       <tag line="2" name="since" description="File available since Release 0.3.0"/>
     </docblock>
   </file>
-  <file path="setup\index.php" hash="cdb8aa08d39c2b3483ba4c5e1aacf998" package="Default">
-    <include line="2" type="Require Once" package="Default">
+  <file path="setup\index.php" hash="34498588ec7cc4958e0813f0cb652358" package="BlackHawk\Setup">
+    <docblock line="2">
+      <description>Project BlackHawk Setup</description>
+      <long-description>&lt;p&gt;Handles setup of project blackhawk database and config files&lt;/p&gt;
+
+&lt;p&gt;PHP version 5.2.17 or higher&lt;/p&gt;
+
+&lt;p&gt;LICENSE: TBD&lt;/p&gt;</long-description>
+      <tag line="2" name="package" description="BlackHawk"/>
+      <tag line="2" name="subpackage" description="Setup"/>
+      <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
+      <tag line="2" name="copyright" description="2012 Project BlackHawk"/>
+      <tag line="2" name="license" description="http://www.futuregencode.com/blackhawk/404  License 1.00"/>
+      <tag line="2" name="version" description="0.3.0"/>
+      <tag line="2" name="since" description="File available since Release 0.3.0"/>
+    </docblock>
+    <include line="19" type="Require Once" package="Default">
       <name>../init.php</name>
     </include>
-    <include line="4" type="Require Once" package="Default">
+    <include line="21" type="Require Once" package="Default">
       <name>../assets/notice.class.php</name>
     </include>
-    <include line="590" type="Require Once" package="Default">
+    <include line="607" type="Require Once" package="Default">
       <name>../assets/member.inc.php</name>
     </include>
-    <function namespace="global" line="676" package="Default">
+    <function namespace="global" line="699" package="BlackHawk\Setup">
       <name>rrmdir</name>
       <full_name>\rrmdir</full_name>
-      <argument line="676">
+      <docblock line="692">
+        <description>Remove Directory</description>
+        <long-description>&lt;p&gt;Removes the specified directory&lt;/p&gt;</long-description>
+        <tag line="692" name="param" description="The directory to remove" type="\global\" variable="$dir"/>
+      </docblock>
+      <argument line="699">
         <name>$dir</name>
-        <default/>
+        <default></default>
         <type/>
       </argument>
     </function>
     <markers>
-      <todo line="91">php explode to make sure its valid</todo>
-      <todo line="600">make sure htaccess exists</todo>
-      <todo line="802">Add PHPVersion check</todo>
-      <todo line="803">Add bycrypt() check</todo>
-      <todo line="804">Add sessions check</todo>
-      <todo line="805">Add cookies check</todo>
-      <todo line="806">Add validate the admin emails</todo>
+      <todo line="108">php explode to make sure its valid</todo>
+      <todo line="617">make sure htaccess exists</todo>
+      <todo line="700">Disabled so that I don't lose my setup folder after setup.</todo>
+      <todo line="826">Add PHPVersion check</todo>
+      <todo line="827">Add bycrypt() check</todo>
+      <todo line="828">Add sessions check</todo>
+      <todo line="829">Add cookies check</todo>
+      <todo line="830">Add validate the admin emails</todo>
     </markers>
-    <parse_markers>
-      <error line="0" code="50007">No page-level DocBlock was found in file setup\index.php</error>
-      <error line="676" code="50009">No DocBlock was found for function \rrmdir()</error>
-    </parse_markers>
   </file>
   <file path="update.php" hash="3e9155b99232a06ff8ab9e31f9e74650" package="Default">
     <parse_markers>
@@ -1497,10 +1518,11 @@ Lets the user Recover their password using e-mail&lt;/p&gt;</long-description>
     <package name="Members" full_name="BlackHawk\Members"/>
     <package name="Notice" full_name="BlackHawk\Notice"/>
     <package name="Security" full_name="BlackHawk\Security"/>
+    <package name="Setup" full_name="BlackHawk\Setup"/>
   </package>
   <package name="Default" full_name="Default"/>
   <namespace name="global" full_name="global"/>
-  <marker count="24">todo</marker>
+  <marker count="25">todo</marker>
   <marker count="0">fixme</marker>
   <deprecated count="0"/>
 </project>
