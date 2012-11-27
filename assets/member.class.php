@@ -468,7 +468,7 @@ $form= '<div class="login_box">
 		header('Refresh: 0; url=index.php'); // Need to test 0, because on 2, we had delay between logout and true logout
 	}
 	
-	/*
+	/**
 	 * clearSession
 	 *
 	 * Resets Session and destroyes it,
