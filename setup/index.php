@@ -689,8 +689,15 @@ if(isset($_POST['finish'])) {
 		$notice->add('success', 'Setup folder removed');
 		header('Location: ../index.php');
 }
-// Disabled so that I don't lose my setup folder after setup.
+/**
+ * Remove Directory
+ * 
+ * Removes the specified directory
+ * 
+ * @param $dir The directory to remove
+ */
 function rrmdir($dir) {
+// TODO: Disabled so that I don't lose my setup folder after setup.
 //	if (is_dir($dir)) {
 //		$objects = scandir($dir);
 //		foreach ($objects as $object) {
