@@ -91,11 +91,9 @@ class mailer {
 	 *
 	 * Mails inputed data
 	 * 
-	 * @param string $emailmaster The email address to send from
 	 * @param string $email The email reciver
 	 * @param string $subject Subject of the email
 	 * @param string $content Content of the email
-	 * @return email $email Sends email
 	 */
 	public function mail($email, $subject, $content) {
 		if(function_exists('mail')) {
