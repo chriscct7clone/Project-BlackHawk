@@ -1,82 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project version="2.0.0a12" title="BlackHawk Developer">
-  <file path="assets\captcha.class.php" hash="8cde67bae976c60366f7b9e0d54f7611" package="BlackHawk\Internal Functions">
-    <docblock line="2">
-      <description>Creates Captcha Image</description>
-      <long-description>&lt;p&gt;This file creates the image for the captcha, as long as Captcha has been turned on during setup.&lt;/p&gt;
-
-&lt;p&gt;PHP version 5.2.17 or higher&lt;/p&gt;
-
-&lt;p&gt;LICENSE: TBD&lt;/p&gt;</long-description>
-      <tag line="2" name="package" description="BlackHawk"/>
-      <tag line="2" name="subpackage" description="Internal Functions"/>
-      <tag line="2" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
-      <tag line="2" name="copyright" description="2012 Project BlackHawk"/>
-      <tag line="2" name="license" description="http://www.futuregencode.com/blackhawk/404  License 1.00"/>
-      <tag line="2" name="version" description="0.3.0"/>
-      <tag line="2" name="see" description="\member()" refers="\member()"/>
-      <tag line="2" name="since" description="File available since Release 0.3.0"/>
-    </docblock>
-    <include line="45" type="Require Once" package="Default">
-      <name>garage.php</name>
-    </include>
-    <class final="false" abstract="false" namespace="global" line="34" package="BlackHawk\Internal Functions">
-      <extends/>
-      <name>captcha</name>
-      <full_name>\captcha</full_name>
-      <docblock line="22">
-        <description>Implements the creation of the captcha</description>
-        <long-description/>
-        <tag line="22" name="package" description="BlackHawk"/>
-        <tag line="22" name="subpackage" description="Internal Functions"/>
-        <tag line="22" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
-        <tag line="22" name="copyright" description="2012 Project BlackHawk"/>
-        <tag line="22" name="license" description="http://www.futuregencode.com/blackhawk/404  License 1.0"/>
-        <tag line="22" name="version" description="0.3.0"/>
-        <tag line="22" name="see" description="\global\member()" refers="\global\member()"/>
-        <tag line="22" name="since" description="File available since Release 0.3.0"/>
-      </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="44" package="BlackHawk\Internal Functions">
-        <name>display</name>
-        <full_name>display</full_name>
-        <docblock line="35">
-          <description>Creates a Captcha image</description>
-          <long-description/>
-          <tag line="35" name="version" description="0.3.0"/>
-          <tag line="35" name="param" description="Dimension (width) for generated image" type="integer" variable="$width">
-            <type by_reference="false">integer</type>
-          </tag>
-          <tag line="35" name="param" description="Dimension (height) for generated image" type="integer" variable="$height">
-            <type by_reference="false">integer</type>
-          </tag>
-          <tag line="35" name="param" description="for generated image" type="string" variable="$text">
-            <type by_reference="false">string</type>
-          </tag>
-          <tag line="35" name="return" description="image $image generated" type="\image">
-            <type by_reference="false">\image</type>
-          </tag>
-        </docblock>
-        <argument line="44">
-          <name>$width</name>
-          <default/>
-          <type/>
-        </argument>
-        <argument line="44">
-          <name>$height</name>
-          <default/>
-          <type/>
-        </argument>
-        <argument line="44">
-          <name>$text</name>
-          <default/>
-          <type/>
-        </argument>
-      </method>
-    </class>
-    <markers>
-      <todo line="74">Evaluate whether we need this or not at all. Isn't the session created anyways when the login/captcha form is presented? This seems to be causing 5.2 Travis builds to fail.</todo>
-    </markers>
-  </file>
   <file path="assets\config.class.php" hash="2c86b8c98ea8653fffa56bcab984fc9e" package="BlackHawk\Internal Functions">
     <docblock line="2">
       <description>Reads the Config file</description>
@@ -178,7 +101,7 @@
       <tag line="2" name="since" description="File available since Release 0.3.0"/>
     </docblock>
   </file>
-  <file path="assets\csv\read-file.php" hash="e5ff4945465ade8452cb49f9111f5462" package="Default">
+  <file path="assets\csv\read-file.php" hash="20396db142492362bb75e095d4e9c805" package="Default">
     <include line="2" type="Require Once" package="Default">
       <name>../csv.class.php</name>
     </include>
@@ -186,7 +109,7 @@
       <error line="0" code="50007">No page-level DocBlock was found in file assets\csv\read-file.php</error>
     </parse_markers>
   </file>
-  <file path="assets\csv\read-uploaded.php" hash="e6cc6b556b003b7f2e3fe7c78b4e8b61" package="Default">
+  <file path="assets\csv\read-uploaded.php" hash="d421c2e687dee234d37e0319902e6ab1" package="Default">
     <include line="7" type="Require Once" package="Default">
       <name>../csv.php</name>
     </include>
@@ -194,7 +117,7 @@
       <error line="0" code="50007">No page-level DocBlock was found in file assets\csv\read-uploaded.php</error>
     </parse_markers>
   </file>
-  <file path="assets\csv\write-direct-download.php" hash="ea0bf1763afa0228eaa8c15fd62f947a" package="Default">
+  <file path="assets\csv\write-direct-download.php" hash="8adc4d3b2665f92d8b116047855344ef" package="Default">
     <include line="2" type="Require Once" package="Default">
       <name>../csv.php</name>
     </include>
@@ -202,7 +125,7 @@
       <error line="0" code="50007">No page-level DocBlock was found in file assets\csv\write-direct-download.php</error>
     </parse_markers>
   </file>
-  <file path="assets\csv\write-file.php" hash="532ceda9f07ea81f0f7f5c4ff7ec6199" package="Default">
+  <file path="assets\csv\write-file.php" hash="e3dbd3cd37eedd4259f85c478c1da195" package="Default">
     <include line="2" type="Require Once" package="Default">
       <name>../csv.php</name>
     </include>
@@ -210,7 +133,7 @@
       <error line="0" code="50007">No page-level DocBlock was found in file assets\csv\write-file.php</error>
     </parse_markers>
   </file>
-  <file path="assets\csv.class.php" hash="899e1900b7d77a58002aacf737ce750f" package="Default">
+  <file path="assets\csv.class.php" hash="a928257a43bbdc1093bbbe9bcd9876ae" package="Default">
     <class final="false" abstract="false" namespace="global" line="3" package="Default">
       <extends/>
       <name>Csv</name>
@@ -432,7 +355,7 @@
       <full_name>\database</full_name>
       <docblock line="21">
         <description>Implements method to store, delete and edit database values via PDO</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="21" name="package" description="BlackHawk"/>
         <tag line="21" name="subpackage" description="Internal Functions"/>
         <tag line="21" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -445,8 +368,8 @@
         <name>$pdo</name>
         <default>null</default>
         <docblock line="33">
-          <description></description>
-          <long-description></long-description>
+          <description/>
+          <long-description/>
           <tag line="33" name="var" description="A reference to the PDO instance; Also used for connecions via PDO." type="\$pdo">
             <type by_reference="false">\$pdo</type>
           </tag>
@@ -456,8 +379,8 @@
         <name>$statement</name>
         <default>null</default>
         <docblock line="39">
-          <description></description>
-          <long-description></long-description>
+          <description/>
+          <long-description/>
           <tag line="39" name="var" description="Used to contain query for prepared statments; Also used for value binding &amp; execution" type="\$statement">
             <type by_reference="false">\$statement</type>
           </tag>
@@ -493,7 +416,7 @@
         </docblock>
         <argument line="72">
           <name>$query</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="72">
@@ -543,11 +466,11 @@
       <tag line="2" name="since" description="File available since Release 0.3.0"/>
     </docblock>
   </file>
-  <file path="assets\garage.class.php" hash="dc1a7f4ed93fd20c1d1863d9392e28b9" package="Default">
+  <file path="assets\garage.class.php" hash="b673c28d7b9ee239cc40f1c9248bd2c7" package="Default">
     <markers>
       <todo line="62">STRreplace name</todo>
-      <todo line="65">insert name into the garages_list</todo>
-      <todo line="151">Reserved spots. Type 5 and pass uid along for the ride.</todo>
+      <todo line="64">insert name into the garages_list</todo>
+      <todo line="92">Reserved spots. Type 5 and pass uid along for the ride.</todo>
     </markers>
   </file>
   <file path="assets\garage.inc.php" hash="8d2e1a14bc65778a71b7ebfac30c861e" package="BlackHawk\Garage">
@@ -685,7 +608,7 @@
       <full_name>\mailer</full_name>
       <docblock line="22">
         <description>Implements emails</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="22" name="package" description="BlackHawk"/>
         <tag line="22" name="subpackage" description="Mail"/>
         <tag line="22" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -696,10 +619,10 @@
       </docblock>
       <property final="false" static="false" visibility="public" line="39" namespace="global" package="Default">
         <name>$email_master</name>
-        <default></default>
+        <default/>
         <docblock line="34">
-          <description></description>
-          <long-description></long-description>
+          <description/>
+          <long-description/>
           <tag line="34" name="var" description="The Master E-Mail" type="\$email_master">
             <type by_reference="false">\$email_master</type>
           </tag>
@@ -707,10 +630,10 @@
       </property>
       <property final="false" static="false" visibility="public" line="45" namespace="global" package="Default">
         <name>$template</name>
-        <default></default>
+        <default/>
         <docblock line="40">
-          <description></description>
-          <long-description></long-description>
+          <description/>
+          <long-description/>
           <tag line="40" name="var" description="Stores template choice" type="\$template">
             <type by_reference="false">\$template</type>
           </tag>
@@ -731,7 +654,7 @@
         </docblock>
         <argument line="55">
           <name>$email_master</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="55">
@@ -755,12 +678,12 @@
         </docblock>
         <argument line="68">
           <name>$subject</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="68">
           <name>$content</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -788,17 +711,17 @@
         </docblock>
         <argument line="100">
           <name>$email</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="100">
           <name>$subject</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="100">
           <name>$content</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -839,7 +762,7 @@
       <full_name>\member</full_name>
       <docblock line="22">
         <description>Member Class</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="22" name="package" description="BlackHawk"/>
         <tag line="22" name="subpackage" description="Members"/>
         <tag line="22" name="author" description="Chris Christoff &lt;chris@futuregencode.com&gt;"/>
@@ -898,12 +821,12 @@ uses a unique salt provided by genSalt function&lt;/p&gt;</long-description>
         </docblock>
         <argument line="116">
           <name>$salt</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="116">
           <name>$password</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -923,7 +846,7 @@ Checks to make sure string is all numbers&lt;/p&gt;</long-description>
         </docblock>
         <argument line="148">
           <name>$int</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -943,12 +866,12 @@ to the current stored hashed password&lt;/p&gt;</long-description>
         </docblock>
         <argument line="180">
           <name>$password</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="180">
           <name>$existingHash</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -1011,7 +934,7 @@ Log it in the database&lt;/p&gt;</long-description>
         </docblock>
         <argument line="508">
           <name>$id</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -1027,7 +950,7 @@ Log it in the database&lt;/p&gt;</long-description>
         </docblock>
         <argument line="532">
           <name>$id</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -1049,12 +972,12 @@ All for security&lt;/p&gt;</long-description>
         </docblock>
         <argument line="555">
           <name>$userid</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="555">
           <name>$action</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -1079,12 +1002,12 @@ All for security&lt;/p&gt;</long-description>
         </docblock>
         <argument line="599">
           <name>$username</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="599">
           <name>$password</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -1500,37 +1423,37 @@ Lets the user Recover their password using e-mail&lt;/p&gt;</long-description>
       <tag line="2" name="since" description="File available since Release 0.3.0"/>
     </docblock>
   </file>
-  <file path="setup\index.php" hash="0ca9b08f5d76f2075df4a26ccf33bc7e" package="Default">
+  <file path="setup\index.php" hash="cdb8aa08d39c2b3483ba4c5e1aacf998" package="Default">
     <include line="2" type="Require Once" package="Default">
       <name>../init.php</name>
     </include>
     <include line="4" type="Require Once" package="Default">
       <name>../assets/notice.class.php</name>
     </include>
-    <include line="593" type="Require Once" package="Default">
+    <include line="590" type="Require Once" package="Default">
       <name>../assets/member.inc.php</name>
     </include>
-    <function namespace="global" line="680" package="Default">
+    <function namespace="global" line="676" package="Default">
       <name>rrmdir</name>
       <full_name>\rrmdir</full_name>
-      <argument line="680">
+      <argument line="676">
         <name>$dir</name>
-        <default/>
+        <default></default>
         <type/>
       </argument>
     </function>
     <markers>
-      <todo line="92">php explode to make sure its valid</todo>
-      <todo line="603">make sure htaccess exists</todo>
-      <todo line="812">Add PHPVersion check</todo>
-      <todo line="813">Add bycrypt() check</todo>
-      <todo line="814">Add sessions check</todo>
-      <todo line="815">Add cookies check</todo>
-      <todo line="816">Add validate the admin emails</todo>
+      <todo line="91">php explode to make sure its valid</todo>
+      <todo line="600">make sure htaccess exists</todo>
+      <todo line="802">Add PHPVersion check</todo>
+      <todo line="803">Add bycrypt() check</todo>
+      <todo line="804">Add sessions check</todo>
+      <todo line="805">Add cookies check</todo>
+      <todo line="806">Add validate the admin emails</todo>
     </markers>
     <parse_markers>
       <error line="0" code="50007">No page-level DocBlock was found in file setup\index.php</error>
-      <error line="680" code="50009">No DocBlock was found for function \rrmdir()</error>
+      <error line="676" code="50009">No DocBlock was found for function \rrmdir()</error>
     </parse_markers>
   </file>
   <file path="update.php" hash="3e9155b99232a06ff8ab9e31f9e74650" package="Default">
@@ -1567,7 +1490,7 @@ Lets the user Recover their password using e-mail&lt;/p&gt;</long-description>
   </package>
   <package name="Default" full_name="Default"/>
   <namespace name="global" full_name="global"/>
-  <marker count="25">todo</marker>
+  <marker count="24">todo</marker>
   <marker count="0">fixme</marker>
   <deprecated count="0"/>
 </project>
