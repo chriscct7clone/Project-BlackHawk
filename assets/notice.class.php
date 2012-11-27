@@ -31,14 +31,14 @@
  * @since      File available since Release 0.3.0
  */
 class notice {
-	/*
+	/**
 	 * @var $_notices
 	 *
 	 * Used to store all the notices
 	 */
 	private $_notices = array();
 	
-	/* 
+	/** 
 	 * Add Notice
 	 *
 	 * Adds a notice to the notice array
@@ -50,7 +50,7 @@ class notice {
 		$this->_notice[$type][] = $message;
 	}
 	
-	/* 
+	/** 
 	 * Report
 	 * 
 	 * Reports all notices (info, error, success)
@@ -82,7 +82,7 @@ class notice {
 	
 	}
 	
-	/* 
+	/** 
 	 * errorsExist
 	 * 
 	 * @return bool True if errors exist, false if no errors
